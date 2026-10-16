@@ -25,9 +25,12 @@ theme and plugin symlinked in. `npx wp-env start` is the supported Docker path f
 Gate run: `wp eval-file tests/e2e/fixtures/create-widgets-page.php` then `npm run test:e2e -- tests/e2e/elementor-gate.spec.js` (62 core widgets, passed 4/4 runs). Colour Kit sync is completed with the palette in Phase 3.
 
 ## Phase 3 — Settings panel + colours
-- [ ] 9 tabs, live preview, export/import, reset section
-- [ ] 12 accent palettes + custom, Elementor globals sync, contrast test
-- [ ] Gate: every swatch updates front end + Elementor globals; contrast passes
+- [x] 10 tabs (spec's 9 + "Texts" for every theme string), live preview, export/import, reset section
+- [x] 12 accent palettes + custom, Elementor globals sync, contrast test
+- [x] Gate: every swatch updates front end + Elementor globals; contrast passes
+
+Gate run: `tests/e2e/colors-gate.spec.js` (12/12 swatches) + `PaletteTest::test_every_palette_meets_contrast`.
+Spec deviations (contrast): Emerald primary #0F875D (was #0F8A5F, 4.36:1); Sunset Coral text #111111 on primary; link/hover colours computed to reach 4.5:1.
 
 ## Phase 4 — CPTs + widgets
 - [ ] CPTs (Destination, Service, Partner, Event, Team, Testimonial, Lead)

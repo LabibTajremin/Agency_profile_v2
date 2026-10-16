@@ -65,6 +65,7 @@ final class SetupTest extends ThemeTestCase {
 				'header' => array(
 					'sticky'      => false,
 					'transparent' => true,
+					'mobile_menu' => 'slide',
 				),
 				'colors' => array(
 					'mode'           => 'dark',
@@ -78,7 +79,7 @@ final class SetupTest extends ThemeTestCase {
 		$this->meta[7]['_elementor_edit_mode'] = 'builder';
 
 		$this->assertSame(
-			array( 'qe-has-transparent-header', 'qe-mode-dark', 'qe-btn-pill', 'qe-no-link-underline', 'qe-elementor-page' ),
+			array( 'qe-has-transparent-header', 'qe-mode-dark', 'qe-btn-pill', 'qe-menu-slide', 'qe-no-link-underline', 'qe-elementor-page' ),
 			qe_edu_body_classes( array() )
 		);
 	}

@@ -7,6 +7,8 @@
  * @package QeEdu\Tests
  */
 
+// Patchwork first, so the internals listed in patchwork.json can be mocked.
+require_once dirname( __DIR__, 2 ) . '/vendor/antecedent/patchwork/Patchwork.php';
 require_once dirname( __DIR__, 2 ) . '/vendor/autoload.php';
 
 define( 'ABSPATH', sys_get_temp_dir() . '/qe-edu-wp/' );

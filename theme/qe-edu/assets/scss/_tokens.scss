@@ -5,6 +5,12 @@
 	--qe-primary-dark: #7e1426;
 	--qe-primary-soft: rgb(164 30 52 / 8%);
 	--qe-on-primary: #fff;
+	--qe-on-primary-dark: #fff;
+	--qe-link: #a41e34;
+	--qe-link-dark-mode: #bd5d6d;
+	--qe-hero-gradient: linear-gradient(135deg, #a41e34 0%, #140342 100%);
+	--qe-base-size: 1rem;
+	--qe-h-scale: 1;
 	--qe-ink: #140342;
 	--qe-ink-2: #2b1c55;
 	--qe-body: #3d3a4f;
@@ -25,6 +31,7 @@
 }
 
 @mixin dark-tokens {
+	--qe-link: var(--qe-link-dark-mode);
 	--qe-ink: #f4f2ff;
 	--qe-ink-2: #dcd7f5;
 	--qe-body: #eceaf6;
@@ -55,3 +62,4 @@ body.qe-btn-pill {
 body.qe-btn-square {
 	--qe-radius-btn: 0;
 }
+

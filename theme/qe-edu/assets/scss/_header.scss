@@ -101,13 +101,13 @@ body.elementor-editor-active .qe-sticky {
 
 		&:hover,
 		&:focus-visible {
-			color: var(--qe-primary);
+			color: var(--qe-link);
 		}
 	}
 
 	.current-menu-item > a,
 	.current-menu-ancestor > a {
-		color: var(--qe-primary);
+		color: var(--qe-link);
 	}
 
 	.sub-menu {
@@ -233,6 +233,18 @@ body.elementor-editor-active .qe-sticky {
 	.qe-nav-open .qe-header__panel {
 		opacity: 1;
 		visibility: visible;
+		transform: none;
+	}
+
+	// "Slide in from the side" mobile menu style.
+	body.qe-menu-slide .qe-header__panel {
+		left: auto;
+		width: min(86%, 380px);
+		box-shadow: var(--qe-shadow-lg);
+		transform: translateX(100%);
+	}
+
+	body.qe-menu-slide .qe-nav-open .qe-header__panel {
 		transform: none;
 	}
 

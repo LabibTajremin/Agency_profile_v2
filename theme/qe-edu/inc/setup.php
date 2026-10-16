@@ -115,6 +115,10 @@ function qe_edu_body_classes( $classes ) {
 		$classes[] = 'qe-btn-' . $button;
 	}
 
+	if ( 'slide' === qe_edu_setting( 'header.mobile_menu', 'fullscreen' ) ) {
+		$classes[] = 'qe-menu-slide';
+	}
+
 	if ( ! qe_edu_enabled( 'colors.link_underline', true ) ) {
 		$classes[] = 'qe-no-link-underline';
 	}

@@ -1,0 +1,6 @@
+*.min.js
+node_modules/
+vendor/
+coverage/
+test-results/
+playwright-report/

@@ -29,6 +29,13 @@ final class Plugin {
 	private $modules = array();
 
 	/**
+	 * Whether boot() ran.
+	 *
+	 * @var bool
+	 */
+	private $booted = false;
+
+	/**
 	 * Get the instance.
 	 *
 	 * @return Plugin
@@ -56,7 +63,15 @@ final class Plugin {
 	 * @return string[]
 	 */
 	public function module_classes() {
-		return (array) apply_filters( 'qe_edu_core_modules', array() );
+		return (array) apply_filters(
+			'qe_edu_core_modules',
+			array(
+				Settings\AdminPage::class,
+				Colors\Styles::class,
+				Colors\KitSync::class,
+				Performance\Optimizer::class,
+			)
+		);
 	}
 
 	/**
@@ -65,6 +80,11 @@ final class Plugin {
 	 * @return void
 	 */
 	public function boot() {
+		if ( $this->booted ) {
+			return;
+		}
+		$this->booted = true;
+
 		load_plugin_textdomain( 'qe-edu', false, dirname( plugin_basename( QE_EDU_CORE_FILE ) ) . '/languages' );
 
 		foreach ( $this->module_classes() as $class_name ) {
@@ -87,11 +107,19 @@ final class Plugin {
 	}
 
 	/**
-	 * Activation: register content types so rewrite rules include them.
+	 * Activation.
 	 *
 	 * @return void
 	 */
 	public static function activate() {
+		// During activation `init` has already run, so boot here.
+		self::instance()->boot();
+
+		/**
+		 * Fires when the plugin is activated (content types register, the
+		 * Elementor Kit syncs).
+		 */
+		do_action( 'qe_edu_core_activated' );
 		flush_rewrite_rules();
 	}
 

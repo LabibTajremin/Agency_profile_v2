@@ -14,7 +14,9 @@ $qe_edu_copyright = qe_edu_setting_text( 'footer.copyright', 'copyright' );
 	<div class="qe-wrap qe-footer__grid">
 		<div class="qe-footer__brand">
 			<?php qe_edu_site_branding(); ?>
-			<p class="qe-footer__tagline"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></p>
+			<?php if ( get_bloginfo( 'description' ) ) : ?>
+				<p class="qe-footer__tagline"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></p>
+			<?php endif; ?>
 		</div>
 		<?php foreach ( $qe_edu_columns as $qe_edu_location ) : ?>
 			<?php if ( has_nav_menu( $qe_edu_location ) ) : ?>

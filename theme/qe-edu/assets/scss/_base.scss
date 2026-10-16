@@ -15,7 +15,7 @@
 	background: var(--qe-surface);
 	color: var(--qe-body);
 	font-family: var(--qe-font-body);
-	font-size: 1rem;
+	font-size: var(--qe-base-size);
 	line-height: 1.7;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -37,15 +37,15 @@
 }
 
 :where(h1) {
-	font-size: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+	font-size: calc(clamp(2rem, 1.4rem + 2.6vw, 3.25rem) * var(--qe-h-scale));
 }
 
 :where(h2) {
-	font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem);
+	font-size: calc(clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem) * var(--qe-h-scale));
 }
 
 :where(h3) {
-	font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+	font-size: calc(clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem) * var(--qe-h-scale));
 }
 
 :where(p, ul, ol, figure, blockquote, table) {
@@ -53,14 +53,14 @@
 }
 
 :where(a) {
-	color: var(--qe-primary);
+	color: var(--qe-link);
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.2em;
 	transition: color 0.2s var(--qe-ease);
 }
 
 :where(a:hover) {
-	color: var(--qe-primary-dark);
+	text-decoration-thickness: 2px;
 }
 
 :where(body.qe-no-link-underline a) {
@@ -91,7 +91,7 @@
 }
 
 :where(:focus-visible) {
-	outline: 3px solid var(--qe-primary);
+	outline: 3px solid var(--qe-link);
 	outline-offset: 2px;
 }
 

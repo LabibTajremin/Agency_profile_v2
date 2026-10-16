@@ -38,4 +38,5 @@ spl_autoload_register(
 register_activation_hook( __FILE__, array( \QeEdu\Core\Plugin::class, 'activate' ) );
 register_deactivation_hook( __FILE__, array( \QeEdu\Core\Plugin::class, 'deactivate' ) );
 
-add_action( 'plugins_loaded', array( \QeEdu\Core\Plugin::instance(), 'boot' ) );
+// Boot on init (priority 1) so translations are available to every module.
+add_action( 'init', array( \QeEdu\Core\Plugin::instance(), 'boot' ), 1 );
