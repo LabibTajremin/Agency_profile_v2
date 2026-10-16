@@ -1,0 +1,57 @@
+// Design tokens. The QE Edu Core plugin overrides these on :root from
+// Theme Settings (accent, mode, fonts). Defaults = QE Crimson, light mode.
+:root {
+	--qe-primary: #a41e34;
+	--qe-primary-dark: #7e1426;
+	--qe-primary-soft: rgb(164 30 52 / 8%);
+	--qe-on-primary: #fff;
+	--qe-ink: #140342;
+	--qe-ink-2: #2b1c55;
+	--qe-body: #3d3a4f;
+	--qe-muted: #6b6880;
+	--qe-surface: #fff;
+	--qe-surface-alt: #f6f5fb;
+	--qe-border: #e4e4e4;
+	--qe-font-heading: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+	--qe-font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+	--qe-radius: 14px;
+	--qe-radius-btn: 10px;
+	--qe-shadow: 0 10px 30px -12px rgb(20 3 66 / 22%);
+	--qe-shadow-lg: 0 24px 60px -20px rgb(20 3 66 / 30%);
+	--qe-content-width: 1240px;
+	--qe-gutter: clamp(16px, 4vw, 32px);
+	--qe-header-h: 76px;
+	--qe-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@mixin dark-tokens {
+	--qe-ink: #f4f2ff;
+	--qe-ink-2: #dcd7f5;
+	--qe-body: #eceaf6;
+	--qe-muted: #a9a4c4;
+	--qe-surface: #0e0b1f;
+	--qe-surface-alt: #17132e;
+	--qe-border: #2a2448;
+	--qe-shadow: 0 10px 30px -12px rgb(0 0 0 / 60%);
+}
+
+body.qe-mode-dark {
+
+	@include dark-tokens;
+}
+
+@media (prefers-color-scheme: dark) {
+
+	body.qe-mode-auto {
+
+		@include dark-tokens;
+	}
+}
+
+body.qe-btn-pill {
+	--qe-radius-btn: 999px;
+}
+
+body.qe-btn-square {
+	--qe-radius-btn: 0;
+}

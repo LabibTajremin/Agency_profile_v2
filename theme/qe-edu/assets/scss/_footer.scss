@@ -1,0 +1,93 @@
+// Fallback footer (used only when no Elementor footer template is assigned).
+.qe-footer {
+	background: var(--qe-ink);
+	color: rgb(255 255 255 / 78%);
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	.qe-site-title {
+		color: #fff;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		margin-bottom: 0.6rem;
+	}
+}
+
+body.qe-mode-dark .qe-footer {
+	background: var(--qe-surface-alt);
+}
+
+.qe-footer__grid {
+	display: grid;
+	grid-template-columns: 1.5fr repeat(3, 1fr);
+	gap: 2rem;
+	padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.qe-footer__heading {
+	margin-bottom: 1rem;
+	color: #fff;
+	font-size: 1rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.qe-footer__bottom {
+	border-top: 1px solid rgb(255 255 255 / 12%);
+	font-size: 0.875rem;
+}
+
+.qe-footer__bottom-inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding-block: 1.25rem;
+
+	p {
+		margin: 0;
+	}
+}
+
+.qe-footer__legal ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.25rem;
+
+	li {
+		margin: 0;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.qe-footer__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.qe-footer__brand {
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.qe-footer__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}

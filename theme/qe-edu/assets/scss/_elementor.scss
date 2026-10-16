@@ -1,0 +1,23 @@
+// Elementor-safe rules. The theme never styles .e-con, .elementor-section,
+// .elementor-column or .elementor-widget-*; these only neutralise theme
+// behaviour inside the editor.
+
+// Elementor pages: the main element must add nothing around the content.
+.qe-elementor-page .site-main {
+	padding: 0;
+}
+
+// Entrance animations off in the editor so sections never "jump".
+body.elementor-editor-active [data-qe-animate] {
+	opacity: 1 !important;
+	transform: none !important;
+	transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	[data-qe-animate] {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}

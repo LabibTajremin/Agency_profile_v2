@@ -1,0 +1,18 @@
+/*
+Theme Name: QE Edu
+Theme URI: https://example.com/qe-edu
+Author: Your Education Group
+Author URI: https://example.com
+Description: A premium, fully editable education and study-abroad theme built for Elementor. Every text, colour and section is editable without code. Pair it with the QE Edu Core plugin for widgets, theme settings, SEO and one-click demo import.
+Requires at least: 6.6
+Tested up to: 6.8
+Requires PHP: 8.1
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: qe-edu
+Domain Path: /languages
+Tags: education, one-column, custom-logo, custom-menu, custom-colors, featured-images, full-width-template, theme-options, translation-ready, threaded-comments, accessibility-ready, rtl-language-support, wide-blocks, editor-style, block-styles
+*/
+
+/* All styles live in assets/css/main.css (compiled from assets/scss). */

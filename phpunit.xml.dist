@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+	bootstrap="tests/php/bootstrap.php"
+	colors="true"
+	cacheDirectory=".phpunit.cache"
+	failOnWarning="true"
+	failOnRisky="true"
+	beStrictAboutOutputDuringTests="true">
+	<testsuites>
+		<testsuite name="plugin"><directory>tests/php/Plugin</directory></testsuite>
+		<testsuite name="theme"><directory>tests/php/Theme</directory></testsuite>
+	</testsuites>
+	<source>
+		<include>
+			<directory suffix=".php">plugin/qe-edu-core/src</directory>
+			<directory suffix=".php">theme/qe-edu/inc</directory>
+		</include>
+	</source>
+</phpunit>
