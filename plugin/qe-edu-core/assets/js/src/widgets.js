@@ -561,6 +561,27 @@
 				);
 			}
 
+			// Keep dropdowns on screen: open towards the left when one would
+			// cross the right edge (the last items of a long menu).
+			function fitPanel( event ) {
+				const li = event.target.closest( '.qe-mega__item' );
+				if ( ! li || nav.classList.contains( 'is-mobile' ) ) {
+					return;
+				}
+				const panel = li.querySelector( '.qe-mega__panel' );
+				if ( ! panel || li.classList.contains( 'is-mega' ) ) {
+					return;
+				}
+				li.classList.remove( 'is-flip' );
+				const width = doc.documentElement.clientWidth;
+				if ( panel.getBoundingClientRect().right > width - 8 ) {
+					li.classList.add( 'is-flip' );
+				}
+			}
+
+			nav.addEventListener( 'mouseover', fitPanel );
+			nav.addEventListener( 'focusin', fitPanel );
+
 			toggle.addEventListener( 'click', () =>
 				setOpen( ! nav.classList.contains( 'is-open' ) )
 			);
@@ -594,7 +615,7 @@
 				setMobile();
 			}
 
-			return { setOpen, closeSubmenus };
+			return { setOpen, closeSubmenus, fitPanel };
 		} );
 	}
 

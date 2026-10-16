@@ -109,25 +109,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },
@@ -151,25 +151,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },
@@ -193,25 +193,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },
@@ -237,25 +237,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },
@@ -279,25 +279,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },
@@ -321,25 +321,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },
@@ -363,25 +363,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },
@@ -405,25 +405,25 @@
             "padding": {
                 "unit": "px",
                 "top": "72",
-                "right": "0",
+                "right": "24",
                 "bottom": "72",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_tablet": {
                 "unit": "px",
                 "top": "56",
-                "right": "0",
+                "right": "24",
                 "bottom": "56",
-                "left": "0",
+                "left": "24",
                 "isLinked": false
             },
             "padding_mobile": {
                 "unit": "px",
                 "top": "40",
-                "right": "0",
+                "right": "16",
                 "bottom": "40",
-                "left": "0",
+                "left": "16",
                 "isLinked": false
             }
         },

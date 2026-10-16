@@ -83,9 +83,9 @@ function section( $children, $extra = array() ) {
 				'content_width'  => 'boxed',
 				'flex_direction' => 'column',
 				'flex_gap'       => gap( 24 ),
-				'padding'        => px( 80, 0 ),
-				'padding_tablet' => px( 64, 0 ),
-				'padding_mobile' => px( 48, 0 ),
+				'padding'        => px( 80, 24 ),
+				'padding_tablet' => px( 64, 24 ),
+				'padding_mobile' => px( 48, 16 ),
 			),
 			$extra
 		),
@@ -145,9 +145,9 @@ function band( $widget, $full = false, $extra = array() ) {
 		: array(
 			'content_width'  => 'boxed',
 			'flex_direction' => 'column',
-			'padding'        => px( 72, 0 ),
-			'padding_tablet' => px( 56, 0 ),
-			'padding_mobile' => px( 40, 0 ),
+			'padding'        => px( 72, 24 ),
+			'padding_tablet' => px( 56, 24 ),
+			'padding_mobile' => px( 40, 16 ),
 		);
 	return el( 'container', array_merge( $settings, $extra ), array( $widget ) );
 }
@@ -730,8 +730,8 @@ $templates['footer'] = array(
 				'content_width'          => 'boxed',
 				'flex_direction'         => 'column',
 				'flex_gap'               => gap( 32 ),
-				'padding'                => px( 64, 0, 24, 0 ),
-				'padding_mobile'         => px( 48, 0, 24, 0 ),
+				'padding'                => px( 64, 24, 24, 24 ),
+				'padding_mobile'         => px( 48, 16, 24, 16 ),
 				'background_background'  => 'classic',
 				'__globals__'            => array( 'background_color' => 'globals/colors?id=secondary' ),
 			),

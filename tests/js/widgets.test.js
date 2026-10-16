@@ -677,6 +677,63 @@ describe( 'widgets.js', () => {
 		menu.closeSubmenus();
 	} );
 
+	test( 'mega menu dropdowns stay on screen', () => {
+		setMatchMedia( false );
+		const nav = menuMarkup();
+		nav.querySelector( '.qe-mega__menu' ).insertAdjacentHTML(
+			'beforeend',
+			'<li class="qe-mega__item"><a href="#c">C</a></li><li class="qe-mega__item is-mega"><a href="#d">D</a><div class="qe-mega__panel"></div></li>'
+		);
+		api.megaMenu( nav );
+		const li = nav.querySelector( '.qe-mega__item' );
+		const panel = li.querySelector( '.qe-mega__panel' );
+		Object.defineProperty( document.documentElement, 'clientWidth', {
+			configurable: true,
+			value: 1000,
+		} );
+
+		panel.getBoundingClientRect = () => ( { right: 1100 } );
+		li.querySelector( 'a' ).dispatchEvent(
+			new window.MouseEvent( 'mouseover', { bubbles: true } )
+		);
+		expect( li.classList.contains( 'is-flip' ) ).toBe( true );
+
+		panel.getBoundingClientRect = () => ( { right: 900 } );
+		li.querySelector( 'a' ).dispatchEvent(
+			new window.FocusEvent( 'focusin', { bubbles: true } )
+		);
+		expect( li.classList.contains( 'is-flip' ) ).toBe( false );
+
+		// No panel, a full-width mega panel, outside an item, or mobile: untouched.
+		const plain = nav.querySelectorAll( '.qe-mega__item' )[ 1 ];
+		plain
+			.querySelector( 'a' )
+			.dispatchEvent(
+				new window.MouseEvent( 'mouseover', { bubbles: true } )
+			);
+		expect( plain.classList.contains( 'is-flip' ) ).toBe( false );
+		const mega = nav.querySelector( '.is-mega' );
+		mega.querySelector( '.qe-mega__panel' ).getBoundingClientRect =
+			() => ( {
+				right: 5000,
+			} );
+		mega.querySelector( 'a' ).dispatchEvent(
+			new window.MouseEvent( 'mouseover', { bubbles: true } )
+		);
+		expect( mega.classList.contains( 'is-flip' ) ).toBe( false );
+		nav.querySelector( '.qe-mega__toggle' ).dispatchEvent(
+			new window.MouseEvent( 'mouseover', { bubbles: true } )
+		);
+
+		panel.getBoundingClientRect = () => ( { right: 1100 } );
+		nav.classList.add( 'is-mobile' );
+		li.querySelector( 'a' ).dispatchEvent(
+			new window.MouseEvent( 'mouseover', { bubbles: true } )
+		);
+		expect( li.classList.contains( 'is-flip' ) ).toBe( false );
+		delete document.documentElement.clientWidth;
+	} );
+
 	test( 'mega menu without matchMedia or change listeners', () => {
 		window.matchMedia = jest.fn( () => ( { matches: false } ) );
 		const nav = menuMarkup();

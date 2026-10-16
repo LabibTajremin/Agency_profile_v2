@@ -1120,6 +1120,17 @@ body.elementor-editor-active .qe-marquee__track {
 		left: 100%;
 	}
 
+	// Set by the script when a dropdown would cross the right edge.
+	.is-flip > .qe-mega__panel {
+		right: 0;
+		left: auto;
+	}
+
+	.is-flip .qe-mega__panel .qe-mega__panel {
+		right: 100%;
+		left: auto;
+	}
+
 	.qe-mega__item:hover > .qe-mega__panel,
 	.qe-mega__item:focus-within > .qe-mega__panel,
 	.qe-mega__item.is-open > .qe-mega__panel {

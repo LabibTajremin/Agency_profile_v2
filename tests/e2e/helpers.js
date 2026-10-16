@@ -85,12 +85,13 @@ function diffPercent( a, b ) {
  * Run a WP-CLI command against the test site: the local install in WP_PATH
  * when set, otherwise the wp-env "cli" container.
  *
- * @param {string} args WP-CLI arguments.
+ * @param {string} args   WP-CLI arguments.
+ * @param {string} wpPath WordPress path (default: WP_PATH).
  * @return {string} Output (trimmed).
  */
-function wp( args ) {
-	const command = process.env.WP_PATH
-		? `wp --allow-root --path=${ process.env.WP_PATH } ${ args }`
+function wp( args, wpPath = process.env.WP_PATH ) {
+	const command = wpPath
+		? `wp --allow-root --path=${ wpPath } ${ args }`
 		: `npx wp-env run cli wp ${ args }`;
 	return execSync( command, { encoding: 'utf8', stdio: 'pipe' } ).trim();
 }

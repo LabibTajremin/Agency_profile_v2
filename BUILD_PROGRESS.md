@@ -52,8 +52,18 @@ Also: title via `document_title_parts`; GA4/GTM with optional consent bar; SEO b
 (title read from `wp.data`); extra robots.txt rules join the `User-agent: *` group before the `Sitemap:` line.
 
 ## Phase 6 — Demo content
-- [ ] Pages, templates, menus, idempotent one-click importer
-- [ ] Gate: fresh import + re-import no duplicates; structure at 1440/1024/390
+- [x] Pages, templates, menus, idempotent one-click importer
+- [x] Gate: fresh import + re-import no duplicates; structure at 1440/1024/390
+
+Gate run: on a brand-new site, `DEMO_BASE_URL=… DEMO_WP_PATH=… npm run test:e2e -- tests/e2e/demo-gate.spec.js`
+(7/7; with wp-env the default target is the separate "tests" site). The spec imports through the Tools UI, then
+checks every page renders exactly the widgets its demo JSON defines (in order) at 1440/1024/390 with no errors,
+overflow or broken images and one `<h1>`; re-import adds 0; single-page import adds 1. All gates together: 20/20.
+Content source: `php bin/make-demo.php` (pages/templates/manifest) and `python3 bin/make-demo-images.py`
+(original artwork, 56 files, ~680 KB). Also `wp qe-edu demo-import [--page=<key>]`.
+Fixes found by the gate: Elementor core Button was grey (Kit button styles now synced), Page Title Banner showed
+the first post on the blog page, Mega Menu dropdowns could cross the right edge, `/events/` is the Event archive
+(demo page is `/events-webinars/`).
 
 ## Phase 7 — Polish & QA
 - [ ] Mobile, a11y, performance, `.pot`, screenshot, README, `npm run zip`
