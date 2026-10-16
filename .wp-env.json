@@ -1,7 +1,19 @@
 {
   "core": "WordPress/WordPress#6.6",
   "phpVersion": "8.1",
-  "themes": [ "./theme/qe-edu" ],
-  "plugins": [ "./plugin/qe-edu-core", "https://downloads.wordpress.org/plugin/elementor.latest-stable.zip" ],
-  "config": { "WP_DEBUG": true, "WP_DEBUG_LOG": true, "SCRIPT_DEBUG": false }
+  "themes": [
+    "./theme/qe-edu"
+  ],
+  "plugins": [
+    "./plugin/qe-edu-core",
+    "https://downloads.wordpress.org/plugin/elementor.latest-stable.zip"
+  ],
+  "config": {
+    "WP_DEBUG": true,
+    "WP_DEBUG_LOG": true,
+    "SCRIPT_DEBUG": false
+  },
+  "mappings": {
+    "wp-content/qe-tests": "./tests"
+  }
 }

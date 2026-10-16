@@ -8,7 +8,7 @@
     "build": "npm run build:css && npm run build:js",
     "build:css": "sass --no-source-map --style=compressed theme/qe-edu/assets/scss/main.scss theme/qe-edu/assets/css/main.css && sass --no-source-map --style=compressed theme/qe-edu/assets/scss/editor.scss theme/qe-edu/assets/css/editor.css && sass --no-source-map --style=compressed plugin/qe-edu-core/assets/scss/widgets.scss plugin/qe-edu-core/assets/css/widgets.css && sass --no-source-map --style=compressed plugin/qe-edu-core/assets/scss/admin.scss plugin/qe-edu-core/assets/css/admin.css",
     "build:js": "node bin/build-js.mjs",
-    "lint:js": "wp-scripts lint-js theme/qe-edu/assets/js/src plugin/qe-edu-core/assets/js/src tests/js",
+    "lint:js": "wp-scripts lint-js theme/qe-edu/assets/js/src plugin/qe-edu-core/assets/js/src tests/js tests/e2e playwright.config.js",
     "lint:css": "wp-scripts lint-style \"theme/qe-edu/assets/scss/**/*.scss\" \"plugin/qe-edu-core/assets/scss/**/*.scss\"",
     "test:js": "wp-scripts test-unit-js --coverage",
     "test:php": "composer test:coverage",

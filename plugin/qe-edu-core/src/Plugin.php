@@ -77,6 +77,12 @@ final class Plugin {
 				Elementor\MenuFields::class,
 				Frontend\MobileBar::class,
 				Frontend\EditLinks::class,
+				Seo\Conflict::class,
+				Seo\Head::class,
+				Seo\Indexing::class,
+				Seo\Redirects::class,
+				Seo\Analytics::class,
+				Seo\Metabox::class,
 			)
 		);
 	}

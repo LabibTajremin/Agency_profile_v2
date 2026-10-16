@@ -111,12 +111,19 @@ class EventList extends Base {
 		$time   = Types::get( $post->ID, 'time' );
 		$online = Types::get( $post->ID, 'online_link' );
 		$venue  = Types::get( $post->ID, 'venue' );
+		$start  = $date;
+
+		if ( '' !== $time ) {
+			// Full ISO 8601 with the site's time zone offset.
+			$moment = date_create( $date . ' ' . $time, wp_timezone() );
+			$start  = $moment ? $moment->format( 'c' ) : $date . 'T' . $time;
+		}
 
 		$data = array(
 			'@context'            => 'https://schema.org',
 			'@type'               => 'Event',
 			'name'                => get_the_title( $post ),
-			'startDate'           => $date . ( '' !== $time ? 'T' . $time : '' ),
+			'startDate'           => $start,
 			'description'         => wp_strip_all_tags( get_the_excerpt( $post ) ),
 			'url'                 => (string) get_permalink( $post ),
 			'eventStatus'         => 'https://schema.org/EventScheduled',

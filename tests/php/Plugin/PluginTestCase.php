@@ -24,7 +24,12 @@ abstract class PluginTestCase extends TestCase {
 			}
 		);
 		Functions\when( 'add_query_arg' )->alias(
-			static function ( $args, $url ) {
+			static function ( $args, $url_or_value = '', $url = null ) {
+				if ( is_array( $args ) ) {
+					$url = $url_or_value;
+				} else {
+					$args = array( $args => $url_or_value );
+				}
 				return $url . ( false === strpos( $url, '?' ) ? '?' : '&' ) . http_build_query( $args );
 			}
 		);

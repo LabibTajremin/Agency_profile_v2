@@ -3,6 +3,8 @@
  */
 const { PNG } = require( 'pngjs' );
 const pixelmatch = require( 'pixelmatch' );
+const path = require( 'path' );
+const { execSync } = require( 'child_process' );
 
 /**
  * Collect console errors and failed requests on a page.
@@ -79,4 +81,32 @@ function diffPercent( a, b ) {
 	return best;
 }
 
-module.exports = { watchErrors, diffPercent };
+/**
+ * Run a WP-CLI command against the test site: the local install in WP_PATH
+ * when set, otherwise the wp-env "cli" container.
+ *
+ * @param {string} args WP-CLI arguments.
+ * @return {string} Output (trimmed).
+ */
+function wp( args ) {
+	const command = process.env.WP_PATH
+		? `wp --allow-root --path=${ process.env.WP_PATH } ${ args }`
+		: `npx wp-env run cli wp ${ args }`;
+	return execSync( command, { encoding: 'utf8', stdio: 'pipe' } ).trim();
+}
+
+/**
+ * Run a fixture script from tests/e2e/fixtures and parse its JSON output.
+ *
+ * @param {string} name File name.
+ * @return {Object} Parsed output.
+ */
+function fixture( name ) {
+	const file = process.env.WP_PATH
+		? path.resolve( __dirname, 'fixtures', name )
+		: `wp-content/qe-tests/e2e/fixtures/${ name }`;
+	const lines = wp( `eval-file ${ file }` ).split( '\n' );
+	return JSON.parse( lines.filter( ( l ) => l.startsWith( '{' ) ).pop() );
+}
+
+module.exports = { watchErrors, diffPercent, wp, fixture };

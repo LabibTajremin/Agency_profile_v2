@@ -175,3 +175,82 @@
 		position: static;
 	}
 }
+
+// Content type fields and SEO box --------------------------------------------
+
+.qe-fields__row {
+	margin-bottom: 16px;
+}
+
+.qe-seo__preview {
+	display: grid;
+	gap: 2px;
+	max-width: 600px;
+	margin-bottom: 16px;
+	padding: 12px 16px;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	background: #fff;
+	font-family: arial, sans-serif;
+}
+
+.qe-seo__preview-url {
+	overflow: hidden;
+	color: #202124;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.qe-seo__preview-title {
+	color: #1a0dab;
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+.qe-seo__preview-desc {
+	color: #4d5156;
+	font-size: 14px;
+	line-height: 1.58;
+}
+
+.qe-seo__field {
+	margin-bottom: 14px;
+
+	label strong {
+		display: block;
+		margin-bottom: 4px;
+	}
+}
+
+.qe-seo__meter {
+	margin: 4px 0 0;
+	font-size: 12px;
+
+	&[data-status="good"] {
+		color: #00a32a;
+	}
+
+	&[data-status="short"],
+	&[data-status="long"] {
+		color: #b32d2e;
+	}
+}
+
+.qe-seo__checks {
+	margin: 0 0 14px;
+
+	.is-ok {
+		color: #00a32a;
+	}
+
+	.is-missing {
+		color: #996800;
+	}
+}
+
+.qe-seo__advanced summary {
+	margin-bottom: 12px;
+	font-weight: 600;
+	cursor: pointer;
+}

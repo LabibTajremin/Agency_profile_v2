@@ -41,8 +41,15 @@ Gate run: `AllWidgetsTest` (every text control of every widget reaches the page;
 Dark mode: Elementor Global Colors are overridden in dark mode with contrast-checked values.
 
 ## Phase 5 — SEO module
-- [ ] Global + per-post SEO, schema, sitemap, robots, redirects, 404 log, Yoast/Rank Math step-aside
-- [ ] Gate: one `<title>`, valid schema, disables with Yoast active
+- [x] Global + per-post SEO, schema, sitemap, robots, redirects, 404 log, Yoast/Rank Math step-aside
+- [x] Gate: one `<title>`, valid schema, disables with Yoast active
+
+Gate run: `WP_PATH=/path/to/wordpress npm run test:e2e -- tests/e2e/seo-gate.spec.js` (5/5, two runs; the spec creates
+its own fixture and installs/activates/deactivates Yoast SEO via WP-CLI). JSON-LD is parsed and checked for the
+fields Google's Rich Results test requires (Organization, WebSite, BreadcrumbList, Course, Event with time zone,
+FAQPage); the online Rich Results tool itself cannot be scripted from this environment.
+Also: title via `document_title_parts`; GA4/GTM with optional consent bar; SEO box works in the block editor
+(title read from `wp.data`); extra robots.txt rules join the `User-agent: *` group before the `Sitemap:` line.
 
 ## Phase 6 — Demo content
 - [ ] Pages, templates, menus, idempotent one-click importer

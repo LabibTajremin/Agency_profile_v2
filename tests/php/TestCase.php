@@ -99,6 +99,11 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase {
 			}
 		);
 		Functions\when( 'wp_unslash' )->returnArg();
+		Functions\when( 'wp_timezone' )->alias(
+			static function () {
+				return new \DateTimeZone( 'Asia/Dhaka' );
+			}
+		);
 		Functions\when( 'wp_date' )->alias(
 			static function ( $format ) {
 				return gmdate( $format, 1767225600 ); // 2026-01-01.

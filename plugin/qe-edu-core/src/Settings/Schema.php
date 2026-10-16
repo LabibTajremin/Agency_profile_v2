@@ -677,6 +677,27 @@ final class Schema {
 				'default' => false,
 				'group'   => $tracking,
 			),
+			'consent_text'     => array(
+				'type'    => 'textarea',
+				'label'   => __( 'Consent bar text', 'qe-edu' ),
+				'help'    => __( 'Leave empty for the default text.', 'qe-edu' ),
+				'default' => '',
+				'group'   => $tracking,
+			),
+			'consent_accept'   => array(
+				'type'    => 'text',
+				'label'   => __( 'Consent bar: accept button', 'qe-edu' ),
+				'help'    => __( 'Leave empty for "Accept".', 'qe-edu' ),
+				'default' => '',
+				'group'   => $tracking,
+			),
+			'consent_decline'  => array(
+				'type'    => 'text',
+				'label'   => __( 'Consent bar: decline button', 'qe-edu' ),
+				'help'    => __( 'Leave empty for "Decline".', 'qe-edu' ),
+				'default' => '',
+				'group'   => $tracking,
+			),
 		);
 	}
 

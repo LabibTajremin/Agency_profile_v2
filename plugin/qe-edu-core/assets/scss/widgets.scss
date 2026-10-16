@@ -1839,3 +1839,44 @@ body.qe-has-mobile-bar .qe-edit-links {
 	position: absolute;
 	inset: 0;
 }
+
+// Consent bar -------------------------------------------------------------
+
+.qe-consent {
+	position: fixed;
+	z-index: 100000;
+	right: 16px;
+	bottom: 16px;
+	left: 16px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem 1.5rem;
+	max-width: 760px;
+	margin-inline: auto;
+	padding: 1rem 1.25rem;
+	border: 1px solid $border;
+	border-radius: $radius;
+	background: $surface;
+	box-shadow: $shadow-lg;
+	color: $text;
+
+	p {
+		flex: 1 1 280px;
+		margin: 0;
+	}
+}
+
+.qe-consent__actions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+body.qe-has-mobile-bar .qe-consent {
+	bottom: 84px;
+
+	@include tablet {
+		bottom: 16px;
+	}
+}
