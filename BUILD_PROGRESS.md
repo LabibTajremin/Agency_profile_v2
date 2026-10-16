@@ -19,8 +19,10 @@ theme and plugin symlinked in. `npx wp-env start` is the supported Docker path f
 - [x] Gate: Theme Check 0 required errors; blank Full Width page has 0px theme padding
 
 ## Phase 2 — Elementor compat
-- [ ] §6 locations, defaults on activation, Kit sync, editor stylesheet, CSS rules
-- [ ] Gate: Playwright §6.5 on a page containing every core Elementor widget
+- [x] §6 locations, defaults on activation, Kit sync, editor stylesheet, CSS rules
+- [x] Gate: Playwright §6.5 on a page containing every core Elementor widget
+
+Gate run: `wp eval-file tests/e2e/fixtures/create-widgets-page.php` then `npm run test:e2e -- tests/e2e/elementor-gate.spec.js` (62 core widgets, passed 4/4 runs). Colour Kit sync is completed with the palette in Phase 3.
 
 ## Phase 3 — Settings panel + colours
 - [ ] 9 tabs, live preview, export/import, reset section
