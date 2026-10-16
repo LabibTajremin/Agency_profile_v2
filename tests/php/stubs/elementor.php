@@ -36,6 +36,7 @@ namespace Elementor {
 		const DATE_TIME   = 'date_time';
 		const GALLERY     = 'gallery';
 		const HIDDEN      = 'hidden';
+		const RAW_HTML    = 'raw_html';
 	}
 
 	class Repeater {
@@ -117,11 +118,17 @@ namespace Elementor {
 			return $this->id;
 		}
 
+		/** Condition of the open section. */
+		public $section_condition = array();
+
 		public function start_controls_section( $id, $args = array() ) {
-			$this->sections[ $id ] = $args;
+			$this->sections[ $id ]   = $args;
+			$this->section_condition = isset( $args['condition'] ) ? $args['condition'] : array();
 		}
 
-		public function end_controls_section() {}
+		public function end_controls_section() {
+			$this->section_condition = array();
+		}
 
 		public function start_controls_tabs( $id ) {}
 
@@ -132,11 +139,14 @@ namespace Elementor {
 		public function end_controls_tab() {}
 
 		public function add_control( $id, $args ) {
+			if ( $this->section_condition ) {
+				$args['section_condition'] = $this->section_condition;
+			}
 			$this->controls[ $id ] = $args;
 		}
 
 		public function add_responsive_control( $id, $args ) {
-			$this->controls[ $id ] = $args;
+			$this->add_control( $id, $args );
 		}
 
 		public function add_group_control( $type, $args ) {

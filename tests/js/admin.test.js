@@ -10,7 +10,11 @@ const PHP_CUSTOM = {
 		on_primary: '#FFFFFF',
 		on_dark: '#FFFFFF',
 		link: '#757575',
-		link_dark_mode: '#7B7B7B',
+		link_dark_mode: '#7E7E7E',
+		dm_primary: '#7E7E7E',
+		dm_on_primary: '#111111',
+		dm_hover: '#959595',
+		dm_on_hover: '#111111',
 	},
 	'#3366FF': {
 		primary: '#3366FF',
@@ -19,7 +23,11 @@ const PHP_CUSTOM = {
 		on_primary: '#FFFFFF',
 		on_dark: '#FFFFFF',
 		link: '#3366FF',
-		link_dark_mode: '#3F6FFF',
+		link_dark_mode: '#4372FF',
+		dm_primary: '#4372FF',
+		dm_on_primary: '#111111',
+		dm_hover: '#658BFF',
+		dm_on_hover: '#111111',
 	},
 	'#FFFF00': {
 		primary: '#FFFF00',
@@ -29,6 +37,10 @@ const PHP_CUSTOM = {
 		on_dark: '#111111',
 		link: '#7A7A00',
 		link_dark_mode: '#FFFF00',
+		dm_primary: '#FFFF00',
+		dm_on_primary: '#111111',
+		dm_hover: '#FFFF2E',
+		dm_on_hover: '#111111',
 	},
 	'#E89B12': {
 		primary: '#E89B12',
@@ -38,6 +50,10 @@ const PHP_CUSTOM = {
 		on_dark: '#111111',
 		link: '#9E690C',
 		link_dark_mode: '#E89B12',
+		dm_primary: '#E89B12',
+		dm_on_primary: '#111111',
+		dm_hover: '#ECAD3D',
+		dm_on_hover: '#111111',
 	},
 };
 
@@ -50,7 +66,11 @@ const DATA = {
 			on_primary: '#FFFFFF',
 			on_dark: '#FFFFFF',
 			link: '#0F875D',
-			link_dark_mode: '#198C63',
+			link_dark_mode: '#1E8E66',
+			dm_primary: '#1E8E66',
+			dm_on_primary: '#111111',
+			dm_hover: '#47A282',
+			dm_on_hover: '#111111',
 		},
 	},
 	fonts: {
@@ -138,6 +158,7 @@ describe( 'admin.js', () => {
 			'#000000'
 		);
 		expect( api.readableCustom( '#36f', 4.5 ) ).toBe( '#3366FF' );
+		expect( api.darkModeAccent( '#FFFFFF', DATA ) ).toBe( '#FFFFFF' );
 	} );
 
 	test( 'custom palette matches PHP Palette::resolve exactly', () => {
@@ -154,10 +175,8 @@ describe( 'admin.js', () => {
 			document.querySelector( 'form' ),
 			DATA
 		);
-		expect( state.vars[ '--qe-primary' ] ).toBe( '#0F875D' );
-		expect( state.vars[ '--qe-surface-alt' ] ).toBe(
-			api.mix( '#0F875D', '#FFFFFF', 0.94 )
-		);
+		expect( state.vars[ '--qe-primary' ] ).toBe( '#1E8E66' );
+		expect( state.vars[ '--qe-surface-alt' ] ).toBe( '#17132E' );
 		expect( state.vars[ '--qe-hero-gradient' ] ).toContain( '#0F875D 0%' );
 		expect( state.classes ).toEqual( {
 			mode: 'qe-mode-dark',
@@ -165,6 +184,38 @@ describe( 'admin.js', () => {
 			underline: true,
 		} );
 		expect( state.fontUrl ).toBeNull();
+	} );
+
+	test( 'preview state in dark mode uses the dark-mode tokens', () => {
+		document.body.innerHTML = colorsForm( 'custom' );
+		const state = api.previewState(
+			document.querySelector( 'form' ),
+			DATA
+		);
+		expect( state.vars[ '--qe-primary' ] ).toBe(
+			PHP_CUSTOM[ '#3366FF' ].dm_primary
+		);
+		expect( state.vars[ '--e-global-color-secondary' ] ).toBe( '#F4F2FF' );
+		expect( state.vars[ '--qe-surface-alt' ] ).toBe( '#17132E' );
+		expect( state.vars[ '--qe-link' ] ).toBe(
+			PHP_CUSTOM[ '#3366FF' ].link_dark_mode
+		);
+	} );
+
+	test( 'preview state in light mode uses the light tokens', () => {
+		document.body.innerHTML = colorsForm();
+		document.querySelector( '[data-qe-field="colors.mode"] select' ).value =
+			'light';
+		const state = api.previewState(
+			document.querySelector( 'form' ),
+			DATA
+		);
+		expect( state.vars[ '--qe-primary' ] ).toBe( '#0F875D' );
+		expect( state.vars[ '--e-global-color-secondary' ] ).toBe( '#140342' );
+		expect( state.vars[ '--qe-link' ] ).toBe( '#0F875D' );
+		expect( state.vars[ '--qe-surface-alt' ] ).toBe(
+			api.mix( '#0F875D', '#FFFFFF', 0.94 )
+		);
 	} );
 
 	test( 'preview state with the custom swatch and no gradient', () => {
@@ -176,7 +227,9 @@ describe( 'admin.js', () => {
 			document.querySelector( 'form' ),
 			DATA
 		);
-		expect( state.vars[ '--qe-primary' ] ).toBe( '#3366FF' );
+		expect( state.vars[ '--qe-primary' ] ).toBe(
+			PHP_CUSTOM[ '#3366FF' ].dm_primary
+		);
 		expect( state.vars[ '--qe-hero-gradient' ] ).toBe( 'none' );
 	} );
 
@@ -212,9 +265,9 @@ describe( 'admin.js', () => {
 			},
 			fontUrl: 'https://g/2',
 		} );
-		expect(
-			target.documentElement.style.getPropertyValue( '--qe-primary' )
-		).toBe( '#0F875D' );
+		expect( target.body.style.getPropertyValue( '--qe-primary' ) ).toBe(
+			'#0F875D'
+		);
 		expect( target.body.className ).toBe(
 			'qe-mode-dark qe-btn-pill qe-no-link-underline'
 		);
@@ -238,6 +291,9 @@ describe( 'admin.js', () => {
 		api.applyPreview( target, { vars: {}, classes: {}, fontUrl: null } );
 		expect( () => api.applyPreview( null, {} ) ).not.toThrow();
 		expect( () => api.applyPreview( {}, {} ) ).not.toThrow();
+		expect( () =>
+			api.applyPreview( { documentElement: {} }, {} )
+		).not.toThrow();
 	} );
 
 	test( 'contrast message', () => {
@@ -256,6 +312,13 @@ describe( 'admin.js', () => {
 			colorsForm( 'custom' ) + '<iframe data-qe-preview></iframe>';
 		const form = document.querySelector( 'form' );
 		const iframe = document.querySelector( 'iframe' );
+		// jsdom's about:blank frame has no <body> yet; real pages do.
+		const frameDoc = iframe.contentDocument;
+		if ( ! frameDoc.body ) {
+			frameDoc.documentElement.appendChild(
+				frameDoc.createElement( 'body' )
+			);
+		}
 		const update = api.initPreview( form, DATA );
 		const hint = document.querySelector( '[data-qe-contrast]' );
 		expect( hint.textContent ).toBe( 'OK 4.7' );
@@ -265,10 +328,8 @@ describe( 'admin.js', () => {
 		form.dispatchEvent( new window.Event( 'input' ) );
 		expect( hint.classList.contains( 'is-low' ) ).toBe( true );
 		expect(
-			iframe.contentDocument.documentElement.style.getPropertyValue(
-				'--qe-primary'
-			)
-		).toBe( '#757575' );
+			iframe.contentDocument.body.style.getPropertyValue( '--qe-primary' )
+		).toBe( PHP_CUSTOM[ '#777777' ].dm_primary );
 
 		iframe.dispatchEvent( new window.Event( 'load' ) );
 		expect( typeof update ).toBe( 'function' );

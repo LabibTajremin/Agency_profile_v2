@@ -70,6 +70,13 @@ final class Plugin {
 				Colors\Styles::class,
 				Colors\KitSync::class,
 				Performance\Optimizer::class,
+				PostTypes\Registrar::class,
+				PostTypes\Leads::class,
+				Forms\Handler::class,
+				Elementor\Integration::class,
+				Elementor\MenuFields::class,
+				Frontend\MobileBar::class,
+				Frontend\EditLinks::class,
 			)
 		);
 	}

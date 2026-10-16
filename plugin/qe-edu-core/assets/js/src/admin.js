@@ -99,13 +99,12 @@
 	}
 
 	/**
-	 * Tokens for the custom colour, as PHP Palette::resolve() computes them.
+	 * A custom colour no text colour can sit on with enough contrast is
+	 * darkened just enough for white text (mirrors Palette::readable_custom).
 	 *
-	 * @param {string} primary Custom colour.
-	 * @param {Object} data    Localised data.
-	 * @param          color
-	 * @param          min
-	 * @return {Object} Tokens.
+	 * @param {string} color Colour.
+	 * @param {number} min   Minimum contrast.
+	 * @return {string} Colour.
 	 */
 	function readableCustom( color, min ) {
 		color = normalize( color );
@@ -120,9 +119,46 @@
 		return ensureContrast( color, '#FFFFFF', min );
 	}
 
+	/**
+	 * Dark-mode accent (mirrors Palette::dark_mode_accent).
+	 *
+	 * @param {string} color Light-mode accent.
+	 * @param {Object} data  Localised data.
+	 * @return {string} Colour.
+	 */
+	function darkModeAccent( color, data ) {
+		const base = ensureContrast(
+			color,
+			data.darkSurface,
+			data.minContrast
+		);
+		let candidate = base;
+		let step = 0;
+		while (
+			Math.max(
+				contrast( candidate, '#FFFFFF' ),
+				contrast( candidate, '#111111' )
+			) < data.minContrast &&
+			step < 50
+		) {
+			step++;
+			candidate = mix( base, '#FFFFFF', step / 50 );
+		}
+		return candidate;
+	}
+
+	/**
+	 * Tokens for the custom colour, as PHP Palette::resolve() computes them.
+	 *
+	 * @param {string} primary Custom colour.
+	 * @param {Object} data    Localised data.
+	 * @return {Object} Tokens.
+	 */
 	function customPalette( primary, data ) {
 		primary = readableCustom( primary, data.minContrast );
 		const dark = mix( primary, '#000000', 0.23 );
+		const dmPrimary = darkModeAccent( primary, data );
+		const dmHover = mix( dmPrimary, '#FFFFFF', 0.18 );
 		return {
 			primary,
 			dark,
@@ -134,11 +170,11 @@
 				data.lightSurface,
 				data.minContrast
 			),
-			link_dark_mode: ensureContrast(
-				primary,
-				data.darkSurface,
-				data.minContrast
-			),
+			link_dark_mode: dmPrimary,
+			dm_primary: dmPrimary,
+			dm_on_primary: textOn( dmPrimary, '#FFFFFF', data.minContrast ),
+			dm_hover: dmHover,
+			dm_on_hover: textOn( dmHover, '#FFFFFF', data.minContrast ),
 		};
 	}
 
@@ -179,28 +215,51 @@
 				accent === 'custom'
 					? customPalette( fieldValue( form, 'colors.custom' ), data )
 					: data.palettes[ accent ];
-			Object.assign( vars, {
-				'--qe-primary': palette.primary,
-				'--qe-primary-dark': palette.dark,
-				'--qe-primary-soft': palette.soft,
-				'--qe-on-primary': palette.on_primary,
-				'--qe-on-primary-dark': palette.on_dark,
-				'--qe-link': palette.link,
-				'--qe-link-dark-mode': palette.link_dark_mode,
-			} );
+			const mode = fieldValue( form, 'colors.mode' );
+			if ( mode === 'dark' ) {
+				Object.assign( vars, {
+					'--qe-primary': palette.dm_primary,
+					'--qe-primary-dark': palette.dm_hover,
+					'--qe-primary-soft': rgba( palette.dm_primary, 0.14 ),
+					'--qe-on-primary': palette.dm_on_primary,
+					'--qe-on-primary-dark': palette.dm_on_hover,
+					'--e-global-color-primary': palette.dm_primary,
+					'--e-global-color-secondary': '#F4F2FF',
+					'--e-global-color-text': '#ECEAF6',
+					'--e-global-color-accent': palette.dm_hover,
+				} );
+			} else {
+				Object.assign( vars, {
+					'--qe-primary': palette.primary,
+					'--qe-primary-dark': palette.dark,
+					'--qe-primary-soft': palette.soft,
+					'--qe-on-primary': palette.on_primary,
+					'--qe-on-primary-dark': palette.on_dark,
+					'--e-global-color-primary': palette.primary,
+					'--e-global-color-secondary': '#140342',
+					'--e-global-color-text': '#3D3A4F',
+					'--e-global-color-accent': palette.dark,
+				} );
+			}
+			vars[ '--qe-link' ] =
+				mode === 'dark' ? palette.link_dark_mode : palette.link;
+			vars[ '--qe-link-dark-mode' ] = palette.link_dark_mode;
 			const tint = fieldValue( form, 'colors.background' );
-			vars[ '--qe-surface-alt' ] = {
-				neutral: '#F6F5FB',
-				accent: mix( palette.primary, '#FFFFFF', 0.94 ),
-				white: '#FFFFFF',
-			}[ tint ];
+			vars[ '--qe-surface-alt' ] =
+				mode === 'dark'
+					? '#17132E'
+					: {
+							neutral: '#F6F5FB',
+							accent: mix( palette.primary, '#FFFFFF', 0.94 ),
+							white: '#FFFFFF',
+					  }[ tint ];
 			vars[ '--qe-hero-gradient' ] = fieldValue(
 				form,
 				'colors.hero_gradient'
 			)
 				? `linear-gradient(135deg, ${ palette.primary } 0%, #140342 100%)`
 				: 'none';
-			classes.mode = 'qe-mode-' + fieldValue( form, 'colors.mode' );
+			classes.mode = 'qe-mode-' + mode;
 			classes.button =
 				'qe-btn-' + fieldValue( form, 'colors.button_style' );
 			classes.underline = ! fieldValue( form, 'colors.link_underline' );
@@ -231,16 +290,15 @@
 	 * @param {Object}   state  From previewState().
 	 */
 	function applyPreview( target, state ) {
-		if ( ! target || ! target.documentElement ) {
+		if ( ! target || ! target.body ) {
 			return;
 		}
-		Object.keys( state.vars ).forEach( ( name ) => {
-			target.documentElement.style.setProperty(
-				name,
-				state.vars[ name ]
-			);
-		} );
+		// On <body>, so the values beat Elementor's kit variables and the
+		// saved dark-mode rules.
 		const body = target.body;
+		Object.keys( state.vars ).forEach( ( name ) => {
+			body.style.setProperty( name, state.vars[ name ] );
+		} );
 		if ( state.classes.mode ) {
 			body.classList.remove(
 				'qe-mode-light',
@@ -411,6 +469,7 @@
 		textOn,
 		ensureContrast,
 		readableCustom,
+		darkModeAccent,
 		customPalette,
 		previewState,
 		applyPreview,

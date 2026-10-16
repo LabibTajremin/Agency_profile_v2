@@ -33,9 +33,12 @@ Gate run: `tests/e2e/colors-gate.spec.js` (12/12 swatches) + `PaletteTest::test_
 Spec deviations (contrast): Emerald primary #0F875D (was #0F8A5F, 4.36:1); Sunset Coral text #111111 on primary; link/hover colours computed to reach 4.5:1.
 
 ## Phase 4 — CPTs + widgets
-- [ ] CPTs (Destination, Service, Partner, Event, Team, Testimonial, Lead)
-- [ ] Widgets (§5), registration form + leads CSV
-- [ ] Gate: every widget renders, every text control editable, no console errors
+- [x] CPTs (Destination, Service, Partner, Event, Team, Testimonial, Lead)
+- [x] Widgets (§5: 20 widgets incl. Site Logo + Social Links), dynamic tags, mobile bar, edit pencils, registration form + leads CSV
+- [x] Gate: every widget renders, every text control editable, no console errors
+
+Gate run: `AllWidgetsTest` (every text control of every widget reaches the page; colours/fonts default to Elementor globals) + `tests/e2e/widgets-gate.spec.js` (editor + front, real form submissions create leads, sliders, mobile mega menu).
+Dark mode: Elementor Global Colors are overridden in dark mode with contrast-checked values.
 
 ## Phase 5 — SEO module
 - [ ] Global + per-post SEO, schema, sitemap, robots, redirects, 404 log, Yoast/Rank Math step-aside

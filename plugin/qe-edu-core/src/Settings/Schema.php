@@ -370,6 +370,18 @@ final class Schema {
 				'help'    => __( 'Shows the newsletter box in the footer.', 'qe-edu' ),
 				'default' => true,
 			),
+			'mailchimp_key'   => array(
+				'type'    => 'text',
+				'label'   => __( 'Mailchimp API key (optional)', 'qe-edu' ),
+				'help'    => __( 'Only if newsletter sign-ups should go to Mailchimp. Mailchimp → Account → Extras → API keys.', 'qe-edu' ),
+				'default' => '',
+			),
+			'mailchimp_list'  => array(
+				'type'    => 'text',
+				'label'   => __( 'Mailchimp audience ID', 'qe-edu' ),
+				'help'    => __( 'Mailchimp → Audience → Settings → "Audience ID".', 'qe-edu' ),
+				'default' => '',
+			),
 			'copyright'       => array(
 				'type'    => 'text',
 				'label'   => __( 'Copyright text', 'qe-edu' ),
@@ -392,6 +404,12 @@ final class Schema {
 				'type'    => 'text',
 				'label'   => __( 'Phone bar: button text', 'qe-edu' ),
 				'help'    => __( 'For example "Apply now".', 'qe-edu' ),
+				'default' => '',
+			),
+			'mobile_bar_chat' => array(
+				'type'    => 'text',
+				'label'   => __( 'Phone bar: WhatsApp button text', 'qe-edu' ),
+				'help'    => __( 'For example "WhatsApp us". Shows when a WhatsApp number is set.', 'qe-edu' ),
 				'default' => '',
 			),
 			'mobile_bar_link' => array(

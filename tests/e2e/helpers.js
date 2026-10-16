@@ -35,8 +35,11 @@ function watchErrors( page ) {
 }
 
 /**
- * Percentage of differing pixels between two PNG buffers. Images of different
- * size are compared over their common area plus the size difference.
+ * Percentage of differing pixels between two PNG buffers. Elements with
+ * fractional heights rasterise one pixel taller or shorter depending on
+ * their sub-pixel position on the page, so the images are also compared
+ * shifted by one pixel up and down and the best alignment counts. Size
+ * differences beyond the common area count as different pixels.
  *
  * @param {Buffer} a PNG.
  * @param {Buffer} b PNG.
@@ -46,21 +49,34 @@ function diffPercent( a, b ) {
 	const imgA = PNG.sync.read( a );
 	const imgB = PNG.sync.read( b );
 	const width = Math.min( imgA.width, imgB.width );
-	const height = Math.min( imgA.height, imgB.height );
-	const crop = ( img ) => {
-		const out = new PNG( { width, height } );
-		PNG.bitblt( img, out, 0, 0, width, height, 0, 0 );
-		return out.data;
-	};
-	const diff = pixelmatch( crop( imgA ), crop( imgB ), null, width, height, {
-		threshold: 0.1,
-	} );
 	const total = Math.max(
 		imgA.width * imgA.height,
 		imgB.width * imgB.height
 	);
-	const missing = total - width * height;
-	return ( ( diff + missing ) / total ) * 100;
+	let best = Infinity;
+
+	for ( const shift of [ 0, -1, 1 ] ) {
+		const offsetA = Math.max( 0, shift );
+		const offsetB = Math.max( 0, -shift );
+		const height = Math.min( imgA.height - offsetA, imgB.height - offsetB );
+		const crop = ( img, y ) => {
+			const out = new PNG( { width, height } );
+			PNG.bitblt( img, out, 0, y, width, height, 0, 0 );
+			return out.data;
+		};
+		const diff = pixelmatch(
+			crop( imgA, offsetA ),
+			crop( imgB, offsetB ),
+			null,
+			width,
+			height,
+			{ threshold: 0.1 }
+		);
+		const missing = total - width * height;
+		best = Math.min( best, ( ( diff + missing ) / total ) * 100 );
+	}
+
+	return best;
 }
 
 module.exports = { watchErrors, diffPercent };

@@ -78,18 +78,56 @@ final class Styles {
 	}
 
 	/**
-	 * The :root rule.
+	 * Dark-mode overrides, including Elementor's Global Colors (whose light
+	 * values would be unreadable on dark backgrounds).
+	 *
+	 * @param array<string,mixed> $settings Settings merged over defaults.
+	 * @return array<string,string>
+	 */
+	public static function dark_tokens( $settings ) {
+		$c = Palette::resolve( (string) Settings::get_path( $settings, 'colors.accent' ), (string) Settings::get_path( $settings, 'colors.custom' ) );
+
+		return array(
+			'--qe-primary'               => $c['dm_primary'],
+			'--qe-primary-dark'          => $c['dm_hover'],
+			'--qe-on-primary'            => $c['dm_on_primary'],
+			'--qe-on-primary-dark'       => $c['dm_on_hover'],
+			'--qe-primary-soft'          => Palette::rgba( $c['dm_primary'], 0.14 ),
+			'--qe-surface-alt'           => '#17132E',
+			'--e-global-color-primary'   => $c['dm_primary'],
+			'--e-global-color-secondary' => '#F4F2FF',
+			'--e-global-color-text'      => '#ECEAF6',
+			'--e-global-color-accent'    => $c['dm_hover'],
+		);
+	}
+
+	/**
+	 * Declarations string.
+	 *
+	 * @param array<string,string> $tokens Property => value.
+	 * @return string
+	 */
+	private static function declarations( $tokens ) {
+		$css = '';
+		foreach ( $tokens as $property => $value ) {
+			$css .= $property . ':' . $value . ';';
+		}
+
+		return $css;
+	}
+
+	/**
+	 * The :root rule plus the dark-mode rules.
 	 *
 	 * @param array<string,mixed> $settings Settings merged over defaults.
 	 * @return string
 	 */
 	public static function css( $settings ) {
-		$css = '';
-		foreach ( self::tokens( $settings ) as $property => $value ) {
-			$css .= $property . ':' . $value . ';';
-		}
+		$dark = self::declarations( self::dark_tokens( $settings ) );
 
-		return ':root{' . $css . '}';
+		return ':root{' . self::declarations( self::tokens( $settings ) ) . '}'
+			. 'body.qe-mode-dark{' . $dark . '}'
+			. '@media (prefers-color-scheme:dark){body.qe-mode-auto{' . $dark . '}}';
 	}
 
 	/**

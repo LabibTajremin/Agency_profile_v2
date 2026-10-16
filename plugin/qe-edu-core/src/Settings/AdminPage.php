@@ -8,6 +8,7 @@
 
 namespace QeEdu\Core\Settings;
 
+use QeEdu\Core\Admin\Fields;
 use QeEdu\Core\Colors\FontPairs;
 use QeEdu\Core\Colors\Palette;
 use QeEdu\Core\Colors\Styles;
@@ -584,27 +585,7 @@ class AdminPage {
 	 * @return void
 	 */
 	protected function render_media( $field, $value, $id, $name ) {
-		$url     = $value ? wp_get_attachment_url( $value ) : '';
-		$is_img  = 'image' === $field['mime'];
-		$preview = '';
-
-		if ( $url ) {
-			$preview = $is_img
-				? '<img src="' . esc_url( $url ) . '" alt="">'
-				: '<a href="' . esc_url( $url ) . '" target="_blank" rel="noopener">' . esc_html( wp_basename( $url ) ) . '</a>';
-		}
-
-		printf(
-			'<div class="qe-media" data-qe-media data-mime="%1$s"><input type="hidden" id="%2$s" name="%3$s" value="%4$s" data-qe-media-id><div class="qe-media__preview" data-qe-media-preview>%5$s</div><button type="button" class="button" data-qe-media-choose>%6$s</button> <button type="button" class="button-link qe-media__remove" data-qe-media-remove%7$s>%8$s</button></div>',
-			esc_attr( $field['mime'] ),
-			esc_attr( $id ),
-			esc_attr( $name ),
-			esc_attr( (string) $value ),
-			$preview, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above.
-			esc_html__( 'Choose file', 'qe-edu' ),
-			$value ? '' : ' hidden',
-			esc_html__( 'Remove', 'qe-edu' )
-		);
+		echo Fields::media( $field['mime'], $value, $id, $name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in Fields::media().
 	}
 
 	/**

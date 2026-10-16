@@ -68,7 +68,17 @@ final class StylesTest extends PluginTestCase {
 	public function test_css() {
 		$css = Styles::css( Settings::all() );
 		$this->assertStringStartsWith( ':root{--qe-primary:#A41E34;', $css );
-		$this->assertStringEndsWith( ';}', $css );
+		$this->assertStringContainsString( 'body.qe-mode-dark{--qe-primary:#BE6070;', $css );
+		$this->assertStringContainsString( '@media (prefers-color-scheme:dark){body.qe-mode-auto{', $css );
+		$this->assertStringEndsWith( ';}}', $css );
+	}
+
+	public function test_dark_tokens_override_elementor_globals() {
+		$dark = Styles::dark_tokens( Settings::all() );
+		$this->assertSame( '#F4F2FF', $dark['--e-global-color-secondary'] );
+		$this->assertSame( '#ECEAF6', $dark['--e-global-color-text'] );
+		$this->assertSame( $dark['--qe-primary'], $dark['--e-global-color-primary'] );
+		$this->assertSame( '#17132E', $dark['--qe-surface-alt'] );
 	}
 
 	public function test_needs_google_fonts() {

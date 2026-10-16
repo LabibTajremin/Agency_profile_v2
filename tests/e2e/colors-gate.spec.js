@@ -27,7 +27,8 @@ const SWATCHES = {
 const cssVar = ( page, name ) =>
 	page.evaluate(
 		( n ) =>
-			getComputedStyle( document.body )
+			window
+				.getComputedStyle( document.body )
 				.getPropertyValue( n )
 				.trim()
 				.toUpperCase(),

@@ -34,6 +34,26 @@ final class PaletteTest extends PluginTestCase {
 		}
 	}
 
+	/**
+	 * Gate: dark mode keeps text and buttons readable for every palette.
+	 */
+	public function test_every_palette_meets_contrast_in_dark_mode() {
+		foreach ( array_keys( Palette::accents() ) as $slug ) {
+			$p = Palette::resolve( $slug );
+			$this->assertGreaterThanOrEqual( 4.5, Palette::contrast( $p['dm_primary'], Palette::DARK_SURFACE ), "$slug dark text" );
+			$this->assertGreaterThanOrEqual( 4.5, Palette::contrast( $p['dm_primary'], $p['dm_on_primary'] ), "$slug dark button" );
+			$this->assertGreaterThanOrEqual( 4.5, Palette::contrast( $p['dm_hover'], $p['dm_on_hover'] ), "$slug dark hover" );
+		}
+	}
+
+	public function test_dark_mode_accent_for_any_colour() {
+		foreach ( array( '#000000', '#140342', '#777777', '#FFFFFF', '#0000FF' ) as $color ) {
+			$dm = Palette::dark_mode_accent( $color );
+			$this->assertGreaterThanOrEqual( 4.5, Palette::contrast( $dm, Palette::DARK_SURFACE ), $color );
+			$this->assertGreaterThanOrEqual( 4.5, max( Palette::contrast( $dm, '#FFFFFF' ), Palette::contrast( $dm, '#111111' ) ), $color );
+		}
+	}
+
 	public function test_custom_colours_always_meet_contrast() {
 		foreach ( array( '#FFFF00', '#777777', '#000000', '#FFFFFF', '#0F8A5F', '#E2574C', '#808080', '#3366FF' ) as $color ) {
 			$p = Palette::resolve( 'custom', $color );

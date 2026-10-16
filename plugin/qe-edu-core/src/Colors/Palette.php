@@ -136,7 +136,7 @@ final class Palette {
 	 *
 	 * @param string $slug   Accent slug, or `custom`.
 	 * @param string $custom Custom primary colour, used when `$slug` is `custom`.
-	 * @return array<string,string> Keys: slug, name, primary, dark, soft, on_primary, on_dark, link, link_dark_mode.
+	 * @return array<string,string> Keys: slug, name, primary, dark, soft, on_primary, on_dark, link, link_dark_mode, dm_primary, dm_on_primary, dm_hover, dm_on_hover.
 	 */
 	public static function resolve( $slug, $custom = '' ) {
 		$accents = self::accents();
@@ -157,6 +157,11 @@ final class Palette {
 		$primary = $accent['primary'];
 		$dark    = $accent['dark'];
 
+		// Dark mode: a lighter accent that reads as text on the dark surface,
+		// with button text picked to stay readable on it.
+		$dm_primary = self::dark_mode_accent( $primary );
+		$dm_hover   = self::mix( $dm_primary, '#FFFFFF', 0.18 );
+
 		return array(
 			'slug'           => $slug,
 			'name'           => $accent['name'],
@@ -166,7 +171,11 @@ final class Palette {
 			'on_primary'     => self::text_on( $primary, $accent['on'] ),
 			'on_dark'        => self::text_on( $dark, $accent['on'] ),
 			'link'           => self::ensure_contrast( $primary, self::LIGHT_SURFACE ),
-			'link_dark_mode' => self::ensure_contrast( $primary, self::DARK_SURFACE ),
+			'link_dark_mode' => $dm_primary,
+			'dm_primary'     => $dm_primary,
+			'dm_on_primary'  => self::text_on( $dm_primary, '#FFFFFF' ),
+			'dm_hover'       => $dm_hover,
+			'dm_on_hover'    => self::text_on( $dm_hover, '#FFFFFF' ),
 		);
 	}
 
@@ -186,6 +195,27 @@ final class Palette {
 		}
 
 		return self::ensure_contrast( $color, '#FFFFFF' );
+	}
+
+	/**
+	 * Dark-mode accent: readable as text on the dark surface AND able to carry
+	 * readable button text (white or near-black). Lightens in 2% steps until
+	 * both hold; near-white always satisfies both.
+	 *
+	 * @param string $color Light-mode accent.
+	 * @return string
+	 */
+	public static function dark_mode_accent( $color ) {
+		$base      = self::ensure_contrast( $color, self::DARK_SURFACE );
+		$candidate = $base;
+		$step      = 0;
+
+		while ( max( self::contrast( $candidate, '#FFFFFF' ), self::contrast( $candidate, '#111111' ) ) < self::MIN_CONTRAST && $step < 50 ) {
+			++$step;
+			$candidate = self::mix( $base, '#FFFFFF', $step / 50 );
+		}
+
+		return $candidate;
 	}
 
 	/**

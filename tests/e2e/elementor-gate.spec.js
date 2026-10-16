@@ -63,7 +63,7 @@ const PARITY_EXEMPT = new Set(
 
 // Fixed overlays hidden while taking section screenshots.
 const HIDE_OVERLAYS =
-	'.qe-back-to-top,.e-contact-buttons,.e-floating-bars,[class*="e-contact-buttons"],[class*="e-floating-bars"]{visibility:hidden!important}';
+	'.qe-back-to-top,.qe-edit-links,.qe-mobile-bar,.e-contact-buttons,.e-floating-bars,[class*="e-contact-buttons"],[class*="e-floating-bars"]{visibility:hidden!important}';
 const WIDTHS = [ 1440, 1024, 390 ];
 
 // Third-party embeds used by core widgets (Video, Audio, Maps) and remote
@@ -206,7 +206,7 @@ test.describe( 'Elementor gate', () => {
 		await page.waitForTimeout( 800 );
 		await page.addStyleTag( {
 			content:
-				'#elementor-navigator,.elementor-navigator{display:none!important}',
+				'#elementor-navigator,.elementor-navigator,#elementor-mode-switcher{display:none!important}',
 		} );
 		await frame.evaluate( ( HIDE ) => {
 			const style = document.createElement( 'style' );
