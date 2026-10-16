@@ -299,15 +299,19 @@ function qe_edu_posted_on() {
 		esc_html( get_the_date() )
 	);
 
-	$author = sprintf(
-		'<a href="%1$s">%2$s</a>',
-		esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
-		esc_html( get_the_author() )
-	);
-
 	echo '<p class="qe-entry-meta">';
 	echo wp_kses_post( str_replace( '{date}', $time, esc_html( qe_edu_text( 'posted_on' ) ) ) );
-	echo ' ';
-	echo wp_kses_post( str_replace( '{author}', $author, esc_html( qe_edu_text( 'by_author' ) ) ) );
+
+	// No byline when the post has no author (e.g. imported content).
+	$name = (string) get_the_author();
+	if ( '' !== $name ) {
+		$author = sprintf(
+			'<a href="%1$s">%2$s</a>',
+			esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
+			esc_html( $name )
+		);
+		echo ' ';
+		echo wp_kses_post( str_replace( '{author}', $author, esc_html( qe_edu_text( 'by_author' ) ) ) );
+	}
 	echo '</p>';
 }

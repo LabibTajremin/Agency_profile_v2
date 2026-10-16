@@ -212,10 +212,11 @@ class Testimonials extends Base {
 		$this->print_heading( $s['heading'], 'h2', 'qe-section-head__title' );
 		echo '</div>';
 
+		$this->prime_images( $items );
 		echo '<div class="qe-slider"' . $this->slider_attributes( $s ) . '><div class="swiper"><div class="swiper-wrapper">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in slider_attributes().
 		foreach ( $items as $item ) {
 			$rating = max( 0, min( 5, (int) $item['rating'] ) );
-			echo '<figure class="swiper-slide qe-tcard">';
+			echo '<div class="swiper-slide"><figure class="qe-tcard">';
 			if ( 'yes' === $s['show_rating'] && $rating ) {
 				printf(
 					'<p class="qe-stars" role="img" aria-label="%1$s">%2$s</p>',
@@ -227,7 +228,7 @@ class Testimonials extends Base {
 			echo '<figcaption class="qe-tcard__author">';
 			$this->print_image( $item['image'], 'thumbnail', 'qe-tcard__photo', $item['name'] );
 			printf( '<span><span class="qe-tcard__name">%1$s</span><span class="qe-tcard__role">%2$s</span></span>', esc_html( $item['name'] ), esc_html( $item['role'] ) );
-			echo '</figcaption></figure>';
+			echo '</figcaption></figure></div>';
 		}
 		echo '</div></div>';
 		$this->print_slider_nav( $s );

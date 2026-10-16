@@ -16,6 +16,14 @@ use QeEdu\Tests\Plugin\PluginTestCase;
 abstract class WidgetTestCase extends PluginTestCase {
 
 	/**
+	 * Attachment id lists primed by widgets.
+	 *
+	 * @var array<int,int[]>
+	 */
+	protected $primed = array();
+
+
+	/**
 	 * Posts returned by get_posts().
 	 *
 	 * @var \WP_Post[]
@@ -38,6 +46,12 @@ abstract class WidgetTestCase extends PluginTestCase {
 
 	protected function setUp(): void {
 		parent::setUp();
+		$this->primed = array();
+		Functions\when( '_prime_post_caches' )->alias(
+			function ( $ids ) {
+				$this->primed[] = $ids;
+			}
+		);
 		$this->posts      = array();
 		$this->editing    = false;
 		$this->menu_items = array();

@@ -37,6 +37,7 @@ final class WidgetBranchesTest extends WidgetTestCase {
 
 	public function test_hero_backgrounds_and_floats() {
 		$light = $this->render( AnimatedHero::class );
+		$this->assertMatchesRegularExpression( '#<span class="qe-hero__rotator" aria-hidden="true" data-words="[^"]+">(<span class="qe-hero__sizer">[^<]+</span>){3}<span class="qe-hero__live"><span class="qe-hero__word">#', $light, 'Every phrase reserves its space.' );
 		$this->assertStringContainsString( 'class="qe-hero qe-hero--light"', $light );
 		$this->assertStringContainsString( '<h1 class="qe-hero__title">', $light );
 		$this->assertStringContainsString( '<span class="screen-reader-text">15 Years of Excellence, Global Education Pathways, Student Success Worldwide</span>', $light );
@@ -132,8 +133,9 @@ final class WidgetBranchesTest extends WidgetTestCase {
 		$this->meta[101]['_qe_link']        = 'https://custom.test';
 		$this->meta[101]['_qe_button_text'] = 'Discover';
 		$html = $this->render( ServiceSlider::class );
-		$this->assertStringContainsString( 'href="https://custom.test">Discover</a>', $html );
-		$this->assertStringContainsString( 'href="https://example.test/p/102/">Learn More</a>', $html );
+		$this->assertStringContainsString( 'href="https://custom.test">Discover<span class="qe-sr">: Post A</span></a>', $html, 'Hidden context names the target.' );
+		$this->assertStringContainsString( 'href="https://example.test/p/102/">Learn More<span class="qe-sr">: Post B</span></a>', $html );
+		$this->assertStringContainsString( '<div class="swiper-slide"><article class="qe-scard">', $html );
 
 		$static = $this->render( ServiceSlider::class, array( 'static_editor' => 'yes' ) );
 		$this->assertStringContainsString( '&quot;static&quot;:false', $static );
@@ -155,7 +157,7 @@ final class WidgetBranchesTest extends WidgetTestCase {
 		$this->meta[102]['_qe_country'] = '';
 		$this->meta[102]['_qe_link']    = 'https://ie.test';
 		$slider                         = $this->render( DestinationsGrid::class, array( 'layout' => 'slider', 'hover' => 'lift' ) );
-		$this->assertStringContainsString( '<a class="qe-dcard qe-dcard--lift swiper-slide" href="https://example.test/p/101/">', $slider );
+		$this->assertStringContainsString( '<div class="swiper-slide"><a class="qe-dcard qe-dcard--lift" href="https://example.test/p/101/">', $slider );
 		$this->assertStringContainsString( 'href="https://ie.test"', $slider );
 		$this->assertStringContainsString( 'Study in Post B', $slider );
 		$this->assertStringContainsString( 'qe-dcard__flag', $slider );
@@ -200,7 +202,7 @@ final class WidgetBranchesTest extends WidgetTestCase {
 
 		$step = $this->render( LogoCarousel::class, array( 'mode' => 'step', 'grayscale' => '' ) );
 		$this->assertStringContainsString( 'qe-logos--step"', $step );
-		$this->assertStringContainsString( 'class="qe-logo swiper-slide"', $step );
+		$this->assertStringContainsString( '<div class="swiper-slide"><a class="qe-logo "', $step );
 
 		$static = $this->render( LogoCarousel::class, array( 'mode' => 'static' ) );
 		$this->assertStringContainsString( 'qe-logos__grid', $static );
@@ -284,6 +286,7 @@ final class WidgetBranchesTest extends WidgetTestCase {
 
 		$banner = $this->render( PageTitleBanner::class, array( 'background_image' => array( 'url' => 'https://example.test/b.jpg' ) ) );
 		$this->assertStringContainsString( 'qe-banner has-image', $banner );
+		$this->assertStringContainsString( 'fetchpriority="high"', $banner, 'The banner is the largest paint.' );
 		$this->assertStringContainsString( '<h1 class="qe-banner__title">Archive</h1>', $banner );
 		$this->assertStringContainsString( 'qe-breadcrumbs', $banner );
 
@@ -328,6 +331,55 @@ final class WidgetBranchesTest extends WidgetTestCase {
 			}
 		);
 		$this->assertSame( 'Queried post', PageTitleBanner::title( $s ) );
+	}
+
+	public function test_images_are_loaded_in_one_go() {
+		$widget = ( new \ReflectionClass( DestinationsGrid::class ) )->newInstanceWithoutConstructor();
+		$prime  = new \ReflectionMethod( DestinationsGrid::class, 'prime_images' );
+		$prime->invoke(
+			$widget,
+			array(
+				array( 'image' => array( 'id' => '5' ), 'flag' => 9 ),
+				array( 'image' => 5 ),
+				array( 'image' => array( 'url' => 'x' ) ),
+				array( 'other' => 3 ),
+			),
+			array( 'image', 'flag' )
+		);
+		$this->assertSame( array( array( 5, 9 ) ), $this->primed );
+
+		$this->primed = array();
+		$prime->invoke( $widget, array( array( 'image' => 0 ) ) );
+		$this->assertSame( array(), $this->primed, 'Nothing to load.' );
+
+		$this->with_posts();
+		$this->render( DestinationsGrid::class );
+		$this->render( ServiceSlider::class );
+		$this->render( NewsSlider::class );
+		$this->render( Testimonials::class );
+		$this->render( LogoCarousel::class );
+		$this->render( TeamGrid::class );
+		$this->assertNotSame( array(), $this->primed );
+	}
+
+	public function test_print_image_forced_alt() {
+		$widget = ( new \ReflectionClass( DestinationsGrid::class ) )->newInstanceWithoutConstructor();
+		$print  = new \ReflectionMethod( DestinationsGrid::class, 'print_image' );
+		$this->meta[7]['_wp_attachment_image_alt'] = 'Library alt';
+		Functions\when( 'wp_get_attachment_image' )->alias(
+			static function ( $id, $size, $icon, $attrs ) {
+				return '<img alt="' . $attrs['alt'] . '" data-x="' . ( isset( $attrs['data-x'] ) ? $attrs['data-x'] : '' ) . '">';
+			}
+		);
+
+		$html = $this->capture( static function () use ( $print, $widget ) { $print->invoke( $widget, 7, 'large', 'c', 'Fallback', array( 'alt' => '', 'data-x' => '1' ) ); } );
+		$this->assertSame( '<img alt="" data-x="1">', $html );
+		$html = $this->capture( static function () use ( $print, $widget ) { $print->invoke( $widget, 7, 'large', 'c', 'Fallback' ); } );
+		$this->assertSame( '<img alt="Library alt" data-x="">', $html );
+		$html = $this->capture( static function () use ( $print, $widget ) { $print->invoke( $widget, array( 'url' => 'https://example.test/u.jpg' ), 'large', 'c', 'Fallback', array( 'alt' => '' ) ); } );
+		$this->assertSame( '<img src="https://example.test/u.jpg" class="c" alt="" loading="lazy" decoding="async">', $html, 'One alt attribute only.' );
+		$html = $this->capture( static function () use ( $print, $widget ) { $print->invoke( $widget, array( 'url' => 'https://example.test/u.jpg' ), 'large', 'c', 'Fallback' ); } );
+		$this->assertStringContainsString( 'alt="Fallback"', $html );
 	}
 
 	public function test_site_logo_variants() {
@@ -451,6 +503,7 @@ final class WidgetBranchesTest extends WidgetTestCase {
 		$testimonials = $this->render( Testimonials::class );
 		$this->assertStringContainsString( 'aria-label="Rated 5 out of 5"', $testimonials );
 		$this->assertStringContainsString( '<span class="qe-tcard__role">Role 101</span>', $testimonials );
+		$this->assertStringContainsString( '<div class="swiper-slide"><figure class="qe-tcard">', $testimonials );
 		$manual = $this->render( Testimonials::class, array( 'source' => 'manual', 'show_rating' => '' ) );
 		$this->assertStringContainsString( 'Amira K.', $manual );
 		$this->assertStringNotContainsString( 'qe-stars', $manual );

@@ -99,6 +99,14 @@ class TeamGrid extends Base {
 		$this->print_heading( $s['heading'], 'h2', 'qe-section-head__title' );
 		echo '</div>';
 
+		$this->prime_images(
+			array_map(
+				static function ( $person ) {
+					return array( 'image' => (int) get_post_thumbnail_id( $person ) );
+				},
+				$people
+			)
+		);
 		echo '<div class="qe-team">';
 		foreach ( $people as $person ) {
 			$name     = get_the_title( $person );

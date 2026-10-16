@@ -65,6 +65,8 @@ final class PluginTest extends PluginTestCase {
 		$this->assertSame( 1, FakeModule::$registered );
 		$this->assertInstanceOf( FakeModule::class, $plugin->module( FakeModule::class ) );
 		$this->assertNull( $plugin->module( 'Nope' ) );
+		$this->assertNotFalse( has_action( 'load_textdomain', array( \QeEdu\Core\Settings\Schema::class, 'flush' ) ) );
+		$this->assertNotFalse( has_action( 'change_locale', array( \QeEdu\Core\Settings\Schema::class, 'flush' ) ) );
 	}
 
 	public function test_activate_and_deactivate() {

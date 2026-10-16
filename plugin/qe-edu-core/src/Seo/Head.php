@@ -55,12 +55,17 @@ final class Head {
 	}
 
 	/**
-	 * The current post id when the request is singular.
+	 * The page whose SEO values apply: the post on singular views, the
+	 * "Posts page" on the blog index.
 	 *
 	 * @return int
 	 */
 	private static function post_id() {
-		return is_singular() ? (int) get_queried_object_id() : 0;
+		if ( is_singular() ) {
+			return (int) get_queried_object_id();
+		}
+
+		return is_home() && ! is_front_page() ? (int) get_option( 'page_for_posts' ) : 0;
 	}
 
 	/**

@@ -245,3 +245,53 @@ function qe_edu_elementor_preview_styles() {
 	wp_enqueue_style( 'qe-edu' );
 }
 add_action( 'elementor/preview/enqueue_styles', 'qe_edu_elementor_preview_styles' );
+
+/**
+ * Elementor templates chosen in Theme Settings that this request shows.
+ *
+ * @return int[] Template ids.
+ */
+function qe_edu_active_template_ids() {
+	$locations = array( 'header', 'footer' );
+	if ( is_singular( 'post' ) ) {
+		$locations[] = 'single';
+	} elseif ( is_home() || is_archive() || is_search() ) {
+		$locations[] = 'archive';
+	} elseif ( is_404() ) {
+		$locations[] = 'not_found';
+	}
+
+	$ids = array();
+	foreach ( $locations as $location ) {
+		$id = absint( qe_edu_setting( 'templates.' . $location, 0 ) );
+		if ( $id && 'publish' === get_post_status( $id ) ) {
+			$ids[] = $id;
+		}
+	}
+
+	return $ids;
+}
+
+/**
+ * Load the styles of those templates in <head>. Elementor otherwise prints
+ * them where the template renders (in <body>), so the header would first
+ * show unstyled and then jump (layout shift).
+ *
+ * @return void
+ */
+function qe_edu_enqueue_template_css() {
+	if ( ! qe_edu_has_elementor() || ! class_exists( '\Elementor\Core\Files\CSS\Post' ) ) {
+		return;
+	}
+
+	$ids = qe_edu_active_template_ids();
+	if ( ! $ids ) {
+		return;
+	}
+
+	\Elementor\Plugin::$instance->frontend->enqueue_styles();
+	foreach ( $ids as $id ) {
+		\Elementor\Core\Files\CSS\Post::create( $id )->enqueue();
+	}
+}
+add_action( 'wp_enqueue_scripts', 'qe_edu_enqueue_template_css', 20 );

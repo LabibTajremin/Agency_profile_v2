@@ -223,9 +223,10 @@ class NewsSlider extends Base {
 			return;
 		}
 
+		$this->prime_images( $items );
 		echo '<div class="qe-slider"' . $this->slider_attributes( $s ) . '><div class="swiper"><div class="swiper-wrapper">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in slider_attributes().
 		foreach ( $items as $i => $item ) {
-			echo '<article class="swiper-slide qe-ncard"><div class="qe-ncard__media">';
+			echo '<div class="swiper-slide"><article class="qe-ncard"><div class="qe-ncard__media">';
 			if ( ! $this->print_image( $item['image'], 'qe-card', 'qe-ncard__img', $item['title'] ) ) {
 				echo '<span class="qe-placeholder" aria-hidden="true"></span>';
 			}
@@ -235,8 +236,8 @@ class NewsSlider extends Base {
 			}
 			printf( '<h3 class="qe-card-title">%s</h3>', esc_html( $item['title'] ) );
 			$this->print_text( $item['text'], 'qe-card-text' );
-			$this->print_button( 'slide-link-' . $i, $s['read_more'], $item['link'], 'qe-link-arrow' );
-			echo '</div></article>';
+			$this->print_button( 'slide-link-' . $i, $s['read_more'], $item['link'], 'qe-link-arrow', $item['title'] );
+			echo '</div></article></div>';
 		}
 		echo '</div></div>';
 		$this->print_slider_nav( $s );

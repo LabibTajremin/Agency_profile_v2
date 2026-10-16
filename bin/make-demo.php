@@ -292,9 +292,9 @@ $pages['home'] = array(
 					'button_1_link' => array( 'url' => page_url( 'study-abroad' ) ),
 					'button_2_link' => array( 'url' => page_url( 'international-pathways' ) ),
 					'floats'        => array(
-						array( '_id' => demo_id( 'float' ), 'image' => media( 'hero-1' ), 'x' => array( 'unit' => '%', 'size' => 6 ), 'y' => array( 'unit' => '%', 'size' => 14 ), 'size' => array( 'unit' => 'px', 'size' => 150 ), 'depth' => array( 'size' => 0.4 ) ),
-						array( '_id' => demo_id( 'float' ), 'image' => media( 'hero-2' ), 'x' => array( 'unit' => '%', 'size' => 82 ), 'y' => array( 'unit' => '%', 'size' => 18 ), 'size' => array( 'unit' => 'px', 'size' => 170 ), 'depth' => array( 'size' => 0.7 ) ),
-						array( '_id' => demo_id( 'float' ), 'image' => media( 'hero-3' ), 'x' => array( 'unit' => '%', 'size' => 76 ), 'y' => array( 'unit' => '%', 'size' => 68 ), 'size' => array( 'unit' => 'px', 'size' => 120 ), 'depth' => array( 'size' => 1 ) ),
+						array( '_id' => demo_id( 'float' ), 'image' => media( 'hero-1' ), 'x' => 64, 'y' => 12, 'size' => 220, 'depth' => 0.4 ),
+						array( '_id' => demo_id( 'float' ), 'image' => media( 'hero-2' ), 'x' => 84, 'y' => 40, 'size' => 170, 'depth' => 0.7 ),
+						array( '_id' => demo_id( 'float' ), 'image' => media( 'hero-3' ), 'x' => 68, 'y' => 64, 'size' => 130, 'depth' => 1 ),
 					),
 				)
 			),
@@ -712,7 +712,18 @@ $current             = 'footer';
 $col                 = static function ( $title, $items ) use ( $white ) {
 	return column(
 		array(
-			heading( $title, 'h4', $white ),
+			heading(
+				$title,
+				'h3', // h3: follows the h2 headings above it (heading order).
+				array_merge(
+					$white,
+					array(
+						'typography_typography'  => 'custom',
+						'typography_font_size'   => array( 'unit' => 'px', 'size' => 16 ),
+						'typography_font_weight' => '700',
+					)
+				)
+			),
 			links( $items, 'traditional', array( 'text_color' => '#FFFFFFC7', 'text_color_hover' => '#FFFFFF' ) ),
 		),
 		20,

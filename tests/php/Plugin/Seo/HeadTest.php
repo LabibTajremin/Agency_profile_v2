@@ -137,6 +137,32 @@ final class HeadTest extends SeoTestCase {
 		$this->assertSame( array( 'title' => 'Page not found | Test Site' ), $head->title_parts( $parts ) );
 	}
 
+	public function test_blog_page_uses_its_own_seo_values() {
+		$this->conditionals( array( 'is_home' ) );
+		$this->options['page_for_posts'] = 12;
+		Functions\when( 'get_post' )->justReturn(
+			(object) array(
+				'post_excerpt' => '',
+				'post_content' => '',
+			)
+		);
+		Functions\when( 'has_excerpt' )->justReturn( false );
+		$this->meta[12] = array(
+			'_qe_seo_description' => 'Study news.',
+			'_qe_seo_title'       => 'Our news {sep} {site}',
+		);
+		$head = new Head();
+		$this->assertSame( 'Our news | Test Site', $head->title() );
+		$this->assertSame( 'Study news.', Head::description() );
+		$this->assertSame( 'https://example.test/p/12/', Head::canonical() );
+		Functions\when( 'wp_get_document_title' )->justReturn( 'News' );
+		Functions\when( 'single_post_title' )->justReturn( 'News' );
+		$this->assertSame( 'CollectionPage', Head::graph()['@graph'][2]['@type'] );
+
+		$this->options['page_for_posts'] = 0;
+		$this->assertSame( '', Head::description(), 'Blog index without a Posts page.' );
+	}
+
 	public function test_excerpt() {
 		$this->assertSame( 'Short text.', Head::excerpt( "  Short\n text. " ) );
 		$long    = str_repeat( 'word ', 60 );

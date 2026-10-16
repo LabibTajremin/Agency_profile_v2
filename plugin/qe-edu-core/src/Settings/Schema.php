@@ -31,6 +31,13 @@ defined( 'ABSPATH' ) || exit;
 final class Schema {
 
 	/**
+	 * Fields of this request (building them translates every label).
+	 *
+	 * @var array<string,array<string,mixed>>|null
+	 */
+	private static $fields = null;
+
+	/**
 	 * All tabs, filterable through `qe_edu_settings_schema`.
 	 *
 	 * @return array<string,array<string,mixed>> tab id => [label, icon, intro, fields].
@@ -105,6 +112,10 @@ final class Schema {
 	 * @return array<string,array<string,mixed>>
 	 */
 	public static function fields() {
+		if ( null !== self::$fields ) {
+			return self::$fields;
+		}
+
 		$fields = array();
 
 		foreach ( self::tabs() as $tab => $definition ) {
@@ -117,7 +128,19 @@ final class Schema {
 			}
 		}
 
+		self::$fields = $fields;
+
 		return $fields;
+	}
+
+	/**
+	 * Forget the cached fields (labels and defaults are translated, so this
+	 * runs whenever a translation loads or the language changes).
+	 *
+	 * @return void
+	 */
+	public static function flush() {
+		self::$fields = null;
 	}
 
 	/**
@@ -736,6 +759,12 @@ final class Schema {
 				'type'    => 'checkbox',
 				'label'   => __( 'Load theme scripts after the page', 'qe-edu' ),
 				'help'    => __( 'The page shows before scripts run.', 'qe-edu' ),
+				'default' => true,
+			),
+			'jquery_footer'  => array(
+				'type'    => 'checkbox',
+				'label'   => __( 'Load jQuery at the end of the page', 'qe-edu' ),
+				'help'    => __( 'Pages appear sooner. Turn this off only if a plugin feature stops working.', 'qe-edu' ),
 				'default' => true,
 			),
 		);

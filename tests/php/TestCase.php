@@ -35,6 +35,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 		Monkey\setUp();
+		\QeEdu\Core\Settings\Schema::flush();
 
 		Functions\stubTranslationFunctions();
 		Functions\stubEscapeFunctions();

@@ -205,8 +205,14 @@
                                 "widgetType": "heading",
                                 "settings": {
                                     "title": "Resources",
-                                    "header_size": "h4",
-                                    "title_color": "#FFFFFF"
+                                    "header_size": "h3",
+                                    "title_color": "#FFFFFF",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "typography_font_weight": "700"
                                 },
                                 "elements": []
                             },
@@ -318,8 +324,14 @@
                                 "widgetType": "heading",
                                 "settings": {
                                     "title": "Study",
-                                    "header_size": "h4",
-                                    "title_color": "#FFFFFF"
+                                    "header_size": "h3",
+                                    "title_color": "#FFFFFF",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "typography_font_weight": "700"
                                 },
                                 "elements": []
                             },
@@ -431,8 +443,14 @@
                                 "widgetType": "heading",
                                 "settings": {
                                     "title": "About",
-                                    "header_size": "h4",
-                                    "title_color": "#FFFFFF"
+                                    "header_size": "h3",
+                                    "title_color": "#FFFFFF",
+                                    "typography_typography": "custom",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "typography_font_weight": "700"
                                 },
                                 "elements": []
                             },

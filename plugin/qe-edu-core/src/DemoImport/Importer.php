@@ -287,6 +287,7 @@ class Importer {
 			$args = array(
 				'post_type'    => $post['type'],
 				'post_status'  => 'publish',
+				'post_author'  => $this->author(),
 				'post_title'   => $post['title'],
 				'post_excerpt' => isset( $post['excerpt'] ) ? $post['excerpt'] : '',
 				'post_content' => isset( $post['content'] ) ? $post['content'] : '',
@@ -320,6 +321,30 @@ class Importer {
 	}
 
 	/**
+	 * Author of imported posts: the person importing, or (from WP-CLI) the
+	 * first administrator.
+	 *
+	 * @return int
+	 */
+	private function author() {
+		$user = get_current_user_id();
+		if ( $user ) {
+			return $user;
+		}
+
+		$admins = get_users(
+			array(
+				'role'    => 'administrator',
+				'number'  => 1,
+				'fields'  => 'ID',
+				'orderby' => 'ID',
+			)
+		);
+
+		return $admins ? (int) $admins[0] : 0;
+	}
+
+	/**
 	 * Store Elementor data on a post.
 	 *
 	 * @param int          $post_id Post id.
@@ -349,6 +374,7 @@ class Importer {
 		$args     = array(
 			'post_type'   => 'page',
 			'post_status' => 'publish',
+			'post_author' => $this->author(),
 			'post_title'  => $page['title'],
 			'post_name'   => $page['slug'],
 		);

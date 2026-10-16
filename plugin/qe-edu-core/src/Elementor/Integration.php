@@ -8,6 +8,8 @@
 
 namespace QeEdu\Core\Elementor;
 
+use QeEdu\Core\Settings\Settings;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -122,5 +124,12 @@ final class Integration {
 				'error' => __( 'Sorry, something went wrong. Please try again.', 'qe-edu' ),
 			)
 		);
+
+		// A header or footer template shows our widgets on every page: load
+		// their styles in <head> instead of where the template renders, so the
+		// header never shows unstyled first (layout shift).
+		if ( absint( Settings::get( 'templates.header' ) ) || absint( Settings::get( 'templates.footer' ) ) ) {
+			wp_enqueue_style( 'qe-edu-core-widgets' );
+		}
 	}
 }

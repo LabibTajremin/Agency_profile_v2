@@ -8,6 +8,7 @@
 namespace QeEdu\Tests\Plugin;
 
 use Brain\Monkey\Filters;
+use Brain\Monkey\Functions;
 use QeEdu\Core\Settings\Schema;
 use QeEdu\Tests\ThemeLoader;
 
@@ -17,6 +18,18 @@ use QeEdu\Tests\ThemeLoader;
 final class SchemaTest extends PluginTestCase {
 
 	const TYPES = array( 'text', 'textarea', 'code', 'url', 'email', 'tel', 'number', 'checkbox', 'select', 'color', 'media', 'template', 'swatch', 'redirects' );
+
+	public function test_fields_are_cached_until_flushed() {
+		$first = Schema::fields();
+		Functions\when( '__' )->alias(
+			static function ( $text ) {
+				return 'X ' . $text;
+			}
+		);
+		$this->assertSame( $first, Schema::fields(), 'Built once per request.' );
+		Schema::flush();
+		$this->assertSame( 'X Accent colour', Schema::fields()['colors.accent']['label'] );
+	}
 
 	public function test_texts_tab_without_theme_has_only_the_page_templates() {
 		if ( function_exists( 'qe_edu_default_strings' ) ) {

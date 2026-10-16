@@ -243,5 +243,10 @@ final class TemplateTagsTest extends ThemeTestCase {
 
 		$this->assertStringContainsString( 'Posted on <time datetime="2026-01-01T00:00:00+00:00">January 1, 2026</time>', $out );
 		$this->assertStringContainsString( 'by <a href="https://example.test/author/a/">Ada</a>', $out );
+
+		Functions\when( 'get_the_author' )->justReturn( '' );
+		$out = $this->capture( 'qe_edu_posted_on' );
+		$this->assertStringNotContainsString( '<a ', $out, 'No empty author link.' );
+		$this->assertStringEndsWith( '</time></p>', $out );
 	}
 }

@@ -228,10 +228,12 @@ class ServiceSlider extends Base {
 		echo '</div>';
 
 		echo '<div class="qe-slider"' . $this->slider_attributes( $s ) . '><div class="swiper"><div class="swiper-wrapper">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in slider_attributes().
-		foreach ( $this->items( $s ) as $i => $item ) {
+		$items = $this->items( $s );
+		$this->prime_images( $items );
+		foreach ( $items as $i => $item ) {
 			$button = '' !== (string) $item['button'] ? $item['button'] : $s['button_text'];
 
-			echo '<article class="swiper-slide qe-scard">';
+			echo '<div class="swiper-slide"><article class="qe-scard">';
 			echo '<div class="qe-scard__media">';
 			if ( ! $this->print_image( $item['image'], 'qe-card', 'qe-scard__img', $item['title'] ) ) {
 				echo '<span class="qe-placeholder" aria-hidden="true"></span>';
@@ -239,8 +241,8 @@ class ServiceSlider extends Base {
 			echo '</div><div class="qe-scard__body">';
 			printf( '<h3 class="qe-card-title">%s</h3>', esc_html( $item['title'] ) );
 			$this->print_text( $item['text'], 'qe-card-text' );
-			$this->print_button( 'card-link-' . $i, $button, $item['link'], 'qe-link-arrow' );
-			echo '</div></article>';
+			$this->print_button( 'card-link-' . $i, $button, $item['link'], 'qe-link-arrow', $item['title'] );
+			echo '</div></article></div>';
 		}
 		echo '</div></div>';
 		$this->print_slider_nav( $s );

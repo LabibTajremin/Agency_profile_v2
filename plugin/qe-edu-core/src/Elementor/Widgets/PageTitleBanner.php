@@ -130,7 +130,7 @@ class PageTitleBanner extends Base {
 
 		printf( '<header class="qe-banner%1$s" style="--qe-banner-min:%2$dpx">', $has_image ? ' has-image' : '', absint( $s['min_height'] ) );
 		if ( $has_image ) {
-			$this->print_image( $s['background_image'], 'qe-hero', 'qe-banner__bg' );
+			$this->print_image( $s['background_image'], 'qe-hero', 'qe-banner__bg', '', array( 'fetchpriority' => 'high' ) );
 		}
 		echo '<div class="qe-banner__inner">';
 		printf( '<h1 class="qe-banner__title">%s</h1>', esc_html( self::title( $s ) ) );

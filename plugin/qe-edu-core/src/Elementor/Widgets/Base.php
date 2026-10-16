@@ -406,9 +406,11 @@ abstract class Base extends Widget_Base {
 	 * @param string              $text  Button text.
 	 * @param array<string,mixed> $link  Elementor URL value.
 	 * @param string              $css_class CSS class.
+	 * @param string              $context   Hidden text naming the target, for
+	 *                                       screen readers ("Learn more: Visas").
 	 * @return void
 	 */
-	protected function print_button( $key, $text, $link, $css_class = 'qe-btn' ) {
+	protected function print_button( $key, $text, $link, $css_class = 'qe-btn', $context = '' ) {
 		if ( '' === trim( (string) $text ) ) {
 			return;
 		}
@@ -416,7 +418,12 @@ abstract class Base extends Widget_Base {
 		$this->add_render_attribute( $key, 'class', $css_class );
 		if ( is_array( $link ) && ! empty( $link['url'] ) ) {
 			$this->add_link_attributes( $key, $link );
-			printf( '<a %1$s>%2$s</a>', $this->get_render_attribute_string( $key ), esc_html( $text ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Elementor escapes attributes.
+			printf(
+				'<a %1$s>%2$s%3$s</a>',
+				$this->get_render_attribute_string( $key ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Elementor escapes attributes.
+				esc_html( $text ),
+				'' !== $context ? '<span class="qe-sr">: ' . esc_html( $context ) . '</span>' : '' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped here.
+			);
 			return;
 		}
 
@@ -438,6 +445,10 @@ abstract class Base extends Widget_Base {
 		$id  = is_array( $media ) ? absint( isset( $media['id'] ) ? $media['id'] : 0 ) : absint( $media );
 		$url = is_array( $media ) && ! empty( $media['url'] ) ? (string) $media['url'] : '';
 
+		// `alt` in $attrs forces the alt text (e.g. '' for a decorative image).
+		$forced = array_key_exists( 'alt', $attrs ) ? (string) $attrs['alt'] : null;
+		unset( $attrs['alt'] );
+
 		if ( $id ) {
 			$alt_text = (string) get_post_meta( $id, '_wp_attachment_image_alt', true );
 			$html     = wp_get_attachment_image(
@@ -447,7 +458,7 @@ abstract class Base extends Widget_Base {
 				array_merge(
 					array(
 						'class' => $css_class,
-						'alt'   => '' !== $alt_text ? $alt_text : $alt,
+						'alt'   => null !== $forced ? $forced : ( '' !== $alt_text ? $alt_text : $alt ),
 					),
 					$attrs
 				)
@@ -463,11 +474,36 @@ abstract class Base extends Widget_Base {
 			foreach ( $attrs as $name => $value ) {
 				$extra .= sprintf( ' %1$s="%2$s"', esc_attr( $name ), esc_attr( $value ) );
 			}
-			printf( '<img src="%1$s" class="%2$s" alt="%3$s" loading="lazy" decoding="async"%4$s>', esc_url( $url ), esc_attr( $css_class ), esc_attr( $alt ), $extra ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above.
+			printf( '<img src="%1$s" class="%2$s" alt="%3$s" loading="lazy" decoding="async"%4$s>', esc_url( $url ), esc_attr( $css_class ), esc_attr( null !== $forced ? $forced : $alt ), $extra ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above.
 			return true;
 		}
 
 		return false;
+	}
+
+	/**
+	 * Load the attachments of many images at once: two queries for the whole
+	 * list instead of two per image when each is printed.
+	 *
+	 * @param array<int,array<string,mixed>> $items Items.
+	 * @param string[]                       $keys  Keys holding a media value or attachment id.
+	 * @return void
+	 */
+	protected function prime_images( $items, $keys = array( 'image' ) ) {
+		$ids = array();
+		foreach ( $items as $item ) {
+			foreach ( $keys as $key ) {
+				$media = isset( $item[ $key ] ) ? $item[ $key ] : 0;
+				$id    = is_array( $media ) ? absint( isset( $media['id'] ) ? $media['id'] : 0 ) : absint( $media );
+				if ( $id ) {
+					$ids[ $id ] = $id;
+				}
+			}
+		}
+
+		if ( $ids ) {
+			_prime_post_caches( array_values( $ids ), false, true );
+		}
 	}
 
 	/**

@@ -19,6 +19,51 @@ final class ElementorCompatTest extends ThemeTestCase {
 		parent::tearDown();
 	}
 
+	public function test_template_css_is_enqueued_in_head() {
+		$this->assertTrue( \QeEdu\Tests\ThemeLoader::has( 'wp_enqueue_scripts', 'qe_edu_enqueue_template_css', 20 ) );
+		\Elementor\Core\Files\CSS\Post::$enqueued = array();
+		foreach ( array( 'is_singular', 'is_home', 'is_archive', 'is_search', 'is_404' ) as $tag ) {
+			Functions\when( $tag )->justReturn( false );
+		}
+		Functions\when( 'get_post_status' )->alias(
+			static function ( $id ) {
+				return 99 === $id ? 'draft' : 'publish';
+			}
+		);
+
+		Functions\when( 'did_action' )->justReturn( 0 );
+		qe_edu_enqueue_template_css();
+		$this->assertSame( array(), \Elementor\Core\Files\CSS\Post::$enqueued, 'No Elementor.' );
+
+		Functions\when( 'did_action' )->justReturn( 1 );
+		qe_edu_enqueue_template_css();
+		$this->assertSame( array(), \Elementor\Core\Files\CSS\Post::$enqueued, 'No templates chosen.' );
+
+		$frontend = \Mockery::mock();
+		$frontend->shouldReceive( 'enqueue_styles' )->once();
+		\Elementor\Plugin::$instance = (object) array( 'frontend' => $frontend );
+		$this->options['qe_edu_settings'] = array(
+			'templates' => array(
+				'header'    => 11,
+				'footer'    => 99,
+				'single'    => 12,
+				'archive'   => 13,
+				'not_found' => 14,
+			),
+		);
+		qe_edu_enqueue_template_css();
+		$this->assertSame( array( 11 ), \Elementor\Core\Files\CSS\Post::$enqueued, 'Unpublished templates are skipped.' );
+
+		Functions\when( 'is_singular' )->justReturn( true );
+		$this->assertSame( array( 11, 12 ), qe_edu_active_template_ids() );
+		Functions\when( 'is_singular' )->justReturn( false );
+		Functions\when( 'is_search' )->justReturn( true );
+		$this->assertSame( array( 11, 13 ), qe_edu_active_template_ids() );
+		Functions\when( 'is_search' )->justReturn( false );
+		Functions\when( 'is_404' )->justReturn( true );
+		$this->assertSame( array( 11, 14 ), qe_edu_active_template_ids() );
+	}
+
 	public function test_register_locations() {
 		$manager = \Mockery::mock();
 		$manager->shouldReceive( 'register_all_core_location' )->once();

@@ -62,6 +62,19 @@ final class ElementorTest extends PluginTestCase {
 		Functions\expect( 'wp_register_style' )->once()->with( 'qe-edu-core-widgets', QE_EDU_CORE_URL . 'assets/css/widgets.css', array(), '1.0.0' );
 		Functions\expect( 'wp_register_script' )->once()->with( 'qe-edu-core-widgets', QE_EDU_CORE_URL . 'assets/js/widgets.min.js', array( 'elementor-frontend' ), '1.0.0', array( 'in_footer' => true ) );
 		Functions\expect( 'wp_localize_script' )->once()->with( 'qe-edu-core-widgets', 'qeEduWidgets', \Mockery::on( static fn( $d ) => isset( $d['pause'], $d['play'], $d['error'] ) ) );
+		Functions\expect( 'wp_enqueue_style' )->never();
+		( new Integration() )->register_assets();
+		$this->addToAssertionCount( 1 );
+	}
+
+	public function test_widget_styles_load_early_with_a_header_or_footer_template() {
+		Functions\when( 'wp_register_style' )->justReturn( true );
+		Functions\when( 'wp_register_script' )->justReturn( true );
+		Functions\when( 'wp_localize_script' )->justReturn( true );
+		Functions\expect( 'wp_enqueue_style' )->twice()->with( 'qe-edu-core-widgets' );
+		$this->settings( array( 'templates' => array( 'header' => 5 ) ) );
+		( new Integration() )->register_assets();
+		$this->settings( array( 'templates' => array( 'footer' => 6 ) ) );
 		( new Integration() )->register_assets();
 		$this->addToAssertionCount( 1 );
 	}

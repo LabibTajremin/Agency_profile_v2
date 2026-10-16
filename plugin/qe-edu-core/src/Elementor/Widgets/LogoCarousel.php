@@ -188,7 +188,8 @@ class LogoCarousel extends Base {
 	protected function render() {
 		$s     = $this->get_settings_for_display();
 		$items = $this->items( $s );
-		$mode  = in_array( $s['mode'], array( 'marquee', 'step', 'static' ), true ) ? $s['mode'] : 'marquee';
+		$this->prime_images( $items );
+		$mode = in_array( $s['mode'], array( 'marquee', 'step', 'static' ), true ) ? $s['mode'] : 'marquee';
 
 		if ( ! $items ) {
 			$this->print_editor_notice( __( 'No logos yet. Add them under Partners in the dashboard menu, or choose images.', 'qe-edu' ) );
@@ -204,7 +205,9 @@ class LogoCarousel extends Base {
 		if ( 'step' === $mode ) {
 			echo '<div class="qe-slider"' . $this->slider_attributes( $s ) . '><div class="swiper"><div class="swiper-wrapper">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in slider_attributes().
 			foreach ( $items as $item ) {
-				$this->print_logo( $item, 'swiper-slide' );
+				echo '<div class="swiper-slide">';
+				$this->print_logo( $item, '' );
+				echo '</div>';
 			}
 			echo '</div></div>';
 			$this->print_slider_nav( $s );

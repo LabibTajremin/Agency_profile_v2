@@ -288,3 +288,26 @@ namespace Elementor\Modules\DynamicTags {
 		const MEDIA_CATEGORY = 'media';
 	}
 }
+
+namespace Elementor\Core\Files\CSS {
+
+	/** Generated CSS file of a post / template (records enqueues). */
+	class Post {
+		/** @var int[] */
+		public static $enqueued = array();
+		/** @var int */
+		private $id;
+
+		public function __construct( $id ) {
+			$this->id = $id;
+		}
+
+		public static function create( $id ) {
+			return new self( $id );
+		}
+
+		public function enqueue() {
+			self::$enqueued[] = $this->id;
+		}
+	}
+}

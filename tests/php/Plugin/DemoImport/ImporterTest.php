@@ -45,6 +45,8 @@ final class ImporterTest extends PluginTestCase {
 		\Elementor\Plugin::$instance = (object) array();
 
 		Functions\when( 'wp_raise_memory_limit' )->justReturn( '256M' );
+		Functions\when( 'get_current_user_id' )->justReturn( 0 );
+		Functions\when( 'get_users' )->justReturn( array( '42' ) );
 		Functions\when( 'wp_slash' )->returnArg();
 		Functions\when( 'trailingslashit' )->alias(
 			static function ( $path ) {
@@ -271,6 +273,7 @@ final class ImporterTest extends PluginTestCase {
 
 		// Pages.
 		$home = $this->id( 'page:home' );
+		$this->assertSame( 42, $this->posts[ $home ]['post_author'], 'From WP-CLI: the first administrator.' );
 		$this->assertSame( 'Home', $this->posts[ $home ]['post_title'] );
 		$this->assertSame( 'publish', $this->posts[ $home ]['post_status'] );
 		$this->assertSame( Importer::PAGE_TEMPLATE, $this->meta[ $home ]['_wp_page_template'] );
@@ -352,6 +355,17 @@ final class ImporterTest extends PluginTestCase {
 		$this->assertSame( 'page', $this->options['show_on_front'] );
 		$this->assertSame( $home, $this->options['page_on_front'] );
 		$this->assertSame( $this->id( 'page:news' ), $this->options['page_for_posts'] );
+	}
+
+	public function test_author() {
+		Functions\when( 'get_current_user_id' )->justReturn( 7 );
+		$this->importer()->run( 'contact' );
+		$this->assertSame( 7, $this->posts[ $this->id( 'page:contact' ) ]['post_author'] );
+
+		Functions\when( 'get_current_user_id' )->justReturn( 0 );
+		Functions\when( 'get_users' )->justReturn( array() );
+		$this->importer()->run( 'news' );
+		$this->assertSame( 0, $this->posts[ $this->id( 'page:news' ) ]['post_author'] );
 	}
 
 	public function test_import_again_creates_nothing() {

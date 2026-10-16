@@ -279,9 +279,16 @@ class AnimatedHero extends Base {
 		if ( $words ) {
 			// Screen readers get every phrase once; the animation is hidden from them.
 			printf( '<span class="screen-reader-text">%s</span>', esc_html( implode( ', ', $words ) ) );
+			// Invisible copies of every phrase reserve the space of the longest
+			// one, so typing never moves the content below (no layout shift).
+			$sizers = '';
+			foreach ( $words as $word ) {
+				$sizers .= '<span class="qe-hero__sizer">' . esc_html( $word ) . '</span>';
+			}
 			printf(
-				'<span class="qe-hero__rotator" aria-hidden="true" data-words="%1$s"><span class="qe-hero__word">%2$s</span>%3$s</span>',
+				'<span class="qe-hero__rotator" aria-hidden="true" data-words="%1$s">%2$s<span class="qe-hero__live"><span class="qe-hero__word">%3$s</span>%4$s</span></span>',
 				esc_attr( (string) wp_json_encode( $words ) ),
+				$sizers, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped above.
 				esc_html( $words[0] ),
 				'yes' === $s['cursor'] ? '<span class="qe-hero__cursor"></span>' : ''
 			);

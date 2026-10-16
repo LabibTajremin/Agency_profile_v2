@@ -214,19 +214,22 @@ class DestinationsGrid extends Base {
 			echo '<div class="qe-dgrid">';
 		}
 
-		foreach ( $this->items( $s ) as $item ) {
+		$items = $this->items( $s );
+		$this->prime_images( $items, array( 'image', 'flag' ) );
+		foreach ( $items as $item ) {
 			$title = str_replace( '{name}', $item['name'], (string) $s['title_template'] );
 			$tag   = '' !== $item['url'] ? 'a' : 'div';
 
+			echo $slider ? '<div class="swiper-slide">' : '';
 			printf(
-				'<%1$s class="qe-dcard qe-dcard--%2$s%3$s"%4$s>',
+				'<%1$s class="qe-dcard qe-dcard--%2$s"%3$s>',
 				tag_escape( $tag ),
 				esc_attr( $hover ),
-				$slider ? ' swiper-slide' : '',
 				'a' === $tag ? ' href="' . esc_url( $item['url'] ) . '"' : ''
 			);
 			echo '<span class="qe-dcard__media">';
-			if ( ! $this->print_image( $item['image'], 'qe-card', 'qe-dcard__img', $item['name'] ) ) {
+			// Decorative: the card title right below names the destination.
+			if ( ! $this->print_image( $item['image'], 'qe-card', 'qe-dcard__img', '', array( 'alt' => '' ) ) ) {
 				echo '<span class="qe-placeholder" aria-hidden="true"></span>';
 			}
 			echo '</span>';
@@ -236,6 +239,7 @@ class DestinationsGrid extends Base {
 				echo '</span>';
 			}
 			printf( '<span class="qe-dcard__title">%s</span></%s>', esc_html( $title ), tag_escape( $tag ) );
+			echo $slider ? '</div>' : '';
 		}
 
 		if ( $slider ) {

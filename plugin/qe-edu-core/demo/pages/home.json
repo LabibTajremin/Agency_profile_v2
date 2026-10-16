@@ -33,21 +33,10 @@
                                 "id": "{{image:hero-1}}",
                                 "url": "{{image-url:hero-1}}"
                             },
-                            "x": {
-                                "unit": "%",
-                                "size": 6
-                            },
-                            "y": {
-                                "unit": "%",
-                                "size": 14
-                            },
-                            "size": {
-                                "unit": "px",
-                                "size": 150
-                            },
-                            "depth": {
-                                "size": 0.4
-                            }
+                            "x": 64,
+                            "y": 12,
+                            "size": 220,
+                            "depth": 0.4
                         },
                         {
                             "_id": "6748112",
@@ -55,21 +44,10 @@
                                 "id": "{{image:hero-2}}",
                                 "url": "{{image-url:hero-2}}"
                             },
-                            "x": {
-                                "unit": "%",
-                                "size": 82
-                            },
-                            "y": {
-                                "unit": "%",
-                                "size": 18
-                            },
-                            "size": {
-                                "unit": "px",
-                                "size": 170
-                            },
-                            "depth": {
-                                "size": 0.7
-                            }
+                            "x": 84,
+                            "y": 40,
+                            "size": 170,
+                            "depth": 0.7
                         },
                         {
                             "_id": "a9510e1",
@@ -77,21 +55,10 @@
                                 "id": "{{image:hero-3}}",
                                 "url": "{{image-url:hero-3}}"
                             },
-                            "x": {
-                                "unit": "%",
-                                "size": 76
-                            },
-                            "y": {
-                                "unit": "%",
-                                "size": 68
-                            },
-                            "size": {
-                                "unit": "px",
-                                "size": 120
-                            },
-                            "depth": {
-                                "size": 1
-                            }
+                            "x": 68,
+                            "y": 64,
+                            "size": 130,
+                            "depth": 1
                         }
                     ]
                 },
