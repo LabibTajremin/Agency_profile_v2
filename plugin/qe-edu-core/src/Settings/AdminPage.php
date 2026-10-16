@@ -344,7 +344,7 @@ class AdminPage {
 				'<div class="qe-settings__preview"><p class="qe-settings__preview-label">%1$s</p><iframe title="%2$s" src="%3$s" data-qe-preview loading="lazy"></iframe></div>',
 				esc_html__( 'Live preview — changes show here before you save.', 'qe-edu' ),
 				esc_attr__( 'Live preview of the home page', 'qe-edu' ),
-				esc_url( home_url( '/' ) )
+				esc_url( add_query_arg( 'qe_preview', '1', home_url( '/' ) ) )
 			);
 		}
 

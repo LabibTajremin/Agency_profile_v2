@@ -32,6 +32,15 @@ final class Analytics {
 	}
 
 	/**
+	 * Whether this request is the Theme Settings live preview (never tracked).
+	 *
+	 * @return bool
+	 */
+	public static function is_preview() {
+		return isset( $_GET['qe_preview'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only flag.
+	}
+
+	/**
 	 * Valid GA4 id, or ''.
 	 *
 	 * @return string
@@ -91,7 +100,7 @@ final class Analytics {
 	 */
 	public function head() {
 		$loader = self::loader();
-		if ( '' === $loader ) {
+		if ( '' === $loader || self::is_preview() ) {
 			return;
 		}
 
@@ -110,7 +119,7 @@ final class Analytics {
 	 */
 	public function body() {
 		$gtm = self::gtm();
-		if ( '' === $gtm || self::needs_consent() ) {
+		if ( '' === $gtm || self::needs_consent() || self::is_preview() ) {
 			return;
 		}
 
@@ -126,7 +135,7 @@ final class Analytics {
 	 * @return void
 	 */
 	public function consent_bar() {
-		if ( ! self::needs_consent() ) {
+		if ( ! self::needs_consent() || self::is_preview() ) {
 			return;
 		}
 

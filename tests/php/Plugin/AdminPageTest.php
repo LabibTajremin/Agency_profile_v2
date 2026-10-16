@@ -229,6 +229,7 @@ final class AdminPageTest extends PluginTestCase {
 		$_GET['qe_notice'] = 'saved';
 		$out               = $this->capture( array( new AdminPage(), 'render' ) );
 		$this->assertStringContainsString( 'data-qe-preview', $out );
+		$this->assertStringContainsString( 'src="https://example.test/?qe_preview=1" data-qe-preview', $out );
 		$this->assertStringContainsString( 'notice-success', $out );
 		$this->assertStringContainsString( 'data-qe-accent', $out );
 		$this->assertSame( 13, substr_count( $out, 'data-qe-accent' ) );

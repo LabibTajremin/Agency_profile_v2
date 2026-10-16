@@ -58,7 +58,7 @@ test( 'every swatch updates the front end and Elementor globals', async ( {
 		await expect
 			.poll( () =>
 				preview
-					.locator( 'html' )
+					.locator( 'body' )
 					.evaluate( ( el ) =>
 						el.style
 							.getPropertyValue( '--qe-primary' )

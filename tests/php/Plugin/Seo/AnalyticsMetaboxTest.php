@@ -20,6 +20,7 @@ final class AnalyticsMetaboxTest extends SeoTestCase {
 
 	protected function tearDown(): void {
 		$_POST = array();
+		$_GET  = array();
 		parent::tearDown();
 	}
 
@@ -194,6 +195,23 @@ final class AnalyticsMetaboxTest extends SeoTestCase {
 		$this->assertStringContainsString( '<p>Cookies?</p>', $html );
 		$this->assertStringContainsString( '>Sure</button>', $html );
 		$this->assertStringContainsString( '>Nope</button>', $html );
+	}
+
+	public function test_nothing_is_printed_in_the_settings_preview() {
+		$analytics = new Analytics();
+		$this->seo(
+			array(
+				'gtm_id'  => 'GTM-ABCD',
+				'consent' => true,
+			)
+		);
+		$this->assertFalse( Analytics::is_preview() );
+		$_GET['qe_preview'] = '1';
+		$this->assertTrue( Analytics::is_preview() );
+		$this->assertSame( '', $this->capture( array( $analytics, 'head' ) ) );
+		$this->assertSame( '', $this->capture( array( $analytics, 'consent_bar' ) ) );
+		$this->seo( array( 'gtm_id' => 'GTM-ABCD' ) );
+		$this->assertSame( '', $this->capture( array( $analytics, 'body' ) ) );
 	}
 
 	public function test_metabox_register_and_add() {
