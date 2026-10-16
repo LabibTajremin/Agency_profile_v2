@@ -53,6 +53,33 @@ final class KitSyncTest extends PluginTestCase {
 		}
 	}
 
+	public function test_sync_sets_button_styles() {
+		$this->options['elementor_active_kit'] = 9;
+		$this->meta[9]['_elementor_page_settings'] = array( '__globals__' => array( 'link_normal_color' => 'globals/colors?id=primary' ) );
+		$files = \Mockery::mock();
+		$files->shouldReceive( 'clear_cache' );
+		\Elementor\Plugin::$instance = (object) array( 'files_manager' => $files );
+
+		( new KitSync() )->sync();
+		$kit = $this->meta[9]['_elementor_page_settings'];
+		$this->assertSame( 'globals/colors?id=primary', $kit['__globals__']['button_background_color'] );
+		$this->assertSame( 'globals/colors?id=accent', $kit['__globals__']['button_hover_background_color'] );
+		$this->assertSame( 'globals/typography?id=accent', $kit['__globals__']['button_typography_typography'] );
+		$this->assertSame( 'globals/colors?id=primary', $kit['__globals__']['link_normal_color'], 'Other globals kept' );
+		$this->assertSame( 'var(--qe-on-primary)', $kit['button_text_color'] );
+		$this->assertSame( 'var(--qe-on-primary-dark)', $kit['button_hover_text_color'] );
+		$this->assertSame( '10', $kit['button_border_radius']['top'] );
+
+		$this->settings( array( 'colors' => array( 'button_style' => 'pill' ) ) );
+		( new KitSync() )->sync();
+		$this->assertSame( '999', $this->meta[9]['_elementor_page_settings']['button_border_radius']['left'] );
+
+		$this->settings( array( 'colors' => array( 'button_style' => 'square' ) ) );
+		$this->assertSame( '0', KitSync::button_styles( \QeEdu\Core\Settings\Settings::all() )['button_border_radius']['right'] );
+		$this->settings( array( 'colors' => array( 'button_style' => 'bogus' ) ) );
+		$this->assertSame( '10', KitSync::button_styles( \QeEdu\Core\Settings\Settings::all() )['button_border_radius']['right'] );
+	}
+
 	public function test_sync_fonts_and_google_option() {
 		$this->options['elementor_active_kit']     = 2;
 		$this->meta[2]['_elementor_page_settings'] = 'garbage';

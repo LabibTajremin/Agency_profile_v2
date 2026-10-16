@@ -1,3 +1,10 @@
 {
-	"redefinable-internals": [ "is_uploaded_file", "header", "exit", "defined", "class_exists" ]
+	"redefinable-internals": [
+		"is_uploaded_file",
+		"header",
+		"exit",
+		"defined",
+		"class_exists",
+		"function_exists"
+	]
 }

@@ -1,0 +1,269 @@
+[
+    {
+        "id": "d791ba0",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "95bb234",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "An online English test with results in 48 hours.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "bf6130c",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "boxed_width": {
+                "unit": "px",
+                "size": 860
+            }
+        },
+        "elements": [
+            {
+                "id": "50a029e",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "About the ELP Test",
+                    "header_size": "h2"
+                },
+                "elements": []
+            },
+            {
+                "id": "512d63f",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                    "editor": "<p>The English Language Proficiency Test checks reading, writing, listening and speaking in about two hours. Take it from home and receive your certificate within 48 hours.</p>"
+                },
+                "elements": []
+            },
+            {
+                "id": "7f94cd7",
+                "elType": "widget",
+                "widgetType": "button",
+                "settings": {
+                    "text": "Book your test",
+                    "link": {
+                        "url": "{{page-url:contact}}",
+                        "is_external": "",
+                        "nofollow": ""
+                    },
+                    "size": "md"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "87eff6e",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "_css_classes": "qe-section-alt"
+        },
+        "elements": [
+            {
+                "id": "74bb4de",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "What the test includes",
+                    "header_size": "h2"
+                },
+                "elements": []
+            },
+            {
+                "id": "b7757e1",
+                "elType": "widget",
+                "widgetType": "icon-list",
+                "settings": {
+                    "icon_list": [
+                        {
+                            "_id": "1041353",
+                            "text": "Reading — 30 minutes",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "440a713",
+                            "text": "Listening — 30 minutes",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "10151ed",
+                            "text": "Writing — 40 minutes",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "63f5ad7",
+                            "text": "Speaking — 15 minutes with a live examiner",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        }
+                    ],
+                    "view": "traditional"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "c9035ab",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "142a3bd",
+                "elType": "widget",
+                "widgetType": "qe-faq",
+                "settings": {
+                    "heading": "Frequently asked questions",
+                    "items": [
+                        {
+                            "_id": "fa6a1c4",
+                            "question": "Which universities accept the ELP Test?",
+                            "answer": "<p>All of our partner universities accept it for admission. Ask us about a specific university.</p>"
+                        },
+                        {
+                            "_id": "e8f2c25",
+                            "question": "What do I need on the day?",
+                            "answer": "<p>A computer with a camera and microphone, a quiet room and your passport.</p>"
+                        },
+                        {
+                            "_id": "95e053d",
+                            "question": "Can I retake the test?",
+                            "answer": "<p>Yes, you can book a new test after 14 days.</p>"
+                        }
+                    ]
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

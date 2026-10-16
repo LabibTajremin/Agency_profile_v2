@@ -1,0 +1,122 @@
+[
+    {
+        "id": "58ceaca",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "6ff5c8b",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "Fairs, webinars and information sessions.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "74f88e5",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "a42df5d",
+                "elType": "widget",
+                "widgetType": "qe-event-list",
+                "settings": {
+                    "count": 12
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "b594120",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "aaef30f",
+                "elType": "widget",
+                "widgetType": "qe-newsletter",
+                "settings": {
+                    "heading": "Never miss an event"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

@@ -1,0 +1,417 @@
+[
+    {
+        "id": "b644e2b",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "4dd997e",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "Build the English you need to succeed.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "012080d",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "7946426",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 48,
+                        "column": "48",
+                        "row": "48"
+                    },
+                    "flex_align_items": "center",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    }
+                },
+                "elements": [
+                    {
+                        "id": "5631f8e",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 55
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "621b9ef",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Learn with experienced teachers",
+                                    "header_size": "h2"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "7431b57",
+                                "elType": "widget",
+                                "widgetType": "text-editor",
+                                "settings": {
+                                    "editor": "<p>Small classes, flexible timetables and teachers who know exactly what universities expect. Study in class or online.</p>"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    },
+                    {
+                        "id": "c58c562",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 45
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "d81b07e",
+                                "elType": "widget",
+                                "widgetType": "image",
+                                "settings": {
+                                    "image": {
+                                        "id": "{{image:service-preparation}}",
+                                        "url": "{{image-url:service-preparation}}"
+                                    },
+                                    "image_size": "large"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    }
+                ],
+                "isInner": false
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "01e4453",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "_css_classes": "qe-section-alt"
+        },
+        "elements": [
+            {
+                "id": "65f5518",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "Our courses",
+                    "header_size": "h2"
+                },
+                "elements": []
+            },
+            {
+                "id": "1b6046b",
+                "elType": "widget",
+                "widgetType": "icon-list",
+                "settings": {
+                    "icon_list": [
+                        {
+                            "_id": "ff44f7e",
+                            "text": "General English — all levels, beginner to advanced",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "699b79c",
+                            "text": "Academic English — essays, presentations and research skills",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "3bc01b7",
+                            "text": "Test preparation — IELTS, PTE and our ELP Test",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "926229f",
+                            "text": "One-to-one lessons — at a time that suits you",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        }
+                    ],
+                    "view": "traditional"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "caca42a",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "c6517aa",
+                "elType": "widget",
+                "widgetType": "qe-testimonials",
+                "settings": {},
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "a4b1e1b",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "_css_classes": "qe-section-alt",
+            "flex_align_items": "center"
+        },
+        "elements": [
+            {
+                "id": "0ea7315",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "Check your level for free",
+                    "header_size": "h2",
+                    "align": "center"
+                },
+                "elements": []
+            },
+            {
+                "id": "2cec9ec",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                    "editor": "<p>Take a short placement test and we will recommend the right course.</p>",
+                    "align": "center"
+                },
+                "elements": []
+            },
+            {
+                "id": "c755447",
+                "elType": "widget",
+                "widgetType": "button",
+                "settings": {
+                    "text": "Book a placement test",
+                    "link": {
+                        "url": "{{page-url:contact}}",
+                        "is_external": "",
+                        "nofollow": ""
+                    },
+                    "size": "md",
+                    "align": "center"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

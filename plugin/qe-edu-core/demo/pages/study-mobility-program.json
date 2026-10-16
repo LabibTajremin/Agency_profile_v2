@@ -1,0 +1,331 @@
+[
+    {
+        "id": "3a8edfd",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "0a68f18",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "Short programmes, life-long experiences.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "15bdd92",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "f155b0f",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 48,
+                        "column": "48",
+                        "row": "48"
+                    },
+                    "flex_align_items": "center",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    }
+                },
+                "elements": [
+                    {
+                        "id": "c6f684e",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 55
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "6592928",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Study abroad for a few weeks or a semester",
+                                    "header_size": "h2"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "d71068a",
+                                "elType": "widget",
+                                "widgetType": "text-editor",
+                                "settings": {
+                                    "editor": "<p>Our mobility programmes let students experience university life abroad before committing to a full degree — or add an international semester to their studies.</p>"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    },
+                    {
+                        "id": "a669874",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 45
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "cb601bd",
+                                "elType": "widget",
+                                "widgetType": "image",
+                                "settings": {
+                                    "image": {
+                                        "id": "{{image:service-campus}}",
+                                        "url": "{{image-url:service-campus}}"
+                                    },
+                                    "image_size": "large"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    }
+                ],
+                "isInner": false
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "70ffaeb",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "_css_classes": "qe-section-alt"
+        },
+        "elements": [
+            {
+                "id": "3ba11c4",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "Programme types",
+                    "header_size": "h2"
+                },
+                "elements": []
+            },
+            {
+                "id": "42d5b65",
+                "elType": "widget",
+                "widgetType": "icon-list",
+                "settings": {
+                    "icon_list": [
+                        {
+                            "_id": "48d68d7",
+                            "text": "Summer schools — two to four weeks",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "1fef6c6",
+                            "text": "Exchange semesters — with credit transfer",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "1bdbfb4",
+                            "text": "University visit tours — meet admissions teams in person",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        }
+                    ],
+                    "view": "traditional"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "ffaa116",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "e5b9042",
+                "elType": "widget",
+                "widgetType": "qe-event-list",
+                "settings": {
+                    "heading": "Upcoming departures & info sessions"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

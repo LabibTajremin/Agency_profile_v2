@@ -1,0 +1,617 @@
+[
+    {
+        "id": "ebfa150",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "00fd134",
+                "elType": "widget",
+                "widgetType": "qe-newsletter",
+                "settings": {},
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "b25dea6",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 32,
+                "column": "32",
+                "row": "32"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "24",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "24",
+                "left": "0",
+                "isLinked": false
+            },
+            "background_background": "classic",
+            "__globals__": {
+                "background_color": "globals/colors?id=secondary"
+            }
+        },
+        "elements": [
+            {
+                "id": "e43ae04",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 32,
+                        "column": "32",
+                        "row": "32"
+                    },
+                    "flex_align_items": "flex-start",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "flex_wrap": "nowrap",
+                    "flex_wrap_tablet": "wrap",
+                    "flex_direction_tablet": "row"
+                },
+                "elements": [
+                    {
+                        "id": "640d548",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 30
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "width_tablet": {
+                                "unit": "%",
+                                "size": 100
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "e446a1f",
+                                "elType": "widget",
+                                "widgetType": "qe-site-logo",
+                                "settings": {
+                                    "variant": "dark"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "47535e6",
+                                "elType": "widget",
+                                "widgetType": "text-editor",
+                                "settings": {
+                                    "editor": "<p>Helping students study at great universities around the world since 2011.</p>",
+                                    "text_color": "#FFFFFFC7"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "75865ed",
+                                "elType": "widget",
+                                "widgetType": "qe-social-links",
+                                "settings": {},
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    },
+                    {
+                        "id": "3e43eaf",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 20
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "width_tablet": {
+                                "unit": "%",
+                                "size": 30
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "9baa523",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Resources",
+                                    "header_size": "h4",
+                                    "title_color": "#FFFFFF"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "b4c6456",
+                                "elType": "widget",
+                                "widgetType": "icon-list",
+                                "settings": {
+                                    "icon_list": [
+                                        {
+                                            "_id": "42ae9cd",
+                                            "text": "Language Academy",
+                                            "link": {
+                                                "url": "{{page-url:language-academy}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "845f577",
+                                            "text": "ELP Test",
+                                            "link": {
+                                                "url": "{{page-url:elp-test}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "fab8d93",
+                                            "text": "Careers",
+                                            "link": {
+                                                "url": "{{page-url:careers}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "16c2e4b",
+                                            "text": "Events & Webinars",
+                                            "link": {
+                                                "url": "{{page-url:events}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        }
+                                    ],
+                                    "view": "traditional",
+                                    "text_color": "#FFFFFFC7",
+                                    "text_color_hover": "#FFFFFF"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    },
+                    {
+                        "id": "395d072",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 20
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "width_tablet": {
+                                "unit": "%",
+                                "size": 30
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "641dc10",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Study",
+                                    "header_size": "h4",
+                                    "title_color": "#FFFFFF"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "7342d63",
+                                "elType": "widget",
+                                "widgetType": "icon-list",
+                                "settings": {
+                                    "icon_list": [
+                                        {
+                                            "_id": "df3256b",
+                                            "text": "Study Destinations",
+                                            "link": {
+                                                "url": "{{page-url:study-abroad}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "dc7ebd9",
+                                            "text": "International Pathways",
+                                            "link": {
+                                                "url": "{{page-url:international-pathways}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "ca92d39",
+                                            "text": "Study Mobility Program",
+                                            "link": {
+                                                "url": "{{page-url:study-mobility-program}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "36c8981",
+                                            "text": "Study News",
+                                            "link": {
+                                                "url": "{{page-url:news}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        }
+                                    ],
+                                    "view": "traditional",
+                                    "text_color": "#FFFFFFC7",
+                                    "text_color_hover": "#FFFFFF"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    },
+                    {
+                        "id": "f1afbce",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 20
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "width_tablet": {
+                                "unit": "%",
+                                "size": 30
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "dde9992",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "About",
+                                    "header_size": "h4",
+                                    "title_color": "#FFFFFF"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "82fb4d3",
+                                "elType": "widget",
+                                "widgetType": "icon-list",
+                                "settings": {
+                                    "icon_list": [
+                                        {
+                                            "_id": "3056cbb",
+                                            "text": "About Us",
+                                            "link": {
+                                                "url": "{{page-url:about}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "b03f009",
+                                            "text": "What We Do",
+                                            "link": {
+                                                "url": "{{page-url:what-we-do}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "2419a0f",
+                                            "text": "Partner With Us",
+                                            "link": {
+                                                "url": "{{page-url:partner-with-us}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        },
+                                        {
+                                            "_id": "433521c",
+                                            "text": "Contact Us",
+                                            "link": {
+                                                "url": "{{page-url:contact}}",
+                                                "is_external": "",
+                                                "nofollow": ""
+                                            },
+                                            "selected_icon": {
+                                                "value": "",
+                                                "library": ""
+                                            }
+                                        }
+                                    ],
+                                    "view": "traditional",
+                                    "text_color": "#FFFFFFC7",
+                                    "text_color_hover": "#FFFFFF"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    }
+                ],
+                "isInner": false
+            },
+            {
+                "id": "f3a6396",
+                "elType": "widget",
+                "widgetType": "divider",
+                "settings": {
+                    "color": "#FFFFFF1F"
+                },
+                "elements": []
+            },
+            {
+                "id": "89ffb32",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 16,
+                        "column": "16",
+                        "row": "16"
+                    },
+                    "flex_align_items": "center",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "flex_justify_content": "space-between",
+                    "flex_wrap": "wrap"
+                },
+                "elements": [
+                    {
+                        "id": "63beb71",
+                        "elType": "widget",
+                        "widgetType": "text-editor",
+                        "settings": {
+                            "text_color": "#FFFFFFC7",
+                            "_element_width": "auto",
+                            "__dynamic__": {
+                                "editor": "[elementor-tag id=\"f6cc6a5\" name=\"qe-setting-text\" settings=\"%7B%22key%22%3A%22copyright%22%7D\"]"
+                            }
+                        },
+                        "elements": []
+                    },
+                    {
+                        "id": "2263691",
+                        "elType": "widget",
+                        "widgetType": "icon-list",
+                        "settings": {
+                            "icon_list": [
+                                {
+                                    "_id": "5e2c337",
+                                    "text": "Privacy Policy",
+                                    "link": {
+                                        "url": "{{page-url:privacy-policy}}",
+                                        "is_external": "",
+                                        "nofollow": ""
+                                    },
+                                    "selected_icon": {
+                                        "value": "",
+                                        "library": ""
+                                    }
+                                },
+                                {
+                                    "_id": "749c3b5",
+                                    "text": "Payment Terms",
+                                    "link": {
+                                        "url": "{{page-url:payment-terms}}",
+                                        "is_external": "",
+                                        "nofollow": ""
+                                    },
+                                    "selected_icon": {
+                                        "value": "",
+                                        "library": ""
+                                    }
+                                },
+                                {
+                                    "_id": "38c92a1",
+                                    "text": "Refund Policy",
+                                    "link": {
+                                        "url": "{{page-url:refund-policy}}",
+                                        "is_external": "",
+                                        "nofollow": ""
+                                    },
+                                    "selected_icon": {
+                                        "value": "",
+                                        "library": ""
+                                    }
+                                }
+                            ],
+                            "view": "inline",
+                            "text_color": "#FFFFFFC7",
+                            "text_color_hover": "#FFFFFF",
+                            "_element_width": "auto"
+                        },
+                        "elements": []
+                    }
+                ],
+                "isInner": false
+            }
+        ],
+        "isInner": false
+    }
+]

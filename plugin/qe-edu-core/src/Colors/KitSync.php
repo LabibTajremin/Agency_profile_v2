@@ -62,6 +62,43 @@ final class KitSync {
 	}
 
 	/**
+	 * Kit button styles (Site Settings → Buttons): Elementor's core Button
+	 * otherwise defaults to grey. Background and hover use the Global Colors;
+	 * text uses the contrast-checked theme variables, which dark mode also
+	 * overrides; the corner radius follows Theme Settings → Button shape.
+	 *
+	 * @param array<string,mixed> $settings Settings merged over defaults.
+	 * @return array<string,mixed>
+	 */
+	public static function button_styles( $settings ) {
+		$radii  = array(
+			'rounded' => 10,
+			'pill'    => 999,
+			'square'  => 0,
+		);
+		$shape  = (string) Settings::get_path( $settings, 'colors.button_style' );
+		$radius = (string) ( isset( $radii[ $shape ] ) ? $radii[ $shape ] : $radii['rounded'] );
+
+		return array(
+			'button_text_color'       => 'var(--qe-on-primary)',
+			'button_hover_text_color' => 'var(--qe-on-primary-dark)',
+			'button_border_radius'    => array(
+				'unit'     => 'px',
+				'top'      => $radius,
+				'right'    => $radius,
+				'bottom'   => $radius,
+				'left'     => $radius,
+				'isLinked' => true,
+			),
+			'__globals__'             => array(
+				'button_background_color'       => 'globals/colors?id=primary',
+				'button_hover_background_color' => 'globals/colors?id=accent',
+				'button_typography_typography'  => 'globals/typography?id=accent',
+			),
+		);
+	}
+
+	/**
 	 * Global Fonts for the current settings.
 	 *
 	 * @param array<string,mixed> $settings Settings merged over defaults.
@@ -106,6 +143,11 @@ final class KitSync {
 
 		$current['system_colors']     = self::system_colors( $settings );
 		$current['system_typography'] = self::system_typography( $settings );
+
+		$buttons                = self::button_styles( $settings );
+		$current['__globals__'] = array_merge( isset( $current['__globals__'] ) && is_array( $current['__globals__'] ) ? $current['__globals__'] : array(), $buttons['__globals__'] );
+		unset( $buttons['__globals__'] );
+		$current = array_merge( $current, $buttons );
 
 		update_post_meta( $kit_id, '_elementor_page_settings', $current );
 

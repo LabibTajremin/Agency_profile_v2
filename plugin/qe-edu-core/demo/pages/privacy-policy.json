@@ -1,0 +1,88 @@
+[
+    {
+        "id": "5a3ca70",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "333c758",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "3d90992",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "boxed_width": {
+                "unit": "px",
+                "size": 860
+            }
+        },
+        "elements": [
+            {
+                "id": "4729bc4",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                    "editor": "<p><em>This is demo text. Replace it with your own privacy policy.</em></p><h2>What we collect</h2><p>When you contact us or apply through our website we collect the details you give us, such as your name, email address, phone number and study plans.</p><h2>How we use it</h2><p>We use your details to answer your questions, help with your applications and, if you agree, send you news about studying abroad.</p><h2>Who we share it with</h2><p>We only share your details with universities and partners you apply to, and with service providers who help us run our website.</p><h2>Your rights</h2><p>You can ask to see, correct or delete your personal information at any time by contacting us.</p>"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

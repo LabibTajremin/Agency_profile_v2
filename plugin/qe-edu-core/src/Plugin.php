@@ -83,6 +83,7 @@ final class Plugin {
 				Seo\Redirects::class,
 				Seo\Analytics::class,
 				Seo\Metabox::class,
+				DemoImport\Admin::class,
 			)
 		);
 	}

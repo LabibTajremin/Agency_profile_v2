@@ -1,6 +1,7 @@
 <?php
 /**
- * Full single post.
+ * Full single post. `$args['hide_title']` is set when a banner template
+ * already shows the title.
  *
  * @package QeEdu
  */
@@ -9,7 +10,11 @@ defined( 'ABSPATH' ) || exit;
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'qe-entry' ); ?>>
 	<header class="qe-entry__header">
-		<?php the_title( '<h1 class="qe-page-title">', '</h1>' ); ?>
+		<?php
+		if ( empty( $args['hide_title'] ) ) {
+			the_title( '<h1 class="qe-page-title">', '</h1>' );
+		}
+		?>
 		<?php qe_edu_posted_on(); ?>
 	</header>
 	<?php if ( has_post_thumbnail() ) : ?>

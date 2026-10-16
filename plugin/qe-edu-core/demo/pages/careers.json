@@ -1,0 +1,363 @@
+[
+    {
+        "id": "0797d56",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "6952b30",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "Help students change their lives.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "813f515",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "0838716",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 48,
+                        "column": "48",
+                        "row": "48"
+                    },
+                    "flex_align_items": "center",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    }
+                },
+                "elements": [
+                    {
+                        "id": "3072645",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 55
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "c772037",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Why work with us",
+                                    "header_size": "h2"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "da3180b",
+                                "elType": "widget",
+                                "widgetType": "text-editor",
+                                "settings": {
+                                    "editor": "<p>We are a friendly international team of advisors, teachers and specialists. We invest in training and give people the freedom to do great work.</p>"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    },
+                    {
+                        "id": "b3c4ada",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 45
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "b830866",
+                                "elType": "widget",
+                                "widgetType": "image",
+                                "settings": {
+                                    "image": {
+                                        "id": "{{image:about}}",
+                                        "url": "{{image-url:about}}"
+                                    },
+                                    "image_size": "large"
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    }
+                ],
+                "isInner": false
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "19a91d6",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "_css_classes": "qe-section-alt"
+        },
+        "elements": [
+            {
+                "id": "829cbdb",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "Open positions",
+                    "header_size": "h2"
+                },
+                "elements": []
+            },
+            {
+                "id": "82864de",
+                "elType": "widget",
+                "widgetType": "icon-list",
+                "settings": {
+                    "icon_list": [
+                        {
+                            "_id": "1d05bdc",
+                            "text": "Student Advisor — full time",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "f8f60b6",
+                            "text": "Admissions Officer — full time",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "bde28ab",
+                            "text": "English Teacher — part time",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        },
+                        {
+                            "_id": "c299698",
+                            "text": "Partnerships Manager — full time",
+                            "selected_icon": {
+                                "value": "fas fa-check-circle",
+                                "library": "fa-solid"
+                            }
+                        }
+                    ],
+                    "view": "traditional"
+                },
+                "elements": []
+            },
+            {
+                "id": "a265664",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                    "editor": "<p>Send your CV and a short note about yourself using the contact page.</p>"
+                },
+                "elements": []
+            },
+            {
+                "id": "063d204",
+                "elType": "widget",
+                "widgetType": "button",
+                "settings": {
+                    "text": "Apply now",
+                    "link": {
+                        "url": "{{page-url:contact}}",
+                        "is_external": "",
+                        "nofollow": ""
+                    },
+                    "size": "md"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "bc605a0",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "85427b5",
+                "elType": "widget",
+                "widgetType": "qe-team",
+                "settings": {
+                    "heading": "Meet some of the team"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

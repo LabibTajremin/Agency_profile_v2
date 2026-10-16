@@ -28,3 +28,4 @@ define( 'QE_EDU_CORE_URL', 'https://example.test/wp-content/plugins/qe-edu-core/
 
 require_once __DIR__ . '/stubs/wordpress.php';
 require_once __DIR__ . '/stubs/elementor.php';
+require_once __DIR__ . '/stubs/wp-cli.php';

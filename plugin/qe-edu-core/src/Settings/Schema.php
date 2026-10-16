@@ -757,6 +757,22 @@ final class Schema {
 				'default' => 0,
 				'group'   => __( 'Pages', 'qe-edu' ),
 			),
+			'single_template'    => array(
+				'type'    => 'template',
+				'path'    => 'templates.single',
+				'label'   => __( 'Blog post banner', 'qe-edu' ),
+				'help'    => __( 'An Elementor template shown at the top of every blog post (for example a Page Title Banner). It replaces the plain post title.', 'qe-edu' ),
+				'default' => 0,
+				'group'   => __( 'Pages', 'qe-edu' ),
+			),
+			'archive_template'   => array(
+				'type'    => 'template',
+				'path'    => 'templates.archive',
+				'label'   => __( 'Blog & archive banner', 'qe-edu' ),
+				'help'    => __( 'An Elementor template shown at the top of the news page and category lists. It replaces the plain heading.', 'qe-edu' ),
+				'default' => 0,
+				'group'   => __( 'Pages', 'qe-edu' ),
+			),
 		);
 
 		if ( ! function_exists( 'qe_edu_default_strings' ) ) {

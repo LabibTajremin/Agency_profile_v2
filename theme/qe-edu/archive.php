@@ -10,8 +10,11 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 if ( ! qe_edu_pro_location( 'archive' ) ) :
+	// Optional Elementor banner (Theme Settings → Texts → "Blog & archive banner").
+	$qe_edu_banner = qe_edu_render_template_setting( 'templates.archive' );
 	?>
 <main id="content" class="site-main qe-wrap qe-content-area">
+	<?php if ( ! $qe_edu_banner ) : ?>
 	<header class="qe-page-header">
 		<h1 class="qe-page-title">
 			<?php
@@ -26,6 +29,7 @@ if ( ! qe_edu_pro_location( 'archive' ) ) :
 		</h1>
 		<?php the_archive_description( '<div class="qe-archive-description">', '</div>' ); ?>
 	</header>
+	<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
 		<div class="qe-post-grid">
 			<?php

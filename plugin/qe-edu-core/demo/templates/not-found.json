@@ -1,0 +1,142 @@
+[
+    {
+        "id": "71cbcbb",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "flex_align_items": "center",
+            "min_height": {
+                "unit": "vh",
+                "size": 60
+            },
+            "flex_justify_content": "center"
+        },
+        "elements": [
+            {
+                "id": "248f717",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "404",
+                    "header_size": "h1",
+                    "align": "center"
+                },
+                "elements": []
+            },
+            {
+                "id": "49ec13b",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "We could not find that page",
+                    "header_size": "h2",
+                    "align": "center"
+                },
+                "elements": []
+            },
+            {
+                "id": "7338a7e",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                    "editor": "<p>The page may have moved. Try the home page or tell us what you were looking for.</p>",
+                    "align": "center"
+                },
+                "elements": []
+            },
+            {
+                "id": "3cf64b0",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "row",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 16,
+                        "column": "16",
+                        "row": "16"
+                    },
+                    "flex_align_items": "center",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "flex_justify_content": "center",
+                    "flex_wrap": "wrap"
+                },
+                "elements": [
+                    {
+                        "id": "5310004",
+                        "elType": "widget",
+                        "widgetType": "button",
+                        "settings": {
+                            "text": "Go to the home page",
+                            "link": {
+                                "url": "{{home-url}}",
+                                "is_external": "",
+                                "nofollow": ""
+                            },
+                            "size": "md",
+                            "_element_width": "auto"
+                        },
+                        "elements": []
+                    },
+                    {
+                        "id": "d403c40",
+                        "elType": "widget",
+                        "widgetType": "button",
+                        "settings": {
+                            "text": "Contact us",
+                            "link": {
+                                "url": "{{page-url:contact}}",
+                                "is_external": "",
+                                "nofollow": ""
+                            },
+                            "size": "md",
+                            "_element_width": "auto"
+                        },
+                        "elements": []
+                    }
+                ],
+                "isInner": false
+            }
+        ],
+        "isInner": false
+    }
+]

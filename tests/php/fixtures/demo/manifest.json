@@ -1,0 +1,146 @@
+{
+ "version": 1,
+ "images": {
+  "img-a": {
+   "file": "a.png",
+   "alt": "Alt A"
+  },
+  "img-noalt": {
+   "file": "a.png"
+  },
+  "missing": {
+   "file": "nope.png",
+   "alt": "Missing"
+  }
+ },
+ "posts": [
+  {
+   "key": "d1",
+   "type": "qe_destination",
+   "title": "Canada",
+   "excerpt": "Ex",
+   "content": "<p>C</p>",
+   "image": "img-a",
+   "order": 3,
+   "meta": {
+    "country": "Canada",
+    "link": "{{page-url:contact}}"
+   }
+  },
+  {
+   "key": "n1",
+   "type": "post",
+   "title": "News one",
+   "category": "Tips",
+   "date": "{{date:2026-01-10}}",
+   "image": "missing"
+  },
+  {
+   "key": "n2",
+   "type": "post",
+   "title": "News two",
+   "category": "New category"
+  },
+  {
+   "key": "bad",
+   "type": "fail",
+   "title": "Broken"
+  }
+ ],
+ "pages": [
+  {
+   "key": "home",
+   "title": "Home",
+   "slug": "home",
+   "file": "pages/home.json",
+   "seo": {
+    "description": "Home {{home-url}}"
+   }
+  },
+  {
+   "key": "contact",
+   "title": "Contact",
+   "slug": "contact",
+   "file": "pages/contact.json"
+  },
+  {
+   "key": "news",
+   "title": "News",
+   "slug": "news"
+  },
+  {
+   "key": "privacy",
+   "title": "Privacy",
+   "slug": "privacy-policy",
+   "file": "pages/contact.json"
+  },
+  {
+   "key": "about",
+   "title": "About",
+   "slug": "about",
+   "file": "pages/contact.json"
+  },
+  {
+   "key": "broken",
+   "title": "Broken",
+   "slug": "broken-page"
+  }
+ ],
+ "templates": [
+  {
+   "key": "header",
+   "title": "Header",
+   "setting": "templates.header",
+   "file": "templates/header.json"
+  },
+  {
+   "key": "footer",
+   "title": "Footer",
+   "setting": "templates.footer",
+   "file": "templates/header.json"
+  },
+  {
+   "key": "broken",
+   "title": "Broken template",
+   "file": "templates/header.json"
+  }
+ ],
+ "menus": {
+  "primary": {
+   "name": "Main",
+   "location": "primary",
+   "items": [
+    [
+     "Home",
+     "home"
+    ],
+    [
+     "Elsewhere",
+     "nowhere",
+     [
+      [
+       "Contact",
+       "contact"
+      ]
+     ]
+    ]
+   ]
+  },
+  "top": {
+   "name": "Top",
+   "location": "topbar",
+   "items": []
+  },
+  "broken": {
+   "name": "Broken menu",
+   "items": []
+  }
+ },
+ "settings": {
+  "brand.logo": "{{image:img-a}}",
+  "contact.email": "demo@example.test",
+  "contact.phone": "+1 555"
+ },
+ "front_page": "home",
+ "posts_page": "news"
+}

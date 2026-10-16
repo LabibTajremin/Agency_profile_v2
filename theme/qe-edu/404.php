@@ -1,7 +1,7 @@
 <?php
 /**
  * 404 template. When an Elementor template is assigned in
- * Theme Settings → Header (404 page), that template is rendered instead.
+ * Theme Settings → Texts ("404 page design"), that template is rendered instead.
  *
  * @package QeEdu
  */

@@ -1,0 +1,283 @@
+[
+    {
+        "id": "e5e4dbb",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "aa864a1",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "Four ways we help students and institutions succeed.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "1156646",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "boxed_width": {
+                "unit": "px",
+                "size": 860
+            }
+        },
+        "elements": [
+            {
+                "id": "04af279",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "From first question to first lecture",
+                    "header_size": "h2"
+                },
+                "elements": []
+            },
+            {
+                "id": "5832788",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                    "editor": "<p>We guide students through every step: choosing a course, applying, preparing for the move and settling in. For universities we recruit, prepare and support talented international students.</p>"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "c3995ca",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "aa8eaf6",
+                "elType": "widget",
+                "widgetType": "qe-service-slider",
+                "settings": {
+                    "heading": "Our services"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "9450a4e",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "025ef42",
+                "elType": "widget",
+                "widgetType": "qe-faq",
+                "settings": {
+                    "heading": "Frequently asked questions",
+                    "items": [
+                        {
+                            "_id": "3a4a0e3",
+                            "question": "Do you charge students for applications?",
+                            "answer": "<p>Most of our application support is free for students. If a service has a fee, we tell you before you start.</p>"
+                        },
+                        {
+                            "_id": "3ecaf7a",
+                            "question": "Which countries do you work with?",
+                            "answer": "<p>We place students in more than 16 study destinations, including the UK, Canada, Australia and Europe.</p>"
+                        },
+                        {
+                            "_id": "cb539d0",
+                            "question": "Can you help with visas?",
+                            "answer": "<p>Yes. Our advisors explain the visa steps for your destination and check your documents before you apply.</p>"
+                        }
+                    ]
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "c284752",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            },
+            "_css_classes": "qe-section-alt",
+            "flex_align_items": "center"
+        },
+        "elements": [
+            {
+                "id": "e42f082",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                    "title": "Not sure where to start?",
+                    "header_size": "h2",
+                    "align": "center"
+                },
+                "elements": []
+            },
+            {
+                "id": "3b9be6d",
+                "elType": "widget",
+                "widgetType": "text-editor",
+                "settings": {
+                    "editor": "<p>Tell us what you would like to study and we will suggest the best options for you.</p>",
+                    "align": "center"
+                },
+                "elements": []
+            },
+            {
+                "id": "390390e",
+                "elType": "widget",
+                "widgetType": "button",
+                "settings": {
+                    "text": "Talk to an advisor",
+                    "link": {
+                        "url": "{{page-url:contact}}",
+                        "is_external": "",
+                        "nofollow": ""
+                    },
+                    "size": "md",
+                    "align": "center"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

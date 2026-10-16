@@ -1,0 +1,1202 @@
+{
+    "version": 1,
+    "images": {
+        "about": {
+            "file": "about.jpg",
+            "alt": ""
+        },
+        "banner": {
+            "file": "banner.jpg",
+            "alt": ""
+        },
+        "company-profile": {
+            "file": "company-profile.pdf",
+            "alt": "Company profile"
+        },
+        "destination-australia": {
+            "file": "destination-australia.jpg",
+            "alt": "Study in Australia"
+        },
+        "destination-canada": {
+            "file": "destination-canada.jpg",
+            "alt": "Study in Canada"
+        },
+        "destination-cyprus": {
+            "file": "destination-cyprus.jpg",
+            "alt": "Study in Cyprus"
+        },
+        "destination-france": {
+            "file": "destination-france.jpg",
+            "alt": "Study in France"
+        },
+        "destination-germany": {
+            "file": "destination-germany.jpg",
+            "alt": "Study in Germany"
+        },
+        "destination-ireland": {
+            "file": "destination-ireland.jpg",
+            "alt": "Study in Ireland"
+        },
+        "destination-italy": {
+            "file": "destination-italy.jpg",
+            "alt": "Study in Italy"
+        },
+        "destination-malaysia": {
+            "file": "destination-malaysia.jpg",
+            "alt": "Study in Malaysia"
+        },
+        "destination-malta": {
+            "file": "destination-malta.jpg",
+            "alt": "Study in Malta"
+        },
+        "destination-netherlands": {
+            "file": "destination-netherlands.jpg",
+            "alt": "Study in Netherlands"
+        },
+        "destination-new-zealand": {
+            "file": "destination-new-zealand.jpg",
+            "alt": "Study in New Zealand"
+        },
+        "destination-spain": {
+            "file": "destination-spain.jpg",
+            "alt": "Study in Spain"
+        },
+        "destination-turkey": {
+            "file": "destination-turkey.jpg",
+            "alt": "Study in Türkiye"
+        },
+        "destination-uae": {
+            "file": "destination-uae.jpg",
+            "alt": "Study in United Arab Emirates"
+        },
+        "destination-united-kingdom": {
+            "file": "destination-united-kingdom.jpg",
+            "alt": "Study in United Kingdom"
+        },
+        "destination-united-states": {
+            "file": "destination-united-states.jpg",
+            "alt": "Study in United States"
+        },
+        "event-1": {
+            "file": "event-1.jpg",
+            "alt": "Event 1"
+        },
+        "event-2": {
+            "file": "event-2.jpg",
+            "alt": "Event 2"
+        },
+        "event-3": {
+            "file": "event-3.jpg",
+            "alt": "Event 3"
+        },
+        "hero-1": {
+            "file": "hero-1.jpg",
+            "alt": ""
+        },
+        "hero-2": {
+            "file": "hero-2.jpg",
+            "alt": ""
+        },
+        "hero-3": {
+            "file": "hero-3.jpg",
+            "alt": ""
+        },
+        "logo-light": {
+            "file": "logo-light.png",
+            "alt": "Your Education Group"
+        },
+        "logo": {
+            "file": "logo.png",
+            "alt": "Your Education Group"
+        },
+        "news-1": {
+            "file": "news-1.jpg",
+            "alt": "News 1"
+        },
+        "news-2": {
+            "file": "news-2.jpg",
+            "alt": "News 2"
+        },
+        "news-3": {
+            "file": "news-3.jpg",
+            "alt": "News 3"
+        },
+        "news-4": {
+            "file": "news-4.jpg",
+            "alt": "News 4"
+        },
+        "news-5": {
+            "file": "news-5.jpg",
+            "alt": "News 5"
+        },
+        "news-6": {
+            "file": "news-6.jpg",
+            "alt": "News 6"
+        },
+        "partner-1": {
+            "file": "partner-1.png",
+            "alt": "Northbridge University logo"
+        },
+        "partner-10": {
+            "file": "partner-10.png",
+            "alt": "Crestwood Institute logo"
+        },
+        "partner-11": {
+            "file": "partner-11.png",
+            "alt": "Bright Path Advisors logo"
+        },
+        "partner-12": {
+            "file": "partner-12.png",
+            "alt": "Global Study Link logo"
+        },
+        "partner-2": {
+            "file": "partner-2.png",
+            "alt": "Harbour Institute of Technology logo"
+        },
+        "partner-3": {
+            "file": "partner-3.png",
+            "alt": "St Aldric College logo"
+        },
+        "partner-4": {
+            "file": "partner-4.png",
+            "alt": "Westmere University logo"
+        },
+        "partner-5": {
+            "file": "partner-5.png",
+            "alt": "Lakeside Business School logo"
+        },
+        "partner-6": {
+            "file": "partner-6.png",
+            "alt": "Kingsgate University logo"
+        },
+        "partner-7": {
+            "file": "partner-7.png",
+            "alt": "Avalon Global Academy logo"
+        },
+        "partner-8": {
+            "file": "partner-8.png",
+            "alt": "Meridian College London logo"
+        },
+        "partner-9": {
+            "file": "partner-9.png",
+            "alt": "Pacific Rim University logo"
+        },
+        "service-campus": {
+            "file": "service-campus.jpg",
+            "alt": "Service campus"
+        },
+        "service-pathways": {
+            "file": "service-pathways.jpg",
+            "alt": "Service pathways"
+        },
+        "service-preparation": {
+            "file": "service-preparation.jpg",
+            "alt": "Service preparation"
+        },
+        "service-recruitment": {
+            "file": "service-recruitment.jpg",
+            "alt": "Service recruitment"
+        },
+        "student-1": {
+            "file": "student-1.jpg",
+            "alt": "Nadia A."
+        },
+        "student-2": {
+            "file": "student-2.jpg",
+            "alt": "Daniel O."
+        },
+        "student-3": {
+            "file": "student-3.jpg",
+            "alt": "Lina C."
+        },
+        "team-1": {
+            "file": "team-1.jpg",
+            "alt": "Amira Rahman"
+        },
+        "team-2": {
+            "file": "team-2.jpg",
+            "alt": "Samuel Kim"
+        },
+        "team-3": {
+            "file": "team-3.jpg",
+            "alt": "Maria Lopez"
+        },
+        "team-4": {
+            "file": "team-4.jpg",
+            "alt": "James Turner"
+        }
+    },
+    "posts": [
+        {
+            "key": "destination-united-kingdom",
+            "type": "qe_destination",
+            "title": "United Kingdom",
+            "excerpt": "Universities, cities and student life in United Kingdom.",
+            "content": "<p>Find out about universities, costs, visas and student life in United Kingdom. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-united-kingdom",
+            "order": 0,
+            "meta": {
+                "country": "United Kingdom",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-united-states",
+            "type": "qe_destination",
+            "title": "United States",
+            "excerpt": "Universities, cities and student life in United States.",
+            "content": "<p>Find out about universities, costs, visas and student life in United States. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-united-states",
+            "order": 1,
+            "meta": {
+                "country": "United States",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-canada",
+            "type": "qe_destination",
+            "title": "Canada",
+            "excerpt": "Universities, cities and student life in Canada.",
+            "content": "<p>Find out about universities, costs, visas and student life in Canada. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-canada",
+            "order": 2,
+            "meta": {
+                "country": "Canada",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-australia",
+            "type": "qe_destination",
+            "title": "Australia",
+            "excerpt": "Universities, cities and student life in Australia.",
+            "content": "<p>Find out about universities, costs, visas and student life in Australia. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-australia",
+            "order": 3,
+            "meta": {
+                "country": "Australia",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-ireland",
+            "type": "qe_destination",
+            "title": "Ireland",
+            "excerpt": "Universities, cities and student life in Ireland.",
+            "content": "<p>Find out about universities, costs, visas and student life in Ireland. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-ireland",
+            "order": 4,
+            "meta": {
+                "country": "Ireland",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-germany",
+            "type": "qe_destination",
+            "title": "Germany",
+            "excerpt": "Universities, cities and student life in Germany.",
+            "content": "<p>Find out about universities, costs, visas and student life in Germany. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-germany",
+            "order": 5,
+            "meta": {
+                "country": "Germany",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-france",
+            "type": "qe_destination",
+            "title": "France",
+            "excerpt": "Universities, cities and student life in France.",
+            "content": "<p>Find out about universities, costs, visas and student life in France. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-france",
+            "order": 6,
+            "meta": {
+                "country": "France",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-netherlands",
+            "type": "qe_destination",
+            "title": "Netherlands",
+            "excerpt": "Universities, cities and student life in Netherlands.",
+            "content": "<p>Find out about universities, costs, visas and student life in Netherlands. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-netherlands",
+            "order": 7,
+            "meta": {
+                "country": "Netherlands",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-new-zealand",
+            "type": "qe_destination",
+            "title": "New Zealand",
+            "excerpt": "Universities, cities and student life in New Zealand.",
+            "content": "<p>Find out about universities, costs, visas and student life in New Zealand. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-new-zealand",
+            "order": 8,
+            "meta": {
+                "country": "New Zealand",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-malaysia",
+            "type": "qe_destination",
+            "title": "Malaysia",
+            "excerpt": "Universities, cities and student life in Malaysia.",
+            "content": "<p>Find out about universities, costs, visas and student life in Malaysia. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-malaysia",
+            "order": 9,
+            "meta": {
+                "country": "Malaysia",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-uae",
+            "type": "qe_destination",
+            "title": "United Arab Emirates",
+            "excerpt": "Universities, cities and student life in United Arab Emirates.",
+            "content": "<p>Find out about universities, costs, visas and student life in United Arab Emirates. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-uae",
+            "order": 10,
+            "meta": {
+                "country": "United Arab Emirates",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-turkey",
+            "type": "qe_destination",
+            "title": "Türkiye",
+            "excerpt": "Universities, cities and student life in Türkiye.",
+            "content": "<p>Find out about universities, costs, visas and student life in Türkiye. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-turkey",
+            "order": 11,
+            "meta": {
+                "country": "Türkiye",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-cyprus",
+            "type": "qe_destination",
+            "title": "Cyprus",
+            "excerpt": "Universities, cities and student life in Cyprus.",
+            "content": "<p>Find out about universities, costs, visas and student life in Cyprus. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-cyprus",
+            "order": 12,
+            "meta": {
+                "country": "Cyprus",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-malta",
+            "type": "qe_destination",
+            "title": "Malta",
+            "excerpt": "Universities, cities and student life in Malta.",
+            "content": "<p>Find out about universities, costs, visas and student life in Malta. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-malta",
+            "order": 13,
+            "meta": {
+                "country": "Malta",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-spain",
+            "type": "qe_destination",
+            "title": "Spain",
+            "excerpt": "Universities, cities and student life in Spain.",
+            "content": "<p>Find out about universities, costs, visas and student life in Spain. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-spain",
+            "order": 14,
+            "meta": {
+                "country": "Spain",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "destination-italy",
+            "type": "qe_destination",
+            "title": "Italy",
+            "excerpt": "Universities, cities and student life in Italy.",
+            "content": "<p>Find out about universities, costs, visas and student life in Italy. Our advisors will help you choose the right programme.</p>",
+            "image": "destination-italy",
+            "order": 15,
+            "meta": {
+                "country": "Italy",
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "service-recruitment",
+            "type": "qe_service",
+            "title": "Direct Entry Student Recruitment",
+            "excerpt": "We match qualified students with the right university and guide them through admission.",
+            "image": "service-recruitment",
+            "order": 0,
+            "meta": {
+                "link": "{{page-url:study-abroad}}"
+            }
+        },
+        {
+            "key": "service-pathways",
+            "type": "qe_service",
+            "title": "International Pathways",
+            "excerpt": "Foundation and pre-master’s programmes that lead straight into degree study.",
+            "image": "service-pathways",
+            "order": 1,
+            "meta": {
+                "link": "{{page-url:international-pathways}}"
+            }
+        },
+        {
+            "key": "service-preparation",
+            "type": "qe_service",
+            "title": "In-country University Preparation",
+            "excerpt": "English and academic skills courses taught in the student’s home country.",
+            "image": "service-preparation",
+            "order": 2,
+            "meta": {
+                "link": "{{page-url:language-academy}}"
+            }
+        },
+        {
+            "key": "service-campus",
+            "type": "qe_service",
+            "title": "Managed Campus",
+            "excerpt": "We run international study centres in partnership with universities.",
+            "image": "service-campus",
+            "order": 3,
+            "meta": {
+                "link": "{{page-url:what-we-do}}"
+            }
+        },
+        {
+            "key": "partner-1",
+            "type": "qe_partner",
+            "title": "Northbridge University (demo)",
+            "image": "partner-1",
+            "order": 0,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-2",
+            "type": "qe_partner",
+            "title": "Harbour Institute of Technology (demo)",
+            "image": "partner-2",
+            "order": 1,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-3",
+            "type": "qe_partner",
+            "title": "St Aldric College (demo)",
+            "image": "partner-3",
+            "order": 2,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-4",
+            "type": "qe_partner",
+            "title": "Westmere University (demo)",
+            "image": "partner-4",
+            "order": 3,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-5",
+            "type": "qe_partner",
+            "title": "Lakeside Business School (demo)",
+            "image": "partner-5",
+            "order": 4,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-6",
+            "type": "qe_partner",
+            "title": "Kingsgate University (demo)",
+            "image": "partner-6",
+            "order": 5,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-7",
+            "type": "qe_partner",
+            "title": "Avalon Global Academy (demo)",
+            "image": "partner-7",
+            "order": 6,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-8",
+            "type": "qe_partner",
+            "title": "Meridian College London (demo)",
+            "image": "partner-8",
+            "order": 7,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-9",
+            "type": "qe_partner",
+            "title": "Pacific Rim University (demo)",
+            "image": "partner-9",
+            "order": 8,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-10",
+            "type": "qe_partner",
+            "title": "Crestwood Institute (demo)",
+            "image": "partner-10",
+            "order": 9,
+            "meta": {
+                "type": "university",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-11",
+            "type": "qe_partner",
+            "title": "Bright Path Advisors (demo)",
+            "image": "partner-11",
+            "order": 10,
+            "meta": {
+                "type": "recruitment",
+                "url": ""
+            }
+        },
+        {
+            "key": "partner-12",
+            "type": "qe_partner",
+            "title": "Global Study Link (demo)",
+            "image": "partner-12",
+            "order": 11,
+            "meta": {
+                "type": "recruitment",
+                "url": ""
+            }
+        },
+        {
+            "key": "event-1",
+            "type": "qe_event",
+            "title": "Study in Europe Education Fair",
+            "excerpt": "Meet admissions teams from more than 30 European universities in one afternoon.",
+            "content": "<p>Meet admissions teams from more than 30 European universities in one afternoon.</p><p>Places are free but limited — register early.</p>",
+            "image": "event-1",
+            "meta": {
+                "date": "{{date:+20 days}}",
+                "time": "11:00",
+                "venue": "Grand Hall, Dubai",
+                "online_link": ""
+            }
+        },
+        {
+            "key": "event-2",
+            "type": "qe_event",
+            "title": "Webinar: Scholarships for International Students",
+            "excerpt": "Learn how to find and apply for scholarships, with tips from our advisors.",
+            "content": "<p>Learn how to find and apply for scholarships, with tips from our advisors.</p><p>Places are free but limited — register early.</p>",
+            "image": "event-2",
+            "meta": {
+                "date": "{{date:+34 days}}",
+                "time": "18:00",
+                "venue": "Online",
+                "online_link": "https://example.com/webinar"
+            }
+        },
+        {
+            "key": "event-3",
+            "type": "qe_event",
+            "title": "Pathway Programmes Information Session",
+            "excerpt": "Everything you need to know about foundation and pre-master’s pathways.",
+            "content": "<p>Everything you need to know about foundation and pre-master’s pathways.</p><p>Places are free but limited — register early.</p>",
+            "image": "event-3",
+            "meta": {
+                "date": "{{date:+55 days}}",
+                "time": "16:30",
+                "venue": "Our office, London",
+                "online_link": ""
+            }
+        },
+        {
+            "key": "team-1",
+            "type": "qe_team",
+            "title": "Amira Rahman",
+            "excerpt": "Amira has helped more than 2,000 students find their university.",
+            "image": "team-1",
+            "order": 0,
+            "meta": {
+                "role": "Head of Admissions",
+                "linkedin": ""
+            }
+        },
+        {
+            "key": "team-2",
+            "type": "qe_team",
+            "title": "Samuel Kim",
+            "excerpt": "Samuel specialises in UK and Irish universities.",
+            "image": "team-2",
+            "order": 1,
+            "meta": {
+                "role": "Senior Student Advisor",
+                "linkedin": ""
+            }
+        },
+        {
+            "key": "team-3",
+            "type": "qe_team",
+            "title": "Maria Lopez",
+            "excerpt": "Maria leads our pathway and English programmes.",
+            "image": "team-3",
+            "order": 2,
+            "meta": {
+                "role": "Academic Director",
+                "linkedin": ""
+            }
+        },
+        {
+            "key": "team-4",
+            "type": "qe_team",
+            "title": "James Turner",
+            "excerpt": "James looks after our university and agent partners.",
+            "image": "team-4",
+            "order": 3,
+            "meta": {
+                "role": "Partnerships Manager",
+                "linkedin": ""
+            }
+        },
+        {
+            "key": "testimonial-1",
+            "type": "qe_testimonial",
+            "title": "Nadia A.",
+            "excerpt": "My advisor answered every question, even at midnight before my visa interview. I could not have done it alone.",
+            "image": "student-1",
+            "order": 0,
+            "meta": {
+                "role": "MSc student, Northbridge University",
+                "rating": "5"
+            }
+        },
+        {
+            "key": "testimonial-2",
+            "type": "qe_testimonial",
+            "title": "Daniel O.",
+            "excerpt": "The pathway programme gave me the confidence and English I needed for my degree.",
+            "image": "student-2",
+            "order": 1,
+            "meta": {
+                "role": "Foundation year student",
+                "rating": "5"
+            }
+        },
+        {
+            "key": "testimonial-3",
+            "type": "qe_testimonial",
+            "title": "Lina C.",
+            "excerpt": "From choosing a course to finding accommodation, everything was clear and simple.",
+            "image": "student-3",
+            "order": 2,
+            "meta": {
+                "role": "BA student, Westmere University",
+                "rating": "5"
+            }
+        },
+        {
+            "key": "news-1",
+            "type": "post",
+            "title": "10 scholarships international students often miss",
+            "excerpt": "Many scholarships go unclaimed every year. Here are ten worth checking before you apply.",
+            "content": "<p>Many scholarships go unclaimed every year. Here are ten worth checking before you apply.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "image": "news-1",
+            "category": "Scholarships",
+            "date": "{{date:-2 days}}"
+        },
+        {
+            "key": "news-2",
+            "type": "post",
+            "title": "How to write a personal statement that stands out",
+            "excerpt": "Admissions teams read thousands of statements. These simple steps will make yours memorable.",
+            "content": "<p>Admissions teams read thousands of statements. These simple steps will make yours memorable.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "image": "news-2",
+            "category": "Applications",
+            "date": "{{date:-11 days}}"
+        },
+        {
+            "key": "news-3",
+            "type": "post",
+            "title": "Foundation year or direct entry: which is right for you?",
+            "excerpt": "We compare the two routes so you can choose with confidence.",
+            "content": "<p>We compare the two routes so you can choose with confidence.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "image": "news-3",
+            "category": "Pathways",
+            "date": "{{date:-20 days}}"
+        },
+        {
+            "key": "news-4",
+            "type": "post",
+            "title": "What to pack for your first year abroad",
+            "excerpt": "A practical checklist from students who have done it.",
+            "content": "<p>A practical checklist from students who have done it.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "image": "news-4",
+            "category": "Student life",
+            "date": "{{date:-29 days}}"
+        },
+        {
+            "key": "news-5",
+            "type": "post",
+            "title": "Understanding English test requirements",
+            "excerpt": "IELTS, PTE or ELP Test? What universities ask for and how to prepare.",
+            "content": "<p>IELTS, PTE or ELP Test? What universities ask for and how to prepare.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "image": "news-5",
+            "category": "English",
+            "date": "{{date:-38 days}}"
+        },
+        {
+            "key": "news-6",
+            "type": "post",
+            "title": "Five cities students love in 2026",
+            "excerpt": "Affordable, friendly and full of opportunities — our students’ favourite study cities.",
+            "content": "<p>Affordable, friendly and full of opportunities — our students’ favourite study cities.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "image": "news-6",
+            "category": "Destinations",
+            "date": "{{date:-47 days}}"
+        }
+    ],
+    "pages": [
+        {
+            "key": "home",
+            "title": "Home",
+            "slug": "home",
+            "seo": {
+                "description": "Study abroad with Your Education Group: university applications, pathways, English courses and one-to-one advice for international students."
+            },
+            "file": "pages/home.json"
+        },
+        {
+            "key": "about",
+            "title": "About Us",
+            "slug": "about",
+            "seo": {
+                "schema": "AboutPage",
+                "description": "Fifteen years of helping students study abroad: who we are, what we believe in and the global network behind Your Education Group."
+            },
+            "file": "pages/about.json"
+        },
+        {
+            "key": "what-we-do",
+            "title": "What We Do",
+            "slug": "what-we-do",
+            "seo": {
+                "description": "Student recruitment, international pathways, university preparation and managed campuses — the four ways we help students and institutions."
+            },
+            "file": "pages/what-we-do.json"
+        },
+        {
+            "key": "study-abroad",
+            "title": "Study Abroad",
+            "slug": "study-abroad",
+            "seo": {
+                "description": "Choose from 16 study destinations and thousands of programmes. Free application support from our study abroad advisors."
+            },
+            "file": "pages/study-abroad.json"
+        },
+        {
+            "key": "international-pathways",
+            "title": "International Pathways",
+            "slug": "international-pathways",
+            "seo": {
+                "schema": "Course",
+                "description": "Foundation, international year one and pre-master’s pathways that lead to degrees at partner universities."
+            },
+            "file": "pages/international-pathways.json"
+        },
+        {
+            "key": "language-academy",
+            "title": "Language Academy",
+            "slug": "language-academy",
+            "seo": {
+                "schema": "Course",
+                "description": "General English, academic English and test preparation courses for students planning to study abroad."
+            },
+            "file": "pages/language-academy.json"
+        },
+        {
+            "key": "elp-test",
+            "title": "ELP Test",
+            "slug": "elp-test",
+            "seo": {
+                "description": "The English Language Proficiency (ELP) Test: an online English test accepted by our partner universities. Results in 48 hours."
+            },
+            "file": "pages/elp-test.json"
+        },
+        {
+            "key": "partner-with-us",
+            "title": "Partner With Us",
+            "slug": "partner-with-us",
+            "seo": {
+                "description": "Universities, colleges and recruitment agents: partner with Your Education Group to reach motivated international students."
+            },
+            "file": "pages/partner-with-us.json"
+        },
+        {
+            "key": "partner-institutions",
+            "title": "Partner Institutions",
+            "slug": "partner-institutions",
+            "seo": {
+                "description": "The universities, colleges and schools we work with around the world."
+            },
+            "file": "pages/partner-institutions.json"
+        },
+        {
+            "key": "recruitment-partners",
+            "title": "Recruitment Partners",
+            "slug": "recruitment-partners",
+            "seo": {
+                "description": "Join our network of recruitment partners and offer your students hundreds of universities and pathway programmes."
+            },
+            "file": "pages/recruitment-partners.json"
+        },
+        {
+            "key": "study-mobility-program",
+            "title": "Study Mobility Program",
+            "slug": "study-mobility-program",
+            "seo": {
+                "description": "Short study abroad experiences: summer schools, exchange semesters and university visits for school and university students."
+            },
+            "file": "pages/study-mobility-program.json"
+        },
+        {
+            "key": "careers",
+            "title": "Careers",
+            "slug": "careers",
+            "seo": {
+                "description": "Work with Your Education Group: open positions and why our team loves helping students study abroad."
+            },
+            "file": "pages/careers.json"
+        },
+        {
+            "key": "events",
+            "title": "Events & Webinars",
+            "slug": "events-webinars",
+            "seo": {
+                "description": "Education fairs, webinars and information sessions about studying abroad."
+            },
+            "file": "pages/events.json"
+        },
+        {
+            "key": "news",
+            "title": "News",
+            "slug": "news",
+            "seo": {
+                "description": "Study abroad news, scholarship tips and student stories."
+            }
+        },
+        {
+            "key": "contact",
+            "title": "Contact Us",
+            "slug": "contact",
+            "seo": {
+                "schema": "ContactPage",
+                "description": "Contact Your Education Group: call, email, WhatsApp or send us a message and an advisor will reply within one working day."
+            },
+            "file": "pages/contact.json"
+        },
+        {
+            "key": "privacy-policy",
+            "title": "Privacy Policy",
+            "slug": "privacy-policy",
+            "seo": {
+                "description": "How we collect, use and protect your personal information."
+            },
+            "file": "pages/privacy-policy.json"
+        },
+        {
+            "key": "payment-terms",
+            "title": "Payment Terms",
+            "slug": "payment-terms",
+            "seo": {
+                "description": "How and when payments for our paid services are made."
+            },
+            "file": "pages/payment-terms.json"
+        },
+        {
+            "key": "refund-policy",
+            "title": "Refund Policy",
+            "slug": "refund-policy",
+            "seo": {
+                "description": "When you can get your money back and how to ask for it."
+            },
+            "file": "pages/refund-policy.json"
+        }
+    ],
+    "templates": [
+        {
+            "key": "header",
+            "title": "Header",
+            "setting": "templates.header",
+            "file": "templates/header.json"
+        },
+        {
+            "key": "footer",
+            "title": "Footer",
+            "setting": "templates.footer",
+            "file": "templates/footer.json"
+        },
+        {
+            "key": "not-found",
+            "title": "404 Page",
+            "setting": "templates.not_found",
+            "file": "templates/not-found.json"
+        },
+        {
+            "key": "single",
+            "title": "Single Post",
+            "setting": "templates.single",
+            "file": "templates/single.json"
+        },
+        {
+            "key": "archive",
+            "title": "Archive",
+            "setting": "templates.archive",
+            "file": "templates/archive.json"
+        }
+    ],
+    "menus": {
+        "primary": {
+            "name": "Main menu",
+            "location": "primary",
+            "items": [
+                [
+                    "Home",
+                    "home"
+                ],
+                [
+                    "About Us",
+                    "about",
+                    [
+                        [
+                            "About Us",
+                            "about"
+                        ],
+                        [
+                            "What We Do",
+                            "what-we-do"
+                        ],
+                        [
+                            "Careers",
+                            "careers"
+                        ],
+                        [
+                            "Events",
+                            "events"
+                        ],
+                        [
+                            "News",
+                            "news"
+                        ]
+                    ]
+                ],
+                [
+                    "ELP Test",
+                    "elp-test"
+                ],
+                [
+                    "Partner With Us",
+                    "partner-with-us"
+                ],
+                [
+                    "Study Abroad",
+                    "study-abroad"
+                ],
+                [
+                    "International Pathways",
+                    "international-pathways"
+                ],
+                [
+                    "Language Academy",
+                    "language-academy"
+                ],
+                [
+                    "Partners",
+                    "partner-institutions",
+                    [
+                        [
+                            "Partner Institutions",
+                            "partner-institutions"
+                        ],
+                        [
+                            "Recruitment Partners",
+                            "recruitment-partners"
+                        ]
+                    ]
+                ]
+            ]
+        },
+        "topbar": {
+            "name": "Top bar",
+            "location": "topbar",
+            "items": [
+                [
+                    "News",
+                    "news"
+                ],
+                [
+                    "Events",
+                    "events"
+                ],
+                [
+                    "Careers",
+                    "careers"
+                ],
+                [
+                    "Study Mobility Program",
+                    "study-mobility-program"
+                ],
+                [
+                    "Contact Us",
+                    "contact"
+                ]
+            ]
+        },
+        "footer-resources": {
+            "name": "Footer: Resources",
+            "location": "footer-resources",
+            "items": [
+                [
+                    "Language Academy",
+                    "language-academy"
+                ],
+                [
+                    "ELP Test",
+                    "elp-test"
+                ],
+                [
+                    "Careers",
+                    "careers"
+                ],
+                [
+                    "Events & Webinars",
+                    "events"
+                ]
+            ]
+        },
+        "footer-study": {
+            "name": "Footer: Study",
+            "location": "footer-study",
+            "items": [
+                [
+                    "Study Destinations",
+                    "study-abroad"
+                ],
+                [
+                    "International Pathways",
+                    "international-pathways"
+                ],
+                [
+                    "Study Mobility Program",
+                    "study-mobility-program"
+                ],
+                [
+                    "Study News",
+                    "news"
+                ]
+            ]
+        },
+        "footer-about": {
+            "name": "Footer: About",
+            "location": "footer-about",
+            "items": [
+                [
+                    "About Us",
+                    "about"
+                ],
+                [
+                    "What We Do",
+                    "what-we-do"
+                ],
+                [
+                    "Partner With Us",
+                    "partner-with-us"
+                ],
+                [
+                    "Contact Us",
+                    "contact"
+                ]
+            ]
+        },
+        "legal": {
+            "name": "Footer: Legal",
+            "location": "legal",
+            "items": [
+                [
+                    "Privacy Policy",
+                    "privacy-policy"
+                ],
+                [
+                    "Payment Terms",
+                    "payment-terms"
+                ],
+                [
+                    "Refund Policy",
+                    "refund-policy"
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "brand.org_name": "Your Education Group",
+        "brand.logo": "{{image:logo}}",
+        "brand.logo_dark": "{{image:logo-light}}",
+        "brand.profile_pdf": "{{image:company-profile}}",
+        "contact.phone": "+44 20 0000 0000",
+        "contact.email": "hello@example.com",
+        "contact.whatsapp": "+44 7000 000000",
+        "contact.address": "1 Example Street\nLondon, United Kingdom",
+        "social.facebook": "https://www.facebook.com/",
+        "social.instagram": "https://www.instagram.com/",
+        "social.linkedin": "https://www.linkedin.com/",
+        "social.youtube": "https://www.youtube.com/",
+        "header.cta_text": "Apply Now",
+        "header.cta_link": "{{page-url:contact}}",
+        "seo.default_image": "{{image:banner}}",
+        "seo.home_title": "{site} {sep} Study Abroad & International Pathways"
+    },
+    "front_page": "home",
+    "posts_page": "news"
+}

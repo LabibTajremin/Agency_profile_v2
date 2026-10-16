@@ -1,0 +1,111 @@
+[
+    {
+        "id": "ee50d14",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "c4409c1",
+                "elType": "widget",
+                "widgetType": "qe-top-bar",
+                "settings": {
+                    "source": "menu",
+                    "menu": "{{menu:topbar}}"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "045db4d",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "center",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "flex_wrap": "nowrap",
+            "padding": {
+                "unit": "px",
+                "top": "12",
+                "right": "32",
+                "bottom": "12",
+                "left": "32",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "10",
+                "right": "16",
+                "bottom": "10",
+                "left": "16",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "f16e4d9",
+                "elType": "widget",
+                "widgetType": "qe-site-logo",
+                "settings": {
+                    "_flex_size": "none",
+                    "width": {
+                        "unit": "px",
+                        "size": 200
+                    },
+                    "width_mobile": {
+                        "unit": "px",
+                        "size": 160
+                    }
+                },
+                "elements": []
+            },
+            {
+                "id": "8dfd7ac",
+                "elType": "widget",
+                "widgetType": "qe-mega-menu",
+                "settings": {
+                    "menu": "{{menu:primary}}",
+                    "_flex_size": "grow"
+                },
+                "elements": []
+            },
+            {
+                "id": "2a77565",
+                "elType": "widget",
+                "widgetType": "button",
+                "settings": {
+                    "text": "Apply Now",
+                    "link": {
+                        "url": "{{page-url:contact}}",
+                        "is_external": "",
+                        "nofollow": ""
+                    },
+                    "size": "md",
+                    "_flex_size": "none",
+                    "hide_mobile": "hidden-mobile"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

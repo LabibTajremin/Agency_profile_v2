@@ -1,0 +1,343 @@
+[
+    {
+        "id": "8ec4c6f",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "042bf23",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "An advisor will reply within one working day.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "d039baa",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_gap": {
+                "unit": "px",
+                "size": 24,
+                "column": "24",
+                "row": "24"
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "0",
+                "bottom": "80",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "64",
+                "right": "0",
+                "bottom": "64",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "48",
+                "right": "0",
+                "bottom": "48",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "88d7744",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 48,
+                        "column": "48",
+                        "row": "48"
+                    },
+                    "flex_align_items": "flex-start",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    }
+                },
+                "elements": [
+                    {
+                        "id": "b36731e",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 40
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "b2885b9",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Get in touch",
+                                    "header_size": "h2"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "562ac22",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Phone",
+                                    "header_size": "h3"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "749b174",
+                                "elType": "widget",
+                                "widgetType": "text-editor",
+                                "settings": {
+                                    "__dynamic__": {
+                                        "editor": "[elementor-tag id=\"d30354f\" name=\"qe-setting-text\" settings=\"%7B%22key%22%3A%22phone%22%7D\"]"
+                                    }
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "a07fa56",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Email",
+                                    "header_size": "h3"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "caa2d0a",
+                                "elType": "widget",
+                                "widgetType": "text-editor",
+                                "settings": {
+                                    "__dynamic__": {
+                                        "editor": "[elementor-tag id=\"b05ddeb\" name=\"qe-setting-text\" settings=\"%7B%22key%22%3A%22email%22%7D\"]"
+                                    }
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "4388b3c",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Visit us",
+                                    "header_size": "h3"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "ce1be99",
+                                "elType": "widget",
+                                "widgetType": "text-editor",
+                                "settings": {
+                                    "__dynamic__": {
+                                        "editor": "[elementor-tag id=\"9558238\" name=\"qe-setting-text\" settings=\"%7B%22key%22%3A%22address%22%7D\"]"
+                                    }
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "0aa0a1b",
+                                "elType": "widget",
+                                "widgetType": "qe-social-links",
+                                "settings": {},
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    },
+                    {
+                        "id": "292675e",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "column",
+                            "flex_gap": {
+                                "unit": "px",
+                                "size": 16,
+                                "column": "16",
+                                "row": "16"
+                            },
+                            "width": {
+                                "unit": "%",
+                                "size": 60
+                            },
+                            "width_mobile": {
+                                "unit": "%",
+                                "size": 100
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            }
+                        },
+                        "elements": [
+                            {
+                                "id": "445869e",
+                                "elType": "widget",
+                                "widgetType": "heading",
+                                "settings": {
+                                    "title": "Send us a message",
+                                    "header_size": "h3"
+                                },
+                                "elements": []
+                            },
+                            {
+                                "id": "ad5f757",
+                                "elType": "widget",
+                                "widgetType": "qe-registration-form",
+                                "settings": {
+                                    "multi_step": "",
+                                    "create_account": "",
+                                    "submit_label": "Send message",
+                                    "fields": [
+                                        {
+                                            "_id": "2d1bd00",
+                                            "label": "Your name",
+                                            "type": "text",
+                                            "required": "yes",
+                                            "width": "50",
+                                            "step": "1"
+                                        },
+                                        {
+                                            "_id": "1346679",
+                                            "label": "Email",
+                                            "type": "email",
+                                            "required": "yes",
+                                            "width": "50",
+                                            "step": "1"
+                                        },
+                                        {
+                                            "_id": "8a9279f",
+                                            "label": "Phone",
+                                            "type": "tel",
+                                            "required": "",
+                                            "width": "50",
+                                            "step": "1"
+                                        },
+                                        {
+                                            "_id": "9422929",
+                                            "label": "Country",
+                                            "type": "country",
+                                            "required": "",
+                                            "width": "50",
+                                            "step": "1"
+                                        },
+                                        {
+                                            "_id": "0466df3",
+                                            "label": "Message",
+                                            "type": "textarea",
+                                            "required": "yes",
+                                            "width": "100",
+                                            "step": "1"
+                                        }
+                                    ]
+                                },
+                                "elements": []
+                            }
+                        ],
+                        "isInner": false
+                    }
+                ],
+                "isInner": false
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "d3f333a",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "afe9536",
+                "elType": "widget",
+                "widgetType": "google_maps",
+                "settings": {
+                    "address": "London, United Kingdom",
+                    "height": {
+                        "unit": "px",
+                        "size": 380
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

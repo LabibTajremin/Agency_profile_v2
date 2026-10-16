@@ -91,11 +91,32 @@ class PageTitleBanner extends Base {
 			return (string) $s['title'];
 		}
 
-		if ( is_singular() || ! is_archive() ) {
-			return (string) get_the_title();
+		if ( is_singular() ) {
+			return (string) get_the_title( get_queried_object_id() );
 		}
 
-		return wp_strip_all_tags( get_the_archive_title() );
+		if ( is_home() && ! is_front_page() ) {
+			return (string) single_post_title( '', false );
+		}
+
+		if ( is_search() ) {
+			/* translators: %s: search terms. */
+			return sprintf( __( 'Search results for “%s”', 'qe-edu' ), get_search_query( false ) );
+		}
+
+		if ( is_404() ) {
+			return __( 'Page not found', 'qe-edu' );
+		}
+
+		if ( is_archive() ) {
+			// A banner reads better without "Category:" / "Archives:".
+			add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
+			$title = wp_strip_all_tags( get_the_archive_title() );
+			remove_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
+			return trim( $title );
+		}
+
+		return (string) get_the_title();
 	}
 
 	/**

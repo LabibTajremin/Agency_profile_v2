@@ -1,0 +1,182 @@
+[
+    {
+        "id": "76d11dd",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "199447a",
+                "elType": "widget",
+                "widgetType": "qe-page-title",
+                "settings": {
+                    "subtitle": "Make the world your classroom.",
+                    "background_image": {
+                        "id": "{{image:banner}}",
+                        "url": "{{image-url:banner}}"
+                    }
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "053e5cd",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "7cb551a",
+                "elType": "widget",
+                "widgetType": "qe-destinations",
+                "settings": {
+                    "count": 16,
+                    "heading": "Choose your destination"
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "e538350",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "408f442",
+                "elType": "widget",
+                "widgetType": "qe-benefits-form",
+                "settings": {},
+                "elements": []
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "1d7a92e",
+        "elType": "container",
+        "settings": {
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "padding": {
+                "unit": "px",
+                "top": "72",
+                "right": "0",
+                "bottom": "72",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_tablet": {
+                "unit": "px",
+                "top": "56",
+                "right": "0",
+                "bottom": "56",
+                "left": "0",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "40",
+                "right": "0",
+                "bottom": "40",
+                "left": "0",
+                "isLinked": false
+            }
+        },
+        "elements": [
+            {
+                "id": "1a152b5",
+                "elType": "widget",
+                "widgetType": "qe-faq",
+                "settings": {
+                    "heading": "Frequently asked questions",
+                    "items": [
+                        {
+                            "_id": "a5aad5e",
+                            "question": "When should I start my application?",
+                            "answer": "<p>Ideally 9 to 12 months before your course starts. Some popular programmes fill up early.</p>"
+                        },
+                        {
+                            "_id": "dc55e6f",
+                            "question": "What documents do I need?",
+                            "answer": "<p>Usually your transcripts, an English test result, a personal statement and a copy of your passport.</p>"
+                        },
+                        {
+                            "_id": "e49ef36",
+                            "question": "Can I get a scholarship?",
+                            "answer": "<p>Many universities offer scholarships for international students. We will show you the ones you can apply for.</p>"
+                        }
+                    ]
+                },
+                "elements": []
+            }
+        ],
+        "isInner": false
+    }
+]

@@ -18,11 +18,11 @@ final class SchemaTest extends PluginTestCase {
 
 	const TYPES = array( 'text', 'textarea', 'code', 'url', 'email', 'tel', 'number', 'checkbox', 'select', 'color', 'media', 'template', 'swatch', 'redirects' );
 
-	public function test_texts_tab_without_theme_has_only_the_404_template() {
+	public function test_texts_tab_without_theme_has_only_the_page_templates() {
 		if ( function_exists( 'qe_edu_default_strings' ) ) {
 			$this->markTestSkipped( 'Theme already loaded in this process.' );
 		}
-		$this->assertSame( array( 'not_found_template' ), array_keys( Schema::tabs()['texts']['fields'] ) );
+		$this->assertSame( array( 'not_found_template', 'single_template', 'archive_template' ), array_keys( Schema::tabs()['texts']['fields'] ) );
 	}
 
 	public function test_tabs() {

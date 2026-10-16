@@ -291,6 +291,45 @@ final class WidgetBranchesTest extends WidgetTestCase {
 		$this->assertStringContainsString( '<h1 class="qe-banner__title">Current page</h1>', $this->render( PageTitleBanner::class ) );
 	}
 
+	public function test_page_title_banner_title_for_every_request() {
+		$s = array( 'title' => '' );
+		$this->assertSame( 'Own title', PageTitleBanner::title( array( 'title' => 'Own title' ) ) );
+
+		Functions\when( 'get_the_archive_title' )->alias(
+			static function () {
+				return ( false !== has_filter( 'get_the_archive_title_prefix', '__return_empty_string' ) ? '' : 'Category: ' ) . '<span>News</span> ';
+			}
+		);
+		$this->assertSame( 'News', PageTitleBanner::title( $s ), 'Prefix removed in the banner only.' );
+		$this->assertFalse( has_filter( 'get_the_archive_title_prefix', '__return_empty_string' ) );
+
+		Functions\when( 'is_archive' )->justReturn( false );
+		Functions\when( 'is_404' )->justReturn( true );
+		$this->assertSame( 'Page not found', PageTitleBanner::title( $s ) );
+
+		Functions\when( 'is_search' )->justReturn( true );
+		Functions\when( 'get_search_query' )->justReturn( 'mba' );
+		$this->assertSame( 'Search results for “mba”', PageTitleBanner::title( $s ) );
+
+		Functions\when( 'is_home' )->justReturn( true );
+		Functions\when( 'single_post_title' )->justReturn( 'News' );
+		$this->assertSame( 'News', PageTitleBanner::title( $s ), 'Blog page title, not the first post.' );
+
+		Functions\when( 'is_front_page' )->justReturn( true );
+		Functions\when( 'is_search' )->justReturn( false );
+		Functions\when( 'is_404' )->justReturn( false );
+		$this->assertSame( 'Current page', PageTitleBanner::title( $s ) );
+
+		Functions\when( 'is_singular' )->justReturn( true );
+		Functions\when( 'get_queried_object_id' )->justReturn( 7 );
+		Functions\when( 'get_the_title' )->alias(
+			static function ( $id = 0 ) {
+				return 7 === $id ? 'Queried post' : 'Loop post';
+			}
+		);
+		$this->assertSame( 'Queried post', PageTitleBanner::title( $s ) );
+	}
+
 	public function test_site_logo_variants() {
 		$this->assertStringContainsString( '<span class="qe-site-logo__name">Test Site</span>', $this->render( SiteLogo::class ) );
 
