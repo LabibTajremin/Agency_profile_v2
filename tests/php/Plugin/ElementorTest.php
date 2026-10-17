@@ -32,6 +32,7 @@ final class ElementorTest extends PluginTestCase {
 		$this->assertNotFalse( has_action( 'elementor/widgets/register', array( $integration, 'widgets' ) ) );
 		$this->assertNotFalse( has_action( 'elementor/dynamic_tags/register', array( $integration, 'tags' ) ) );
 		$this->assertNotFalse( has_action( 'wp_enqueue_scripts', array( $integration, 'register_assets' ) ) );
+		$this->assertNotFalse( has_action( 'wp_enqueue_scripts', array( $integration, 'after_theme_styles' ) ) );
 	}
 
 	public function test_twenty_widgets() {
@@ -65,6 +66,28 @@ final class ElementorTest extends PluginTestCase {
 		Functions\expect( 'wp_enqueue_style' )->never();
 		( new Integration() )->register_assets();
 		$this->addToAssertionCount( 1 );
+	}
+
+	public function test_widget_styles_print_after_the_theme_stylesheet() {
+		$styles = (object) array( 'registered' => array() );
+		Functions\when( 'wp_styles' )->justReturn( $styles );
+		$integration = new Integration();
+
+		$integration->after_theme_styles();
+		$this->assertSame( array(), $styles->registered, 'Nothing registered: nothing to do.' );
+
+		$styles->registered = array(
+			'qe-edu'              => (object) array( 'deps' => array() ),
+			'qe-edu-core-widgets' => (object) array( 'deps' => array( 'swiper' ) ),
+		);
+		$integration->after_theme_styles();
+		$integration->after_theme_styles();
+		$this->assertSame( array( 'swiper', 'qe-edu' ), $styles->registered['qe-edu-core-widgets']->deps, 'Added once.' );
+
+		unset( $styles->registered['qe-edu'] );
+		$styles->registered['qe-edu-core-widgets']->deps = array();
+		$integration->after_theme_styles();
+		$this->assertSame( array(), $styles->registered['qe-edu-core-widgets']->deps, 'Another theme: untouched.' );
 	}
 
 	public function test_widget_styles_load_early_with_a_header_or_footer_template() {

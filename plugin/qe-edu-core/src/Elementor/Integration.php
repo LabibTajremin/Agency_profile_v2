@@ -27,6 +27,26 @@ final class Integration {
 		add_action( 'elementor/widgets/register', array( $this, 'widgets' ) );
 		add_action( 'elementor/dynamic_tags/register', array( $this, 'tags' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ), 5 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'after_theme_styles' ), 20 );
+	}
+
+	/**
+	 * Print the widget styles after the theme's stylesheet (`qe-edu`), so
+	 * widget rules such as the outline button win over the theme's generic
+	 * button styles whatever order things were enqueued in.
+	 *
+	 * @return void
+	 */
+	public function after_theme_styles() {
+		$styles = wp_styles();
+		if ( ! isset( $styles->registered['qe-edu-core-widgets'], $styles->registered['qe-edu'] ) ) {
+			return;
+		}
+
+		$widgets = $styles->registered['qe-edu-core-widgets'];
+		if ( ! in_array( 'qe-edu', $widgets->deps, true ) ) {
+			$widgets->deps[] = 'qe-edu';
+		}
 	}
 
 	/**
