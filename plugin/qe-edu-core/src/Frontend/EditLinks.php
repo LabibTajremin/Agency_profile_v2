@@ -24,6 +24,11 @@ final class EditLinks {
 	 */
 	public function register() {
 		add_action( 'wp_footer', array( $this, 'render' ), 20 );
+
+		// The Theme Settings live preview shows the site as visitors see it.
+		if ( isset( $_GET['qe_preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only flag.
+			add_filter( 'show_admin_bar', '__return_false' );
+		}
 	}
 
 	/**
@@ -48,7 +53,7 @@ final class EditLinks {
 	 * @return array<string,string>
 	 */
 	public static function links() {
-		if ( ! current_user_can( 'edit_pages' ) || is_admin() || ! did_action( 'elementor/loaded' ) || isset( $_GET['elementor-preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only check.
+		if ( ! current_user_can( 'edit_pages' ) || is_admin() || ! did_action( 'elementor/loaded' ) || isset( $_GET['elementor-preview'] ) || isset( $_GET['qe_preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only check.
 			return array();
 		}
 

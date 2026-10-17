@@ -66,5 +66,27 @@ the first post on the blog page, Mega Menu dropdowns could cross the right edge,
 (demo page is `/events-webinars/`).
 
 ## Phase 7 — Polish & QA
-- [ ] Mobile, a11y, performance, `.pot`, screenshot, README, `npm run zip`
-- [ ] Gate: Lighthouse / axe / PHPCS / zips
+- [x] Mobile, a11y, performance, `.pot`, screenshot, README, `npm run zip`
+- [x] Gate: Lighthouse / axe / PHPCS / zips
+
+Gate results (final run, all from scratch):
+- Lighthouse mobile (`node bin/lighthouse.mjs`), 7 demo pages, with page cache + gzip as on any host:
+  performance 93–98, accessibility 100, SEO 100, CLS 0. Without cache/compression on PHP's dev
+  server (SQLite, ~0.45 s responses): 80–90 performance, still 100/100. Both are in the README.
+- axe (`tests/e2e/a11y-gate.spec.js`): no serious/critical issues on 22 URLs at desktop and phone,
+  the open mobile menu and Theme Settings — 4/4.
+- PHPCS, ESLint, Stylelint clean; string check OK; Theme Check 0 required / 0 warnings.
+- `npm run zip` → `dist/qe-edu.zip`, `dist/qe-edu-core.zip`; both installed on a fresh site via
+  WP-CLI, demo imported, no PHP notices; child-theme snippet from the README verified.
+- All e2e gates 27/27 (demo 10, a11y 4, colours 1, Elementor 2, SEO 5, widgets 5); PHPUnit 405 tests,
+  100% lines; Jest 66 tests, 100% all metrics.
+- `.pot`: theme 92 strings, plugin 976 strings (`npm run pot`).
+
+Mobile (§10): full-screen menu opens below its button, focus trapped, Esc closes, 48px targets;
+no horizontal scroll at 360px; compact top bar on phones; sticky Apply/WhatsApp bar.
+Fixes found in this phase: CLS from late template/widget CSS and JS-only mobile menu; banner LCP
+priority and srcset preload; jQuery to footer; 91 fewer queries on home (image priming); settings
+schema cached; slider/slide a11y roles; link context; footer heading order; empty author link;
+blog page SEO values; header menu never pushes the button off screen (clip check added to the
+demo gate); widget CSS always after theme CSS; admin hint contrast.
+User request: Brand → "Use the logo as the site icon (favicon)" (square copy; symbol of a wide logo).

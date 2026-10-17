@@ -94,6 +94,14 @@ final class FrontendTest extends PluginTestCase {
 		$_GET['elementor-preview'] = '5';
 		$this->assertSame( array(), EditLinks::links(), 'Inside the editor preview' );
 		unset( $_GET['elementor-preview'] );
+		$_GET['qe_preview'] = '1';
+		$this->assertSame( array(), EditLinks::links(), 'Inside the Theme Settings preview' );
+		$this->assertFalse( has_filter( 'show_admin_bar', '__return_false' ) );
+		( new EditLinks() )->register();
+		$this->assertNotFalse( has_filter( 'show_admin_bar', '__return_false' ), 'No admin bar in the preview.' );
+		unset( $_GET['qe_preview'] );
+		$_GET['elementor-preview'] = '5';
+		unset( $_GET['elementor-preview'] );
 
 		Functions\when( 'is_singular' )->justReturn( true );
 		Functions\when( 'get_queried_object_id' )->justReturn( 7 );
