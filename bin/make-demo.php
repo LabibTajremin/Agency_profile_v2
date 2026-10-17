@@ -686,7 +686,14 @@ $templates['header'] = array(
 	'title'   => 'Header',
 	'setting' => 'templates.header',
 	'data'    => array(
-		band( el( 'qe-top-bar', array( 'source' => 'menu', 'menu' => '{{menu:topbar}}' ) ), true ),
+		band(
+			el( 'qe-top-bar', array( 'source' => 'menu', 'menu' => '{{menu:topbar}}' ) ),
+			true,
+			array(
+				'padding'        => px( 4, 32 ),
+				'padding_mobile' => px( 4, 16 ),
+			)
+		),
 		el(
 			'container',
 			array(

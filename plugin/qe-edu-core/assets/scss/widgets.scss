@@ -1257,7 +1257,8 @@ body.elementor-editor-active .qe-marquee__track {
 	.qe-mega__menu {
 		position: fixed;
 		z-index: 999;
-		inset: var(--qe-header-h, 76px) 0 0;
+		// Set by the script to the menu button's bottom edge when opening.
+		inset: var(--qe-mega-top, var(--qe-header-h, 76px)) 0 0;
 		display: none;
 		flex-direction: column;
 		align-items: stretch;
@@ -1404,6 +1405,33 @@ body.elementor-editor-active.qe-menu-locked {
 	flex-wrap: wrap;
 	gap: 0 1.25rem;
 	margin: 0;
+}
+
+// Phones: two compact rows; the links scroll sideways instead of wrapping.
+@media (max-width: 767px) {
+
+	.qe-topbar-w {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+
+		ul {
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			scrollbar-width: none;
+			white-space: nowrap;
+		}
+
+		ul::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	.qe-topbar-w__contact {
+		flex-wrap: nowrap;
+		overflow: hidden;
+		white-space: nowrap;
+	}
 }
 
 // Newsletter -----------------------------------------------------------

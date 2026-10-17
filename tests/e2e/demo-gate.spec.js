@@ -1,7 +1,7 @@
 /**
  * Phase 6 gate: on a fresh site, Theme Settings → Tools → "Import demo"
  * builds every page, template and menu; each page renders the structure the
- * demo defines (every widget, in order) at 1440 / 1024 / 390 with no errors,
+ * demo defines (every widget, in order) at 1440 / 1024 / 390 / 360 with no errors,
  * no overflow, no broken images and exactly one <h1>; importing again adds
  * nothing; a single page can be imported on its own.
  *
@@ -156,7 +156,7 @@ test.describe( 'Demo import gate', () => {
 		);
 	} );
 
-	for ( const width of [ 1440, 1024, 390 ] ) {
+	for ( const width of [ 1440, 1024, 390, 360 ] ) {
 		test( `every page matches the demo structure at ${ width }px`, async ( {
 			browser,
 		} ) => {

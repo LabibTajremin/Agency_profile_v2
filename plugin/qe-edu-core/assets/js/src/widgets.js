@@ -543,10 +543,52 @@
 				);
 			}
 
+			// Visible links and buttons of the open menu, toggle first.
+			function focusables() {
+				return Array.from(
+					nav.querySelectorAll(
+						'.qe-mega__menu a[href], .qe-mega__menu button'
+					)
+				).filter( ( el ) => el.offsetWidth > 0 || el.offsetHeight > 0 );
+			}
+
 			function setOpen( open ) {
+				if ( open ) {
+					// Open just below the button, whatever the header height.
+					nav.style.setProperty(
+						'--qe-mega-top',
+						`${ Math.round(
+							toggle.getBoundingClientRect().bottom
+						) }px`
+					);
+				}
 				nav.classList.toggle( 'is-open', open );
 				toggle.setAttribute( 'aria-expanded', open ? 'true' : 'false' );
 				doc.body.classList.toggle( 'qe-menu-locked', open );
+				const first = open && focusables()[ 0 ];
+				if ( first ) {
+					first.focus();
+				}
+			}
+
+			// Keep Tab inside the open full-screen menu (and its button).
+			function trapFocus( event ) {
+				if (
+					event.key !== 'Tab' ||
+					! nav.classList.contains( 'is-open' ) ||
+					! nav.classList.contains( 'is-mobile' )
+				) {
+					return;
+				}
+				const items = [ toggle, ...focusables() ];
+				const last = items[ items.length - 1 ];
+				if ( event.shiftKey && doc.activeElement === toggle ) {
+					event.preventDefault();
+					last.focus();
+				} else if ( ! event.shiftKey && doc.activeElement === last ) {
+					event.preventDefault();
+					toggle.focus();
+				}
 			}
 
 			function closeSubmenus() {
@@ -596,6 +638,8 @@
 				li.classList.toggle( 'is-open', open );
 				button.setAttribute( 'aria-expanded', open ? 'true' : 'false' );
 			} );
+
+			nav.addEventListener( 'keydown', trapFocus );
 
 			nav.addEventListener( 'keydown', ( event ) => {
 				if ( event.key !== 'Escape' ) {

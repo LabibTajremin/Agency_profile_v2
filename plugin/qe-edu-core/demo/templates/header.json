@@ -7,10 +7,18 @@
             "flex_direction": "column",
             "padding": {
                 "unit": "px",
-                "top": "0",
-                "right": "0",
-                "bottom": "0",
-                "left": "0",
+                "top": "4",
+                "right": "32",
+                "bottom": "4",
+                "left": "32",
+                "isLinked": false
+            },
+            "padding_mobile": {
+                "unit": "px",
+                "top": "4",
+                "right": "16",
+                "bottom": "4",
+                "left": "16",
                 "isLinked": false
             }
         },

@@ -677,6 +677,88 @@ describe( 'widgets.js', () => {
 		menu.closeSubmenus();
 	} );
 
+	test( 'mobile menu opens below its button and keeps focus inside', () => {
+		setMatchMedia( true );
+		const nav = menuMarkup();
+		const menu = api.megaMenu( nav );
+		const toggle = nav.querySelector( '.qe-mega__toggle' );
+		const [ first, sub, last ] = [
+			nav.querySelector( 'a[href="#a"]' ),
+			nav.querySelector( '.qe-mega__sub-toggle' ),
+			nav.querySelector( 'a[href="#b"]' ),
+		];
+		toggle.getBoundingClientRect = () => ( { bottom: 120.4 } );
+		const visible = new Set( [ first, sub, last ] );
+		const width = Object.getOwnPropertyDescriptor(
+			window.HTMLElement.prototype,
+			'offsetWidth'
+		);
+		const height = Object.getOwnPropertyDescriptor(
+			window.HTMLElement.prototype,
+			'offsetHeight'
+		);
+		Object.defineProperty( window.HTMLElement.prototype, 'offsetWidth', {
+			configurable: true,
+			get() {
+				return visible.has( this ) && this !== last ? 10 : 0;
+			},
+		} );
+		Object.defineProperty( window.HTMLElement.prototype, 'offsetHeight', {
+			configurable: true,
+			get() {
+				return visible.has( this ) && this === last ? 10 : 0;
+			},
+		} );
+		const tab = ( shiftKey = false, key = 'Tab' ) => {
+			const event = new window.KeyboardEvent( 'keydown', {
+				key,
+				shiftKey,
+				bubbles: true,
+				cancelable: true,
+			} );
+			document.activeElement.dispatchEvent( event );
+			return event.defaultPrevented;
+		};
+
+		toggle.click();
+		expect( nav.style.getPropertyValue( '--qe-mega-top' ) ).toBe( '120px' );
+		expect( document.activeElement ).toBe( first );
+
+		last.focus();
+		expect( tab() ).toBe( true );
+		expect( document.activeElement ).toBe( toggle );
+		expect( tab( true ) ).toBe( true );
+		expect( document.activeElement ).toBe( last );
+		sub.focus();
+		expect( tab() ).toBe( false );
+		expect( tab( false, 'a' ) ).toBe( false );
+
+		nav.classList.remove( 'is-mobile' );
+		last.focus();
+		expect( tab() ).toBe( false );
+		nav.classList.add( 'is-mobile' );
+		menu.setOpen( false );
+		last.focus();
+		expect( tab() ).toBe( false );
+
+		// Nothing visible to focus: focus stays where it is.
+		visible.clear();
+		toggle.focus();
+		menu.setOpen( true );
+		expect( document.activeElement ).toBe( toggle );
+
+		Object.defineProperty(
+			window.HTMLElement.prototype,
+			'offsetWidth',
+			width
+		);
+		Object.defineProperty(
+			window.HTMLElement.prototype,
+			'offsetHeight',
+			height
+		);
+	} );
+
 	test( 'mega menu dropdowns stay on screen', () => {
 		setMatchMedia( false );
 		const nav = menuMarkup();
