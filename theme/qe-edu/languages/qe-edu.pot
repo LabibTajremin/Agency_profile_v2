@@ -1,0 +1,408 @@
+# Copyright (C) 2026 Your Education Group
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: QE Edu 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/qe-edu\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-17T12:45:30+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: qe-edu\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "QE Edu"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://example.com/qe-edu"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A premium, fully editable education and study-abroad theme built for Elementor. Every text, colour and section is editable without code. Pair it with the QE Edu Core plugin for widgets, theme settings, SEO and one-click demo import."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Your Education Group"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://example.com"
+msgstr ""
+
+#: inc/customizer.php:20
+msgid "Keep the header visible while scrolling"
+msgstr ""
+
+#: inc/customizer.php:25
+msgid "Show the top bar (small links above the header)"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Header button text"
+msgstr ""
+
+#: inc/customizer.php:35
+msgid "Header button link"
+msgstr ""
+
+#: inc/customizer.php:40
+msgid "Copyright text"
+msgstr ""
+
+#: inc/customizer.php:41
+msgid "Use {year} for the current year and {site} for the site name."
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Show the \"back to top\" button"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Theme quick settings"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "All other options are under Theme Settings in the dashboard menu."
+msgstr ""
+
+#: inc/elementor-compat.php:40
+msgid "Primary (accent)"
+msgstr ""
+
+#: inc/elementor-compat.php:45
+msgid "Secondary (navy)"
+msgstr ""
+
+#: inc/elementor-compat.php:50
+msgid "Text"
+msgstr ""
+
+#: inc/elementor-compat.php:55
+msgid "Accent (dark)"
+msgstr ""
+
+#: inc/elementor-compat.php:78
+msgid "Headings"
+msgstr ""
+
+#: inc/elementor-compat.php:79
+msgid "Sub-headings"
+msgstr ""
+
+#: inc/elementor-compat.php:80
+msgid "Body text"
+msgstr ""
+
+#: inc/elementor-compat.php:81
+msgid "Buttons"
+msgstr ""
+
+#: inc/setup.php:51
+msgid "Main menu (header)"
+msgstr ""
+
+#: inc/setup.php:52
+msgid "Top bar links"
+msgstr ""
+
+#: inc/setup.php:53
+msgid "Footer: Resources column"
+msgstr ""
+
+#: inc/setup.php:54
+msgid "Footer: Study column"
+msgstr ""
+
+#: inc/setup.php:55
+msgid "Footer: About column"
+msgstr ""
+
+#: inc/setup.php:56
+msgid "Footer: Legal links"
+msgstr ""
+
+#: inc/setup.php:86
+msgid "Card (640×420)"
+msgstr ""
+
+#: inc/setup.php:87
+msgid "Hero (1920×1080)"
+msgstr ""
+
+#: inc/setup.php:168
+msgid "Outline (accent)"
+msgstr ""
+
+#: inc/template-tags.php:57
+msgid "Skip to content"
+msgstr ""
+
+#: inc/template-tags.php:58
+msgid "Open menu"
+msgstr ""
+
+#: inc/template-tags.php:59
+msgid "Close menu"
+msgstr ""
+
+#: inc/template-tags.php:60
+msgid "Main menu"
+msgstr ""
+
+#: inc/template-tags.php:61
+msgid "Utility links"
+msgstr ""
+
+#: inc/template-tags.php:62
+msgid "Footer links"
+msgstr ""
+
+#: inc/template-tags.php:63
+msgid "Legal links"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "Show submenu"
+msgstr ""
+
+#: inc/template-tags.php:65
+msgid "Back to top"
+msgstr ""
+
+#: inc/template-tags.php:66
+msgid "© {year} {site}. All rights reserved."
+msgstr ""
+
+#: inc/template-tags.php:67
+msgid "Page not found"
+msgstr ""
+
+#: inc/template-tags.php:68
+msgid "The page you are looking for has moved or no longer exists. Try a search instead."
+msgstr ""
+
+#: inc/template-tags.php:69
+msgid "Search results for: {query}"
+msgstr ""
+
+#: inc/template-tags.php:70
+msgid "Nothing matched your search. Please try different keywords."
+msgstr ""
+
+#: inc/template-tags.php:71
+msgid "There is nothing here yet."
+msgstr ""
+
+#: inc/template-tags.php:72
+msgid "News"
+msgstr ""
+
+#: inc/template-tags.php:73
+msgid "Read more"
+msgstr ""
+
+#: inc/template-tags.php:74
+msgid "Posted on {date}"
+msgstr ""
+
+#: inc/template-tags.php:75
+msgid "by {author}"
+msgstr ""
+
+#: inc/template-tags.php:76
+msgid "Pages:"
+msgstr ""
+
+#: inc/template-tags.php:77
+msgid "Previous"
+msgstr ""
+
+#: inc/template-tags.php:78
+msgid "Next"
+msgstr ""
+
+#: inc/template-tags.php:79
+msgid "Comments"
+msgstr ""
+
+#: inc/template-tags.php:80
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/template-tags.php:81
+msgid "Search for:"
+msgstr ""
+
+#: inc/template-tags.php:82
+msgid "Search"
+msgstr ""
+
+#: inc/template-tags.php:83
+msgid "Search…"
+msgstr ""
+
+#: inc/template-tags.php:84
+msgid "Apply Now"
+msgstr ""
+
+#: inc/tgmpa.php:19
+msgid "Elementor"
+msgstr ""
+
+#: inc/tgmpa.php:27
+msgid "QE Edu Core"
+msgstr ""
+
+#: inc/tgmpa.php:67
+msgid "Activate"
+msgstr ""
+
+#: inc/tgmpa.php:70
+msgid "Upload the qe-edu-core.zip that came with the theme"
+msgstr ""
+
+#: inc/tgmpa.php:76
+msgid "Install"
+msgstr ""
+
+#: inc/tgmpa.php:98
+msgid "QE Edu theme needs these plugins to unlock the editable layouts:"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Blank Canvas (no header or footer)"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Full Width (Header + Footer)"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary (accent)"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary dark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Navy (headings)"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Navy 2"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Indigo"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Violet"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Body text"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Muted text"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Soft background"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Border"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Hero (accent to navy)"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Headings"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Body"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr ""

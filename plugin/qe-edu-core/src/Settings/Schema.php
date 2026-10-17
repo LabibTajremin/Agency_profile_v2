@@ -165,34 +165,40 @@ final class Schema {
 	 */
 	private static function brand() {
 		return array(
-			'org_name'    => array(
+			'org_name'     => array(
 				'type'    => 'text',
 				'label'   => __( 'Organisation name', 'qe-edu' ),
 				'help'    => __( 'Your official name, used by search engines. Leave empty to use the site title.', 'qe-edu' ),
 				'default' => '',
 			),
-			'logo'        => array(
+			'logo'         => array(
 				'type'    => 'media',
 				'mime'    => 'image',
 				'label'   => __( 'Logo', 'qe-edu' ),
 				'help'    => __( 'Shown in the header. A transparent PNG or SVG around 240×80 looks best.', 'qe-edu' ),
 				'default' => 0,
 			),
-			'logo_dark'   => array(
+			'logo_dark'    => array(
 				'type'    => 'media',
 				'mime'    => 'image',
 				'label'   => __( 'Logo for dark backgrounds', 'qe-edu' ),
 				'help'    => __( 'A light version of your logo, used in dark mode and on dark footers.', 'qe-edu' ),
 				'default' => 0,
 			),
-			'favicon'     => array(
+			'logo_favicon' => array(
+				'type'    => 'checkbox',
+				'label'   => __( 'Use the logo as the site icon (favicon)', 'qe-edu' ),
+				'help'    => __( 'Shows your logo in browser tabs and bookmarks. A square version is made for you; for a wide logo with a symbol, just the symbol is used. Choose a separate icon below to use that instead.', 'qe-edu' ),
+				'default' => true,
+			),
+			'favicon'      => array(
 				'type'    => 'media',
 				'mime'    => 'image',
-				'label'   => __( 'Site icon (favicon)', 'qe-edu' ),
-				'help'    => __( 'The small square icon in browser tabs. Use a square image of at least 512×512.', 'qe-edu' ),
+				'label'   => __( 'Separate site icon (optional)', 'qe-edu' ),
+				'help'    => __( 'A square image of at least 512×512, used instead of the logo. Good for wide logos: use just your symbol here.', 'qe-edu' ),
 				'default' => 0,
 			),
-			'profile_pdf' => array(
+			'profile_pdf'  => array(
 				'type'    => 'media',
 				'mime'    => 'application/pdf',
 				'label'   => __( 'Company profile PDF', 'qe-edu' ),

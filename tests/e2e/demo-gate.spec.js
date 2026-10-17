@@ -1,7 +1,7 @@
 /**
  * Phase 6 gate: on a fresh site, Theme Settings → Tools → "Import demo"
  * builds every page, template and menu; each page renders the structure the
- * demo defines (every widget, in order) at 1440 / 1024 / 390 / 360 with no errors,
+ * demo defines (every widget, in order) at 1440 / 1280 / 1100 / 1024 / 390 / 360 with no errors,
  * no overflow, no broken images and exactly one <h1>; importing again adds
  * nothing; a single page can be imported on its own.
  *
@@ -118,6 +118,21 @@ async function inspect( page ) {
 			footer: !! document.querySelector(
 				'[data-elementor-type="section"] .qe-newsletter'
 			),
+			// Header/footer widgets cut off at the edges (overflow is clipped,
+			// so scrollWidth alone would not show it).
+			clipped: Array.from(
+				document.querySelectorAll(
+					'[data-elementor-type="section"] .elementor-widget'
+				)
+			)
+				.filter( ( el ) => {
+					const box = el.getBoundingClientRect();
+					return (
+						box.width > 0 &&
+						( box.right > window.innerWidth + 1 || box.left < -1 )
+					);
+				} )
+				.map( ( el ) => el.getAttribute( 'data-widget_type' ) ),
 			broken: Array.from( document.images )
 				.filter( ( img ) => img.complete && img.naturalWidth === 0 )
 				.map( ( img ) => img.currentSrc || img.src ),
@@ -156,7 +171,7 @@ test.describe( 'Demo import gate', () => {
 		);
 	} );
 
-	for ( const width of [ 1440, 1024, 390, 360 ] ) {
+	for ( const width of [ 1440, 1280, 1100, 1024, 390, 360 ] ) {
 		test( `every page matches the demo structure at ${ width }px`, async ( {
 			browser,
 		} ) => {
@@ -200,6 +215,7 @@ test.describe( 'Demo import gate', () => {
 					`${ label } overflow`
 				).toBeLessThanOrEqual( 0 );
 				expect( info.h1, `${ label } <h1>` ).toBe( 1 );
+				expect( info.clipped, `${ label } clipped` ).toEqual( [] );
 				expect( info.broken, `${ label } images` ).toEqual( [] );
 				const relevant = errors.filter(
 					( e ) => ! /google|gstatic|maps|favicon/.test( e )

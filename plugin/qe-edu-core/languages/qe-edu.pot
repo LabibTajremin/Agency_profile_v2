@@ -1,0 +1,4145 @@
+# Copyright (C) 2026 Your Education Group
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: QE Edu Core 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/qe-edu-core\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-17T12:45:31+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: qe-edu\n"
+
+#. Plugin Name of the plugin
+#: qe-edu-core.php
+msgid "QE Edu Core"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: qe-edu-core.php
+msgid "https://example.com/qe-edu"
+msgstr ""
+
+#. Description of the plugin
+#: qe-edu-core.php
+msgid "Companion plugin for the QE Edu theme: Theme Settings panel, 12 accent palettes, Elementor widgets, content types, forms, SEO and one-click demo import."
+msgstr ""
+
+#. Author of the plugin
+#: qe-edu-core.php
+msgid "Your Education Group"
+msgstr ""
+
+#: src/Admin/Fields.php:44
+#: src/Settings/AdminPage.php:130
+msgid "Choose file"
+msgstr ""
+
+#: src/Admin/Fields.php:46
+msgid "Remove"
+msgstr ""
+
+#: src/Colors/FontPairs.php:39
+msgid "Montserrat + Open Sans (default, fastest)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:40
+msgid "Poppins + Inter (modern)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:41
+msgid "Playfair Display + Source Sans 3 (classic)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:42
+msgid "Raleway + Lato (elegant)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:43
+msgid "DM Serif Display + DM Sans (editorial)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:44
+msgid "Lora + Nunito Sans (friendly)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:45
+msgid "Oswald + Roboto (bold)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:46
+msgid "Merriweather + Work Sans (academic)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:47
+msgid "Sora + Manrope (tech)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:48
+msgid "Libre Baskerville + Karla (heritage)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:49
+msgid "Outfit + Plus Jakarta Sans (clean)"
+msgstr ""
+
+#: src/Colors/FontPairs.php:50
+msgid "Cormorant Garamond + Mulish (luxury)"
+msgstr ""
+
+#: src/Colors/KitSync.php:43
+msgid "Primary (accent)"
+msgstr ""
+
+#: src/Colors/KitSync.php:48
+msgid "Secondary (navy)"
+msgstr ""
+
+#: src/Colors/KitSync.php:53
+#: src/Elementor/Widgets/AnimatedHero.php:223
+#: src/Elementor/Widgets/BenefitsForm.php:94
+#: src/Elementor/Widgets/BenefitsForm.php:171
+#: src/Elementor/Widgets/Breadcrumbs.php:61
+#: src/Elementor/Widgets/CtaDownload.php:56
+#: src/Elementor/Widgets/CtaDownload.php:80
+#: src/Elementor/Widgets/Newsletter.php:68
+#: src/Elementor/Widgets/Newsletter.php:91
+#: src/Elementor/Widgets/NewsSlider.php:109
+#: src/Elementor/Widgets/ServiceSlider.php:149
+#: src/Elementor/Widgets/TopBar.php:85
+#: src/Forms/Defaults.php:26
+msgid "Text"
+msgstr ""
+
+#: src/Colors/KitSync.php:58
+msgid "Accent (dark)"
+msgstr ""
+
+#: src/Colors/KitSync.php:121
+msgid "Headings"
+msgstr ""
+
+#: src/Colors/KitSync.php:122
+msgid "Sub-headings"
+msgstr ""
+
+#: src/Colors/KitSync.php:123
+msgid "Body text"
+msgstr ""
+
+#: src/Colors/KitSync.php:124
+#: src/Elementor/Widgets/AnimatedHero.php:107
+msgid "Buttons"
+msgstr ""
+
+#: src/Colors/Palette.php:60
+msgid "QE Crimson"
+msgstr ""
+
+#: src/Colors/Palette.php:66
+msgid "Royal Indigo"
+msgstr ""
+
+#: src/Colors/Palette.php:72
+msgid "Electric Violet"
+msgstr ""
+
+#: src/Colors/Palette.php:78
+msgid "Midnight Navy"
+msgstr ""
+
+#: src/Colors/Palette.php:84
+msgid "Ocean Blue"
+msgstr ""
+
+#: src/Colors/Palette.php:90
+msgid "Emerald"
+msgstr ""
+
+#: src/Colors/Palette.php:96
+msgid "Teal Lagoon"
+msgstr ""
+
+#: src/Colors/Palette.php:102
+msgid "Champagne Gold"
+msgstr ""
+
+#: src/Colors/Palette.php:108
+msgid "Sunset Coral"
+msgstr ""
+
+#: src/Colors/Palette.php:114
+msgid "Amber Saffron"
+msgstr ""
+
+#: src/Colors/Palette.php:120
+msgid "Rose Quartz"
+msgstr ""
+
+#: src/Colors/Palette.php:126
+msgid "Graphite"
+msgstr ""
+
+#: src/Colors/Palette.php:147
+#: src/Settings/AdminPage.php:567
+msgid "Custom"
+msgstr ""
+
+#. translators: 1: number of items added, 2: number of items that already existed.
+#: src/DemoImport/Admin.php:85
+#, php-format
+msgid "Demo imported: %1$d items added, %2$d already there (left unchanged)."
+msgstr ""
+
+#: src/DemoImport/Admin.php:92
+msgid "View the page"
+msgstr ""
+
+#: src/DemoImport/Admin.php:92
+msgid "View your site"
+msgstr ""
+
+#: src/DemoImport/Admin.php:105
+msgid "Import the demo"
+msgstr ""
+
+#: src/DemoImport/Admin.php:107
+msgid "Adds the demo pages, header, footer, menus, images and sample content, so you can start by changing text instead of building from scratch. Anything you already have is left as it is, and running it again never creates duplicates."
+msgstr ""
+
+#: src/DemoImport/Admin.php:110
+msgid "The demo files are missing. Please reinstall the QE Edu Core plugin."
+msgstr ""
+
+#: src/DemoImport/Admin.php:116
+msgid "Please install and activate Elementor first — the demo pages are built with it."
+msgstr ""
+
+#: src/DemoImport/Admin.php:122
+msgid "What to import"
+msgstr ""
+
+#: src/DemoImport/Admin.php:124
+msgid "The whole site (recommended)"
+msgstr ""
+
+#: src/DemoImport/Admin.php:125
+msgid "Or just one page"
+msgstr ""
+
+#: src/DemoImport/Admin.php:130
+msgid "Importing copies about 60 small images into your Media Library and can take up to a minute."
+msgstr ""
+
+#: src/DemoImport/Admin.php:131
+msgid "Import demo"
+msgstr ""
+
+#: src/DemoImport/Admin.php:142
+#: src/Seo/Conflict.php:179
+#: src/Seo/Redirects.php:169
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: src/Elementor/Integration.php:72
+msgid "QE Education"
+msgstr ""
+
+#: src/Elementor/Integration.php:97
+#: src/Settings/AdminPage.php:54
+#: src/Settings/AdminPage.php:55
+#: src/Settings/AdminPage.php:320
+msgid "Theme Settings"
+msgstr ""
+
+#: src/Elementor/Integration.php:122
+msgid "Pause"
+msgstr ""
+
+#: src/Elementor/Integration.php:123
+msgid "Play"
+msgstr ""
+
+#: src/Elementor/Integration.php:124
+#: src/Forms/Defaults.php:91
+#: src/Forms/Defaults.php:114
+msgid "Sorry, something went wrong. Please try again."
+msgstr ""
+
+#: src/Elementor/MenuFields.php:89
+msgid "Mega panel (Mega Menu widget)"
+msgstr ""
+
+#: src/Elementor/MenuFields.php:92
+msgid "No — normal dropdown"
+msgstr ""
+
+#: src/Elementor/MenuFields.php:93
+msgid "2 columns"
+msgstr ""
+
+#: src/Elementor/MenuFields.php:94
+msgid "3 columns"
+msgstr ""
+
+#: src/Elementor/MenuFields.php:95
+msgid "4 columns"
+msgstr ""
+
+#: src/Elementor/MenuFields.php:101
+msgid "Panel image (optional):"
+msgstr ""
+
+#: src/Elementor/Tags/Logo.php:37
+msgid "Theme Settings logo"
+msgstr ""
+
+#: src/Elementor/Tags/Logo.php:67
+#: src/Elementor/Widgets/SiteLogo.php:57
+msgid "Which logo"
+msgstr ""
+
+#: src/Elementor/Tags/Logo.php:70
+#: src/Elementor/Widgets/SiteLogo.php:59
+msgid "Normal logo"
+msgstr ""
+
+#: src/Elementor/Tags/Logo.php:71
+#: src/Elementor/Widgets/SiteLogo.php:60
+#: src/Settings/Schema.php:184
+msgid "Logo for dark backgrounds"
+msgstr ""
+
+#: src/Elementor/Tags/SettingText.php:36
+msgid "Theme Settings text"
+msgstr ""
+
+#: src/Elementor/Tags/SettingText.php:66
+msgid "Which text"
+msgstr ""
+
+#: src/Elementor/Tags/SettingUrl.php:36
+msgid "Theme Settings link"
+msgstr ""
+
+#: src/Elementor/Tags/SettingUrl.php:66
+msgid "Which link"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:28
+#: src/Settings/Schema.php:170
+msgid "Organisation name"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:29
+#: src/Settings/Schema.php:462
+msgid "Main phone"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:30
+#: src/Settings/Schema.php:469
+msgid "Second phone"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:31
+#: src/Forms/Defaults.php:27
+#: src/Forms/Handler.php:332
+#: src/PostTypes/Leads.php:130
+#: src/PostTypes/Leads.php:242
+#: src/Settings/Schema.php:476
+msgid "Email"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:32
+#: src/Settings/Schema.php:483
+msgid "WhatsApp number"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:33
+#: src/Seo/Redirects.php:144
+#: src/Settings/Schema.php:490
+msgid "Address"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:34
+#: src/Settings/Schema.php:416
+msgid "Copyright text"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:51
+msgid "© {year} {site}. All rights reserved."
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:71
+msgid "Call the main phone"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:72
+msgid "Call the second phone"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:73
+msgid "Send an email"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:74
+msgid "Chat on WhatsApp"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:75
+#: src/Settings/Schema.php:497
+msgid "Map link"
+msgstr ""
+
+#: src/Elementor/Tags/Values.php:76
+#: src/Settings/Schema.php:204
+msgid "Company profile PDF"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:36
+msgid "Animated Hero"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:63
+#: src/Elementor/Widgets/AnimatedHero.php:213
+msgid "Headline"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:64
+msgid "Text before the moving words"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:64
+msgid "Celebrating"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:70
+msgid "Words"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:79
+msgid "Moving words (typed one after another)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:84
+msgid "15 Years of Excellence"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:85
+msgid "Global Education Pathways"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:86
+msgid "Student Success Worldwide"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:90
+msgid "Text after the moving words"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:93
+msgid "Heading level"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:99
+msgid "Use H1 for the first section of a page."
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:101
+msgid "Text under the headline"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:101
+msgid "Your trusted partner for studying abroad — from choosing a course to arriving on campus."
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:102
+msgid "Show typing cursor"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:103
+msgid "Typing speed (milliseconds per letter)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:104
+msgid "Pause on each phrase (milliseconds)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:108
+msgid "First button text"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:108
+msgid "Start Your Journey"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:109
+msgid "First button link"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:110
+msgid "Second button text"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:110
+msgid "Find Courses"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:111
+msgid "Second button link"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:114
+msgid "Background"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:117
+msgid "Background type"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:119
+msgid "Soft light colour"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:120
+msgid "Accent-to-navy gradient (white text)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:121
+#: src/Elementor/Widgets/AnimatedHero.php:153
+#: src/Elementor/Widgets/NewsSlider.php:92
+#: src/Elementor/Widgets/ServiceSlider.php:132
+#: src/PostTypes/Registrar.php:136
+msgid "Image"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:122
+msgid "Video"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:129
+#: src/Elementor/Widgets/PageTitleBanner.php:69
+msgid "Background image"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:137
+msgid "Video file link (MP4)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:141
+msgid "Upload the video to the Media Library and paste its link. The image above shows while it loads and on phones."
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:144
+msgid "Darken the background for readable text"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:145
+#: src/Elementor/Widgets/PageTitleBanner.php:74
+msgid "Minimum height (pixels)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:148
+msgid "Floating images"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:161
+msgid "Horizontal position (%)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:171
+msgid "Vertical position (%)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:181
+msgid "Width (pixels)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:191
+msgid "Movement (0 = still, 1 = most)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:202
+msgid "Images that move with the mouse (desktop only)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:209
+msgid "Mouse-move strength (pixels)"
+msgstr ""
+
+#: src/Elementor/Widgets/AnimatedHero.php:217
+msgid "Moving words colour"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:246
+#: src/Elementor/Widgets/DestinationsGrid.php:113
+msgid "Slider"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:248
+msgid "Cards visible on computers"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:249
+msgid "Cards visible on tablets"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:252
+msgid "Cards visible on phones"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:258
+msgid "1.15 shows a peek of the next card, inviting a swipe."
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:261
+msgid "Move automatically"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:264
+msgid "Seconds between slides"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:270
+msgid "Show arrows"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:271
+msgid "Show dots"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:274
+msgid "Show as a still row while editing"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:276
+msgid "Makes editing easier; visitors still see the slider."
+msgstr ""
+
+#. translators: %s: element name, e.g. Heading.
+#: src/Elementor/Widgets/Base.php:296
+#, php-format
+msgid "%s colour"
+msgstr ""
+
+#. translators: %s: element name, e.g. Heading.
+#: src/Elementor/Widgets/Base.php:307
+#, php-format
+msgid "%s font"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:324
+msgid "Button colour"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:333
+msgid "Button colour on hover"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:343
+msgid "Button font"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:359
+msgid "Colours & fonts"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:597
+msgid "Previous slide"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:598
+msgid "Next slide"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:38
+msgid "Benefits + Form"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:65
+msgid "Text & benefits"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:66
+msgid "Small text above the heading"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:66
+msgid "International Students"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:67
+#: src/Elementor/Widgets/BenefitsForm.php:170
+#: src/Elementor/Widgets/CtaDownload.php:55
+#: src/Elementor/Widgets/CtaDownload.php:79
+#: src/Elementor/Widgets/DestinationsGrid.php:99
+#: src/Elementor/Widgets/DestinationsGrid.php:153
+#: src/Elementor/Widgets/EventList.php:53
+#: src/Elementor/Widgets/Faq.php:54
+#: src/Elementor/Widgets/LogoCarousel.php:73
+#: src/Elementor/Widgets/LogoCarousel.php:116
+#: src/Elementor/Widgets/Newsletter.php:67
+#: src/Elementor/Widgets/Newsletter.php:90
+#: src/Elementor/Widgets/NewsSlider.php:74
+#: src/Elementor/Widgets/NewsSlider.php:153
+#: src/Elementor/Widgets/ServiceSlider.php:115
+#: src/Elementor/Widgets/ServiceSlider.php:179
+#: src/Elementor/Widgets/TeamGrid.php:54
+#: src/Elementor/Widgets/Testimonials.php:73
+msgid "Heading"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:67
+msgid "Your future starts with one application"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:68
+#: src/Elementor/Widgets/DestinationsGrid.php:100
+#: src/Elementor/Widgets/ServiceSlider.php:116
+msgid "Introduction"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:68
+msgid "Create your free account to explore programmes, apply to universities and get one-to-one guidance from our advisors."
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:74
+msgid "Icon"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:85
+msgid "Bold first words"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:102
+msgid "Benefits"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:112
+msgid "Apply with Ease"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:113
+msgid "One simple application for universities around the world."
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:120
+msgid "Vast Program Selection"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:121
+msgid "Choose from 45,000+ programmes at leading institutions."
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:128
+msgid "End-to-End Support"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:129
+msgid "Guidance from your first question to your first day on campus."
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:136
+msgid "Form position"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:138
+msgid "Form on the right"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:139
+msgid "Form on the left"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:145
+#: src/PostTypes/Leads.php:131
+#: src/PostTypes/Leads.php:242
+msgid "Form"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:146
+msgid "Form heading"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:146
+msgid "Register now"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:149
+msgid "Form to show"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:151
+msgid "Built-in registration form"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:152
+msgid "Another form plugin (shortcode)"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:158
+#: src/Elementor/Widgets/Newsletter.php:79
+msgid "Form shortcode"
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:162
+msgid "For example [contact-form-7 id=\"123\"]."
+msgstr ""
+
+#: src/Elementor/Widgets/BenefitsForm.php:175
+#: src/Elementor/Widgets/SocialLinks.php:114
+msgid "Icon colour"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:36
+#: src/Elementor/Widgets/Breadcrumbs.php:54
+#: src/Settings/Schema.php:634
+msgid "Breadcrumbs"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:55
+msgid "First link text"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:55
+#: src/Elementor/Widgets/PageTitleBanner.php:64
+#: src/Seo/Head.php:424
+msgid "Home"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:56
+#: src/Settings/Schema.php:563
+msgid "Separator"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:57
+#: src/Elementor/Widgets/MegaMenu.php:82
+#: src/Elementor/Widgets/SocialLinks.php:107
+#: src/Elementor/Widgets/TopBar.php:117
+msgid "Label for screen readers"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:57
+#: src/Elementor/Widgets/PageTitleBanner.php:65
+msgid "Breadcrumb"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:100
+msgid "Breadcrumbs are switched off in Theme Settings → SEO."
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:36
+msgid "CTA Download"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:54
+msgid "Content"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:55
+msgid "Company Profile"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:56
+msgid "Discover our story, services and global network in one document."
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:57
+#: src/Elementor/Widgets/EventList.php:65
+#: src/Elementor/Widgets/Newsletter.php:81
+#: src/Elementor/Widgets/ServiceSlider.php:173
+#: src/PostTypes/Types.php:72
+msgid "Button text"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:57
+msgid "Download PDF"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:61
+msgid "File"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:65
+msgid "Leave empty to use Theme Settings → Brand → Company profile PDF."
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:71
+msgid "Image (optional)"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:124
+msgid "Choose a PDF here or in Theme Settings → Brand to show the download button."
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:36
+msgid "Destinations Grid"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:73
+#: src/Forms/Countries.php:212
+msgid "United Kingdom"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:74
+#: src/Forms/Countries.php:213
+msgid "United States"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:75
+#: src/Forms/Countries.php:55
+msgid "Canada"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:76
+#: src/Forms/Countries.php:32
+msgid "Australia"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:77
+#: src/Forms/Countries.php:105
+msgid "Ireland"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:78
+#: src/Forms/Countries.php:149
+msgid "New Zealand"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:79
+#: src/Forms/Countries.php:88
+msgid "Germany"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:80
+#: src/Forms/Countries.php:84
+msgid "France"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:81
+#: src/Forms/Countries.php:148
+msgid "Netherlands"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:82
+#: src/Forms/Countries.php:129
+msgid "Malaysia"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:83
+#: src/Forms/Countries.php:182
+msgid "Singapore"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:84
+#: src/Forms/Countries.php:211
+msgid "United Arab Emirates"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:85
+#: src/Forms/Countries.php:67
+msgid "Cyprus"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:86
+#: src/Forms/Countries.php:132
+msgid "Malta"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:87
+#: src/Forms/Countries.php:195
+msgid "Switzerland"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:88
+#: src/Forms/Countries.php:109
+msgid "Japan"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:98
+#: src/PostTypes/Types.php:32
+msgid "Destinations"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:99
+msgid "Make the world your classroom"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:100
+msgid "Explore study destinations chosen by thousands of our students."
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:103
+#: src/Elementor/Widgets/DestinationsGrid.php:154
+#: src/Elementor/Widgets/ServiceSlider.php:180
+msgid "Card title"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:104
+msgid "Study in {name}"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:105
+msgid "{name} becomes the country name."
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:107
+#: src/Elementor/Widgets/EventList.php:54
+#: src/Elementor/Widgets/NewsSlider.php:86
+#: src/Elementor/Widgets/ServiceSlider.php:126
+#: src/Elementor/Widgets/TeamGrid.php:55
+msgid "How many"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:110
+#: src/Elementor/Widgets/EventList.php:58
+msgid "Layout"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:112
+msgid "Grid"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:120
+#: src/Elementor/Widgets/TeamGrid.php:59
+msgid "Columns"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:139
+msgid "Hover effect"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:141
+msgid "Zoom the photo"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:142
+msgid "Lift the card"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:143
+msgid "None"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:147
+msgid "Show flags"
+msgstr ""
+
+#: src/Elementor/Widgets/DestinationsGrid.php:181
+msgid "Showing sample countries. Add your own under Destinations in the dashboard menu."
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:34
+msgid "Event List"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:52
+#: src/Elementor/Widgets/TopBar.php:99
+#: src/PostTypes/Types.php:101
+msgid "Events"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:53
+msgid "Upcoming events & webinars"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:55
+msgid "Also show past events"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:60
+msgid "List"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:61
+#: src/Elementor/Widgets/ServiceSlider.php:114
+#: src/Elementor/Widgets/ServiceSlider.php:165
+msgid "Cards"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:65
+msgid "Details & registration"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:66
+msgid "Label for online events"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:66
+msgid "Online"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:67
+msgid "Text when there are no events"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:67
+msgid "No upcoming events right now — please check back soon."
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:68
+msgid "Tell Google about these events (rich results)"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:72
+msgid "Event title"
+msgstr ""
+
+#: src/Elementor/Widgets/EventList.php:73
+#: src/Forms/Defaults.php:29
+#: src/PostTypes/Types.php:111
+msgid "Date"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:35
+msgid "FAQ"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:53
+#: src/Elementor/Widgets/Faq.php:76
+msgid "Questions"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:54
+msgid "Frequently asked questions"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:59
+#: src/Elementor/Widgets/Faq.php:97
+msgid "Question"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:68
+#: src/Elementor/Widgets/Faq.php:98
+msgid "Answer"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:82
+msgid "How much does your service cost?"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:83
+msgid "Our advice for students is free. Partner institutions support our work."
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:86
+msgid "When should I apply?"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:87
+msgid "Ideally 9–12 months before your course starts, so there is time for visas and housing."
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:92
+msgid "Open the first question"
+msgstr ""
+
+#: src/Elementor/Widgets/Faq.php:93
+msgid "Tell Google these are FAQs (rich results)"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:36
+msgid "Logo Carousel"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:72
+#: src/Elementor/Widgets/LogoCarousel.php:93
+msgid "Logos"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:73
+msgid "Trusted by leaders, experts and institutions across the globe"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:76
+msgid "Logos come from"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:78
+msgid "Partners (dashboard menu) — updates automatically"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:79
+msgid "Images chosen below"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:85
+msgid "Which partners"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:86
+msgid "All partners"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:101
+msgid "Movement"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:103
+msgid "Continuous scroll"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:104
+msgid "Step by step (slider)"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:105
+msgid "No movement (grid)"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:109
+msgid "Scroll duration (seconds per loop)"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:110
+msgid "Grey logos, colour on hover"
+msgstr ""
+
+#: src/Elementor/Widgets/LogoCarousel.php:195
+msgid "No logos yet. Add them under Partners in the dashboard menu, or choose images."
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:37
+msgid "Mega Menu"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:64
+#: src/Elementor/Widgets/MegaMenu.php:67
+#: src/Elementor/Widgets/MegaMenu.php:81
+#: src/Elementor/Widgets/TopBar.php:79
+msgid "Menu"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:70
+msgid "Create and edit menus in Appearance → Menus. Tick \"Mega panel\" on a top-level item for a multi-column panel."
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:74
+msgid "Switch to the mobile menu below"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:76
+msgid "Tablet width (1024px)"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:77
+msgid "Phone width (767px)"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:81
+msgid "Mobile menu button text"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:82
+msgid "Main menu"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:83
+msgid "Submenu button label for screen readers"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:83
+msgid "Show submenu"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:87
+msgid "Menu links"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:91
+msgid "Current page and hover colour"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:222
+msgid "Choose a menu in the widget settings (create one in Appearance → Menus)."
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:37
+#: src/Elementor/Widgets/Newsletter.php:66
+#: src/PostTypes/Leads.php:88
+msgid "Newsletter"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:71
+msgid "Send sign-ups to"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:73
+msgid "Leads list on this website"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:74
+msgid "Mailchimp (set the key in Theme Settings → Footer)"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:75
+msgid "Another plugin (shortcode)"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:80
+msgid "Hint inside the email box"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:82
+#: src/Elementor/Widgets/RegistrationFormTrait.php:175
+msgid "Thank-you message"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:83
+msgid "Wrong email message"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:84
+#: src/Elementor/Widgets/RegistrationFormTrait.php:176
+msgid "Error message"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:85
+#: src/Elementor/Widgets/RegistrationFormTrait.php:179
+msgid "Too many attempts"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:86
+msgid "Button while sending"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:86
+#: src/Forms/Defaults.php:84
+msgid "Sending…"
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:105
+msgid "The newsletter is switched off in Theme Settings → Footer."
+msgstr ""
+
+#: src/Elementor/Widgets/Newsletter.php:133
+#: src/Elementor/Widgets/RegistrationFormTrait.php:286
+msgid "Leave this field empty"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:37
+msgid "Image / News Slider"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:73
+#: src/Elementor/Widgets/NewsSlider.php:125
+msgid "Slides"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:74
+msgid "Expand Your Horizons"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:75
+#: src/Elementor/Widgets/PageTitleBanner.php:62
+#: src/Elementor/Widgets/PageTitleBanner.php:79
+msgid "Subtitle"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:75
+msgid "Choose your dream career through countless universities."
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:78
+msgid "Slides come from"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:80
+msgid "Latest news posts"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:81
+msgid "Upcoming events"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:82
+#: src/Elementor/Widgets/ServiceSlider.php:122
+#: src/Elementor/Widgets/Testimonials.php:79
+#: src/Elementor/Widgets/TopBar.php:74
+msgid "Typed in below"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:100
+#: src/Elementor/Widgets/PageTitleBanner.php:55
+#: src/Elementor/Widgets/PageTitleBanner.php:58
+#: src/Elementor/Widgets/PageTitleBanner.php:78
+#: src/Elementor/Widgets/ServiceSlider.php:140
+msgid "Title"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:117
+#: src/Elementor/Widgets/ServiceSlider.php:157
+#: src/Elementor/Widgets/TopBar.php:93
+#: src/PostTypes/Types.php:51
+#: src/PostTypes/Types.php:67
+msgid "Link"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:132
+msgid "Business & Management"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:133
+msgid "Lead global organisations."
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:136
+msgid "Engineering & Technology"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:137
+msgid "Build what comes next."
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:140
+msgid "Health & Medicine"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:141
+msgid "Care for the world."
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:146
+msgid "Link text"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:146
+msgid "Read more"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:147
+msgid "Text when there is nothing to show"
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:147
+msgid "News is coming soon."
+msgstr ""
+
+#: src/Elementor/Widgets/NewsSlider.php:154
+msgid "Slide title"
+msgstr ""
+
+#: src/Elementor/Widgets/PageTitleBanner.php:37
+msgid "Page Title Banner"
+msgstr ""
+
+#: src/Elementor/Widgets/PageTitleBanner.php:60
+msgid "Leave empty to use the page title."
+msgstr ""
+
+#: src/Elementor/Widgets/PageTitleBanner.php:63
+msgid "Show breadcrumbs"
+msgstr ""
+
+#: src/Elementor/Widgets/PageTitleBanner.php:64
+msgid "Breadcrumb first link"
+msgstr ""
+
+#: src/Elementor/Widgets/PageTitleBanner.php:65
+msgid "Breadcrumb label for screen readers"
+msgstr ""
+
+#. translators: %s: search terms.
+#: src/Elementor/Widgets/PageTitleBanner.php:104
+#: src/Seo/Head.php:118
+#, php-format
+msgid "Search results for “%s”"
+msgstr ""
+
+#: src/Elementor/Widgets/PageTitleBanner.php:108
+#: src/Seo/Breadcrumbs.php:68
+#: src/Seo/Head.php:122
+msgid "Page not found"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationForm.php:34
+msgid "Registration Form"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationForm.php:64
+msgid "Labels"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:36
+msgid "Form fields"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:45
+#: src/Elementor/Widgets/StatsCounter.php:92
+#: src/Elementor/Widgets/StatsCounter.php:138
+msgid "Label"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:47
+msgid "New field"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:54
+msgid "Type"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:63
+msgid "Required"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:72
+msgid "Hint inside the box"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:81
+msgid "Choices (one per line)"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:91
+#: src/Elementor/Widgets/SiteLogo.php:68
+msgid "Width"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:94
+msgid "Full width"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:95
+msgid "Half width (side by side on computers)"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:103
+msgid "Step"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:106
+msgid "Step 1"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:107
+msgid "Step 2"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:115
+msgid "Fields"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:125
+msgid "Countries in the \"Country list\" field (one per line)"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:132
+msgid "First line of drop-downs"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:133
+msgid "Consent checkbox text (leave empty for no checkbox)"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:136
+msgid "Create a website account (uses the Password field)"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:138
+msgid "Only works when Settings → General → \"Anyone can register\" is ticked; otherwise password fields are hidden."
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:145
+msgid "Steps & buttons"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:149
+msgid "Split into two steps"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:150
+msgid "Step 1 title"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:151
+msgid "Step 2 title"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:152
+msgid "\"Next\" button"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:153
+msgid "\"Back\" button"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:154
+msgid "Send button"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:155
+msgid "Send button while sending"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:161
+msgid "Messages & email"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:167
+msgid "Send new registrations to (email)"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:170
+msgid "Leave empty to use Theme Settings → Contact & Social → Email."
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:174
+msgid "Email subject"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:177
+msgid "Empty required field"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:178
+msgid "Wrong format"
+msgstr ""
+
+#: src/Elementor/Widgets/RegistrationFormTrait.php:180
+msgid "Account already exists"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:37
+msgid "Service Cards Slider"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:75
+msgid "Direct Entry Student Recruitment"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:76
+msgid "We connect qualified students directly with partner universities and colleges."
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:79
+msgid "International Pathways"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:80
+msgid "Foundation and pre-master's programmes that lead to degree study."
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:83
+msgid "In-country University Preparation"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:84
+msgid "Academic and English preparation before you travel."
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:87
+msgid "Managed Campus"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:88
+msgid "Study centres that deliver partner programmes close to home."
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:115
+msgid "What We Do"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:116
+msgid "Four ways we help students and institutions succeed."
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:119
+msgid "Cards come from"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:121
+msgid "Services (dashboard menu) — updates automatically"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:173
+msgid "Learn More"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:181
+msgid "Card text"
+msgstr ""
+
+#: src/Elementor/Widgets/ServiceSlider.php:210
+msgid "Showing sample cards. Add your own under Services in the dashboard menu."
+msgstr ""
+
+#: src/Elementor/Widgets/SiteLogo.php:36
+msgid "Site Logo"
+msgstr ""
+
+#: src/Elementor/Widgets/SiteLogo.php:54
+#: src/PostTypes/Types.php:84
+#: src/Settings/Schema.php:177
+msgid "Logo"
+msgstr ""
+
+#: src/Elementor/Widgets/SiteLogo.php:63
+msgid "Logos are set in Theme Settings → Brand."
+msgstr ""
+
+#: src/Elementor/Widgets/SiteLogo.php:87
+msgid "Site name (when there is no logo)"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:37
+msgid "Social Links"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:88
+msgid "Social links"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:93
+msgid "Links come from Theme Settings → Contact & Social. Only networks with a link are shown."
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:96
+msgid "Include WhatsApp"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:99
+msgid "Shape"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:101
+msgid "Circles"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:102
+msgid "Rounded squares"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:103
+msgid "Icons only"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:107
+#: src/Settings/Schema.php:513
+msgid "Social media"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:166
+msgid "Add your social media links in Theme Settings → Contact & Social."
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:35
+msgid "Stats Counter"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:62
+#: src/Elementor/Widgets/StatsCounter.php:101
+msgid "Numbers"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:67
+#: src/Elementor/Widgets/StatsCounter.php:137
+msgid "Number"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:76
+msgid "Before the number"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:84
+msgid "After the number"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:110
+msgid "Years of excellence"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:116
+msgid "Programmes to choose from"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:122
+msgid "Partner institutions"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:128
+msgid "Study destinations"
+msgstr ""
+
+#: src/Elementor/Widgets/StatsCounter.php:133
+msgid "Count-up time (seconds)"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:35
+msgid "Team Grid"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:53
+#: src/PostTypes/Types.php:133
+msgid "Team"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:54
+msgid "Meet our team"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:73
+msgid "Show short bio"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:74
+msgid "Show LinkedIn link"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:75
+msgid "LinkedIn link text"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:75
+#: src/PostTypes/Types.php:147
+msgid "LinkedIn profile"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:79
+#: src/Elementor/Widgets/Testimonials.php:95
+#: src/Elementor/Widgets/Testimonials.php:159
+msgid "Name"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:80
+#: src/PostTypes/Types.php:142
+msgid "Job title"
+msgstr ""
+
+#: src/Elementor/Widgets/TeamGrid.php:94
+msgid "No team members yet. Add them under Team in the dashboard menu."
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:36
+#: src/Elementor/Widgets/Testimonials.php:72
+#: src/Elementor/Widgets/Testimonials.php:129
+#: src/PostTypes/Types.php:154
+msgid "Testimonials"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:73
+msgid "What our students say"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:76
+msgid "Testimonials come from"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:78
+msgid "Testimonials (dashboard menu) — updates automatically"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:87
+#: src/PostTypes/Types.php:158
+msgid "What they said"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:103
+#: src/PostTypes/Types.php:163
+msgid "Who they are"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:111
+#: src/PostTypes/Types.php:138
+#: src/PostTypes/Types.php:159
+msgid "Photo"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:119
+msgid "Stars"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:136
+msgid "The advisors guided me through every step. I am now studying my dream course abroad."
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:137
+msgid "Amira K."
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:138
+msgid "MSc student"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:142
+msgid "From choosing a university to my visa, everything was clear and fast."
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:143
+msgid "Daniel O."
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:144
+msgid "Foundation student"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:150
+msgid "Show stars"
+msgstr ""
+
+#. translators: %d: number of stars.
+#: src/Elementor/Widgets/Testimonials.php:152
+msgid "Star rating text for screen readers"
+msgstr ""
+
+#. translators: %d: number of stars.
+#: src/Elementor/Widgets/Testimonials.php:152
+#, php-format
+msgid "Rated %d out of 5"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:158
+msgid "Quote"
+msgstr ""
+
+#: src/Elementor/Widgets/Testimonials.php:207
+msgid "No testimonials yet. Add them under Testimonials in the dashboard menu."
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:37
+msgid "Top Bar"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:55
+msgid "— Choose a menu —"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:69
+#: src/Elementor/Widgets/TopBar.php:108
+#: src/Elementor/Widgets/TopBar.php:121
+msgid "Links"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:72
+msgid "Links come from"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:75
+msgid "A menu (Appearance → Menus)"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:99
+msgid "News"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:99
+msgid "Careers"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:99
+msgid "Study Mobility Program"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:99
+msgid "Contact Us"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:116
+msgid "Show phone and email (from Theme Settings)"
+msgstr ""
+
+#: src/Elementor/Widgets/TopBar.php:117
+msgid "Utility links"
+msgstr ""
+
+#: src/Forms/Countries.php:24
+msgid "Afghanistan"
+msgstr ""
+
+#: src/Forms/Countries.php:25
+msgid "Albania"
+msgstr ""
+
+#: src/Forms/Countries.php:26
+msgid "Algeria"
+msgstr ""
+
+#: src/Forms/Countries.php:27
+msgid "Andorra"
+msgstr ""
+
+#: src/Forms/Countries.php:28
+msgid "Angola"
+msgstr ""
+
+#: src/Forms/Countries.php:29
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: src/Forms/Countries.php:30
+msgid "Argentina"
+msgstr ""
+
+#: src/Forms/Countries.php:31
+msgid "Armenia"
+msgstr ""
+
+#: src/Forms/Countries.php:33
+msgid "Austria"
+msgstr ""
+
+#: src/Forms/Countries.php:34
+msgid "Azerbaijan"
+msgstr ""
+
+#: src/Forms/Countries.php:35
+msgid "Bahamas"
+msgstr ""
+
+#: src/Forms/Countries.php:36
+msgid "Bahrain"
+msgstr ""
+
+#: src/Forms/Countries.php:37
+msgid "Bangladesh"
+msgstr ""
+
+#: src/Forms/Countries.php:38
+msgid "Barbados"
+msgstr ""
+
+#: src/Forms/Countries.php:39
+msgid "Belarus"
+msgstr ""
+
+#: src/Forms/Countries.php:40
+msgid "Belgium"
+msgstr ""
+
+#: src/Forms/Countries.php:41
+msgid "Belize"
+msgstr ""
+
+#: src/Forms/Countries.php:42
+msgid "Benin"
+msgstr ""
+
+#: src/Forms/Countries.php:43
+msgid "Bhutan"
+msgstr ""
+
+#: src/Forms/Countries.php:44
+msgid "Bolivia"
+msgstr ""
+
+#: src/Forms/Countries.php:45
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: src/Forms/Countries.php:46
+msgid "Botswana"
+msgstr ""
+
+#: src/Forms/Countries.php:47
+msgid "Brazil"
+msgstr ""
+
+#: src/Forms/Countries.php:48
+msgid "Brunei"
+msgstr ""
+
+#: src/Forms/Countries.php:49
+msgid "Bulgaria"
+msgstr ""
+
+#: src/Forms/Countries.php:50
+msgid "Burkina Faso"
+msgstr ""
+
+#: src/Forms/Countries.php:51
+msgid "Burundi"
+msgstr ""
+
+#: src/Forms/Countries.php:52
+msgid "Cabo Verde"
+msgstr ""
+
+#: src/Forms/Countries.php:53
+msgid "Cambodia"
+msgstr ""
+
+#: src/Forms/Countries.php:54
+msgid "Cameroon"
+msgstr ""
+
+#: src/Forms/Countries.php:56
+msgid "Central African Republic"
+msgstr ""
+
+#: src/Forms/Countries.php:57
+msgid "Chad"
+msgstr ""
+
+#: src/Forms/Countries.php:58
+msgid "Chile"
+msgstr ""
+
+#: src/Forms/Countries.php:59
+msgid "China"
+msgstr ""
+
+#: src/Forms/Countries.php:60
+msgid "Colombia"
+msgstr ""
+
+#: src/Forms/Countries.php:61
+msgid "Comoros"
+msgstr ""
+
+#: src/Forms/Countries.php:62
+msgid "Congo"
+msgstr ""
+
+#: src/Forms/Countries.php:63
+msgid "Costa Rica"
+msgstr ""
+
+#: src/Forms/Countries.php:64
+msgid "Côte d'Ivoire"
+msgstr ""
+
+#: src/Forms/Countries.php:65
+msgid "Croatia"
+msgstr ""
+
+#: src/Forms/Countries.php:66
+msgid "Cuba"
+msgstr ""
+
+#: src/Forms/Countries.php:68
+msgid "Czechia"
+msgstr ""
+
+#: src/Forms/Countries.php:69
+msgid "Democratic Republic of the Congo"
+msgstr ""
+
+#: src/Forms/Countries.php:70
+msgid "Denmark"
+msgstr ""
+
+#: src/Forms/Countries.php:71
+msgid "Djibouti"
+msgstr ""
+
+#: src/Forms/Countries.php:72
+msgid "Dominica"
+msgstr ""
+
+#: src/Forms/Countries.php:73
+msgid "Dominican Republic"
+msgstr ""
+
+#: src/Forms/Countries.php:74
+msgid "Ecuador"
+msgstr ""
+
+#: src/Forms/Countries.php:75
+msgid "Egypt"
+msgstr ""
+
+#: src/Forms/Countries.php:76
+msgid "El Salvador"
+msgstr ""
+
+#: src/Forms/Countries.php:77
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: src/Forms/Countries.php:78
+msgid "Eritrea"
+msgstr ""
+
+#: src/Forms/Countries.php:79
+msgid "Estonia"
+msgstr ""
+
+#: src/Forms/Countries.php:80
+msgid "Eswatini"
+msgstr ""
+
+#: src/Forms/Countries.php:81
+msgid "Ethiopia"
+msgstr ""
+
+#: src/Forms/Countries.php:82
+msgid "Fiji"
+msgstr ""
+
+#: src/Forms/Countries.php:83
+msgid "Finland"
+msgstr ""
+
+#: src/Forms/Countries.php:85
+msgid "Gabon"
+msgstr ""
+
+#: src/Forms/Countries.php:86
+msgid "Gambia"
+msgstr ""
+
+#: src/Forms/Countries.php:87
+msgid "Georgia"
+msgstr ""
+
+#: src/Forms/Countries.php:89
+msgid "Ghana"
+msgstr ""
+
+#: src/Forms/Countries.php:90
+msgid "Greece"
+msgstr ""
+
+#: src/Forms/Countries.php:91
+msgid "Grenada"
+msgstr ""
+
+#: src/Forms/Countries.php:92
+msgid "Guatemala"
+msgstr ""
+
+#: src/Forms/Countries.php:93
+msgid "Guinea"
+msgstr ""
+
+#: src/Forms/Countries.php:94
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: src/Forms/Countries.php:95
+msgid "Guyana"
+msgstr ""
+
+#: src/Forms/Countries.php:96
+msgid "Haiti"
+msgstr ""
+
+#: src/Forms/Countries.php:97
+msgid "Honduras"
+msgstr ""
+
+#: src/Forms/Countries.php:98
+msgid "Hong Kong"
+msgstr ""
+
+#: src/Forms/Countries.php:99
+msgid "Hungary"
+msgstr ""
+
+#: src/Forms/Countries.php:100
+msgid "Iceland"
+msgstr ""
+
+#: src/Forms/Countries.php:101
+msgid "India"
+msgstr ""
+
+#: src/Forms/Countries.php:102
+msgid "Indonesia"
+msgstr ""
+
+#: src/Forms/Countries.php:103
+msgid "Iran"
+msgstr ""
+
+#: src/Forms/Countries.php:104
+msgid "Iraq"
+msgstr ""
+
+#: src/Forms/Countries.php:106
+msgid "Israel"
+msgstr ""
+
+#: src/Forms/Countries.php:107
+msgid "Italy"
+msgstr ""
+
+#: src/Forms/Countries.php:108
+msgid "Jamaica"
+msgstr ""
+
+#: src/Forms/Countries.php:110
+msgid "Jordan"
+msgstr ""
+
+#: src/Forms/Countries.php:111
+msgid "Kazakhstan"
+msgstr ""
+
+#: src/Forms/Countries.php:112
+msgid "Kenya"
+msgstr ""
+
+#: src/Forms/Countries.php:113
+msgid "Kiribati"
+msgstr ""
+
+#: src/Forms/Countries.php:114
+msgid "Kosovo"
+msgstr ""
+
+#: src/Forms/Countries.php:115
+msgid "Kuwait"
+msgstr ""
+
+#: src/Forms/Countries.php:116
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: src/Forms/Countries.php:117
+msgid "Laos"
+msgstr ""
+
+#: src/Forms/Countries.php:118
+msgid "Latvia"
+msgstr ""
+
+#: src/Forms/Countries.php:119
+msgid "Lebanon"
+msgstr ""
+
+#: src/Forms/Countries.php:120
+msgid "Lesotho"
+msgstr ""
+
+#: src/Forms/Countries.php:121
+msgid "Liberia"
+msgstr ""
+
+#: src/Forms/Countries.php:122
+msgid "Libya"
+msgstr ""
+
+#: src/Forms/Countries.php:123
+msgid "Liechtenstein"
+msgstr ""
+
+#: src/Forms/Countries.php:124
+msgid "Lithuania"
+msgstr ""
+
+#: src/Forms/Countries.php:125
+msgid "Luxembourg"
+msgstr ""
+
+#: src/Forms/Countries.php:126
+msgid "Macao"
+msgstr ""
+
+#: src/Forms/Countries.php:127
+msgid "Madagascar"
+msgstr ""
+
+#: src/Forms/Countries.php:128
+msgid "Malawi"
+msgstr ""
+
+#: src/Forms/Countries.php:130
+msgid "Maldives"
+msgstr ""
+
+#: src/Forms/Countries.php:131
+msgid "Mali"
+msgstr ""
+
+#: src/Forms/Countries.php:133
+msgid "Marshall Islands"
+msgstr ""
+
+#: src/Forms/Countries.php:134
+msgid "Mauritania"
+msgstr ""
+
+#: src/Forms/Countries.php:135
+msgid "Mauritius"
+msgstr ""
+
+#: src/Forms/Countries.php:136
+msgid "Mexico"
+msgstr ""
+
+#: src/Forms/Countries.php:137
+msgid "Micronesia"
+msgstr ""
+
+#: src/Forms/Countries.php:138
+msgid "Moldova"
+msgstr ""
+
+#: src/Forms/Countries.php:139
+msgid "Monaco"
+msgstr ""
+
+#: src/Forms/Countries.php:140
+msgid "Mongolia"
+msgstr ""
+
+#: src/Forms/Countries.php:141
+msgid "Montenegro"
+msgstr ""
+
+#: src/Forms/Countries.php:142
+msgid "Morocco"
+msgstr ""
+
+#: src/Forms/Countries.php:143
+msgid "Mozambique"
+msgstr ""
+
+#: src/Forms/Countries.php:144
+msgid "Myanmar"
+msgstr ""
+
+#: src/Forms/Countries.php:145
+msgid "Namibia"
+msgstr ""
+
+#: src/Forms/Countries.php:146
+msgid "Nauru"
+msgstr ""
+
+#: src/Forms/Countries.php:147
+msgid "Nepal"
+msgstr ""
+
+#: src/Forms/Countries.php:150
+msgid "Nicaragua"
+msgstr ""
+
+#: src/Forms/Countries.php:151
+msgid "Niger"
+msgstr ""
+
+#: src/Forms/Countries.php:152
+msgid "Nigeria"
+msgstr ""
+
+#: src/Forms/Countries.php:153
+msgid "North Korea"
+msgstr ""
+
+#: src/Forms/Countries.php:154
+msgid "North Macedonia"
+msgstr ""
+
+#: src/Forms/Countries.php:155
+msgid "Norway"
+msgstr ""
+
+#: src/Forms/Countries.php:156
+msgid "Oman"
+msgstr ""
+
+#: src/Forms/Countries.php:157
+msgid "Pakistan"
+msgstr ""
+
+#: src/Forms/Countries.php:158
+msgid "Palau"
+msgstr ""
+
+#: src/Forms/Countries.php:159
+msgid "Palestine"
+msgstr ""
+
+#: src/Forms/Countries.php:160
+msgid "Panama"
+msgstr ""
+
+#: src/Forms/Countries.php:161
+msgid "Papua New Guinea"
+msgstr ""
+
+#: src/Forms/Countries.php:162
+msgid "Paraguay"
+msgstr ""
+
+#: src/Forms/Countries.php:163
+msgid "Peru"
+msgstr ""
+
+#: src/Forms/Countries.php:164
+msgid "Philippines"
+msgstr ""
+
+#: src/Forms/Countries.php:165
+msgid "Poland"
+msgstr ""
+
+#: src/Forms/Countries.php:166
+msgid "Portugal"
+msgstr ""
+
+#: src/Forms/Countries.php:167
+msgid "Qatar"
+msgstr ""
+
+#: src/Forms/Countries.php:168
+msgid "Romania"
+msgstr ""
+
+#: src/Forms/Countries.php:169
+msgid "Russia"
+msgstr ""
+
+#: src/Forms/Countries.php:170
+msgid "Rwanda"
+msgstr ""
+
+#: src/Forms/Countries.php:171
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: src/Forms/Countries.php:172
+msgid "Saint Lucia"
+msgstr ""
+
+#: src/Forms/Countries.php:173
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: src/Forms/Countries.php:174
+msgid "Samoa"
+msgstr ""
+
+#: src/Forms/Countries.php:175
+msgid "San Marino"
+msgstr ""
+
+#: src/Forms/Countries.php:176
+msgid "São Tomé and Príncipe"
+msgstr ""
+
+#: src/Forms/Countries.php:177
+msgid "Saudi Arabia"
+msgstr ""
+
+#: src/Forms/Countries.php:178
+msgid "Senegal"
+msgstr ""
+
+#: src/Forms/Countries.php:179
+msgid "Serbia"
+msgstr ""
+
+#: src/Forms/Countries.php:180
+msgid "Seychelles"
+msgstr ""
+
+#: src/Forms/Countries.php:181
+msgid "Sierra Leone"
+msgstr ""
+
+#: src/Forms/Countries.php:183
+msgid "Slovakia"
+msgstr ""
+
+#: src/Forms/Countries.php:184
+msgid "Slovenia"
+msgstr ""
+
+#: src/Forms/Countries.php:185
+msgid "Solomon Islands"
+msgstr ""
+
+#: src/Forms/Countries.php:186
+msgid "Somalia"
+msgstr ""
+
+#: src/Forms/Countries.php:187
+msgid "South Africa"
+msgstr ""
+
+#: src/Forms/Countries.php:188
+msgid "South Korea"
+msgstr ""
+
+#: src/Forms/Countries.php:189
+msgid "South Sudan"
+msgstr ""
+
+#: src/Forms/Countries.php:190
+msgid "Spain"
+msgstr ""
+
+#: src/Forms/Countries.php:191
+msgid "Sri Lanka"
+msgstr ""
+
+#: src/Forms/Countries.php:192
+msgid "Sudan"
+msgstr ""
+
+#: src/Forms/Countries.php:193
+msgid "Suriname"
+msgstr ""
+
+#: src/Forms/Countries.php:194
+msgid "Sweden"
+msgstr ""
+
+#: src/Forms/Countries.php:196
+msgid "Syria"
+msgstr ""
+
+#: src/Forms/Countries.php:197
+msgid "Taiwan"
+msgstr ""
+
+#: src/Forms/Countries.php:198
+msgid "Tajikistan"
+msgstr ""
+
+#: src/Forms/Countries.php:199
+msgid "Tanzania"
+msgstr ""
+
+#: src/Forms/Countries.php:200
+msgid "Thailand"
+msgstr ""
+
+#: src/Forms/Countries.php:201
+msgid "Timor-Leste"
+msgstr ""
+
+#: src/Forms/Countries.php:202
+msgid "Togo"
+msgstr ""
+
+#: src/Forms/Countries.php:203
+msgid "Tonga"
+msgstr ""
+
+#: src/Forms/Countries.php:204
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: src/Forms/Countries.php:205
+msgid "Tunisia"
+msgstr ""
+
+#: src/Forms/Countries.php:206
+msgid "Turkey"
+msgstr ""
+
+#: src/Forms/Countries.php:207
+msgid "Turkmenistan"
+msgstr ""
+
+#: src/Forms/Countries.php:208
+msgid "Tuvalu"
+msgstr ""
+
+#: src/Forms/Countries.php:209
+msgid "Uganda"
+msgstr ""
+
+#: src/Forms/Countries.php:210
+msgid "Ukraine"
+msgstr ""
+
+#: src/Forms/Countries.php:214
+msgid "Uruguay"
+msgstr ""
+
+#: src/Forms/Countries.php:215
+msgid "Uzbekistan"
+msgstr ""
+
+#: src/Forms/Countries.php:216
+msgid "Vanuatu"
+msgstr ""
+
+#: src/Forms/Countries.php:217
+msgid "Vatican City"
+msgstr ""
+
+#: src/Forms/Countries.php:218
+msgid "Venezuela"
+msgstr ""
+
+#: src/Forms/Countries.php:219
+msgid "Vietnam"
+msgstr ""
+
+#: src/Forms/Countries.php:220
+msgid "Yemen"
+msgstr ""
+
+#: src/Forms/Countries.php:221
+msgid "Zambia"
+msgstr ""
+
+#: src/Forms/Countries.php:222
+msgid "Zimbabwe"
+msgstr ""
+
+#: src/Forms/Defaults.php:28
+msgid "Phone"
+msgstr ""
+
+#: src/Forms/Defaults.php:30
+msgid "Country list"
+msgstr ""
+
+#: src/Forms/Defaults.php:31
+msgid "Drop-down"
+msgstr ""
+
+#: src/Forms/Defaults.php:32
+msgid "Long text"
+msgstr ""
+
+#: src/Forms/Defaults.php:33
+msgid "Password (only used to create an account)"
+msgstr ""
+
+#: src/Forms/Defaults.php:69
+msgid "First name"
+msgstr ""
+
+#: src/Forms/Defaults.php:70
+msgid "Last name"
+msgstr ""
+
+#: src/Forms/Defaults.php:71
+msgid "Email address"
+msgstr ""
+
+#: src/Forms/Defaults.php:71
+msgid "you@example.com"
+msgstr ""
+
+#: src/Forms/Defaults.php:72
+msgid "Phone number"
+msgstr ""
+
+#: src/Forms/Defaults.php:72
+msgid "+971 50 000 0000"
+msgstr ""
+
+#: src/Forms/Defaults.php:73
+msgid "Date of birth"
+msgstr ""
+
+#: src/Forms/Defaults.php:74
+msgid "Home country"
+msgstr ""
+
+#: src/Forms/Defaults.php:75
+msgid "Create a password"
+msgstr ""
+
+#: src/Forms/Defaults.php:79
+msgid "Your details"
+msgstr ""
+
+#: src/Forms/Defaults.php:80
+msgid "About you"
+msgstr ""
+
+#: src/Forms/Defaults.php:81
+msgid "Next"
+msgstr ""
+
+#: src/Forms/Defaults.php:82
+msgid "Back"
+msgstr ""
+
+#: src/Forms/Defaults.php:83
+msgid "Sign Up"
+msgstr ""
+
+#: src/Forms/Defaults.php:85
+msgid "Please choose…"
+msgstr ""
+
+#: src/Forms/Defaults.php:86
+msgid "I agree to be contacted about my application and accept the privacy policy."
+msgstr ""
+
+#: src/Forms/Defaults.php:89
+msgid "New student registration"
+msgstr ""
+
+#: src/Forms/Defaults.php:90
+msgid "Thank you! Your registration was received. Our advisors will contact you shortly."
+msgstr ""
+
+#: src/Forms/Defaults.php:92
+msgid "Please fill in this field."
+msgstr ""
+
+#: src/Forms/Defaults.php:93
+msgid "Please check this value."
+msgstr ""
+
+#: src/Forms/Defaults.php:94
+#: src/Forms/Defaults.php:115
+msgid "Too many attempts. Please wait a few minutes and try again."
+msgstr ""
+
+#: src/Forms/Defaults.php:95
+msgid "An account with this email already exists. Please log in instead."
+msgstr ""
+
+#: src/Forms/Defaults.php:106
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: src/Forms/Defaults.php:107
+msgid "Study tips, scholarships and events — once a month, no spam."
+msgstr ""
+
+#: src/Forms/Defaults.php:108
+msgid "Your email address"
+msgstr ""
+
+#: src/Forms/Defaults.php:109
+msgid "Subscribe"
+msgstr ""
+
+#: src/Forms/Defaults.php:112
+msgid "Thanks for subscribing!"
+msgstr ""
+
+#: src/Forms/Defaults.php:113
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: src/Frontend/EditLinks.php:57
+msgid "Edit this page"
+msgstr ""
+
+#: src/Frontend/EditLinks.php:61
+msgid "Edit header"
+msgstr ""
+
+#: src/Frontend/EditLinks.php:62
+msgid "Edit footer"
+msgstr ""
+
+#: src/Frontend/EditLinks.php:86
+msgid "Edit with Elementor"
+msgstr ""
+
+#: src/Frontend/MobileBar.php:46
+msgid "Apply now"
+msgstr ""
+
+#: src/Frontend/MobileBar.php:56
+msgid "WhatsApp us"
+msgstr ""
+
+#: src/PostTypes/Leads.php:49
+msgid "Lead"
+msgstr ""
+
+#: src/PostTypes/Leads.php:49
+msgid "Leads"
+msgstr ""
+
+#: src/PostTypes/Leads.php:87
+msgid "Registration"
+msgstr ""
+
+#: src/PostTypes/Leads.php:132
+#: src/PostTypes/Leads.php:180
+#: src/PostTypes/Leads.php:242
+msgid "Page"
+msgstr ""
+
+#: src/PostTypes/Leads.php:133
+#: src/PostTypes/Leads.php:242
+msgid "Received"
+msgstr ""
+
+#: src/PostTypes/Leads.php:163
+msgid "Submitted details"
+msgstr ""
+
+#: src/PostTypes/Leads.php:199
+msgid "Download all as CSV (Excel)"
+msgstr ""
+
+#: src/PostTypes/Leads.php:267
+msgid "You are not allowed to export leads."
+msgstr ""
+
+#. translators: %s: item name, e.g. Destination.
+#: src/PostTypes/Registrar.php:123
+#, php-format
+msgid "Add new %s"
+msgstr ""
+
+#. translators: %s: item name.
+#: src/PostTypes/Registrar.php:125
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#. translators: %s: item name.
+#: src/PostTypes/Registrar.php:127
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#. translators: %s: item name.
+#: src/PostTypes/Registrar.php:129
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#. translators: %s: items name, e.g. Destinations.
+#: src/PostTypes/Registrar.php:131
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#. translators: %s: items name.
+#: src/PostTypes/Registrar.php:133
+#, php-format
+msgid "No %s yet."
+msgstr ""
+
+#. translators: %s: items name.
+#: src/PostTypes/Registrar.php:135
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: src/PostTypes/Registrar.php:137
+msgid "Choose image"
+msgstr ""
+
+#. translators: %s: item name, e.g. Destination.
+#: src/PostTypes/Registrar.php:164
+#, php-format
+msgid "%s name"
+msgstr ""
+
+#: src/PostTypes/Registrar.php:177
+msgid "Details"
+msgstr ""
+
+#: src/PostTypes/Types.php:31
+msgid "Destination"
+msgstr ""
+
+#: src/PostTypes/Types.php:36
+msgid "Short introduction (one or two sentences)"
+msgstr ""
+
+#: src/PostTypes/Types.php:37
+msgid "Country photo"
+msgstr ""
+
+#: src/PostTypes/Types.php:41
+msgid "Country name"
+msgstr ""
+
+#: src/PostTypes/Types.php:42
+msgid "Used in \"Study in {name}\". Leave empty to use the title."
+msgstr ""
+
+#: src/PostTypes/Types.php:46
+msgid "Flag"
+msgstr ""
+
+#: src/PostTypes/Types.php:47
+msgid "A small flag image (optional)."
+msgstr ""
+
+#: src/PostTypes/Types.php:52
+msgid "Where the card leads. Leave empty to open this destination's own page."
+msgstr ""
+
+#: src/PostTypes/Types.php:57
+msgid "Service"
+msgstr ""
+
+#: src/PostTypes/Types.php:58
+msgid "Services"
+msgstr ""
+
+#: src/PostTypes/Types.php:62
+msgid "Short description shown on the card"
+msgstr ""
+
+#: src/PostTypes/Types.php:63
+msgid "Card image"
+msgstr ""
+
+#: src/PostTypes/Types.php:68
+msgid "Where \"Learn more\" leads. Leave empty to open this service's own page."
+msgstr ""
+
+#: src/PostTypes/Types.php:73
+msgid "Leave empty to use the widget's button text."
+msgstr ""
+
+#: src/PostTypes/Types.php:78
+msgid "Partner"
+msgstr ""
+
+#: src/PostTypes/Types.php:79
+msgid "Partners"
+msgstr ""
+
+#: src/PostTypes/Types.php:88
+msgid "Website"
+msgstr ""
+
+#: src/PostTypes/Types.php:89
+msgid "The partner's website (optional)."
+msgstr ""
+
+#: src/PostTypes/Types.php:93
+msgid "Partner type"
+msgstr ""
+
+#: src/PostTypes/Types.php:94
+msgid "Lets widgets show only one kind of partner."
+msgstr ""
+
+#: src/PostTypes/Types.php:100
+#: src/Seo/Fields.php:89
+msgid "Event"
+msgstr ""
+
+#: src/PostTypes/Types.php:105
+msgid "Short summary"
+msgstr ""
+
+#: src/PostTypes/Types.php:106
+msgid "Event image"
+msgstr ""
+
+#: src/PostTypes/Types.php:112
+msgid "The day the event takes place."
+msgstr ""
+
+#: src/PostTypes/Types.php:116
+msgid "Start time"
+msgstr ""
+
+#: src/PostTypes/Types.php:117
+#: src/PostTypes/Types.php:148
+#: src/Settings/Schema.php:470
+msgid "Optional."
+msgstr ""
+
+#: src/PostTypes/Types.php:121
+msgid "Venue"
+msgstr ""
+
+#: src/PostTypes/Types.php:122
+msgid "Place name and city, or \"Online\"."
+msgstr ""
+
+#: src/PostTypes/Types.php:126
+msgid "Online link"
+msgstr ""
+
+#: src/PostTypes/Types.php:127
+msgid "Webinar or registration link (optional)."
+msgstr ""
+
+#: src/PostTypes/Types.php:132
+msgid "Team Member"
+msgstr ""
+
+#: src/PostTypes/Types.php:137
+msgid "Short bio"
+msgstr ""
+
+#: src/PostTypes/Types.php:143
+msgid "For example \"Admissions Director\"."
+msgstr ""
+
+#: src/PostTypes/Types.php:153
+msgid "Testimonial"
+msgstr ""
+
+#: src/PostTypes/Types.php:164
+msgid "For example \"MSc student, University of Leeds\"."
+msgstr ""
+
+#: src/PostTypes/Types.php:168
+msgid "Star rating"
+msgstr ""
+
+#: src/PostTypes/Types.php:169
+msgid "Shown as stars."
+msgstr ""
+
+#: src/PostTypes/Types.php:174
+msgid "No stars"
+msgstr ""
+
+#: src/PostTypes/Types.php:189
+msgid "University / institution"
+msgstr ""
+
+#: src/PostTypes/Types.php:190
+msgid "Recruitment partner"
+msgstr ""
+
+#: src/PostTypes/Types.php:191
+msgid "Accreditation body"
+msgstr ""
+
+#: src/Seo/Analytics.php:150
+msgid "Cookie consent"
+msgstr ""
+
+#: src/Seo/Analytics.php:151
+msgid "We use cookies to understand how visitors use this site. Is that OK?"
+msgstr ""
+
+#: src/Seo/Analytics.php:152
+msgid "Accept"
+msgstr ""
+
+#: src/Seo/Analytics.php:153
+msgid "Decline"
+msgstr ""
+
+#. translators: %d: number of values.
+#: src/Seo/Conflict.php:155
+#, php-format
+msgid "Copied %d SEO values."
+msgstr ""
+
+#. translators: %s: SEO plugin name.
+#: src/Seo/Conflict.php:162
+#, php-format
+msgid "%s is active, so the theme's own SEO tags are switched off to avoid duplicates. You can copy the SEO titles and descriptions you entered with the theme into it."
+msgstr ""
+
+#: src/Seo/Conflict.php:168
+msgid "Copy my SEO values"
+msgstr ""
+
+#: src/Seo/Fields.php:26
+msgid "SEO title"
+msgstr ""
+
+#: src/Seo/Fields.php:27
+msgid "The blue headline in Google. About 50–60 characters. Leave empty to use the page title."
+msgstr ""
+
+#: src/Seo/Fields.php:31
+msgid "Meta description"
+msgstr ""
+
+#: src/Seo/Fields.php:32
+msgid "The grey text under the headline in Google. About 120–160 characters."
+msgstr ""
+
+#: src/Seo/Fields.php:36
+msgid "Focus keyword"
+msgstr ""
+
+#: src/Seo/Fields.php:37
+msgid "The phrase people search for, e.g. \"study in Canada\". You will see simple tips below."
+msgstr ""
+
+#: src/Seo/Fields.php:41
+msgid "Canonical address"
+msgstr ""
+
+#: src/Seo/Fields.php:42
+msgid "Advanced. Only if this page copies another page; paste the original address."
+msgstr ""
+
+#: src/Seo/Fields.php:46
+msgid "Hide this page from search engines (noindex)"
+msgstr ""
+
+#: src/Seo/Fields.php:47
+msgid "For thank-you pages, private landing pages and similar."
+msgstr ""
+
+#: src/Seo/Fields.php:51
+msgid "Ask search engines not to follow links on this page (nofollow)"
+msgstr ""
+
+#: src/Seo/Fields.php:52
+msgid "Rarely needed."
+msgstr ""
+
+#: src/Seo/Fields.php:56
+msgid "Title when shared on social media"
+msgstr ""
+
+#: src/Seo/Fields.php:57
+msgid "Leave empty to use the SEO title."
+msgstr ""
+
+#: src/Seo/Fields.php:61
+msgid "Description when shared on social media"
+msgstr ""
+
+#: src/Seo/Fields.php:62
+msgid "Leave empty to use the meta description."
+msgstr ""
+
+#: src/Seo/Fields.php:66
+msgid "Image when shared on social media"
+msgstr ""
+
+#: src/Seo/Fields.php:67
+msgid "1200×630 is ideal. Leave empty to use the featured image or the default share image."
+msgstr ""
+
+#: src/Seo/Fields.php:71
+msgid "What kind of page is this?"
+msgstr ""
+
+#: src/Seo/Fields.php:72
+msgid "Helps Google show the right kind of result. Questions come from the FAQ widget (switch on \"Tell Google these are FAQs\") and event details from the event itself."
+msgstr ""
+
+#: src/Seo/Fields.php:85
+msgid "Normal page"
+msgstr ""
+
+#: src/Seo/Fields.php:86
+msgid "About page"
+msgstr ""
+
+#: src/Seo/Fields.php:87
+msgid "Contact page"
+msgstr ""
+
+#: src/Seo/Fields.php:88
+msgid "Questions & answers page"
+msgstr ""
+
+#: src/Seo/Fields.php:90
+msgid "Course / programme"
+msgstr ""
+
+#: src/Seo/Indexing.php:105
+msgid "Search engines are blocked."
+msgstr ""
+
+#: src/Seo/Indexing.php:106
+msgid "Google will not show this site while \"Discourage search engines\" is ticked."
+msgstr ""
+
+#: src/Seo/Indexing.php:108
+msgid "Change this in Settings → Reading"
+msgstr ""
+
+#: src/Seo/Metabox.php:49
+#: src/Seo/Metabox.php:216
+#: src/Settings/Schema.php:80
+msgid "SEO"
+msgstr ""
+
+#. translators: 1: number of characters, 2: recommended range.
+#: src/Seo/Metabox.php:77
+#, php-format
+msgid "%1$s characters (aim for %2$s)"
+msgstr ""
+
+#: src/Seo/Metabox.php:78
+msgid "The focus keyword is in the SEO title."
+msgstr ""
+
+#: src/Seo/Metabox.php:79
+msgid "The focus keyword is in the meta description."
+msgstr ""
+
+#: src/Seo/Metabox.php:80
+msgid "The focus keyword is in the page address."
+msgstr ""
+
+#: src/Seo/Metabox.php:81
+msgid "The focus keyword is in the page title."
+msgstr ""
+
+#: src/Seo/Metabox.php:82
+msgid "Not yet"
+msgstr ""
+
+#: src/Seo/Metabox.php:83
+msgid "Yes"
+msgstr ""
+
+#: src/Seo/Metabox.php:119
+msgid "Social sharing & advanced"
+msgstr ""
+
+#: src/Seo/Redirects.php:137
+msgid "Addresses visitors could not find (404)"
+msgstr ""
+
+#: src/Seo/Redirects.php:140
+msgid "Nothing logged yet."
+msgstr ""
+
+#: src/Seo/Redirects.php:144
+msgid "Times"
+msgstr ""
+
+#: src/Seo/Redirects.php:144
+msgid "Last seen"
+msgstr ""
+
+#: src/Seo/Redirects.php:158
+msgid "Clear the list"
+msgstr ""
+
+#. translators: %s: contrast ratio such as 3.2.
+#: src/Settings/AdminPage.php:127
+#, php-format
+msgid "Text on this colour would be hard to read (best contrast %s:1), so the site uses a slightly darker shade of it."
+msgstr ""
+
+#. translators: %s: contrast ratio such as 7.1.
+#: src/Settings/AdminPage.php:129
+#, php-format
+msgid "Good contrast (%s:1)."
+msgstr ""
+
+#: src/Settings/AdminPage.php:131
+msgid "Use this file"
+msgstr ""
+
+#: src/Settings/AdminPage.php:161
+msgid "You are not allowed to change these settings."
+msgstr ""
+
+#: src/Settings/AdminPage.php:295
+msgid "Settings saved."
+msgstr ""
+
+#: src/Settings/AdminPage.php:296
+msgid "Settings imported."
+msgstr ""
+
+#: src/Settings/AdminPage.php:297
+msgid "Section reset to its defaults."
+msgstr ""
+
+#: src/Settings/AdminPage.php:298
+msgid "That file could not be imported. Please choose a settings file exported from this screen."
+msgstr ""
+
+#: src/Settings/AdminPage.php:299
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: src/Settings/AdminPage.php:351
+msgid "Live preview — changes show here before you save."
+msgstr ""
+
+#: src/Settings/AdminPage.php:352
+msgid "Live preview of the home page"
+msgstr ""
+
+#: src/Settings/AdminPage.php:399
+msgid "Save changes"
+msgstr ""
+
+#: src/Settings/AdminPage.php:561
+#: src/Settings/Schema.php:220
+msgid "Accent colour"
+msgstr ""
+
+#: src/Settings/AdminPage.php:617
+msgid "Built-in design (no Elementor template)"
+msgstr ""
+
+#: src/Settings/AdminPage.php:624
+msgid "No Elementor templates yet. Import the demo (Tools tab) or create one in Elementor → Templates."
+msgstr ""
+
+#: src/Settings/AdminPage.php:649
+msgid "Old address (e.g. /old-page/)"
+msgstr ""
+
+#: src/Settings/AdminPage.php:650
+msgid "New address (e.g. /new-page/ or a full link)"
+msgstr ""
+
+#: src/Settings/AdminPage.php:659
+msgid "Old address"
+msgstr ""
+
+#: src/Settings/AdminPage.php:660
+msgid "New address"
+msgstr ""
+
+#: src/Settings/AdminPage.php:664
+msgid "Add another redirect"
+msgstr ""
+
+#: src/Settings/AdminPage.php:682
+msgid "Back up your settings"
+msgstr ""
+
+#: src/Settings/AdminPage.php:683
+msgid "Downloads a small file with every Theme Settings value. Keep it safe or use it on another site."
+msgstr ""
+
+#: src/Settings/AdminPage.php:687
+msgid "Download settings file"
+msgstr ""
+
+#: src/Settings/AdminPage.php:691
+msgid "Restore settings"
+msgstr ""
+
+#: src/Settings/AdminPage.php:692
+msgid "Choose a settings file you downloaded earlier. Your current settings will be replaced."
+msgstr ""
+
+#: src/Settings/AdminPage.php:696
+msgid "Settings file"
+msgstr ""
+
+#: src/Settings/AdminPage.php:698
+msgid "Restore"
+msgstr ""
+
+#: src/Settings/AdminPage.php:702
+msgid "Reset a section"
+msgstr ""
+
+#: src/Settings/AdminPage.php:703
+msgid "Puts one tab back to the way it was when the theme was installed. Other tabs are not touched."
+msgstr ""
+
+#: src/Settings/AdminPage.php:707
+msgid "Section"
+msgstr ""
+
+#: src/Settings/AdminPage.php:715
+msgid "Reset section"
+msgstr ""
+
+#: src/Settings/Schema.php:48
+msgid "Brand"
+msgstr ""
+
+#: src/Settings/Schema.php:49
+msgid "Your logo, site icon and company profile."
+msgstr ""
+
+#: src/Settings/Schema.php:53
+msgid "Colours"
+msgstr ""
+
+#: src/Settings/Schema.php:54
+msgid "Pick an accent colour — the whole site and Elementor update together."
+msgstr ""
+
+#: src/Settings/Schema.php:59
+msgid "Typography"
+msgstr ""
+
+#: src/Settings/Schema.php:60
+msgid "Fonts and text sizes used across the site."
+msgstr ""
+
+#: src/Settings/Schema.php:65
+msgid "Header"
+msgstr ""
+
+#: src/Settings/Schema.php:66
+msgid "The bar at the top of every page."
+msgstr ""
+
+#: src/Settings/Schema.php:70
+msgid "Footer"
+msgstr ""
+
+#: src/Settings/Schema.php:71
+msgid "The area at the bottom of every page."
+msgstr ""
+
+#: src/Settings/Schema.php:75
+msgid "Contact & Social"
+msgstr ""
+
+#: src/Settings/Schema.php:76
+msgid "Used by widgets, the footer, the WhatsApp button and search engines."
+msgstr ""
+
+#: src/Settings/Schema.php:81
+msgid "How your site appears on Google and when shared on social media."
+msgstr ""
+
+#: src/Settings/Schema.php:85
+msgid "Performance"
+msgstr ""
+
+#: src/Settings/Schema.php:86
+msgid "Speed options. The defaults are right for almost every site."
+msgstr ""
+
+#: src/Settings/Schema.php:90
+msgid "Texts"
+msgstr ""
+
+#: src/Settings/Schema.php:91
+msgid "Every small text the theme shows outside your Elementor pages. Leave a box empty to use the default shown in grey."
+msgstr ""
+
+#: src/Settings/Schema.php:95
+msgid "Tools"
+msgstr ""
+
+#: src/Settings/Schema.php:96
+msgid "Import the demo, back up or restore your settings, or reset a section."
+msgstr ""
+
+#: src/Settings/Schema.php:171
+msgid "Your official name, used by search engines. Leave empty to use the site title."
+msgstr ""
+
+#: src/Settings/Schema.php:178
+msgid "Shown in the header. A transparent PNG or SVG around 240×80 looks best."
+msgstr ""
+
+#: src/Settings/Schema.php:185
+msgid "A light version of your logo, used in dark mode and on dark footers."
+msgstr ""
+
+#: src/Settings/Schema.php:190
+msgid "Use the logo as the site icon (favicon)"
+msgstr ""
+
+#: src/Settings/Schema.php:191
+msgid "Shows your logo in browser tabs and bookmarks. A square version is made for you; for a wide logo with a symbol, just the symbol is used. Choose a separate icon below to use that instead."
+msgstr ""
+
+#: src/Settings/Schema.php:197
+msgid "Separate site icon (optional)"
+msgstr ""
+
+#: src/Settings/Schema.php:198
+msgid "A square image of at least 512×512, used instead of the logo. Good for wide logos: use just your symbol here."
+msgstr ""
+
+#: src/Settings/Schema.php:205
+msgid "The file visitors get when they click \"Download PDF\"."
+msgstr ""
+
+#: src/Settings/Schema.php:221
+msgid "Click a swatch. Buttons, links and highlights change everywhere, including in Elementor."
+msgstr ""
+
+#: src/Settings/Schema.php:226
+msgid "Custom accent colour"
+msgstr ""
+
+#: src/Settings/Schema.php:227
+msgid "Used when the \"Custom\" swatch is selected. You will see a warning if text on it would be hard to read."
+msgstr ""
+
+#: src/Settings/Schema.php:232
+msgid "Light or dark mode"
+msgstr ""
+
+#: src/Settings/Schema.php:233
+msgid "\"Automatic\" follows each visitor's device setting."
+msgstr ""
+
+#: src/Settings/Schema.php:236
+msgid "Light"
+msgstr ""
+
+#: src/Settings/Schema.php:237
+msgid "Dark"
+msgstr ""
+
+#: src/Settings/Schema.php:238
+msgid "Automatic"
+msgstr ""
+
+#: src/Settings/Schema.php:243
+msgid "Background tint"
+msgstr ""
+
+#: src/Settings/Schema.php:244
+msgid "A very light wash of your accent colour behind soft sections."
+msgstr ""
+
+#: src/Settings/Schema.php:247
+msgid "Neutral (light grey-violet)"
+msgstr ""
+
+#: src/Settings/Schema.php:248
+msgid "Tinted with the accent colour"
+msgstr ""
+
+#: src/Settings/Schema.php:249
+msgid "Plain white"
+msgstr ""
+
+#: src/Settings/Schema.php:254
+msgid "Button shape"
+msgstr ""
+
+#: src/Settings/Schema.php:255
+msgid "Applies to every button on the site."
+msgstr ""
+
+#: src/Settings/Schema.php:258
+msgid "Rounded corners"
+msgstr ""
+
+#: src/Settings/Schema.php:259
+msgid "Pill (fully round)"
+msgstr ""
+
+#: src/Settings/Schema.php:260
+msgid "Square corners"
+msgstr ""
+
+#: src/Settings/Schema.php:265
+msgid "Underline links in text"
+msgstr ""
+
+#: src/Settings/Schema.php:266
+msgid "Underlined links are easier to spot for everyone."
+msgstr ""
+
+#: src/Settings/Schema.php:271
+msgid "Use an accent-to-navy gradient behind heroes"
+msgstr ""
+
+#: src/Settings/Schema.php:272
+msgid "Applies to hero sections that have no background image."
+msgstr ""
+
+#: src/Settings/Schema.php:292
+msgid "Font pair"
+msgstr ""
+
+#: src/Settings/Schema.php:293
+msgid "One font for headings and one for body text, chosen to look good together."
+msgstr ""
+
+#: src/Settings/Schema.php:299
+msgid "Body text size (px)"
+msgstr ""
+
+#: src/Settings/Schema.php:300
+msgid "Between 14 and 20. 16 is the web standard."
+msgstr ""
+
+#: src/Settings/Schema.php:307
+msgid "Heading size"
+msgstr ""
+
+#: src/Settings/Schema.php:308
+msgid "How much bigger headings are than body text."
+msgstr ""
+
+#: src/Settings/Schema.php:311
+msgid "Compact"
+msgstr ""
+
+#: src/Settings/Schema.php:312
+msgid "Normal"
+msgstr ""
+
+#: src/Settings/Schema.php:313
+msgid "Large"
+msgstr ""
+
+#: src/Settings/Schema.php:318
+msgid "Serve fonts from this website"
+msgstr ""
+
+#: src/Settings/Schema.php:319
+msgid "Faster and privacy-friendly (no Google request). Works with the default font pair."
+msgstr ""
+
+#: src/Settings/Schema.php:335
+msgid "Header design"
+msgstr ""
+
+#: src/Settings/Schema.php:336
+msgid "Pick the Elementor template used as the header, or keep the built-in header."
+msgstr ""
+
+#: src/Settings/Schema.php:341
+msgid "Keep the header visible while scrolling"
+msgstr ""
+
+#: src/Settings/Schema.php:342
+msgid "The header stays at the top of the screen as visitors scroll."
+msgstr ""
+
+#: src/Settings/Schema.php:347
+msgid "See-through header over the hero"
+msgstr ""
+
+#: src/Settings/Schema.php:348
+msgid "The header floats over the first section of the home page."
+msgstr ""
+
+#: src/Settings/Schema.php:353
+msgid "Show the top bar"
+msgstr ""
+
+#: src/Settings/Schema.php:354
+msgid "Small links above the header (News, Events, Careers…). Edit them in Appearance → Menus → \"Top bar links\"."
+msgstr ""
+
+#: src/Settings/Schema.php:359
+msgid "Header button text"
+msgstr ""
+
+#: src/Settings/Schema.php:360
+msgid "For example \"Apply Now\". The button only shows when it has a link."
+msgstr ""
+
+#: src/Settings/Schema.php:365
+msgid "Header button link"
+msgstr ""
+
+#: src/Settings/Schema.php:366
+msgid "The page the header button opens."
+msgstr ""
+
+#: src/Settings/Schema.php:371
+msgid "Mobile menu style"
+msgstr ""
+
+#: src/Settings/Schema.php:372
+msgid "How the menu opens on phones."
+msgstr ""
+
+#: src/Settings/Schema.php:375
+msgid "Full screen"
+msgstr ""
+
+#: src/Settings/Schema.php:376
+msgid "Slide in from the side"
+msgstr ""
+
+#: src/Settings/Schema.php:392
+msgid "Footer design"
+msgstr ""
+
+#: src/Settings/Schema.php:393
+msgid "Pick the Elementor template used as the footer, or keep the built-in footer."
+msgstr ""
+
+#: src/Settings/Schema.php:398
+msgid "Show the newsletter sign-up"
+msgstr ""
+
+#: src/Settings/Schema.php:399
+msgid "Shows the newsletter box in the footer."
+msgstr ""
+
+#: src/Settings/Schema.php:404
+msgid "Mailchimp API key (optional)"
+msgstr ""
+
+#: src/Settings/Schema.php:405
+msgid "Only if newsletter sign-ups should go to Mailchimp. Mailchimp → Account → Extras → API keys."
+msgstr ""
+
+#: src/Settings/Schema.php:410
+msgid "Mailchimp audience ID"
+msgstr ""
+
+#: src/Settings/Schema.php:411
+msgid "Mailchimp → Audience → Settings → \"Audience ID\"."
+msgstr ""
+
+#: src/Settings/Schema.php:417
+msgid "Use {year} for the current year and {site} for your site name."
+msgstr ""
+
+#: src/Settings/Schema.php:422
+msgid "Show the \"back to top\" button"
+msgstr ""
+
+#: src/Settings/Schema.php:423
+msgid "A small round button that appears after scrolling down."
+msgstr ""
+
+#: src/Settings/Schema.php:428
+msgid "Sticky \"Apply / WhatsApp\" bar on phones"
+msgstr ""
+
+#: src/Settings/Schema.php:429
+msgid "A bar fixed to the bottom of the screen on phones."
+msgstr ""
+
+#: src/Settings/Schema.php:434
+msgid "Phone bar: button text"
+msgstr ""
+
+#: src/Settings/Schema.php:435
+msgid "For example \"Apply now\"."
+msgstr ""
+
+#: src/Settings/Schema.php:440
+msgid "Phone bar: WhatsApp button text"
+msgstr ""
+
+#: src/Settings/Schema.php:441
+msgid "For example \"WhatsApp us\". Shows when a WhatsApp number is set."
+msgstr ""
+
+#: src/Settings/Schema.php:446
+msgid "Phone bar: button link"
+msgstr ""
+
+#: src/Settings/Schema.php:447
+msgid "The page the phone bar button opens. The WhatsApp button uses Contact & Social → WhatsApp."
+msgstr ""
+
+#: src/Settings/Schema.php:463
+msgid "Include the country code, e.g. +971 4 000 0000."
+msgstr ""
+
+#: src/Settings/Schema.php:465
+#: src/Settings/Schema.php:472
+#: src/Settings/Schema.php:479
+#: src/Settings/Schema.php:486
+#: src/Settings/Schema.php:493
+#: src/Settings/Schema.php:500
+msgid "Contact details"
+msgstr ""
+
+#: src/Settings/Schema.php:477
+msgid "Public email address. Form notifications also go here unless a widget says otherwise."
+msgstr ""
+
+#: src/Settings/Schema.php:484
+msgid "With country code. Turns on the WhatsApp buttons."
+msgstr ""
+
+#: src/Settings/Schema.php:491
+msgid "Your office address, one line per row."
+msgstr ""
+
+#: src/Settings/Schema.php:498
+msgid "In Google Maps: Share → Embed a map → copy the address inside src=\"…\"."
+msgstr ""
+
+#. translators: %s: social network name.
+#: src/Settings/Schema.php:509
+#, php-format
+msgid "%s page"
+msgstr ""
+
+#. translators: %s: social network name.
+#: src/Settings/Schema.php:511
+#, php-format
+msgid "Full link to your %s profile. Leave empty to hide the icon."
+msgstr ""
+
+#: src/Settings/Schema.php:546
+msgid "Titles & descriptions"
+msgstr ""
+
+#: src/Settings/Schema.php:547
+msgid "Social sharing"
+msgstr ""
+
+#: src/Settings/Schema.php:548
+msgid "Organisation details for Google"
+msgstr ""
+
+#: src/Settings/Schema.php:549
+msgid "Indexing"
+msgstr ""
+
+#: src/Settings/Schema.php:550
+msgid "Site verification"
+msgstr ""
+
+#: src/Settings/Schema.php:551
+msgid "Analytics"
+msgstr ""
+
+#: src/Settings/Schema.php:556
+msgid "Page title format"
+msgstr ""
+
+#: src/Settings/Schema.php:557
+msgid "Shown in Google and browser tabs. {title} = page title, {sep} = separator, {site} = site name."
+msgstr ""
+
+#: src/Settings/Schema.php:564
+msgid "The symbol between the page title and the site name."
+msgstr ""
+
+#: src/Settings/Schema.php:578
+msgid "Home page title"
+msgstr ""
+
+#: src/Settings/Schema.php:579
+msgid "The title Google shows for your home page. Leave empty for \"Site name | Tagline\"."
+msgstr ""
+
+#: src/Settings/Schema.php:585
+msgid "Home page description"
+msgstr ""
+
+#: src/Settings/Schema.php:586
+msgid "One or two sentences (up to 160 characters) shown under your title in Google."
+msgstr ""
+
+#: src/Settings/Schema.php:593
+msgid "Default share image"
+msgstr ""
+
+#: src/Settings/Schema.php:594
+msgid "Shown when a page is shared on Facebook, LinkedIn, WhatsApp or X. 1200×630 is ideal."
+msgstr ""
+
+#: src/Settings/Schema.php:600
+msgid "Facebook App ID"
+msgstr ""
+
+#: src/Settings/Schema.php:601
+msgid "Optional. Only needed for Facebook Insights."
+msgstr ""
+
+#: src/Settings/Schema.php:607
+msgid "X (Twitter) username"
+msgstr ""
+
+#: src/Settings/Schema.php:608
+msgid "Including the @, e.g. @youreducation."
+msgstr ""
+
+#: src/Settings/Schema.php:614
+msgid "Organisation type"
+msgstr ""
+
+#: src/Settings/Schema.php:615
+msgid "Helps Google understand what you are. Your name, logo, address, phone and social links come from the other tabs."
+msgstr ""
+
+#: src/Settings/Schema.php:618
+msgid "Educational organisation"
+msgstr ""
+
+#: src/Settings/Schema.php:619
+msgid "College or university"
+msgstr ""
+
+#: src/Settings/Schema.php:620
+msgid "School"
+msgstr ""
+
+#: src/Settings/Schema.php:621
+msgid "Company / other organisation"
+msgstr ""
+
+#: src/Settings/Schema.php:627
+msgid "XML sitemap"
+msgstr ""
+
+#: src/Settings/Schema.php:628
+msgid "A list of your pages for search engines, at /wp-sitemap.xml."
+msgstr ""
+
+#: src/Settings/Schema.php:635
+msgid "The \"Home › Section › Page\" trail, also shown in Google results."
+msgstr ""
+
+#: src/Settings/Schema.php:641
+msgid "Extra robots.txt rules"
+msgstr ""
+
+#: src/Settings/Schema.php:642
+msgid "Advanced. Added to the end of /robots.txt. Leave empty if unsure."
+msgstr ""
+
+#: src/Settings/Schema.php:648
+msgid "Redirects"
+msgstr ""
+
+#: src/Settings/Schema.php:649
+msgid "Send visitors from an old address to a new one (permanent 301 redirect)."
+msgstr ""
+
+#: src/Settings/Schema.php:655
+msgid "Keep a list of broken links (404 log)"
+msgstr ""
+
+#: src/Settings/Schema.php:656
+msgid "Records the last 500 addresses visitors could not find, so you can redirect them."
+msgstr ""
+
+#: src/Settings/Schema.php:662
+msgid "Google verification code"
+msgstr ""
+
+#: src/Settings/Schema.php:663
+msgid "From Google Search Console → HTML tag. Paste only the content=\"…\" value."
+msgstr ""
+
+#: src/Settings/Schema.php:669
+msgid "Bing verification code"
+msgstr ""
+
+#: src/Settings/Schema.php:670
+msgid "From Bing Webmaster Tools."
+msgstr ""
+
+#: src/Settings/Schema.php:676
+msgid "Yandex verification code"
+msgstr ""
+
+#: src/Settings/Schema.php:677
+msgid "From Yandex Webmaster."
+msgstr ""
+
+#: src/Settings/Schema.php:683
+msgid "Pinterest verification code"
+msgstr ""
+
+#: src/Settings/Schema.php:684
+msgid "From Pinterest → Claim website."
+msgstr ""
+
+#: src/Settings/Schema.php:690
+msgid "Google Analytics 4 ID"
+msgstr ""
+
+#: src/Settings/Schema.php:691
+msgid "Looks like G-XXXXXXXXXX."
+msgstr ""
+
+#: src/Settings/Schema.php:697
+msgid "Google Tag Manager ID"
+msgstr ""
+
+#: src/Settings/Schema.php:698
+msgid "Looks like GTM-XXXXXXX. Use this or Analytics, not both."
+msgstr ""
+
+#: src/Settings/Schema.php:704
+msgid "Ask for cookie consent before loading analytics"
+msgstr ""
+
+#: src/Settings/Schema.php:705
+msgid "Shows a small consent bar; analytics load only after visitors accept."
+msgstr ""
+
+#: src/Settings/Schema.php:711
+msgid "Consent bar text"
+msgstr ""
+
+#: src/Settings/Schema.php:712
+msgid "Leave empty for the default text."
+msgstr ""
+
+#: src/Settings/Schema.php:718
+msgid "Consent bar: accept button"
+msgstr ""
+
+#: src/Settings/Schema.php:719
+msgid "Leave empty for \"Accept\"."
+msgstr ""
+
+#: src/Settings/Schema.php:725
+msgid "Consent bar: decline button"
+msgstr ""
+
+#: src/Settings/Schema.php:726
+msgid "Leave empty for \"Decline\"."
+msgstr ""
+
+#: src/Settings/Schema.php:742
+msgid "Load images only when they scroll into view"
+msgstr ""
+
+#: src/Settings/Schema.php:743
+msgid "Makes pages open faster."
+msgstr ""
+
+#: src/Settings/Schema.php:748
+msgid "Load the hero image first"
+msgstr ""
+
+#: src/Settings/Schema.php:749
+msgid "The big image at the top of a page appears sooner."
+msgstr ""
+
+#: src/Settings/Schema.php:754
+msgid "Remove the WordPress emoji script"
+msgstr ""
+
+#: src/Settings/Schema.php:755
+msgid "Emojis still show — your visitors' devices draw them."
+msgstr ""
+
+#: src/Settings/Schema.php:760
+msgid "Remove the WordPress embed script"
+msgstr ""
+
+#: src/Settings/Schema.php:761
+msgid "Only turn off if you never paste links to other WordPress posts."
+msgstr ""
+
+#: src/Settings/Schema.php:766
+msgid "Load theme scripts after the page"
+msgstr ""
+
+#: src/Settings/Schema.php:767
+msgid "The page shows before scripts run."
+msgstr ""
+
+#: src/Settings/Schema.php:772
+msgid "Load jQuery at the end of the page"
+msgstr ""
+
+#: src/Settings/Schema.php:773
+msgid "Pages appear sooner. Turn this off only if a plugin feature stops working."
+msgstr ""
+
+#: src/Settings/Schema.php:790
+msgid "404 page design"
+msgstr ""
+
+#: src/Settings/Schema.php:791
+msgid "An Elementor template shown when a page is not found. Keep the built-in one if unsure."
+msgstr ""
+
+#: src/Settings/Schema.php:793
+#: src/Settings/Schema.php:801
+#: src/Settings/Schema.php:809
+msgid "Pages"
+msgstr ""
+
+#: src/Settings/Schema.php:798
+msgid "Blog post banner"
+msgstr ""
+
+#: src/Settings/Schema.php:799
+msgid "An Elementor template shown at the top of every blog post (for example a Page Title Banner). It replaces the plain post title."
+msgstr ""
+
+#: src/Settings/Schema.php:806
+msgid "Blog & archive banner"
+msgstr ""
+
+#: src/Settings/Schema.php:807
+msgid "An Elementor template shown at the top of the news page and category lists. It replaces the plain heading."
+msgstr ""
+
+#: src/Settings/Schema.php:825
+msgid "Theme texts"
+msgstr ""

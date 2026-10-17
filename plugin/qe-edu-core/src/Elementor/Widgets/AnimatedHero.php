@@ -221,7 +221,7 @@ class AnimatedHero extends Base {
 			)
 		);
 		$this->add_text_style( 'description', __( 'Text', 'qe-edu' ), '.qe-hero__text', self::COLOR_TEXT, self::FONT_TEXT );
-		$this->add_button_style( '.qe-hero__actions .qe-btn' );
+		$this->add_button_style( '.qe-hero__actions .qe-btn:not(.qe-btn--ghost)' );
 		$this->end_controls_section();
 	}
 

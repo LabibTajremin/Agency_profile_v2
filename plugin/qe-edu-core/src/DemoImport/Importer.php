@@ -11,6 +11,7 @@ namespace QeEdu\Core\DemoImport;
 
 use QeEdu\Core\PostTypes\Types;
 use QeEdu\Core\Seo\Fields as SeoFields;
+use QeEdu\Core\Settings\AdminPage;
 use QeEdu\Core\Settings\Settings;
 
 defined( 'ABSPATH' ) || exit;
@@ -105,6 +106,8 @@ class Importer {
 				$this->import_template( $template );
 			}
 			$this->apply_settings();
+			// Logo → Site Identity, and the logo (or icon) → favicon.
+			AdminPage::sync_brand( Settings::all() );
 			$this->apply_reading();
 		}
 

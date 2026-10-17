@@ -141,6 +141,24 @@ final class AdminPageTest extends PluginTestCase {
 		$this->assertSame( 0, $this->options['site_icon'] );
 	}
 
+	public function test_sync_brand_uses_the_logo_as_icon() {
+		Functions\when( 'set_theme_mod' )->justReturn( true );
+		Functions\when( 'get_attached_file' )->justReturn( '' );
+
+		AdminPage::sync_brand( array( 'brand' => array( 'logo' => 5 ) ) );
+		$this->assertSame( 5, $this->options['site_icon'], 'Default: the logo (here unreadable, so as is).' );
+
+		AdminPage::sync_brand(
+			array(
+				'brand' => array(
+					'logo'         => 5,
+					'logo_favicon' => false,
+				),
+			)
+		);
+		$this->assertSame( 0, $this->options['site_icon'], 'Switched off: no icon.' );
+	}
+
 	public function test_sync_brand_sets_logo_and_icon() {
 		Functions\expect( 'set_theme_mod' )->once()->with( 'custom_logo', 5 );
 		AdminPage::sync_brand(
@@ -181,6 +199,7 @@ final class AdminPageTest extends PluginTestCase {
 		file_put_contents( $file, '{"plugin":"qe-edu-core","settings":{"brand":{"logo":3}}}' );
 		$_FILES['qe_edu_import'] = array( 'tmp_name' => $file );
 		Functions\when( 'is_uploaded_file' )->justReturn( true );
+		Functions\when( 'get_attached_file' )->justReturn( '' );
 		Functions\expect( 'set_theme_mod' )->once()->with( 'custom_logo', 3 );
 
 		( new TestableAdminPage() )->handle_import();

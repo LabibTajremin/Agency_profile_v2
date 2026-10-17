@@ -212,7 +212,9 @@ class AdminPage {
 
 	/**
 	 * Mirror the logo and site icon into the WordPress core settings, so the
-	 * Customizer and every theme feature that reads them stay in sync.
+	 * Customizer and every theme feature that reads them stay in sync. The
+	 * site icon is the separate icon when one is chosen, otherwise (when
+	 * "Use the logo as the site icon" is on) a square copy of the logo.
 	 *
 	 * @param array<string,mixed> $settings Saved settings.
 	 * @return void
@@ -220,6 +222,10 @@ class AdminPage {
 	public static function sync_brand( $settings ) {
 		$logo = absint( Settings::get_path( $settings, 'brand.logo', 0 ) );
 		$icon = absint( Settings::get_path( $settings, 'brand.favicon', 0 ) );
+
+		if ( ! $icon && $logo && Settings::get_path( $settings, 'brand.logo_favicon', true ) ) {
+			$icon = SiteIcon::from_logo( $logo );
+		}
 
 		if ( $logo ) {
 			set_theme_mod( 'custom_logo', $logo );

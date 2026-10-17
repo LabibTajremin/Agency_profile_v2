@@ -333,6 +333,15 @@ final class WidgetBranchesTest extends WidgetTestCase {
 		$this->assertSame( 'Queried post', PageTitleBanner::title( $s ) );
 	}
 
+	public function test_hero_button_colour_leaves_the_ghost_button_alone() {
+		$hero = new AnimatedHero();
+		( new \ReflectionMethod( AnimatedHero::class, 'register_controls' ) )->invoke( $hero );
+		$this->assertSame(
+			array( '{{WRAPPER}} .qe-hero__actions .qe-btn:not(.qe-btn--ghost)' => 'background-color: {{VALUE}};' ),
+			$hero->controls['button_bg']['selectors']
+		);
+	}
+
 	public function test_images_are_loaded_in_one_go() {
 		$widget = ( new \ReflectionClass( DestinationsGrid::class ) )->newInstanceWithoutConstructor();
 		$prime  = new \ReflectionMethod( DestinationsGrid::class, 'prime_images' );

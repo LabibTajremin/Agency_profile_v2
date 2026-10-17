@@ -701,14 +701,15 @@ $templates['header'] = array(
 				'flex_direction'       => 'row',
 				'flex_justify_content' => 'space-between',
 				'flex_align_items'     => 'center',
-				'flex_gap'             => gap( 24 ),
+				'flex_gap'             => gap( 12 ),
 				'flex_wrap'            => 'nowrap',
 				'padding'              => px( 12, 32 ),
 				'padding_mobile'       => px( 10, 16 ),
 			),
 			array(
-				el( 'qe-site-logo', array( '_flex_size' => 'none', 'width' => array( 'unit' => 'px', 'size' => 200 ), 'width_mobile' => array( 'unit' => 'px', 'size' => 160 ) ) ),
-				el( 'qe-mega-menu', array( 'menu' => '{{menu:primary}}', '_flex_size' => 'grow' ) ),
+				el( 'qe-site-logo', array( '_flex_size' => 'none', 'width' => array( 'unit' => 'px', 'size' => 180 ), 'width_mobile' => array( 'unit' => 'px', 'size' => 160 ) ) ),
+				// May grow and shrink, so it never pushes the button off screen.
+				el( 'qe-mega-menu', array( 'menu' => '{{menu:primary}}', '_flex_size' => 'custom', '_flex_grow' => 1, '_flex_shrink' => 1 ) ),
 				button( 'Apply Now', page_url( 'contact' ), array( '_flex_size' => 'none', 'hide_mobile' => 'hidden-mobile' ) ),
 			)
 		),
@@ -985,8 +986,7 @@ $menus = array(
 	'primary' => array(
 		'name'     => 'Main menu',
 		'location' => 'primary',
-		'items'    => array(
-			array( 'Home', 'home' ),
+		'items'    => array( // The logo links to the home page.
 			array(
 				'About Us',
 				'about',

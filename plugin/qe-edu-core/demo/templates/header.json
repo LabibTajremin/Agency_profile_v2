@@ -46,9 +46,9 @@
             "flex_align_items": "center",
             "flex_gap": {
                 "unit": "px",
-                "size": 24,
-                "column": "24",
-                "row": "24"
+                "size": 12,
+                "column": "12",
+                "row": "12"
             },
             "flex_wrap": "nowrap",
             "padding": {
@@ -77,7 +77,7 @@
                     "_flex_size": "none",
                     "width": {
                         "unit": "px",
-                        "size": 200
+                        "size": 180
                     },
                     "width_mobile": {
                         "unit": "px",
@@ -92,7 +92,9 @@
                 "widgetType": "qe-mega-menu",
                 "settings": {
                     "menu": "{{menu:primary}}",
-                    "_flex_size": "grow"
+                    "_flex_size": "custom",
+                    "_flex_grow": 1,
+                    "_flex_shrink": 1
                 },
                 "elements": []
             },

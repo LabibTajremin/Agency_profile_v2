@@ -178,9 +178,14 @@ final class ImporterTest extends PluginTestCase {
 		);
 		Functions\when( 'set_theme_mod' )->alias(
 			function ( $name, $value ) {
-				$this->locations = $value;
+				if ( 'nav_menu_locations' === $name ) {
+					$this->locations = $value;
+				}
+				$this->calls['mods'][ $name ] = $value;
 			}
 		);
+		Functions\when( 'remove_theme_mod' )->justReturn( true );
+		Functions\when( 'get_attached_file' )->justReturn( '' );
 		Functions\when( 'wp_get_nav_menu_object' )->alias(
 			static function ( $name ) {
 				return 'Top' === $name ? (object) array( 'term_id' => 3 ) : false;
@@ -350,6 +355,8 @@ final class ImporterTest extends PluginTestCase {
 
 		// Settings and reading.
 		$this->assertSame( $image, $stored['brand']['logo'] );
+		$this->assertSame( $image, $this->calls['mods']['custom_logo'], 'Logo synced to Site Identity.' );
+		$this->assertSame( $image, $this->options['site_icon'], 'Logo used as the site icon.' );
 		$this->assertSame( 'demo@example.test', $stored['contact']['email'] );
 		$this->assertSame( '+9 999', $stored['contact']['phone'], 'Existing values are kept.' );
 		$this->assertSame( 'page', $this->options['show_on_front'] );

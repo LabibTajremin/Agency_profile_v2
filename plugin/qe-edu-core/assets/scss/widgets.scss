@@ -1096,9 +1096,10 @@ body.elementor-editor-active .qe-marquee__track {
 .qe-mega__link {
 	display: flex;
 	flex-direction: column;
-	padding: 0.6rem 0.8rem;
+	// A little tighter on small desktops so long menus stay on one line.
+	padding: 0.6rem clamp(0.35rem, 0.75vw - 0.15rem, 0.8rem);
 	color: $secondary;
-	font-size: 0.9375rem;
+	font-size: clamp(0.8125rem, 0.62rem + 0.3vw, 0.9375rem);
 	font-weight: 600;
 	text-decoration: none;
 	transition: color 0.2s $ease;
@@ -1130,6 +1131,10 @@ body.elementor-editor-active .qe-marquee__track {
 }
 
 @mixin qe-mega-desktop {
+
+	.qe-mega__menu {
+		justify-content: center;
+	}
 
 	.has-children > .qe-mega__link::after {
 		content: "";

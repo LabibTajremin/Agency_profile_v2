@@ -146,7 +146,7 @@ final class SettingsTest extends PluginTestCase {
 		$this->assertFalse( $tab['header']['sticky'], 'Unticked checkbox becomes false' );
 		$this->assertSame( 'Apply', $tab['header']['cta_text'] );
 
-		$this->assertSame( array(), Settings::sanitize( 'nope', array( 'brand' ) ) );
+		$this->assertSame( array( 'brand' => array( 'logo_favicon' => false ) ), Settings::sanitize( 'nope', array( 'brand' ) ), 'Bad input: only the unticked checkbox.' );
 	}
 
 	public function test_save_tab() {
