@@ -90,3 +90,7 @@ schema cached; slider/slide a11y roles; link context; footer heading order; empt
 blog page SEO values; header menu never pushes the button off screen (clip check added to the
 demo gate); widget CSS always after theme CSS; admin hint contrast.
 User request: Brand → "Use the logo as the site icon (favicon)" (square copy; symbol of a wide logo).
+User request: `docs/DEPLOYMENT.md` (full deployment guide, demo seeding from the dashboard and WP-CLI);
+realistic demo (fictional "Brightway Education Group", destination key facts, full news articles, named
+testimonials, real-looking contact details from reserved test ranges, `{{email:…}}` placeholder on the
+site's own domain). Re-verified: PHPUnit 100% lines, demo gate 10/10 and SEO gate 5/5 on a fresh site.

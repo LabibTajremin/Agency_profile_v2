@@ -283,7 +283,7 @@ $current = 'home';
 $pages['home'] = array(
 	'title' => 'Home',
 	'slug'  => 'home',
-	'seo'   => array( 'description' => 'Study abroad with Your Education Group: university applications, pathways, English courses and one-to-one advice for international students.' ),
+	'seo'   => array( 'description' => 'Study abroad with Brightway Education Group: university applications, pathways, English courses and one-to-one advice for international students.' ),
 	'data'  => array(
 		band(
 			el(
@@ -315,13 +315,13 @@ $current = 'about';
 $pages['about'] = array(
 	'title' => 'About Us',
 	'slug'  => 'about',
-	'seo'   => array( 'schema' => 'AboutPage', 'description' => 'Fifteen years of helping students study abroad: who we are, what we believe in and the global network behind Your Education Group.' ),
+	'seo'   => array( 'schema' => 'AboutPage', 'description' => 'Fifteen years of helping students study abroad: who we are, what we believe in and the global network behind Brightway Education Group.' ),
 	'data'  => array(
 		banner( 'Fifteen years of opening doors to world-class education.' ),
 		intro(
 			'Who we are',
 			array(
-				'Your Education Group helps students from more than 60 countries find the right university, programme and city — and supports them all the way to graduation.',
+				'Brightway Education Group helps students from more than 60 countries find the right university, programme and city — and supports them all the way to graduation.',
 				'Our advisors, admissions specialists and teachers work together so every student gets honest advice and a clear plan.',
 			),
 			'about',
@@ -464,7 +464,7 @@ $current = 'partner-with-us';
 $pages['partner-with-us'] = array(
 	'title' => 'Partner With Us',
 	'slug'  => 'partner-with-us',
-	'seo'   => array( 'description' => 'Universities, colleges and recruitment agents: partner with Your Education Group to reach motivated international students.' ),
+	'seo'   => array( 'description' => 'Universities, colleges and recruitment agents: partner with Brightway Education Group to reach motivated international students.' ),
 	'data'  => array(
 		banner( 'Grow your international student community with us.' ),
 		intro(
@@ -536,7 +536,7 @@ $current = 'careers';
 $pages['careers'] = array(
 	'title' => 'Careers',
 	'slug'  => 'careers',
-	'seo'   => array( 'description' => 'Work with Your Education Group: open positions and why our team loves helping students study abroad.' ),
+	'seo'   => array( 'description' => 'Work with Brightway Education Group: open positions and why our team loves helping students study abroad.' ),
 	'data'  => array(
 		banner( 'Help students change their lives.' ),
 		intro( 'Why work with us', array( 'We are a friendly international team of advisors, teachers and specialists. We invest in training and give people the freedom to do great work.' ), 'about' ),
@@ -579,7 +579,7 @@ $current = 'contact';
 $pages['contact'] = array(
 	'title' => 'Contact Us',
 	'slug'  => 'contact',
-	'seo'   => array( 'schema' => 'ContactPage', 'description' => 'Contact Your Education Group: call, email, WhatsApp or send us a message and an advisor will reply within one working day.' ),
+	'seo'   => array( 'schema' => 'ContactPage', 'description' => 'Contact Brightway Education Group: call, email, WhatsApp or send us a message and an advisor will reply within one working day.' ),
 	'data'  => array(
 		banner( 'An advisor will reply within one working day.' ),
 		section(
@@ -851,8 +851,8 @@ foreach ( array( 'team-1' => 'Amira Rahman', 'team-2' => 'Samuel Kim', 'team-3' 
 foreach ( array( 'hero-1', 'hero-2', 'hero-3', 'banner', 'about' ) as $key ) {
 	$images[ $key ]['alt'] = '';
 }
-$images['logo']['alt']            = 'Your Education Group';
-$images['logo-light']['alt']      = 'Your Education Group';
+$images['logo']['alt']            = 'Brightway Education Group';
+$images['logo-light']['alt']      = 'Brightway Education Group';
 $images['company-profile']['alt'] = 'Company profile';
 
 $posts = array();
@@ -863,14 +863,37 @@ $destinations = array(
 	'new-zealand' => 'New Zealand', 'malaysia' => 'Malaysia', 'uae' => 'United Arab Emirates', 'turkey' => 'Türkiye',
 	'cyprus' => 'Cyprus', 'malta' => 'Malta', 'spain' => 'Spain', 'italy' => 'Italy',
 );
+// Country facts: [cities, typical yearly tuition, intakes, post-study work].
+$facts = array(
+	'united-kingdom' => array( 'London, Manchester, Edinburgh, Birmingham', '£12,000–£26,000', 'September, January', 'Graduate Route: 2 years (3 for PhD)' ),
+	'united-states'  => array( 'Boston, New York, Chicago, Los Angeles', 'US$20,000–US$45,000', 'August/September, January', 'OPT: 12 months (up to 36 for STEM)' ),
+	'canada'         => array( 'Toronto, Vancouver, Montréal, Ottawa', 'C$20,000–C$40,000', 'September, January, May', 'PGWP: up to 3 years' ),
+	'australia'      => array( 'Sydney, Melbourne, Brisbane, Perth', 'A$25,000–A$45,000', 'February, July', 'Temporary Graduate visa: 2–4 years' ),
+	'ireland'        => array( 'Dublin, Cork, Galway, Limerick', '€10,000–€25,000', 'September, January', 'Stay Back: 1–2 years' ),
+	'germany'        => array( 'Berlin, Munich, Hamburg, Frankfurt', 'Low or no tuition at public universities', 'October, April', '18-month job-seeker permit' ),
+	'france'         => array( 'Paris, Lyon, Toulouse, Lille', '€3,000–€15,000', 'September, January', 'APS: 1–2 years for master’s graduates' ),
+	'netherlands'    => array( 'Amsterdam, Rotterdam, Utrecht, Groningen', '€9,000–€20,000', 'September, February', 'Orientation year: 12 months' ),
+	'new-zealand'    => array( 'Auckland, Wellington, Christchurch, Dunedin', 'NZ$25,000–NZ$40,000', 'February, July', 'Post-study work visa: up to 3 years' ),
+	'malaysia'       => array( 'Kuala Lumpur, Penang, Johor Bahru', 'RM20,000–RM45,000', 'January, May, September', 'Limited; strong regional employers' ),
+	'uae'            => array( 'Dubai, Abu Dhabi, Sharjah', 'AED 40,000–AED 90,000', 'September, January', 'Graduate residence options' ),
+	'turkey'         => array( 'Istanbul, Ankara, Izmir', 'US$3,000–US$12,000', 'September, February', 'Work permit through employer' ),
+	'cyprus'         => array( 'Nicosia, Limassol, Larnaca', '€6,000–€12,000', 'September, February', 'Work permit through employer' ),
+	'malta'          => array( 'Valletta, Msida, Sliema', '€8,000–€16,000', 'October, February', 'Post-study stay: up to 9 months' ),
+	'spain'          => array( 'Madrid, Barcelona, Valencia, Seville', '€4,000–€18,000', 'September, February', 'Job search permit: 12 months' ),
+	'italy'          => array( 'Milan, Rome, Bologna, Florence', '€2,000–€20,000', 'September, February', 'Stay permit for job search: 12 months' ),
+);
 $order = 0;
 foreach ( $destinations as $key => $country ) {
+	list( $cities, $tuition, $intakes, $work ) = $facts[ $key ];
 	$posts[] = array(
 		'key'     => 'destination-' . $key,
 		'type'    => 'qe_destination',
 		'title'   => $country,
-		'excerpt' => 'Universities, cities and student life in ' . $country . '.',
-		'content' => '<p>Find out about universities, costs, visas and student life in ' . $country . '. Our advisors will help you choose the right programme.</p>',
+		'excerpt' => 'Top student cities: ' . $cities . '. Intakes in ' . $intakes . '.',
+		'content' => '<p>' . $country . ' welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p>'
+			. '<h2>Key facts</h2><ul><li><strong>Popular cities:</strong> ' . $cities . '</li><li><strong>Typical tuition per year:</strong> ' . $tuition . '</li><li><strong>Main intakes:</strong> ' . $intakes . '</li><li><strong>Work after study:</strong> ' . $work . '</li></ul>'
+			. '<h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p>'
+			. '<p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>',
 		'image'   => 'destination-' . $key,
 		'order'   => $order++,
 		'meta'    => array( 'country' => $country, 'link' => page_url( 'study-abroad' ) ),
@@ -902,7 +925,7 @@ foreach ( $partner_names as $i => $name ) {
 	$posts[] = array(
 		'key'   => 'partner-' . ( $i + 1 ),
 		'type'  => 'qe_partner',
-		'title' => $name . ' (demo)',
+		'title' => $name,
 		'image' => 'partner-' . ( $i + 1 ),
 		'order' => $i,
 		'meta'  => array( 'type' => $i >= 10 ? 'recruitment' : 'university', 'url' => '' ),
@@ -910,9 +933,9 @@ foreach ( $partner_names as $i => $name ) {
 }
 
 $events = array(
-	array( 'Study in Europe Education Fair', '+20 days', '11:00', 'Grand Hall, Dubai', '', 'Meet admissions teams from more than 30 European universities in one afternoon.' ),
-	array( 'Webinar: Scholarships for International Students', '+34 days', '18:00', 'Online', 'https://example.com/webinar', 'Learn how to find and apply for scholarships, with tips from our advisors.' ),
-	array( 'Pathway Programmes Information Session', '+55 days', '16:30', 'Our office, London', '', 'Everything you need to know about foundation and pre-master’s pathways.' ),
+	array( 'Study in Europe Education Fair 2026', '+20 days', '11:00', 'Conrad Hall, Sheikh Zayed Road, Dubai', '', 'Meet admissions teams from 34 universities in the UK, Ireland, Germany and the Netherlands in one afternoon. Bring your transcripts — many universities give on-the-spot offers.' ),
+	array( 'Webinar: Scholarships for International Students', '+34 days', '18:00', 'Online (Zoom)', '{{home-url}}?webinar=scholarships', 'Senior advisor Samuel Kim explains where to find scholarships, how they are assessed and how to write an application that stands out. Live Q&A at the end.' ),
+	array( 'Foundation & Pre-Master’s Information Evening', '+55 days', '17:30', 'Brightway Education, 3rd floor, 48 Gresham Street, London', '', 'Everything you need to know about pathway programmes: entry requirements, progression rates and how pathway students do once they start their degree.' ),
 );
 foreach ( $events as $i => $e ) {
 	$posts[] = array(
@@ -920,17 +943,17 @@ foreach ( $events as $i => $e ) {
 		'type'    => 'qe_event',
 		'title'   => $e[0],
 		'excerpt' => $e[5],
-		'content' => '<p>' . $e[5] . '</p><p>Places are free but limited — register early.</p>',
+		'content' => '<p>' . $e[5] . '</p><h2>Who should attend</h2><p>Students planning to start in the next 12 months, and parents who want to understand the process.</p><p>Entry is free but places are limited — register early and we will send you a reminder the day before.</p>',
 		'image'   => 'event-' . ( $i + 1 ),
 		'meta'    => array( 'date' => '{{date:' . $e[1] . '}}', 'time' => $e[2], 'venue' => $e[3], 'online_link' => $e[4] ),
 	);
 }
 
 $team = array(
-	array( 'Amira Rahman', 'Head of Admissions', 'Amira has helped more than 2,000 students find their university.' ),
-	array( 'Samuel Kim', 'Senior Student Advisor', 'Samuel specialises in UK and Irish universities.' ),
-	array( 'Maria Lopez', 'Academic Director', 'Maria leads our pathway and English programmes.' ),
-	array( 'James Turner', 'Partnerships Manager', 'James looks after our university and agent partners.' ),
+	array( 'Amira Rahman', 'Head of Admissions', 'Amira has guided more than 2,000 students into universities in 14 countries. She studied in Manchester herself and still remembers her first winter.' ),
+	array( 'Samuel Kim', 'Senior Student Advisor', 'Samuel specialises in UK and Irish universities and scholarship applications. He speaks English, Korean and Spanish.' ),
+	array( 'María López', 'Academic Director', 'María leads our pathway and English programmes and holds a master’s in Applied Linguistics. She has taught in Madrid, Seoul and London.' ),
+	array( 'James Turner', 'Partnerships Manager', 'James looks after our network of more than 150 universities and recruitment partners worldwide.' ),
 );
 foreach ( $team as $i => $t ) {
 	$posts[] = array(
@@ -945,9 +968,9 @@ foreach ( $team as $i => $t ) {
 }
 
 $quotes = array(
-	array( 'Nadia A.', 'MSc student, Northbridge University', 'My advisor answered every question, even at midnight before my visa interview. I could not have done it alone.' ),
-	array( 'Daniel O.', 'Foundation year student', 'The pathway programme gave me the confidence and English I needed for my degree.' ),
-	array( 'Lina C.', 'BA student, Westmere University', 'From choosing a course to finding accommodation, everything was clear and simple.' ),
+	array( 'Nadia Hassan', 'MSc Data Science, Northbridge University · from Egypt', 'My advisor answered every question, even the night before my visa interview. I received three offers and a £4,000 scholarship. I could not have done it alone.' ),
+	array( 'Daniel Okafor', 'Foundation Year, Kingsgate University · from Nigeria', 'The pathway programme gave me the confidence and the academic English I needed. I progressed to my engineering degree with a distinction.' ),
+	array( 'Lina Chen', 'BA International Business, Westmere University · from China', 'From choosing a course to finding accommodation near campus, everything was clear and simple. Brightway even met me at the airport.' ),
 );
 foreach ( $quotes as $i => $q ) {
 	$posts[] = array(
@@ -962,12 +985,42 @@ foreach ( $quotes as $i => $q ) {
 }
 
 $news = array(
-	array( '10 scholarships international students often miss', 'Scholarships', 'Many scholarships go unclaimed every year. Here are ten worth checking before you apply.' ),
-	array( 'How to write a personal statement that stands out', 'Applications', 'Admissions teams read thousands of statements. These simple steps will make yours memorable.' ),
-	array( 'Foundation year or direct entry: which is right for you?', 'Pathways', 'We compare the two routes so you can choose with confidence.' ),
-	array( 'What to pack for your first year abroad', 'Student life', 'A practical checklist from students who have done it.' ),
-	array( 'Understanding English test requirements', 'English', 'IELTS, PTE or ELP Test? What universities ask for and how to prepare.' ),
-	array( 'Five cities students love in 2026', 'Destinations', 'Affordable, friendly and full of opportunities — our students’ favourite study cities.' ),
+	array(
+		'10 scholarships international students often miss',
+		'Scholarships',
+		'Many scholarships go unclaimed every year simply because nobody applies. Here are ten types worth checking before you submit your application.',
+		'<h2>Start with the university itself</h2><p>Most universities offer automatic merit awards of 10–30% for strong grades. Check the international fees page of every university on your shortlist — many awards need no separate application.</p><h2>Look beyond the big names</h2><p>Government programmes, professional bodies and charitable trusts all fund international students. Smaller awards of £1,000–£3,000 often have only a handful of applicants.</p><h2>Mind the deadlines</h2><p>Some scholarships close a full year before the course starts. Our advisors keep a calendar of deadlines and will remind you in good time.</p>',
+	),
+	array(
+		'How to write a personal statement that stands out',
+		'Applications',
+		'Admissions tutors read thousands of statements every year. These five steps will make yours clear, personal and memorable.',
+		'<h2>Open with your motivation</h2><p>Skip the famous quotation. Tell the reader in two or three sentences why this subject matters to you and what sparked your interest.</p><h2>Show, don’t list</h2><p>Instead of listing achievements, pick two or three experiences and explain what you learned from them.</p><h2>Connect to the course</h2><p>Mention modules or research areas that excite you. It shows you have done your homework.</p><h2>Ask for feedback</h2><p>Every Brightway student gets two rounds of feedback on their statement from an advisor before it is submitted.</p>',
+	),
+	array(
+		'Foundation year or direct entry: which is right for you?',
+		'Pathways',
+		'Both routes lead to a degree. We compare entry requirements, cost and support so you can choose with confidence.',
+		'<h2>Direct entry</h2><p>If your school grades and English score meet the university’s requirements, you can start the first year of your degree straight away. It is the fastest and usually the cheapest route.</p><h2>Foundation year</h2><p>A one-year programme that combines academic subjects, study skills and English. It suits students whose qualifications are not yet accepted for direct entry, or who want extra support. Over 90% of our pathway students progress to their degree.</p><h2>Still unsure?</h2><p>Book a free 20-minute call and we will check your documents against both routes.</p>',
+	),
+	array(
+		'What to pack for your first year abroad',
+		'Student life',
+		'A practical checklist from students who have done it — including the things most people forget.',
+		'<h2>Documents first</h2><p>Passport, visa, offer letter, accommodation contract, insurance and printed copies of everything. Keep them in your hand luggage.</p><h2>Things worth bringing</h2><p>A universal adapter, a few favourite spices, medication with a prescription, and one warm coat — you can buy the rest when you arrive.</p><h2>Things to leave at home</h2><p>Bedding, kitchen equipment and heavy textbooks are cheaper to buy locally or second-hand from other students.</p>',
+	),
+	array(
+		'Understanding English test requirements',
+		'English',
+		'IELTS, PTE, TOEFL or the ELP Test? What universities ask for, what the scores mean and how to prepare.',
+		'<h2>What universities ask for</h2><p>Most undergraduate courses ask for an overall IELTS 6.0–6.5 (or equivalent), with no band below 5.5. Postgraduate and health courses often ask for 6.5–7.0.</p><h2>Which test should I take?</h2><p>Check which tests your chosen universities accept before you book. Many now accept several, including online tests taken from home.</p><h2>Preparing well</h2><p>Our Language Academy runs four-week intensive preparation courses with a full mock test every Friday.</p>',
+	),
+	array(
+		'Five cities students love in 2026',
+		'Destinations',
+		'Affordable, friendly and full of opportunities — the study cities our students rated highest this year.',
+		'<h2>Manchester, United Kingdom</h2><p>Three major universities, a huge student population and rent well below London.</p><h2>Dublin, Ireland</h2><p>A tech hub with English as the main language and a two-year stay-back visa for graduates.</p><h2>Berlin, Germany</h2><p>Very low tuition at public universities and a growing number of English-taught master’s programmes.</p><h2>Melbourne, Australia</h2><p>Consistently rated one of the world’s most liveable cities, with great part-time work options.</p><h2>Toronto, Canada</h2><p>Diverse, safe and home to some of North America’s best-known universities.</p>',
+	),
 );
 foreach ( $news as $i => $n ) {
 	$posts[] = array(
@@ -975,7 +1028,7 @@ foreach ( $news as $i => $n ) {
 		'type'     => 'post',
 		'title'    => $n[0],
 		'excerpt'  => $n[2],
-		'content'  => '<p>' . $n[2] . '</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>',
+		'content'  => '<p>' . $n[2] . '</p>' . $n[3],
 		'image'    => 'news-' . ( $i + 1 ),
 		'category' => $n[1],
 		'date'     => '{{date:-' . ( $i * 9 + 2 ) . ' days}}',
@@ -1041,14 +1094,14 @@ $menus = array(
 );
 
 $settings = array(
-	'brand.org_name'     => 'Your Education Group',
+	'brand.org_name'     => 'Brightway Education Group',
 	'brand.logo'         => '{{image:logo}}',
 	'brand.logo_dark'    => '{{image:logo-light}}',
 	'brand.profile_pdf'  => '{{image:company-profile}}',
-	'contact.phone'      => '+44 20 0000 0000',
-	'contact.email'      => 'hello@example.com',
-	'contact.whatsapp'   => '+44 7000 000000',
-	'contact.address'    => "1 Example Street\nLondon, United Kingdom",
+	'contact.phone'      => '+44 20 7946 0321',
+	'contact.email'      => '{{email:admissions}}',
+	'contact.whatsapp'   => '+44 7700 900482',
+	'contact.address'    => "3rd floor, 48 Gresham Street\nLondon EC2V 7AY, United Kingdom",
 	'social.facebook'    => 'https://www.facebook.com/',
 	'social.instagram'   => 'https://www.instagram.com/',
 	'social.linkedin'    => 'https://www.linkedin.com/',

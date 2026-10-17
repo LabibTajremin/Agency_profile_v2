@@ -13,6 +13,7 @@ const { test, expect } = require( '@playwright/test' );
 const { watchErrors, wp, fixture } = require( './helpers' );
 
 let fx;
+let site;
 
 test.beforeAll( () => {
 	try {
@@ -21,6 +22,7 @@ test.beforeAll( () => {
 		// Not installed or already inactive.
 	}
 	fx = fixture( 'create-seo-fixtures.php' );
+	site = wp( 'option get blogname' ).split( '\n' ).pop();
 } );
 
 /**
@@ -127,7 +129,7 @@ test.describe( 'SEO gate', () => {
 	test( 'per-page values and valid schema', async ( { page } ) => {
 		await page.goto( fx.pageUrl );
 		const info = await inspect( page );
-		expect( info.title ).toBe( 'Custom SEO Title | Your Education Group' );
+		expect( info.title ).toBe( `Custom SEO Title | ${ site }` );
 		await expect(
 			page.locator( 'meta[name="description"]' )
 		).toHaveAttribute(
@@ -231,7 +233,7 @@ test.describe( 'SEO gate', () => {
 		const box = page.locator( '[data-qe-seo]' );
 		await expect( box ).toHaveCount( 1 );
 		await expect( box.locator( '[data-qe-seo-preview-title]' ) ).toHaveText(
-			'Custom SEO Title | Your Education Group'
+			`Custom SEO Title | ${ site }`
 		);
 		await expect(
 			box.locator( '[data-qe-seo-meter="description"]' )
@@ -270,7 +272,7 @@ test.describe( 'SEO gate', () => {
 			.locator( '#qe-seo-title' )
 			.fill( 'Study in Canada {sep} {site}' );
 		await expect( box.locator( '[data-qe-seo-preview-title]' ) ).toHaveText(
-			'Study in Canada | Your Education Group'
+			`Study in Canada | ${ site }`
 		);
 		await expect( checks.first() ).toHaveClass( 'is-ok' );
 		await expect(

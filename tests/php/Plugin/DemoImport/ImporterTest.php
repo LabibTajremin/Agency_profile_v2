@@ -299,6 +299,7 @@ final class ImporterTest extends PluginTestCase {
 		$this->assertSame( '2026-03-01', $settings['date'] );
 		$this->assertSame( 'https://example.test/ghost/', $settings['nolink'], 'Unknown page key falls back to /key/.' );
 		$this->assertSame( '', $settings['noimg'] );
+		$this->assertSame( 'hello@example.test', $settings['mail'], 'Mailbox on the site domain.' );
 		$this->assertSame( 'no tokens', $settings['plain'] );
 		$this->assertSame( 5, $settings['num'] );
 		$this->assertSame( (string) array_search( 'Main', $this->menus, true ), $settings['menu'], 'Menus exist before page layouts are written.' );

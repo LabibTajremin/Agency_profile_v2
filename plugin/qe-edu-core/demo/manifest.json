@@ -103,11 +103,11 @@
         },
         "logo-light": {
             "file": "logo-light.png",
-            "alt": "Your Education Group"
+            "alt": "Brightway Education Group"
         },
         "logo": {
             "file": "logo.png",
-            "alt": "Your Education Group"
+            "alt": "Brightway Education Group"
         },
         "news-1": {
             "file": "news-1.jpg",
@@ -231,8 +231,8 @@
             "key": "destination-united-kingdom",
             "type": "qe_destination",
             "title": "United Kingdom",
-            "excerpt": "Universities, cities and student life in United Kingdom.",
-            "content": "<p>Find out about universities, costs, visas and student life in United Kingdom. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: London, Manchester, Edinburgh, Birmingham. Intakes in September, January.",
+            "content": "<p>United Kingdom welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> London, Manchester, Edinburgh, Birmingham</li><li><strong>Typical tuition per year:</strong> £12,000–£26,000</li><li><strong>Main intakes:</strong> September, January</li><li><strong>Work after study:</strong> Graduate Route: 2 years (3 for PhD)</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-united-kingdom",
             "order": 0,
             "meta": {
@@ -244,8 +244,8 @@
             "key": "destination-united-states",
             "type": "qe_destination",
             "title": "United States",
-            "excerpt": "Universities, cities and student life in United States.",
-            "content": "<p>Find out about universities, costs, visas and student life in United States. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Boston, New York, Chicago, Los Angeles. Intakes in August/September, January.",
+            "content": "<p>United States welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Boston, New York, Chicago, Los Angeles</li><li><strong>Typical tuition per year:</strong> US$20,000–US$45,000</li><li><strong>Main intakes:</strong> August/September, January</li><li><strong>Work after study:</strong> OPT: 12 months (up to 36 for STEM)</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-united-states",
             "order": 1,
             "meta": {
@@ -257,8 +257,8 @@
             "key": "destination-canada",
             "type": "qe_destination",
             "title": "Canada",
-            "excerpt": "Universities, cities and student life in Canada.",
-            "content": "<p>Find out about universities, costs, visas and student life in Canada. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Toronto, Vancouver, Montréal, Ottawa. Intakes in September, January, May.",
+            "content": "<p>Canada welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Toronto, Vancouver, Montréal, Ottawa</li><li><strong>Typical tuition per year:</strong> C$20,000–C$40,000</li><li><strong>Main intakes:</strong> September, January, May</li><li><strong>Work after study:</strong> PGWP: up to 3 years</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-canada",
             "order": 2,
             "meta": {
@@ -270,8 +270,8 @@
             "key": "destination-australia",
             "type": "qe_destination",
             "title": "Australia",
-            "excerpt": "Universities, cities and student life in Australia.",
-            "content": "<p>Find out about universities, costs, visas and student life in Australia. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Sydney, Melbourne, Brisbane, Perth. Intakes in February, July.",
+            "content": "<p>Australia welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Sydney, Melbourne, Brisbane, Perth</li><li><strong>Typical tuition per year:</strong> A$25,000–A$45,000</li><li><strong>Main intakes:</strong> February, July</li><li><strong>Work after study:</strong> Temporary Graduate visa: 2–4 years</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-australia",
             "order": 3,
             "meta": {
@@ -283,8 +283,8 @@
             "key": "destination-ireland",
             "type": "qe_destination",
             "title": "Ireland",
-            "excerpt": "Universities, cities and student life in Ireland.",
-            "content": "<p>Find out about universities, costs, visas and student life in Ireland. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Dublin, Cork, Galway, Limerick. Intakes in September, January.",
+            "content": "<p>Ireland welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Dublin, Cork, Galway, Limerick</li><li><strong>Typical tuition per year:</strong> €10,000–€25,000</li><li><strong>Main intakes:</strong> September, January</li><li><strong>Work after study:</strong> Stay Back: 1–2 years</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-ireland",
             "order": 4,
             "meta": {
@@ -296,8 +296,8 @@
             "key": "destination-germany",
             "type": "qe_destination",
             "title": "Germany",
-            "excerpt": "Universities, cities and student life in Germany.",
-            "content": "<p>Find out about universities, costs, visas and student life in Germany. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Berlin, Munich, Hamburg, Frankfurt. Intakes in October, April.",
+            "content": "<p>Germany welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Berlin, Munich, Hamburg, Frankfurt</li><li><strong>Typical tuition per year:</strong> Low or no tuition at public universities</li><li><strong>Main intakes:</strong> October, April</li><li><strong>Work after study:</strong> 18-month job-seeker permit</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-germany",
             "order": 5,
             "meta": {
@@ -309,8 +309,8 @@
             "key": "destination-france",
             "type": "qe_destination",
             "title": "France",
-            "excerpt": "Universities, cities and student life in France.",
-            "content": "<p>Find out about universities, costs, visas and student life in France. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Paris, Lyon, Toulouse, Lille. Intakes in September, January.",
+            "content": "<p>France welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Paris, Lyon, Toulouse, Lille</li><li><strong>Typical tuition per year:</strong> €3,000–€15,000</li><li><strong>Main intakes:</strong> September, January</li><li><strong>Work after study:</strong> APS: 1–2 years for master’s graduates</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-france",
             "order": 6,
             "meta": {
@@ -322,8 +322,8 @@
             "key": "destination-netherlands",
             "type": "qe_destination",
             "title": "Netherlands",
-            "excerpt": "Universities, cities and student life in Netherlands.",
-            "content": "<p>Find out about universities, costs, visas and student life in Netherlands. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Amsterdam, Rotterdam, Utrecht, Groningen. Intakes in September, February.",
+            "content": "<p>Netherlands welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Amsterdam, Rotterdam, Utrecht, Groningen</li><li><strong>Typical tuition per year:</strong> €9,000–€20,000</li><li><strong>Main intakes:</strong> September, February</li><li><strong>Work after study:</strong> Orientation year: 12 months</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-netherlands",
             "order": 7,
             "meta": {
@@ -335,8 +335,8 @@
             "key": "destination-new-zealand",
             "type": "qe_destination",
             "title": "New Zealand",
-            "excerpt": "Universities, cities and student life in New Zealand.",
-            "content": "<p>Find out about universities, costs, visas and student life in New Zealand. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Auckland, Wellington, Christchurch, Dunedin. Intakes in February, July.",
+            "content": "<p>New Zealand welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Auckland, Wellington, Christchurch, Dunedin</li><li><strong>Typical tuition per year:</strong> NZ$25,000–NZ$40,000</li><li><strong>Main intakes:</strong> February, July</li><li><strong>Work after study:</strong> Post-study work visa: up to 3 years</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-new-zealand",
             "order": 8,
             "meta": {
@@ -348,8 +348,8 @@
             "key": "destination-malaysia",
             "type": "qe_destination",
             "title": "Malaysia",
-            "excerpt": "Universities, cities and student life in Malaysia.",
-            "content": "<p>Find out about universities, costs, visas and student life in Malaysia. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Kuala Lumpur, Penang, Johor Bahru. Intakes in January, May, September.",
+            "content": "<p>Malaysia welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Kuala Lumpur, Penang, Johor Bahru</li><li><strong>Typical tuition per year:</strong> RM20,000–RM45,000</li><li><strong>Main intakes:</strong> January, May, September</li><li><strong>Work after study:</strong> Limited; strong regional employers</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-malaysia",
             "order": 9,
             "meta": {
@@ -361,8 +361,8 @@
             "key": "destination-uae",
             "type": "qe_destination",
             "title": "United Arab Emirates",
-            "excerpt": "Universities, cities and student life in United Arab Emirates.",
-            "content": "<p>Find out about universities, costs, visas and student life in United Arab Emirates. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Dubai, Abu Dhabi, Sharjah. Intakes in September, January.",
+            "content": "<p>United Arab Emirates welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Dubai, Abu Dhabi, Sharjah</li><li><strong>Typical tuition per year:</strong> AED 40,000–AED 90,000</li><li><strong>Main intakes:</strong> September, January</li><li><strong>Work after study:</strong> Graduate residence options</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-uae",
             "order": 10,
             "meta": {
@@ -374,8 +374,8 @@
             "key": "destination-turkey",
             "type": "qe_destination",
             "title": "Türkiye",
-            "excerpt": "Universities, cities and student life in Türkiye.",
-            "content": "<p>Find out about universities, costs, visas and student life in Türkiye. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Istanbul, Ankara, Izmir. Intakes in September, February.",
+            "content": "<p>Türkiye welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Istanbul, Ankara, Izmir</li><li><strong>Typical tuition per year:</strong> US$3,000–US$12,000</li><li><strong>Main intakes:</strong> September, February</li><li><strong>Work after study:</strong> Work permit through employer</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-turkey",
             "order": 11,
             "meta": {
@@ -387,8 +387,8 @@
             "key": "destination-cyprus",
             "type": "qe_destination",
             "title": "Cyprus",
-            "excerpt": "Universities, cities and student life in Cyprus.",
-            "content": "<p>Find out about universities, costs, visas and student life in Cyprus. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Nicosia, Limassol, Larnaca. Intakes in September, February.",
+            "content": "<p>Cyprus welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Nicosia, Limassol, Larnaca</li><li><strong>Typical tuition per year:</strong> €6,000–€12,000</li><li><strong>Main intakes:</strong> September, February</li><li><strong>Work after study:</strong> Work permit through employer</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-cyprus",
             "order": 12,
             "meta": {
@@ -400,8 +400,8 @@
             "key": "destination-malta",
             "type": "qe_destination",
             "title": "Malta",
-            "excerpt": "Universities, cities and student life in Malta.",
-            "content": "<p>Find out about universities, costs, visas and student life in Malta. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Valletta, Msida, Sliema. Intakes in October, February.",
+            "content": "<p>Malta welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Valletta, Msida, Sliema</li><li><strong>Typical tuition per year:</strong> €8,000–€16,000</li><li><strong>Main intakes:</strong> October, February</li><li><strong>Work after study:</strong> Post-study stay: up to 9 months</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-malta",
             "order": 13,
             "meta": {
@@ -413,8 +413,8 @@
             "key": "destination-spain",
             "type": "qe_destination",
             "title": "Spain",
-            "excerpt": "Universities, cities and student life in Spain.",
-            "content": "<p>Find out about universities, costs, visas and student life in Spain. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Madrid, Barcelona, Valencia, Seville. Intakes in September, February.",
+            "content": "<p>Spain welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Madrid, Barcelona, Valencia, Seville</li><li><strong>Typical tuition per year:</strong> €4,000–€18,000</li><li><strong>Main intakes:</strong> September, February</li><li><strong>Work after study:</strong> Job search permit: 12 months</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-spain",
             "order": 14,
             "meta": {
@@ -426,8 +426,8 @@
             "key": "destination-italy",
             "type": "qe_destination",
             "title": "Italy",
-            "excerpt": "Universities, cities and student life in Italy.",
-            "content": "<p>Find out about universities, costs, visas and student life in Italy. Our advisors will help you choose the right programme.</p>",
+            "excerpt": "Top student cities: Milan, Rome, Bologna, Florence. Intakes in September, February.",
+            "content": "<p>Italy welcomes international students with high-quality teaching, globally recognised degrees and a lively student culture. Our advisors work with universities across the country and can help you compare courses, costs and entry requirements.</p><h2>Key facts</h2><ul><li><strong>Popular cities:</strong> Milan, Rome, Bologna, Florence</li><li><strong>Typical tuition per year:</strong> €2,000–€20,000</li><li><strong>Main intakes:</strong> September, February</li><li><strong>Work after study:</strong> Stay permit for job search: 12 months</li></ul><h2>How we help</h2><p>We shortlist courses that fit your grades and budget, check your documents, submit your applications and prepare you for your visa interview — free of charge for students.</p><p><em>Figures are a guide only; fees and visa rules change, so we confirm the latest details with you before you apply.</em></p>",
             "image": "destination-italy",
             "order": 15,
             "meta": {
@@ -482,7 +482,7 @@
         {
             "key": "partner-1",
             "type": "qe_partner",
-            "title": "Northbridge University (demo)",
+            "title": "Northbridge University",
             "image": "partner-1",
             "order": 0,
             "meta": {
@@ -493,7 +493,7 @@
         {
             "key": "partner-2",
             "type": "qe_partner",
-            "title": "Harbour Institute of Technology (demo)",
+            "title": "Harbour Institute of Technology",
             "image": "partner-2",
             "order": 1,
             "meta": {
@@ -504,7 +504,7 @@
         {
             "key": "partner-3",
             "type": "qe_partner",
-            "title": "St Aldric College (demo)",
+            "title": "St Aldric College",
             "image": "partner-3",
             "order": 2,
             "meta": {
@@ -515,7 +515,7 @@
         {
             "key": "partner-4",
             "type": "qe_partner",
-            "title": "Westmere University (demo)",
+            "title": "Westmere University",
             "image": "partner-4",
             "order": 3,
             "meta": {
@@ -526,7 +526,7 @@
         {
             "key": "partner-5",
             "type": "qe_partner",
-            "title": "Lakeside Business School (demo)",
+            "title": "Lakeside Business School",
             "image": "partner-5",
             "order": 4,
             "meta": {
@@ -537,7 +537,7 @@
         {
             "key": "partner-6",
             "type": "qe_partner",
-            "title": "Kingsgate University (demo)",
+            "title": "Kingsgate University",
             "image": "partner-6",
             "order": 5,
             "meta": {
@@ -548,7 +548,7 @@
         {
             "key": "partner-7",
             "type": "qe_partner",
-            "title": "Avalon Global Academy (demo)",
+            "title": "Avalon Global Academy",
             "image": "partner-7",
             "order": 6,
             "meta": {
@@ -559,7 +559,7 @@
         {
             "key": "partner-8",
             "type": "qe_partner",
-            "title": "Meridian College London (demo)",
+            "title": "Meridian College London",
             "image": "partner-8",
             "order": 7,
             "meta": {
@@ -570,7 +570,7 @@
         {
             "key": "partner-9",
             "type": "qe_partner",
-            "title": "Pacific Rim University (demo)",
+            "title": "Pacific Rim University",
             "image": "partner-9",
             "order": 8,
             "meta": {
@@ -581,7 +581,7 @@
         {
             "key": "partner-10",
             "type": "qe_partner",
-            "title": "Crestwood Institute (demo)",
+            "title": "Crestwood Institute",
             "image": "partner-10",
             "order": 9,
             "meta": {
@@ -592,7 +592,7 @@
         {
             "key": "partner-11",
             "type": "qe_partner",
-            "title": "Bright Path Advisors (demo)",
+            "title": "Bright Path Advisors",
             "image": "partner-11",
             "order": 10,
             "meta": {
@@ -603,7 +603,7 @@
         {
             "key": "partner-12",
             "type": "qe_partner",
-            "title": "Global Study Link (demo)",
+            "title": "Global Study Link",
             "image": "partner-12",
             "order": 11,
             "meta": {
@@ -614,14 +614,14 @@
         {
             "key": "event-1",
             "type": "qe_event",
-            "title": "Study in Europe Education Fair",
-            "excerpt": "Meet admissions teams from more than 30 European universities in one afternoon.",
-            "content": "<p>Meet admissions teams from more than 30 European universities in one afternoon.</p><p>Places are free but limited — register early.</p>",
+            "title": "Study in Europe Education Fair 2026",
+            "excerpt": "Meet admissions teams from 34 universities in the UK, Ireland, Germany and the Netherlands in one afternoon. Bring your transcripts — many universities give on-the-spot offers.",
+            "content": "<p>Meet admissions teams from 34 universities in the UK, Ireland, Germany and the Netherlands in one afternoon. Bring your transcripts — many universities give on-the-spot offers.</p><h2>Who should attend</h2><p>Students planning to start in the next 12 months, and parents who want to understand the process.</p><p>Entry is free but places are limited — register early and we will send you a reminder the day before.</p>",
             "image": "event-1",
             "meta": {
                 "date": "{{date:+20 days}}",
                 "time": "11:00",
-                "venue": "Grand Hall, Dubai",
+                "venue": "Conrad Hall, Sheikh Zayed Road, Dubai",
                 "online_link": ""
             }
         },
@@ -629,27 +629,27 @@
             "key": "event-2",
             "type": "qe_event",
             "title": "Webinar: Scholarships for International Students",
-            "excerpt": "Learn how to find and apply for scholarships, with tips from our advisors.",
-            "content": "<p>Learn how to find and apply for scholarships, with tips from our advisors.</p><p>Places are free but limited — register early.</p>",
+            "excerpt": "Senior advisor Samuel Kim explains where to find scholarships, how they are assessed and how to write an application that stands out. Live Q&A at the end.",
+            "content": "<p>Senior advisor Samuel Kim explains where to find scholarships, how they are assessed and how to write an application that stands out. Live Q&A at the end.</p><h2>Who should attend</h2><p>Students planning to start in the next 12 months, and parents who want to understand the process.</p><p>Entry is free but places are limited — register early and we will send you a reminder the day before.</p>",
             "image": "event-2",
             "meta": {
                 "date": "{{date:+34 days}}",
                 "time": "18:00",
-                "venue": "Online",
-                "online_link": "https://example.com/webinar"
+                "venue": "Online (Zoom)",
+                "online_link": "{{home-url}}?webinar=scholarships"
             }
         },
         {
             "key": "event-3",
             "type": "qe_event",
-            "title": "Pathway Programmes Information Session",
-            "excerpt": "Everything you need to know about foundation and pre-master’s pathways.",
-            "content": "<p>Everything you need to know about foundation and pre-master’s pathways.</p><p>Places are free but limited — register early.</p>",
+            "title": "Foundation & Pre-Master’s Information Evening",
+            "excerpt": "Everything you need to know about pathway programmes: entry requirements, progression rates and how pathway students do once they start their degree.",
+            "content": "<p>Everything you need to know about pathway programmes: entry requirements, progression rates and how pathway students do once they start their degree.</p><h2>Who should attend</h2><p>Students planning to start in the next 12 months, and parents who want to understand the process.</p><p>Entry is free but places are limited — register early and we will send you a reminder the day before.</p>",
             "image": "event-3",
             "meta": {
                 "date": "{{date:+55 days}}",
-                "time": "16:30",
-                "venue": "Our office, London",
+                "time": "17:30",
+                "venue": "Brightway Education, 3rd floor, 48 Gresham Street, London",
                 "online_link": ""
             }
         },
@@ -657,7 +657,7 @@
             "key": "team-1",
             "type": "qe_team",
             "title": "Amira Rahman",
-            "excerpt": "Amira has helped more than 2,000 students find their university.",
+            "excerpt": "Amira has guided more than 2,000 students into universities in 14 countries. She studied in Manchester herself and still remembers her first winter.",
             "image": "team-1",
             "order": 0,
             "meta": {
@@ -669,7 +669,7 @@
             "key": "team-2",
             "type": "qe_team",
             "title": "Samuel Kim",
-            "excerpt": "Samuel specialises in UK and Irish universities.",
+            "excerpt": "Samuel specialises in UK and Irish universities and scholarship applications. He speaks English, Korean and Spanish.",
             "image": "team-2",
             "order": 1,
             "meta": {
@@ -680,8 +680,8 @@
         {
             "key": "team-3",
             "type": "qe_team",
-            "title": "Maria Lopez",
-            "excerpt": "Maria leads our pathway and English programmes.",
+            "title": "María López",
+            "excerpt": "María leads our pathway and English programmes and holds a master’s in Applied Linguistics. She has taught in Madrid, Seoul and London.",
             "image": "team-3",
             "order": 2,
             "meta": {
@@ -693,7 +693,7 @@
             "key": "team-4",
             "type": "qe_team",
             "title": "James Turner",
-            "excerpt": "James looks after our university and agent partners.",
+            "excerpt": "James looks after our network of more than 150 universities and recruitment partners worldwide.",
             "image": "team-4",
             "order": 3,
             "meta": {
@@ -704,36 +704,36 @@
         {
             "key": "testimonial-1",
             "type": "qe_testimonial",
-            "title": "Nadia A.",
-            "excerpt": "My advisor answered every question, even at midnight before my visa interview. I could not have done it alone.",
+            "title": "Nadia Hassan",
+            "excerpt": "My advisor answered every question, even the night before my visa interview. I received three offers and a £4,000 scholarship. I could not have done it alone.",
             "image": "student-1",
             "order": 0,
             "meta": {
-                "role": "MSc student, Northbridge University",
+                "role": "MSc Data Science, Northbridge University · from Egypt",
                 "rating": "5"
             }
         },
         {
             "key": "testimonial-2",
             "type": "qe_testimonial",
-            "title": "Daniel O.",
-            "excerpt": "The pathway programme gave me the confidence and English I needed for my degree.",
+            "title": "Daniel Okafor",
+            "excerpt": "The pathway programme gave me the confidence and the academic English I needed. I progressed to my engineering degree with a distinction.",
             "image": "student-2",
             "order": 1,
             "meta": {
-                "role": "Foundation year student",
+                "role": "Foundation Year, Kingsgate University · from Nigeria",
                 "rating": "5"
             }
         },
         {
             "key": "testimonial-3",
             "type": "qe_testimonial",
-            "title": "Lina C.",
-            "excerpt": "From choosing a course to finding accommodation, everything was clear and simple.",
+            "title": "Lina Chen",
+            "excerpt": "From choosing a course to finding accommodation near campus, everything was clear and simple. Brightway even met me at the airport.",
             "image": "student-3",
             "order": 2,
             "meta": {
-                "role": "BA student, Westmere University",
+                "role": "BA International Business, Westmere University · from China",
                 "rating": "5"
             }
         },
@@ -741,8 +741,8 @@
             "key": "news-1",
             "type": "post",
             "title": "10 scholarships international students often miss",
-            "excerpt": "Many scholarships go unclaimed every year. Here are ten worth checking before you apply.",
-            "content": "<p>Many scholarships go unclaimed every year. Here are ten worth checking before you apply.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "excerpt": "Many scholarships go unclaimed every year simply because nobody applies. Here are ten types worth checking before you submit your application.",
+            "content": "<p>Many scholarships go unclaimed every year simply because nobody applies. Here are ten types worth checking before you submit your application.</p><h2>Start with the university itself</h2><p>Most universities offer automatic merit awards of 10–30% for strong grades. Check the international fees page of every university on your shortlist — many awards need no separate application.</p><h2>Look beyond the big names</h2><p>Government programmes, professional bodies and charitable trusts all fund international students. Smaller awards of £1,000–£3,000 often have only a handful of applicants.</p><h2>Mind the deadlines</h2><p>Some scholarships close a full year before the course starts. Our advisors keep a calendar of deadlines and will remind you in good time.</p>",
             "image": "news-1",
             "category": "Scholarships",
             "date": "{{date:-2 days}}"
@@ -751,8 +751,8 @@
             "key": "news-2",
             "type": "post",
             "title": "How to write a personal statement that stands out",
-            "excerpt": "Admissions teams read thousands of statements. These simple steps will make yours memorable.",
-            "content": "<p>Admissions teams read thousands of statements. These simple steps will make yours memorable.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "excerpt": "Admissions tutors read thousands of statements every year. These five steps will make yours clear, personal and memorable.",
+            "content": "<p>Admissions tutors read thousands of statements every year. These five steps will make yours clear, personal and memorable.</p><h2>Open with your motivation</h2><p>Skip the famous quotation. Tell the reader in two or three sentences why this subject matters to you and what sparked your interest.</p><h2>Show, don’t list</h2><p>Instead of listing achievements, pick two or three experiences and explain what you learned from them.</p><h2>Connect to the course</h2><p>Mention modules or research areas that excite you. It shows you have done your homework.</p><h2>Ask for feedback</h2><p>Every Brightway student gets two rounds of feedback on their statement from an advisor before it is submitted.</p>",
             "image": "news-2",
             "category": "Applications",
             "date": "{{date:-11 days}}"
@@ -761,8 +761,8 @@
             "key": "news-3",
             "type": "post",
             "title": "Foundation year or direct entry: which is right for you?",
-            "excerpt": "We compare the two routes so you can choose with confidence.",
-            "content": "<p>We compare the two routes so you can choose with confidence.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "excerpt": "Both routes lead to a degree. We compare entry requirements, cost and support so you can choose with confidence.",
+            "content": "<p>Both routes lead to a degree. We compare entry requirements, cost and support so you can choose with confidence.</p><h2>Direct entry</h2><p>If your school grades and English score meet the university’s requirements, you can start the first year of your degree straight away. It is the fastest and usually the cheapest route.</p><h2>Foundation year</h2><p>A one-year programme that combines academic subjects, study skills and English. It suits students whose qualifications are not yet accepted for direct entry, or who want extra support. Over 90% of our pathway students progress to their degree.</p><h2>Still unsure?</h2><p>Book a free 20-minute call and we will check your documents against both routes.</p>",
             "image": "news-3",
             "category": "Pathways",
             "date": "{{date:-20 days}}"
@@ -771,8 +771,8 @@
             "key": "news-4",
             "type": "post",
             "title": "What to pack for your first year abroad",
-            "excerpt": "A practical checklist from students who have done it.",
-            "content": "<p>A practical checklist from students who have done it.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "excerpt": "A practical checklist from students who have done it — including the things most people forget.",
+            "content": "<p>A practical checklist from students who have done it — including the things most people forget.</p><h2>Documents first</h2><p>Passport, visa, offer letter, accommodation contract, insurance and printed copies of everything. Keep them in your hand luggage.</p><h2>Things worth bringing</h2><p>A universal adapter, a few favourite spices, medication with a prescription, and one warm coat — you can buy the rest when you arrive.</p><h2>Things to leave at home</h2><p>Bedding, kitchen equipment and heavy textbooks are cheaper to buy locally or second-hand from other students.</p>",
             "image": "news-4",
             "category": "Student life",
             "date": "{{date:-29 days}}"
@@ -781,8 +781,8 @@
             "key": "news-5",
             "type": "post",
             "title": "Understanding English test requirements",
-            "excerpt": "IELTS, PTE or ELP Test? What universities ask for and how to prepare.",
-            "content": "<p>IELTS, PTE or ELP Test? What universities ask for and how to prepare.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "excerpt": "IELTS, PTE, TOEFL or the ELP Test? What universities ask for, what the scores mean and how to prepare.",
+            "content": "<p>IELTS, PTE, TOEFL or the ELP Test? What universities ask for, what the scores mean and how to prepare.</p><h2>What universities ask for</h2><p>Most undergraduate courses ask for an overall IELTS 6.0–6.5 (or equivalent), with no band below 5.5. Postgraduate and health courses often ask for 6.5–7.0.</p><h2>Which test should I take?</h2><p>Check which tests your chosen universities accept before you book. Many now accept several, including online tests taken from home.</p><h2>Preparing well</h2><p>Our Language Academy runs four-week intensive preparation courses with a full mock test every Friday.</p>",
             "image": "news-5",
             "category": "English",
             "date": "{{date:-38 days}}"
@@ -791,8 +791,8 @@
             "key": "news-6",
             "type": "post",
             "title": "Five cities students love in 2026",
-            "excerpt": "Affordable, friendly and full of opportunities — our students’ favourite study cities.",
-            "content": "<p>Affordable, friendly and full of opportunities — our students’ favourite study cities.</p><h2>Start early</h2><p>The earlier you begin, the more options you have. Make a short list, note the deadlines and ask an advisor to check your plan.</p><h2>Ask for help</h2><p>Our advisors are happy to help — the service is free for students.</p>",
+            "excerpt": "Affordable, friendly and full of opportunities — the study cities our students rated highest this year.",
+            "content": "<p>Affordable, friendly and full of opportunities — the study cities our students rated highest this year.</p><h2>Manchester, United Kingdom</h2><p>Three major universities, a huge student population and rent well below London.</p><h2>Dublin, Ireland</h2><p>A tech hub with English as the main language and a two-year stay-back visa for graduates.</p><h2>Berlin, Germany</h2><p>Very low tuition at public universities and a growing number of English-taught master’s programmes.</p><h2>Melbourne, Australia</h2><p>Consistently rated one of the world’s most liveable cities, with great part-time work options.</p><h2>Toronto, Canada</h2><p>Diverse, safe and home to some of North America’s best-known universities.</p>",
             "image": "news-6",
             "category": "Destinations",
             "date": "{{date:-47 days}}"
@@ -804,7 +804,7 @@
             "title": "Home",
             "slug": "home",
             "seo": {
-                "description": "Study abroad with Your Education Group: university applications, pathways, English courses and one-to-one advice for international students."
+                "description": "Study abroad with Brightway Education Group: university applications, pathways, English courses and one-to-one advice for international students."
             },
             "file": "pages/home.json"
         },
@@ -814,7 +814,7 @@
             "slug": "about",
             "seo": {
                 "schema": "AboutPage",
-                "description": "Fifteen years of helping students study abroad: who we are, what we believe in and the global network behind Your Education Group."
+                "description": "Fifteen years of helping students study abroad: who we are, what we believe in and the global network behind Brightway Education Group."
             },
             "file": "pages/about.json"
         },
@@ -870,7 +870,7 @@
             "title": "Partner With Us",
             "slug": "partner-with-us",
             "seo": {
-                "description": "Universities, colleges and recruitment agents: partner with Your Education Group to reach motivated international students."
+                "description": "Universities, colleges and recruitment agents: partner with Brightway Education Group to reach motivated international students."
             },
             "file": "pages/partner-with-us.json"
         },
@@ -906,7 +906,7 @@
             "title": "Careers",
             "slug": "careers",
             "seo": {
-                "description": "Work with Your Education Group: open positions and why our team loves helping students study abroad."
+                "description": "Work with Brightway Education Group: open positions and why our team loves helping students study abroad."
             },
             "file": "pages/careers.json"
         },
@@ -933,7 +933,7 @@
             "slug": "contact",
             "seo": {
                 "schema": "ContactPage",
-                "description": "Contact Your Education Group: call, email, WhatsApp or send us a message and an advisor will reply within one working day."
+                "description": "Contact Brightway Education Group: call, email, WhatsApp or send us a message and an advisor will reply within one working day."
             },
             "file": "pages/contact.json"
         },
@@ -1176,14 +1176,14 @@
         }
     },
     "settings": {
-        "brand.org_name": "Your Education Group",
+        "brand.org_name": "Brightway Education Group",
         "brand.logo": "{{image:logo}}",
         "brand.logo_dark": "{{image:logo-light}}",
         "brand.profile_pdf": "{{image:company-profile}}",
-        "contact.phone": "+44 20 0000 0000",
-        "contact.email": "hello@example.com",
-        "contact.whatsapp": "+44 7000 000000",
-        "contact.address": "1 Example Street\nLondon, United Kingdom",
+        "contact.phone": "+44 20 7946 0321",
+        "contact.email": "{{email:admissions}}",
+        "contact.whatsapp": "+44 7700 900482",
+        "contact.address": "3rd floor, 48 Gresham Street\nLondon EC2V 7AY, United Kingdom",
         "social.facebook": "https://www.facebook.com/",
         "social.instagram": "https://www.instagram.com/",
         "social.linkedin": "https://www.linkedin.com/",

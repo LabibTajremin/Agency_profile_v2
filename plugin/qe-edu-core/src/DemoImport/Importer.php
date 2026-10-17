@@ -205,6 +205,9 @@ class Importer {
 				return $id ? (string) get_permalink( $id ) : home_url( '/' . $slug . '/' );
 			case 'home-url':
 				return home_url( '/' );
+			case 'email': // A mailbox on the site's own domain, e.g. {{email:hello}}.
+				$host = (string) wp_parse_url( home_url(), PHP_URL_HOST );
+				return $argument . '@' . preg_replace( '/^www\./', '', $host );
 			case 'date':
 				return gmdate( 'Y-m-d', (int) strtotime( $argument, (int) current_time( 'timestamp' ) ) ); // phpcs:ignore WordPress.DateTime.CurrentTimeTimestamp.Requested -- local dates for demo events.
 			default:

@@ -116,11 +116,11 @@ def avatar(initials, color, size=400):
 
 def logo(color, sub_color, name):
     """Stacked wordmark (about 5:1), legible at the logo widget's default width."""
-    img = Image.new('RGBA', (720, 180), (0, 0, 0, 0))
+    img = Image.new('RGBA', (820, 180), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     d.rounded_rectangle([0, 30, 120, 150], radius=26, fill=CRIMSON)
     d.polygon([(28, 120), (60, 58), (92, 120)], fill=(255, 255, 255))
-    d.text((148, 34), 'Your Education', font=font(54), fill=color)
+    d.text((148, 34), 'Brightway Education', font=font(50), fill=color)
     d.text((150, 104), 'G R O U P', font=font(36, False), fill=sub_color)
     img = img.crop(img.getbbox())
     img.save(os.path.join(OUT, name + '.png'), optimize=True)
@@ -128,12 +128,12 @@ def logo(color, sub_color, name):
 
 def pdf():
     pages = []
-    for i, title in enumerate(['Your Education Group', 'Our services', 'Global network']):
+    for i, title in enumerate(['Brightway Education Group', 'Our services', 'Global network']):
         page = art('pdf-%d' % i, (1240, 1754), PALETTES[0])
         d = ImageDraw.Draw(page)
         d.rectangle([80, 1300, 1160, 1650], fill=(255, 255, 255))
         d.text((120, 1360), title, font=font(64), fill=NAVY)
-        d.text((120, 1460), 'Company profile — demo document', font=font(36, False), fill=(60, 60, 70))
+        d.text((120, 1460), 'Company profile 2026', font=font(36, False), fill=(60, 60, 70))
         pages.append(page)
     pages[0].save(os.path.join(OUT, 'company-profile.pdf'), save_all=True, append_images=pages[1:], resolution=150, quality=60)
 

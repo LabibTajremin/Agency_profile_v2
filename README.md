@@ -36,6 +36,10 @@ footer and text is editable in Elementor or in **Theme Settings** — no code, n
 10. [For developers](#for-developers)
 11. [Credits and licence](#credits-and-licence)
 
+**Putting the site live?** Follow the step-by-step [deployment guide](docs/DEPLOYMENT.md)
+(hosting, install, seeding the demo from the dashboard or WP-CLI, SMTP, HTTPS, caching,
+security, backups, staging → production, updates and a go-live checklist).
+
 ---
 
 ## Requirements
@@ -66,9 +70,11 @@ You receive two files: **`qe-edu.zip`** (the theme) and **`qe-edu-core.zip`** (t
 
 ## Import the demo
 
-The demo gives you a complete website to start from: pages, header, footer, menus,
-images, sample destinations, services, partners, events, team members, testimonials and
-news posts.
+The demo gives you a complete, realistic website for a fictional agency, *Brightway
+Education Group*: 18 pages, header, footer, menus, original images, 16 study destinations
+with key facts, services, partners, upcoming events, team members, student testimonials
+and full news articles. Replace its contact details (fictional numbers from ranges
+reserved for test use; the email uses your own domain) before going live.
 
 1. Go to **Theme Settings → Tools**.
 2. In **Import the demo**, keep **The whole site (recommended)** selected and click
