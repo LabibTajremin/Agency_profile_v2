@@ -33,7 +33,7 @@ class Breadcrumbs extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Breadcrumbs', 'qe-edu' );
+		return __( 'Breadcrumbs', 'qe-edu-core' );
 	}
 
 	/**
@@ -51,15 +51,22 @@ class Breadcrumbs extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Breadcrumbs', 'qe-edu' ) ) );
-		$this->add_text( 'home_label', __( 'First link text', 'qe-edu' ), __( 'Home', 'qe-edu' ) );
-		$this->add_text( 'separator', __( 'Separator', 'qe-edu' ), '›' );
-		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu' ), __( 'Breadcrumb', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Breadcrumbs', 'qe-edu-core' ) ) );
+		$this->add_text( 'home_label', __( 'First link text', 'qe-edu-core' ), __( 'Home', 'qe-edu-core' ) );
+		$this->add_text( 'separator', __( 'Separator', 'qe-edu-core' ), '›' );
+		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu-core' ), __( 'Breadcrumb', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'text', __( 'Text', 'qe-edu' ), '.qe-breadcrumbs', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'text', __( 'Text', 'qe-edu-core' ), '.qe-breadcrumbs', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-breadcrumbs',
+			array(
+				'label' => __( 'Bar', 'qe-edu-core' ),
+				'align' => '.qe-breadcrumbs',
+			)
+		);
 	}
 
 	/**
@@ -97,7 +104,7 @@ class Breadcrumbs extends Base {
 		$s = $this->get_settings_for_display();
 
 		if ( ! Settings::get( 'seo.breadcrumbs' ) ) {
-			$this->print_editor_notice( __( 'Breadcrumbs are switched off in Theme Settings → SEO.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'Breadcrumbs are switched off in Theme Settings → SEO.', 'qe-edu-core' ) );
 			return;
 		}
 

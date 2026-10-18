@@ -329,7 +329,7 @@ final class Handler {
 			return;
 		}
 
-		Leads::create( 'newsletter', array( __( 'Email', 'qe-edu' ) => $email ), $email, esc_url_raw( (string) wp_get_referer() ) );
+		Leads::create( 'newsletter', array( __( 'Email', 'qe-edu-core' ) => $email ), $email, esc_url_raw( (string) wp_get_referer() ) );
 
 		wp_send_json_success( array( 'message' => $config['success_message'] ) );
 	}

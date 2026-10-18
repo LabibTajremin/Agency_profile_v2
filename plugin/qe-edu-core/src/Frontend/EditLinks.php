@@ -59,12 +59,12 @@ final class EditLinks {
 
 		$links = array();
 		if ( is_singular() && 'builder' === get_post_meta( (int) get_queried_object_id(), '_elementor_edit_mode', true ) && current_user_can( 'edit_post', (int) get_queried_object_id() ) ) {
-			$links[ __( 'Edit this page', 'qe-edu' ) ] = self::edit_url( (int) get_queried_object_id() );
+			$links[ __( 'Edit this page', 'qe-edu-core' ) ] = self::edit_url( (int) get_queried_object_id() );
 		}
 
 		foreach ( array(
-			'header' => __( 'Edit header', 'qe-edu' ),
-			'footer' => __( 'Edit footer', 'qe-edu' ),
+			'header' => __( 'Edit header', 'qe-edu-core' ),
+			'footer' => __( 'Edit footer', 'qe-edu-core' ),
 		) as $location => $label ) {
 			$template = absint( Settings::get( 'templates.' . $location ) );
 			if ( $template && current_user_can( 'edit_post', $template ) ) {
@@ -88,7 +88,7 @@ final class EditLinks {
 
 		wp_enqueue_style( 'qe-edu-core-widgets' );
 
-		printf( '<nav class="qe-edit-links" aria-label="%s">', esc_attr__( 'Edit with Elementor', 'qe-edu' ) );
+		printf( '<nav class="qe-edit-links" aria-label="%s">', esc_attr__( 'Edit with Elementor', 'qe-edu-core' ) );
 		foreach ( $links as $label => $url ) {
 			printf( '<a href="%1$s"><span aria-hidden="true">✎</span> %2$s</a>', esc_url( $url ), esc_html( $label ) );
 		}

@@ -171,6 +171,24 @@ pages.
 
 ![The Destinations list](docs/images/destinations-list.png)
 
+**Rename the web addresses or hide what you don't use:** *Theme Settings → Texts →
+Content types*. Change `destinations` to, say, `destinos` and every destination page moves
+to `/destinos/…` (permalinks are refreshed for you). Untick a type you don't need to hide
+it from the dashboard — nothing is deleted.
+
+### Styling any widget
+
+Every theme widget has two sections in Elementor's **Style** tab:
+
+- **Colours & fonts** — text colours and typography (they start from your Elementor
+  global colours and fonts), plus button colours, text colours, border, corner radius and
+  padding for widgets with buttons.
+- **… box & spacing** — background (colour or gradient), border, corner radius, shadow
+  and padding of the cards or box, the space between items, and, where it makes sense,
+  alignment and minimum height. All of these are responsive (desktop / tablet / mobile).
+
+Everything is empty by default, so the widget follows your theme until you change it.
+
 ### Forms and leads
 
 The registration and contact forms save every submission under **Leads** (and email you,
@@ -312,7 +330,7 @@ composer lint             # PHPCS (WordPress-Extra + Docs)
 npm run lint:js           # ESLint;  npm run lint:css → Stylelint
 npm test                  # Jest + PHPUnit, both with 100% coverage gates
 npm run check:strings     # no hard-coded user-facing strings
-npm run pot               # languages/qe-edu.pot for theme and plugin (needs WP-CLI)
+npm run pot               # theme languages/qe-edu.pot + plugin languages/qe-edu-core.pot (needs WP-CLI)
 npm run zip               # dist/qe-edu.zip + dist/qe-edu-core.zip
 npx wp-env start          # Docker WordPress at http://localhost:8888 (tests site :8889)
 ```

@@ -93,7 +93,11 @@ final class OptimizerTest extends PluginTestCase {
 				array(
 					'elType'   => 'container',
 					'elements' => array(
-						array( 'elType' => 'widget', 'widgetType' => 'heading', 'elements' => array() ),
+						array(
+							'elType'     => 'widget',
+							'widgetType' => 'heading',
+							'elements'   => array(),
+						),
 					),
 				),
 				array(
@@ -121,13 +125,34 @@ final class OptimizerTest extends PluginTestCase {
 			Optimizer::hero_image( 2 )
 		);
 
-		$this->meta[3]['_elementor_data'] = wp_json_encode( array( array( 'widgetType' => 'qe-animated-hero', 'settings' => array() ) ) );
+		$this->meta[3]['_elementor_data'] = wp_json_encode(
+			array(
+				array(
+					'widgetType' => 'qe-animated-hero',
+					'settings'   => array(),
+				),
+			)
+		);
 		$this->assertNull( Optimizer::hero_image( 3 ), 'No image.' );
 
-		$this->meta[4]['_elementor_data'] = wp_json_encode( array( array( 'widgetType' => 'qe-animated-hero', 'settings' => array( 'background_image' => array( 'url' => 'https://x.test/h.jpg' ) ) ) ) );
+		$this->meta[4]['_elementor_data'] = wp_json_encode(
+			array(
+				array(
+					'widgetType' => 'qe-animated-hero',
+					'settings'   => array( 'background_image' => array( 'url' => 'https://x.test/h.jpg' ) ),
+				),
+			)
+		);
 		$this->assertNull( Optimizer::hero_image( 4 ), 'A light/gradient hero does not show its image.' );
 
-		$this->meta[5]['_elementor_data'] = wp_json_encode( array( array( 'widgetType' => 'qe-page-title', 'settings' => array( 'background_image' => array( 'url' => 'https://x.test/b.jpg' ) ) ) ) );
+		$this->meta[5]['_elementor_data'] = wp_json_encode(
+			array(
+				array(
+					'widgetType' => 'qe-page-title',
+					'settings'   => array( 'background_image' => array( 'url' => 'https://x.test/b.jpg' ) ),
+				),
+			)
+		);
 		$this->assertSame(
 			array(
 				'id'  => 0,
@@ -145,12 +170,31 @@ final class OptimizerTest extends PluginTestCase {
 		Functions\when( 'get_queried_object_id' )->justReturn( 4 );
 		$this->assertSame( '', $this->capture( array( new Optimizer(), 'preload_hero' ) ) );
 
-		$this->meta[4]['_elementor_data'] = wp_json_encode( array( array( 'widgetType' => 'qe-page-title', 'settings' => array( 'background_image' => array( 'url' => 'https://x.test/h.jpg' ) ) ) ) );
+		$this->meta[4]['_elementor_data'] = wp_json_encode(
+			array(
+				array(
+					'widgetType' => 'qe-page-title',
+					'settings'   => array( 'background_image' => array( 'url' => 'https://x.test/h.jpg' ) ),
+				),
+			)
+		);
 		$this->assertSame( '<link rel="preload" as="image" href="https://x.test/h.jpg" fetchpriority="high">' . "\n", $this->capture( array( new Optimizer(), 'preload_hero' ) ) );
 
 		Functions\when( 'wp_get_attachment_image_srcset' )->justReturn( 'https://x.test/h-768.jpg 768w, https://x.test/h.jpg 1600w' );
 		Functions\when( 'wp_get_attachment_image_sizes' )->justReturn( '(max-width: 1600px) 100vw, 1600px' );
-		$this->meta[4]['_elementor_data'] = wp_json_encode( array( array( 'widgetType' => 'qe-page-title', 'settings' => array( 'background_image' => array( 'id' => 9, 'url' => 'https://x.test/h.jpg' ) ) ) ) );
+		$this->meta[4]['_elementor_data'] = wp_json_encode(
+			array(
+				array(
+					'widgetType' => 'qe-page-title',
+					'settings'   => array(
+						'background_image' => array(
+							'id'  => 9,
+							'url' => 'https://x.test/h.jpg',
+						),
+					),
+				),
+			)
+		);
 		$this->assertSame(
 			'<link rel="preload" as="image" href="https://x.test/h.jpg" imagesrcset="https://x.test/h-768.jpg 768w, https://x.test/h.jpg 1600w" imagesizes="(max-width: 1600px) 100vw, 1600px" fetchpriority="high">' . "\n",
 			$this->capture( array( new Optimizer(), 'preload_hero' ) )

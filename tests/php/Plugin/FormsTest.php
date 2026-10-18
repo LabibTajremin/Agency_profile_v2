@@ -83,7 +83,13 @@ final class FormsTest extends PluginTestCase {
 			'heading' => 'H',
 		);
 
-		$this->assertSame( array( 'button' => 'Join', 'heading' => 'H' ), Locator::find( 5, 'w1', array( 'qe-newsletter' ), $defaults ) );
+		$this->assertSame(
+			array(
+				'button'  => 'Join',
+				'heading' => 'H',
+			),
+			Locator::find( 5, 'w1', array( 'qe-newsletter' ), $defaults )
+		);
 		$this->assertSame( $defaults, Locator::find( 5, 'w2', array( 'qe-newsletter' ), $defaults ) );
 		$this->assertNull( Locator::find( 5, 'w1', array( 'qe-registration-form' ), $defaults ), 'Wrong widget type' );
 		$this->assertNull( Locator::find( 5, 'w0', array( 'qe-newsletter' ), $defaults ), 'Not a form' );

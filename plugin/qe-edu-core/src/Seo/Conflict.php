@@ -152,20 +152,20 @@ class Conflict {
 			printf(
 				'<div class="notice notice-success is-dismissible"><p>%s</p></div>',
 				/* translators: %d: number of values. */
-				esc_html( sprintf( __( 'Copied %d SEO values.', 'qe-edu' ), absint( $_GET['qe_seo_imported'] ) ) ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				esc_html( sprintf( __( 'Copied %d SEO values.', 'qe-edu-core' ), absint( $_GET['qe_seo_imported'] ) ) ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			);
 		}
 
 		echo '<div class="notice notice-info"><p>';
 		printf(
 			/* translators: %s: SEO plugin name. */
-			esc_html__( '%s is active, so the theme\'s own SEO tags are switched off to avoid duplicates. You can copy the SEO titles and descriptions you entered with the theme into it.', 'qe-edu' ),
+			esc_html__( '%s is active, so the theme\'s own SEO tags are switched off to avoid duplicates. You can copy the SEO titles and descriptions you entered with the theme into it.', 'qe-edu-core' ),
 			esc_html( $names[ $plugin ] )
 		);
 		echo '</p><form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
 		wp_nonce_field( 'qe_edu_seo_import' );
 		echo '<input type="hidden" name="action" value="qe_edu_seo_import">';
-		submit_button( __( 'Copy my SEO values', 'qe-edu' ), 'secondary', 'submit', false );
+		submit_button( __( 'Copy my SEO values', 'qe-edu-core' ), 'secondary', 'submit', false );
 		echo '</form></div>';
 	}
 
@@ -176,7 +176,7 @@ class Conflict {
 	 */
 	public function handle_import() {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'You are not allowed to do this.', 'qe-edu' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to do this.', 'qe-edu-core' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( 'qe_edu_seo_import' );
 

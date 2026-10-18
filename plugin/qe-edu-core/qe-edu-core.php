@@ -9,7 +9,7 @@
  * Author:            Your Education Group
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       qe-edu
+ * Text Domain:       qe-edu-core
  * Domain Path:       /languages
  *
  * @package QeEdu\Core

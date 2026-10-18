@@ -32,7 +32,7 @@ class Faq extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'FAQ', 'qe-edu' );
+		return __( 'FAQ', 'qe-edu-core' );
 	}
 
 	/**
@@ -50,13 +50,13 @@ class Faq extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Questions', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'Frequently asked questions', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Questions', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'Frequently asked questions', 'qe-edu-core' ) );
 		$items = new Repeater();
 		$items->add_control(
 			'question',
 			array(
-				'label'       => __( 'Question', 'qe-edu' ),
+				'label'       => __( 'Question', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
@@ -65,7 +65,7 @@ class Faq extends Base {
 		$items->add_control(
 			'answer',
 			array(
-				'label'   => __( 'Answer', 'qe-edu' ),
+				'label'   => __( 'Answer', 'qe-edu-core' ),
 				'type'    => Controls_Manager::WYSIWYG,
 				'default' => '',
 			)
@@ -73,30 +73,37 @@ class Faq extends Base {
 		$this->add_control(
 			'items',
 			array(
-				'label'       => __( 'Questions', 'qe-edu' ),
+				'label'       => __( 'Questions', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $items->get_controls(),
 				'title_field' => '{{{ question }}}',
 				'default'     => array(
 					array(
-						'question' => __( 'How much does your service cost?', 'qe-edu' ),
-						'answer'   => __( 'Our advice for students is free. Partner institutions support our work.', 'qe-edu' ),
+						'question' => __( 'How much does your service cost?', 'qe-edu-core' ),
+						'answer'   => __( 'Our advice for students is free. Partner institutions support our work.', 'qe-edu-core' ),
 					),
 					array(
-						'question' => __( 'When should I apply?', 'qe-edu' ),
-						'answer'   => __( 'Ideally 9–12 months before your course starts, so there is time for visas and housing.', 'qe-edu' ),
+						'question' => __( 'When should I apply?', 'qe-edu-core' ),
+						'answer'   => __( 'Ideally 9–12 months before your course starts, so there is time for visas and housing.', 'qe-edu-core' ),
 					),
 				),
 			)
 		);
-		$this->add_switch( 'first_open', __( 'Open the first question', 'qe-edu' ) );
-		$this->add_switch( 'schema', __( 'Tell Google these are FAQs (rich results)', 'qe-edu' ) );
+		$this->add_switch( 'first_open', __( 'Open the first question', 'qe-edu-core' ) );
+		$this->add_switch( 'schema', __( 'Tell Google these are FAQs (rich results)', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'question', __( 'Question', 'qe-edu' ), '.qe-faq__question', self::COLOR_SECONDARY, self::FONT_SECONDARY );
-		$this->add_text_style( 'answer', __( 'Answer', 'qe-edu' ), '.qe-faq__answer', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'question', __( 'Question', 'qe-edu-core' ), '.qe-faq__question', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'answer', __( 'Answer', 'qe-edu-core' ), '.qe-faq__answer', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-faq__item',
+			array(
+				'label' => __( 'Questions', 'qe-edu-core' ),
+				'gap'   => '.qe-faq',
+			)
+		);
 	}
 
 	/**

@@ -42,7 +42,7 @@ final class ImporterTest extends PluginTestCase {
 		parent::setUp();
 
 		$this->options['show_on_front'] = 'posts';
-		\Elementor\Plugin::$instance = (object) array();
+		\Elementor\Plugin::$instance    = (object) array();
 
 		Functions\when( 'wp_raise_memory_limit' )->justReturn( '256M' );
 		Functions\when( 'get_current_user_id' )->justReturn( 0 );
@@ -450,7 +450,7 @@ final class ImporterTest extends PluginTestCase {
 
 	public function test_untouched_placeholder() {
 		$this->options['wp_page_for_privacy_policy'] = 3;
-		$draft = (object) array(
+		$draft                                       = (object) array(
 			'ID'                => 3,
 			'post_status'       => 'draft',
 			'post_date_gmt'     => 'a',

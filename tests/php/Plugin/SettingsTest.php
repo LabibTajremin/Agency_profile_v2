@@ -18,7 +18,15 @@ final class SettingsTest extends PluginTestCase {
 		$data = array();
 		Settings::set_path( $data, 'a.b.c', 1 );
 		Settings::set_path( $data, 'a.x', 2 );
-		$this->assertSame( array( 'a' => array( 'b' => array( 'c' => 1 ), 'x' => 2 ) ), $data );
+		$this->assertSame(
+			array(
+				'a' => array(
+					'b' => array( 'c' => 1 ),
+					'x' => 2,
+				),
+			),
+			$data
+		);
 		$this->assertSame( 1, Settings::get_path( $data, 'a.b.c' ) );
 		$this->assertSame( 'f', Settings::get_path( $data, 'a.b.c.d', 'f' ) );
 
@@ -66,7 +74,14 @@ final class SettingsTest extends PluginTestCase {
 		$this->assertTrue( Settings::sanitize_field( $this->field( 'checkbox' ), '1' ) );
 		$this->assertFalse( Settings::sanitize_field( $this->field( 'checkbox' ), 'no' ) );
 
-		$number = $this->field( 'number', array( 'default' => 16, 'min' => 14, 'max' => 20 ) );
+		$number = $this->field(
+			'number',
+			array(
+				'default' => 16,
+				'min'     => 14,
+				'max'     => 20,
+			)
+		);
 		$this->assertSame( 18, Settings::sanitize_field( $number, '18' ) );
 		$this->assertSame( 20, Settings::sanitize_field( $number, '99' ) );
 		$this->assertSame( 14, Settings::sanitize_field( $number, '2' ) );
@@ -76,7 +91,15 @@ final class SettingsTest extends PluginTestCase {
 		$this->assertSame( 12, Settings::sanitize_field( $this->field( 'media' ), '12' ) );
 		$this->assertSame( 7, Settings::sanitize_field( $this->field( 'template' ), '-7' ) );
 
-		$select = $this->field( 'select', array( 'options' => array( 'a' => 'A', 'd' => 'D' ) ) );
+		$select = $this->field(
+			'select',
+			array(
+				'options' => array(
+					'a' => 'A',
+					'd' => 'D',
+				),
+			)
+		);
 		$this->assertSame( 'a', Settings::sanitize_field( $select, 'a' ) );
 		$this->assertSame( 'd', Settings::sanitize_field( $select, 'zzz' ) );
 		$this->assertSame( 'd', Settings::sanitize_field( $select, array( 'a' ) ) );
@@ -108,25 +131,56 @@ final class SettingsTest extends PluginTestCase {
 	public function test_sanitize_redirects() {
 		$rows = Settings::sanitize_redirects(
 			array(
-				array( 'from' => '/old/', 'to' => '/new/' ),
-				array( 'from' => 'https://example.test/legacy?x=1', 'to' => 'https://other.test/page' ),
-				array( 'from' => '/same/', 'to' => '/same/' ),
-				array( 'from' => '/', 'to' => '/home/' ),
-				array( 'from' => '', 'to' => '/x/' ),
-				array( 'from' => '/x/', 'to' => '   ' ),
+				array(
+					'from' => '/old/',
+					'to'   => '/new/',
+				),
+				array(
+					'from' => 'https://example.test/legacy?x=1',
+					'to'   => 'https://other.test/page',
+				),
+				array(
+					'from' => '/same/',
+					'to'   => '/same/',
+				),
+				array(
+					'from' => '/',
+					'to'   => '/home/',
+				),
+				array(
+					'from' => '',
+					'to'   => '/x/',
+				),
+				array(
+					'from' => '/x/',
+					'to'   => '   ',
+				),
 				'not-a-row',
 			)
 		);
 
 		$this->assertSame(
 			array(
-				array( 'from' => '/old/', 'to' => '/new/' ),
-				array( 'from' => '/legacy', 'to' => 'https://other.test/page' ),
+				array(
+					'from' => '/old/',
+					'to'   => '/new/',
+				),
+				array(
+					'from' => '/legacy',
+					'to'   => 'https://other.test/page',
+				),
 			),
 			$rows
 		);
 
-		$many = array_fill( 0, 600, array( 'from' => '/a', 'to' => '/b' ) );
+		$many = array_fill(
+			0,
+			600,
+			array(
+				'from' => '/a',
+				'to'   => '/b',
+			)
+		);
 		$this->assertCount( 500, Settings::sanitize_redirects( $many ) );
 	}
 

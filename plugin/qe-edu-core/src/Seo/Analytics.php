@@ -147,10 +147,10 @@ final class Analytics {
 
 		printf(
 			'<div class="qe-consent" role="region" aria-label="%1$s" hidden><p>%2$s</p><div class="qe-consent__actions"><button type="button" class="qe-btn" data-qe-consent="yes">%3$s</button><button type="button" class="qe-btn qe-btn--ghost" data-qe-consent="no">%4$s</button></div></div>',
-			esc_attr__( 'Cookie consent', 'qe-edu' ),
-			esc_html( '' !== $text ? $text : __( 'We use cookies to understand how visitors use this site. Is that OK?', 'qe-edu' ) ),
-			esc_html( '' !== $accept ? $accept : __( 'Accept', 'qe-edu' ) ),
-			esc_html( '' !== $decline ? $decline : __( 'Decline', 'qe-edu' ) )
+			esc_attr__( 'Cookie consent', 'qe-edu-core' ),
+			esc_html( '' !== $text ? $text : __( 'We use cookies to understand how visitors use this site. Is that OK?', 'qe-edu-core' ) ),
+			esc_html( '' !== $accept ? $accept : __( 'Accept', 'qe-edu-core' ) ),
+			esc_html( '' !== $decline ? $decline : __( 'Decline', 'qe-edu-core' ) )
 		);
 		wp_enqueue_script( 'qe-edu-core-consent', QE_EDU_CORE_URL . 'assets/js/consent.min.js', array(), QE_EDU_CORE_VERSION, true );
 	}

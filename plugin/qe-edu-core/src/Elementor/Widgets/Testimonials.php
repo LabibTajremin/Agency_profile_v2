@@ -33,7 +33,7 @@ class Testimonials extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Testimonials', 'qe-edu' );
+		return __( 'Testimonials', 'qe-edu-core' );
 	}
 
 	/**
@@ -69,14 +69,14 @@ class Testimonials extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Testimonials', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'What our students say', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Testimonials', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'What our students say', 'qe-edu-core' ) );
 		$this->add_select(
 			'source',
-			__( 'Testimonials come from', 'qe-edu' ),
+			__( 'Testimonials come from', 'qe-edu-core' ),
 			array(
-				'cpt'    => __( 'Testimonials (dashboard menu) — updates automatically', 'qe-edu' ),
-				'manual' => __( 'Typed in below', 'qe-edu' ),
+				'cpt'    => __( 'Testimonials (dashboard menu) — updates automatically', 'qe-edu-core' ),
+				'manual' => __( 'Typed in below', 'qe-edu-core' ),
 			),
 			'cpt'
 		);
@@ -84,7 +84,7 @@ class Testimonials extends Base {
 		$items->add_control(
 			'quote',
 			array(
-				'label'   => __( 'What they said', 'qe-edu' ),
+				'label'   => __( 'What they said', 'qe-edu-core' ),
 				'type'    => Controls_Manager::TEXTAREA,
 				'default' => '',
 			)
@@ -92,7 +92,7 @@ class Testimonials extends Base {
 		$items->add_control(
 			'name',
 			array(
-				'label'   => __( 'Name', 'qe-edu' ),
+				'label'   => __( 'Name', 'qe-edu-core' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -100,7 +100,7 @@ class Testimonials extends Base {
 		$items->add_control(
 			'role',
 			array(
-				'label'   => __( 'Who they are', 'qe-edu' ),
+				'label'   => __( 'Who they are', 'qe-edu-core' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -108,7 +108,7 @@ class Testimonials extends Base {
 		$items->add_control(
 			'image',
 			array(
-				'label'   => __( 'Photo', 'qe-edu' ),
+				'label'   => __( 'Photo', 'qe-edu-core' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array( 'url' => '' ),
 			)
@@ -116,7 +116,7 @@ class Testimonials extends Base {
 		$items->add_control(
 			'rating',
 			array(
-				'label'   => __( 'Stars', 'qe-edu' ),
+				'label'   => __( 'Stars', 'qe-edu-core' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 5,
 				'min'     => 0,
@@ -126,38 +126,45 @@ class Testimonials extends Base {
 		$this->add_control(
 			'items',
 			array(
-				'label'       => __( 'Testimonials', 'qe-edu' ),
+				'label'       => __( 'Testimonials', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $items->get_controls(),
 				'title_field' => '{{{ name }}}',
 				'condition'   => array( 'source' => 'manual' ),
 				'default'     => array(
 					array(
-						'quote'  => __( 'The advisors guided me through every step. I am now studying my dream course abroad.', 'qe-edu' ),
-						'name'   => __( 'Amira K.', 'qe-edu' ),
-						'role'   => __( 'MSc student', 'qe-edu' ),
+						'quote'  => __( 'The advisors guided me through every step. I am now studying my dream course abroad.', 'qe-edu-core' ),
+						'name'   => __( 'Amira K.', 'qe-edu-core' ),
+						'role'   => __( 'MSc student', 'qe-edu-core' ),
 						'rating' => 5,
 					),
 					array(
-						'quote'  => __( 'From choosing a university to my visa, everything was clear and fast.', 'qe-edu' ),
-						'name'   => __( 'Daniel O.', 'qe-edu' ),
-						'role'   => __( 'Foundation student', 'qe-edu' ),
+						'quote'  => __( 'From choosing a university to my visa, everything was clear and fast.', 'qe-edu-core' ),
+						'name'   => __( 'Daniel O.', 'qe-edu-core' ),
+						'role'   => __( 'Foundation student', 'qe-edu-core' ),
 						'rating' => 5,
 					),
 				),
 			)
 		);
-		$this->add_switch( 'show_rating', __( 'Show stars', 'qe-edu' ) );
+		$this->add_switch( 'show_rating', __( 'Show stars', 'qe-edu-core' ) );
 		/* translators: %d: number of stars. */
-		$this->add_text( 'rating_label', __( 'Star rating text for screen readers', 'qe-edu' ), __( 'Rated %d out of 5', 'qe-edu' ) );
+		$this->add_text( 'rating_label', __( 'Star rating text for screen readers', 'qe-edu-core' ), __( 'Rated %d out of 5', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->add_slider_controls( 2 );
 
 		$this->start_style_section();
-		$this->add_text_style( 'quote', __( 'Quote', 'qe-edu' ), '.qe-tcard__quote', self::COLOR_TEXT, self::FONT_TEXT );
-		$this->add_text_style( 'name', __( 'Name', 'qe-edu' ), '.qe-tcard__name', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'quote', __( 'Quote', 'qe-edu-core' ), '.qe-tcard__quote', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'name', __( 'Name', 'qe-edu-core' ), '.qe-tcard__name', self::COLOR_SECONDARY, self::FONT_SECONDARY );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-tcard',
+			array(
+				'gap'     => '.qe-slider',
+				'gap_var' => '--qe-gap',
+			)
+		);
 	}
 
 	/**
@@ -204,7 +211,7 @@ class Testimonials extends Base {
 		$items = $this->items( $s );
 
 		if ( ! $items ) {
-			$this->print_editor_notice( __( 'No testimonials yet. Add them under Testimonials in the dashboard menu.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'No testimonials yet. Add them under Testimonials in the dashboard menu.', 'qe-edu-core' ) );
 			return;
 		}
 

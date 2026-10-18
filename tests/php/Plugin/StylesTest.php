@@ -56,10 +56,10 @@ final class StylesTest extends PluginTestCase {
 	}
 
 	public function test_unknown_tint_and_scale_fall_back() {
-		$settings                              = Settings::all();
-		$settings['colors']['background']      = 'odd';
+		$settings                                = Settings::all();
+		$settings['colors']['background']        = 'odd';
 		$settings['typography']['heading_scale'] = 'odd';
-		$tokens                                = Styles::tokens( $settings );
+		$tokens                                  = Styles::tokens( $settings );
 		$this->assertSame( '#F6F5FB', $tokens['--qe-surface-alt'] );
 		$this->assertSame( '1', $tokens['--qe-h-scale'] );
 		$this->assertSame( '#FFFFFF', Styles::tokens( array_replace_recursive( $settings, array( 'colors' => array( 'background' => 'white' ) ) ) )['--qe-surface-alt'] );

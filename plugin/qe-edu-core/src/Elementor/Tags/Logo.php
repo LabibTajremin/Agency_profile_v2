@@ -34,7 +34,7 @@ class Logo extends Data_Tag {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Theme Settings logo', 'qe-edu' );
+		return __( 'Theme Settings logo', 'qe-edu-core' );
 	}
 
 	/**
@@ -64,11 +64,11 @@ class Logo extends Data_Tag {
 		$this->add_control(
 			'variant',
 			array(
-				'label'   => __( 'Which logo', 'qe-edu' ),
+				'label'   => __( 'Which logo', 'qe-edu-core' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'default' => __( 'Normal logo', 'qe-edu' ),
-					'dark'    => __( 'Logo for dark backgrounds', 'qe-edu' ),
+					'default' => __( 'Normal logo', 'qe-edu-core' ),
+					'dark'    => __( 'Logo for dark backgrounds', 'qe-edu-core' ),
 				),
 				'default' => 'default',
 			)

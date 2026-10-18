@@ -54,7 +54,14 @@ final class FrontendTest extends PluginTestCase {
 		);
 		$this->assertSame( array( 'Start', 'Chat' ), array_column( MobileBar::buttons(), 'text' ) );
 
-		$this->settings( array( 'footer' => array( 'mobile_bar' => false, 'mobile_bar_link' => 'https://x.test' ) ) );
+		$this->settings(
+			array(
+				'footer' => array(
+					'mobile_bar'      => false,
+					'mobile_bar_link' => 'https://x.test',
+				),
+			)
+		);
 		$this->assertSame( array(), MobileBar::buttons() );
 	}
 
@@ -106,7 +113,14 @@ final class FrontendTest extends PluginTestCase {
 		Functions\when( 'is_singular' )->justReturn( true );
 		Functions\when( 'get_queried_object_id' )->justReturn( 7 );
 		$this->meta[7]['_elementor_edit_mode'] = 'builder';
-		$this->settings( array( 'templates' => array( 'header' => 8, 'footer' => 9 ) ) );
+		$this->settings(
+			array(
+				'templates' => array(
+					'header' => 8,
+					'footer' => 9,
+				),
+			)
+		);
 
 		$this->assertSame( array( 'Edit this page', 'Edit header', 'Edit footer' ), array_keys( EditLinks::links() ) );
 
@@ -134,7 +148,15 @@ final class FrontendTest extends PluginTestCase {
 
 	public function test_trail_front_page_and_archives() {
 		$this->conditionals( array( 'is_front_page' ) );
-		$this->assertSame( array( array( 'label' => 'Home', 'url' => '' ) ), Breadcrumbs::trail( 'Home' ) );
+		$this->assertSame(
+			array(
+				array(
+					'label' => 'Home',
+					'url'   => '',
+				),
+			),
+			Breadcrumbs::trail( 'Home' )
+		);
 
 		$this->conditionals( array( 'is_home' ) );
 		Functions\when( 'single_post_title' )->justReturn( 'News' );
@@ -150,7 +172,13 @@ final class FrontendTest extends PluginTestCase {
 		$this->conditionals( array() );
 		Functions\when( 'get_the_archive_title' )->justReturn( '<span>Events</span>' );
 		Functions\when( 'wp_strip_all_tags' )->alias( 'strip_tags' );
-		$this->assertSame( array( 'label' => 'Events', 'url' => '' ), Breadcrumbs::trail( 'Home' )[1] );
+		$this->assertSame(
+			array(
+				'label' => 'Events',
+				'url'   => '',
+			),
+			Breadcrumbs::trail( 'Home' )[1]
+		);
 	}
 
 	public function test_trail_singular() {
@@ -159,7 +187,13 @@ final class FrontendTest extends PluginTestCase {
 		Functions\when( 'get_permalink' )->alias( fn( $p ) => 'https://example.test/' . ( is_object( $p ) ? $p->ID : $p ) . '/' );
 
 		// A blog post with a category and a "Posts page".
-		$post = new \WP_Post( array( 'ID' => 3, 'post_type' => 'post', 'post_title' => 'Hello' ) );
+		$post = new \WP_Post(
+			array(
+				'ID'         => 3,
+				'post_type'  => 'post',
+				'post_title' => 'Hello',
+			)
+		);
 		Functions\when( 'get_queried_object' )->justReturn( $post );
 		Functions\when( 'get_post_type_object' )->justReturn( (object) array( 'has_archive' => false ) );
 		Functions\when( 'get_the_category' )->justReturn( array( (object) array( 'name' => 'Tips' ) ) );
@@ -174,13 +208,25 @@ final class FrontendTest extends PluginTestCase {
 		$this->assertSame( array( 'Home', 'Hello' ), array_column( Breadcrumbs::trail( 'Home' ), 'label' ) );
 
 		// A child page.
-		$page = new \WP_Post( array( 'ID' => 5, 'post_type' => 'page', 'post_title' => 'Child' ) );
+		$page = new \WP_Post(
+			array(
+				'ID'         => 5,
+				'post_type'  => 'page',
+				'post_title' => 'Child',
+			)
+		);
 		Functions\when( 'get_queried_object' )->justReturn( $page );
 		Functions\when( 'get_post_ancestors' )->justReturn( array( 2, 1 ) );
 		$this->assertSame( array( 'Home', 'Title 1', 'Title 2', 'Child' ), array_column( Breadcrumbs::trail( 'Home' ), 'label' ) );
 
 		// A custom post type with an archive.
-		$event = new \WP_Post( array( 'ID' => 6, 'post_type' => 'qe_event', 'post_title' => 'Fair' ) );
+		$event = new \WP_Post(
+			array(
+				'ID'         => 6,
+				'post_type'  => 'qe_event',
+				'post_title' => 'Fair',
+			)
+		);
 		Functions\when( 'get_queried_object' )->justReturn( $event );
 		Functions\when( 'get_post_ancestors' )->justReturn( array() );
 		Functions\when( 'get_post_type_object' )->justReturn(
@@ -199,12 +245,26 @@ final class FrontendTest extends PluginTestCase {
 	public function test_schema() {
 		$schema = Breadcrumbs::schema(
 			array(
-				array( 'label' => 'Home', 'url' => 'https://example.test/' ),
-				array( 'label' => 'Page', 'url' => '' ),
+				array(
+					'label' => 'Home',
+					'url'   => 'https://example.test/',
+				),
+				array(
+					'label' => 'Page',
+					'url'   => '',
+				),
 			)
 		);
 		$this->assertSame( 'BreadcrumbList', $schema['@type'] );
-		$this->assertSame( array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => 'https://example.test/' ), $schema['itemListElement'][0] );
+		$this->assertSame(
+			array(
+				'@type'    => 'ListItem',
+				'position' => 1,
+				'name'     => 'Home',
+				'item'     => 'https://example.test/',
+			),
+			$schema['itemListElement'][0]
+		);
 		$this->assertArrayNotHasKey( 'item', $schema['itemListElement'][1] );
 	}
 }

@@ -35,7 +35,7 @@ class BenefitsForm extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Benefits + Form', 'qe-edu' );
+		return __( 'Benefits + Form', 'qe-edu-core' );
 	}
 
 	/**
@@ -62,16 +62,16 @@ class BenefitsForm extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Text & benefits', 'qe-edu' ) ) );
-		$this->add_text( 'eyebrow', __( 'Small text above the heading', 'qe-edu' ), __( 'International Students', 'qe-edu' ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'Your future starts with one application', 'qe-edu' ) );
-		$this->add_textarea( 'text', __( 'Introduction', 'qe-edu' ), __( 'Create your free account to explore programmes, apply to universities and get one-to-one guidance from our advisors.', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Text & benefits', 'qe-edu-core' ) ) );
+		$this->add_text( 'eyebrow', __( 'Small text above the heading', 'qe-edu-core' ), __( 'International Students', 'qe-edu-core' ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'Your future starts with one application', 'qe-edu-core' ) );
+		$this->add_textarea( 'text', __( 'Introduction', 'qe-edu-core' ), __( 'Create your free account to explore programmes, apply to universities and get one-to-one guidance from our advisors.', 'qe-edu-core' ) );
 
 		$benefits = new Repeater();
 		$benefits->add_control(
 			'icon',
 			array(
-				'label'   => __( 'Icon', 'qe-edu' ),
+				'label'   => __( 'Icon', 'qe-edu-core' ),
 				'type'    => Controls_Manager::ICONS,
 				'default' => array(
 					'value'   => 'fas fa-check-circle',
@@ -82,7 +82,7 @@ class BenefitsForm extends Base {
 		$benefits->add_control(
 			'title',
 			array(
-				'label'       => __( 'Bold first words', 'qe-edu' ),
+				'label'       => __( 'Bold first words', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
@@ -91,7 +91,7 @@ class BenefitsForm extends Base {
 		$benefits->add_control(
 			'text',
 			array(
-				'label'   => __( 'Text', 'qe-edu' ),
+				'label'   => __( 'Text', 'qe-edu-core' ),
 				'type'    => Controls_Manager::TEXTAREA,
 				'default' => '',
 			)
@@ -99,7 +99,7 @@ class BenefitsForm extends Base {
 		$this->add_control(
 			'benefits',
 			array(
-				'label'       => __( 'Benefits', 'qe-edu' ),
+				'label'       => __( 'Benefits', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $benefits->get_controls(),
 				'title_field' => '{{{ title }}}',
@@ -109,57 +109,57 @@ class BenefitsForm extends Base {
 							'value'   => 'fas fa-check-circle',
 							'library' => 'fa-solid',
 						),
-						'title' => __( 'Apply with Ease', 'qe-edu' ),
-						'text'  => __( 'One simple application for universities around the world.', 'qe-edu' ),
+						'title' => __( 'Apply with Ease', 'qe-edu-core' ),
+						'text'  => __( 'One simple application for universities around the world.', 'qe-edu-core' ),
 					),
 					array(
 						'icon'  => array(
 							'value'   => 'fas fa-check-circle',
 							'library' => 'fa-solid',
 						),
-						'title' => __( 'Vast Program Selection', 'qe-edu' ),
-						'text'  => __( 'Choose from 45,000+ programmes at leading institutions.', 'qe-edu' ),
+						'title' => __( 'Vast Program Selection', 'qe-edu-core' ),
+						'text'  => __( 'Choose from 45,000+ programmes at leading institutions.', 'qe-edu-core' ),
 					),
 					array(
 						'icon'  => array(
 							'value'   => 'fas fa-check-circle',
 							'library' => 'fa-solid',
 						),
-						'title' => __( 'End-to-End Support', 'qe-edu' ),
-						'text'  => __( 'Guidance from your first question to your first day on campus.', 'qe-edu' ),
+						'title' => __( 'End-to-End Support', 'qe-edu-core' ),
+						'text'  => __( 'Guidance from your first question to your first day on campus.', 'qe-edu-core' ),
 					),
 				),
 			)
 		);
 		$this->add_select(
 			'layout',
-			__( 'Form position', 'qe-edu' ),
+			__( 'Form position', 'qe-edu-core' ),
 			array(
-				'right' => __( 'Form on the right', 'qe-edu' ),
-				'left'  => __( 'Form on the left', 'qe-edu' ),
+				'right' => __( 'Form on the right', 'qe-edu-core' ),
+				'left'  => __( 'Form on the left', 'qe-edu-core' ),
 			),
 			'right'
 		);
 		$this->end_controls_section();
 
-		$this->start_controls_section( 'section_form', array( 'label' => __( 'Form', 'qe-edu' ) ) );
-		$this->add_text( 'form_heading', __( 'Form heading', 'qe-edu' ), __( 'Register now', 'qe-edu' ) );
+		$this->start_controls_section( 'section_form', array( 'label' => __( 'Form', 'qe-edu-core' ) ) );
+		$this->add_text( 'form_heading', __( 'Form heading', 'qe-edu-core' ), __( 'Register now', 'qe-edu-core' ) );
 		$this->add_select(
 			'form_source',
-			__( 'Form to show', 'qe-edu' ),
+			__( 'Form to show', 'qe-edu-core' ),
 			array(
-				'builtin'   => __( 'Built-in registration form', 'qe-edu' ),
-				'shortcode' => __( 'Another form plugin (shortcode)', 'qe-edu' ),
+				'builtin'   => __( 'Built-in registration form', 'qe-edu-core' ),
+				'shortcode' => __( 'Another form plugin (shortcode)', 'qe-edu-core' ),
 			),
 			'builtin'
 		);
 		$this->add_text(
 			'shortcode',
-			__( 'Form shortcode', 'qe-edu' ),
+			__( 'Form shortcode', 'qe-edu-core' ),
 			'',
 			array(
 				'condition'   => array( 'form_source' => 'shortcode' ),
-				'description' => __( 'For example [contact-form-7 id="123"].', 'qe-edu' ),
+				'description' => __( 'For example [contact-form-7 id="123"].', 'qe-edu-core' ),
 			)
 		);
 		$this->end_controls_section();
@@ -167,12 +167,12 @@ class BenefitsForm extends Base {
 		$this->register_form_controls( array( 'form_source' => 'builtin' ) );
 
 		$this->start_style_section();
-		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu' ), '.qe-benefits__heading', self::COLOR_SECONDARY, self::FONT_PRIMARY );
-		$this->add_text_style( 'text', __( 'Text', 'qe-edu' ), '.qe-benefits__text, .qe-benefits__item-text', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu-core' ), '.qe-benefits__heading', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'text', __( 'Text', 'qe-edu-core' ), '.qe-benefits__text, .qe-benefits__item-text', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->add_control(
 			'icon_color',
 			array(
-				'label'     => __( 'Icon colour', 'qe-edu' ),
+				'label'     => __( 'Icon colour', 'qe-edu-core' ),
 				'type'      => Controls_Manager::COLOR,
 				'global'    => array( 'default' => self::COLOR_PRIMARY ),
 				'selectors' => array( '{{WRAPPER}} .qe-benefits__icon' => 'color: {{VALUE}}; fill: {{VALUE}};' ),
@@ -180,6 +180,13 @@ class BenefitsForm extends Base {
 		);
 		$this->add_button_style( '.qe-form .qe-btn:not(.qe-btn--ghost)' );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-benefits__form',
+			array(
+				'label' => __( 'Form box', 'qe-edu-core' ),
+				'gap'   => '.qe-benefits__list',
+			)
+		);
 	}
 
 	/**

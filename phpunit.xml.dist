@@ -15,6 +15,7 @@
 	<testsuites>
 		<testsuite name="plugin"><directory>tests/php/Plugin</directory></testsuite>
 		<testsuite name="theme"><directory>tests/php/Theme</directory></testsuite>
+		<testsuite name="packaging"><directory>tests/php/Packaging</directory></testsuite>
 	</testsuites>
 	<source>
 		<include>

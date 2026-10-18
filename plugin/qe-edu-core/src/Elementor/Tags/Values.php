@@ -25,13 +25,13 @@ final class Values {
 	 */
 	public static function text_options() {
 		return array(
-			'org_name'  => __( 'Organisation name', 'qe-edu' ),
-			'phone'     => __( 'Main phone', 'qe-edu' ),
-			'phone_2'   => __( 'Second phone', 'qe-edu' ),
-			'email'     => __( 'Email', 'qe-edu' ),
-			'whatsapp'  => __( 'WhatsApp number', 'qe-edu' ),
-			'address'   => __( 'Address', 'qe-edu' ),
-			'copyright' => __( 'Copyright text', 'qe-edu' ),
+			'org_name'  => __( 'Organisation name', 'qe-edu-core' ),
+			'phone'     => __( 'Main phone', 'qe-edu-core' ),
+			'phone_2'   => __( 'Second phone', 'qe-edu-core' ),
+			'email'     => __( 'Email', 'qe-edu-core' ),
+			'whatsapp'  => __( 'WhatsApp number', 'qe-edu-core' ),
+			'address'   => __( 'Address', 'qe-edu-core' ),
+			'copyright' => __( 'Copyright text', 'qe-edu-core' ),
 		);
 	}
 
@@ -48,7 +48,7 @@ final class Values {
 				return '' !== $name ? $name : (string) get_bloginfo( 'name' );
 			case 'copyright':
 				$text = (string) Settings::get( 'footer.copyright' );
-				$text = '' !== $text ? $text : __( '© {year} {site}. All rights reserved.', 'qe-edu' );
+				$text = '' !== $text ? $text : __( '© {year} {site}. All rights reserved.', 'qe-edu-core' );
 				return str_replace( array( '{year}', '{site}' ), array( wp_date( 'Y' ), get_bloginfo( 'name' ) ), $text );
 			case 'phone':
 			case 'phone_2':
@@ -68,12 +68,12 @@ final class Values {
 	 */
 	public static function url_options() {
 		$options = array(
-			'phone'       => __( 'Call the main phone', 'qe-edu' ),
-			'phone_2'     => __( 'Call the second phone', 'qe-edu' ),
-			'email'       => __( 'Send an email', 'qe-edu' ),
-			'whatsapp'    => __( 'Chat on WhatsApp', 'qe-edu' ),
-			'map'         => __( 'Map link', 'qe-edu' ),
-			'profile_pdf' => __( 'Company profile PDF', 'qe-edu' ),
+			'phone'       => __( 'Call the main phone', 'qe-edu-core' ),
+			'phone_2'     => __( 'Call the second phone', 'qe-edu-core' ),
+			'email'       => __( 'Send an email', 'qe-edu-core' ),
+			'whatsapp'    => __( 'Chat on WhatsApp', 'qe-edu-core' ),
+			'map'         => __( 'Map link', 'qe-edu-core' ),
+			'profile_pdf' => __( 'Company profile PDF', 'qe-edu-core' ),
 		);
 		foreach ( Schema::social_networks() as $key => $label ) {
 			$options[ 'social_' . $key ] = $label;

@@ -34,7 +34,7 @@ class NewsSlider extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Image / News Slider', 'qe-edu' );
+		return __( 'Image / News Slider', 'qe-edu-core' );
 	}
 
 	/**
@@ -70,26 +70,26 @@ class NewsSlider extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Slides', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'Expand Your Horizons', 'qe-edu' ) );
-		$this->add_textarea( 'subtitle', __( 'Subtitle', 'qe-edu' ), __( 'Choose your dream career through countless universities.', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Slides', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'Expand Your Horizons', 'qe-edu-core' ) );
+		$this->add_textarea( 'subtitle', __( 'Subtitle', 'qe-edu-core' ), __( 'Choose your dream career through countless universities.', 'qe-edu-core' ) );
 		$this->add_select(
 			'source',
-			__( 'Slides come from', 'qe-edu' ),
+			__( 'Slides come from', 'qe-edu-core' ),
 			array(
-				'posts'  => __( 'Latest news posts', 'qe-edu' ),
-				'events' => __( 'Upcoming events', 'qe-edu' ),
-				'manual' => __( 'Typed in below', 'qe-edu' ),
+				'posts'  => __( 'Latest news posts', 'qe-edu-core' ),
+				'events' => __( 'Upcoming events', 'qe-edu-core' ),
+				'manual' => __( 'Typed in below', 'qe-edu-core' ),
 			),
 			'posts'
 		);
-		$this->add_number( 'count', __( 'How many', 'qe-edu' ), 6, 1, 20, array( 'condition' => array( 'source!' => 'manual' ) ) );
+		$this->add_number( 'count', __( 'How many', 'qe-edu-core' ), 6, 1, 20, array( 'condition' => array( 'source!' => 'manual' ) ) );
 
 		$items = new Repeater();
 		$items->add_control(
 			'image',
 			array(
-				'label'   => __( 'Image', 'qe-edu' ),
+				'label'   => __( 'Image', 'qe-edu-core' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array( 'url' => '' ),
 			)
@@ -97,7 +97,7 @@ class NewsSlider extends Base {
 		$items->add_control(
 			'title',
 			array(
-				'label'       => __( 'Title', 'qe-edu' ),
+				'label'       => __( 'Title', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
@@ -106,7 +106,7 @@ class NewsSlider extends Base {
 		$items->add_control(
 			'text',
 			array(
-				'label'   => __( 'Text', 'qe-edu' ),
+				'label'   => __( 'Text', 'qe-edu-core' ),
 				'type'    => Controls_Manager::TEXTAREA,
 				'default' => '',
 			)
@@ -114,7 +114,7 @@ class NewsSlider extends Base {
 		$items->add_control(
 			'link',
 			array(
-				'label'   => __( 'Link', 'qe-edu' ),
+				'label'   => __( 'Link', 'qe-edu-core' ),
 				'type'    => Controls_Manager::URL,
 				'default' => array( 'url' => '' ),
 			)
@@ -122,37 +122,44 @@ class NewsSlider extends Base {
 		$this->add_control(
 			'items',
 			array(
-				'label'       => __( 'Slides', 'qe-edu' ),
+				'label'       => __( 'Slides', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $items->get_controls(),
 				'title_field' => '{{{ title }}}',
 				'condition'   => array( 'source' => 'manual' ),
 				'default'     => array(
 					array(
-						'title' => __( 'Business & Management', 'qe-edu' ),
-						'text'  => __( 'Lead global organisations.', 'qe-edu' ),
+						'title' => __( 'Business & Management', 'qe-edu-core' ),
+						'text'  => __( 'Lead global organisations.', 'qe-edu-core' ),
 					),
 					array(
-						'title' => __( 'Engineering & Technology', 'qe-edu' ),
-						'text'  => __( 'Build what comes next.', 'qe-edu' ),
+						'title' => __( 'Engineering & Technology', 'qe-edu-core' ),
+						'text'  => __( 'Build what comes next.', 'qe-edu-core' ),
 					),
 					array(
-						'title' => __( 'Health & Medicine', 'qe-edu' ),
-						'text'  => __( 'Care for the world.', 'qe-edu' ),
+						'title' => __( 'Health & Medicine', 'qe-edu-core' ),
+						'text'  => __( 'Care for the world.', 'qe-edu-core' ),
 					),
 				),
 			)
 		);
-		$this->add_text( 'read_more', __( 'Link text', 'qe-edu' ), __( 'Read more', 'qe-edu' ) );
-		$this->add_text( 'empty_text', __( 'Text when there is nothing to show', 'qe-edu' ), __( 'News is coming soon.', 'qe-edu' ) );
+		$this->add_text( 'read_more', __( 'Link text', 'qe-edu-core' ), __( 'Read more', 'qe-edu-core' ) );
+		$this->add_text( 'empty_text', __( 'Text when there is nothing to show', 'qe-edu-core' ), __( 'News is coming soon.', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->add_slider_controls( 3 );
 
 		$this->start_style_section();
-		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu' ), '.qe-section-head__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
-		$this->add_text_style( 'card_title', __( 'Slide title', 'qe-edu' ), '.qe-card-title', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu-core' ), '.qe-section-head__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'card_title', __( 'Slide title', 'qe-edu-core' ), '.qe-card-title', self::COLOR_SECONDARY, self::FONT_SECONDARY );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-ncard',
+			array(
+				'gap'     => '.qe-slider',
+				'gap_var' => '--qe-gap',
+			)
+		);
 	}
 
 	/**

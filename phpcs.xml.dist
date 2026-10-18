@@ -16,8 +16,9 @@
 	<config name="minimum_wp_version" value="6.6"/>
 	<rule ref="PHPCompatibilityWP"/>
 	<rule ref="WordPress-Extra"/>
+	<!-- Theme: `qe-edu`; plugin: `qe-edu-core` (tests/php/TextDomainTest.php keeps each package on its own). -->
 	<rule ref="WordPress.WP.I18n">
-		<properties><property name="text_domain" type="array"><element value="qe-edu"/></property></properties>
+		<properties><property name="text_domain" type="array"><element value="qe-edu"/><element value="qe-edu-core"/></property></properties>
 	</rule>
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties><property name="prefixes" type="array"><element value="qe_edu"/><element value="QeEdu"/></property></properties>

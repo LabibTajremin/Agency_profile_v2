@@ -41,7 +41,7 @@ final class ElementorCompatTest extends ThemeTestCase {
 
 		$frontend = \Mockery::mock();
 		$frontend->shouldReceive( 'enqueue_styles' )->once();
-		\Elementor\Plugin::$instance = (object) array( 'frontend' => $frontend );
+		\Elementor\Plugin::$instance      = (object) array( 'frontend' => $frontend );
 		$this->options['qe_edu_settings'] = array(
 			'templates' => array(
 				'header'    => 11,
@@ -92,12 +92,12 @@ final class ElementorCompatTest extends ThemeTestCase {
 	}
 
 	public function test_update_kit_merges_and_clears_cache() {
-		$this->options['elementor_active_kit']        = 12;
+		$this->options['elementor_active_kit']      = 12;
 		$this->meta[12]['_elementor_page_settings'] = array(
 			'a' => 'old',
 			'b' => 'keep',
 		);
-		$files = \Mockery::mock();
+		$files                                      = \Mockery::mock();
 		$files->shouldReceive( 'clear_cache' )->twice();
 		\Elementor\Plugin::$instance = (object) array( 'files_manager' => $files );
 
@@ -110,13 +110,21 @@ final class ElementorCompatTest extends ThemeTestCase {
 			$this->meta[12]['_elementor_page_settings']
 		);
 
-		$this->assertTrue( qe_edu_update_kit( array( 'a' => 'ignored', 'c' => 'added' ), true ) );
+		$this->assertTrue(
+			qe_edu_update_kit(
+				array(
+					'a' => 'ignored',
+					'c' => 'added',
+				),
+				true
+			)
+		);
 		$this->assertSame( 'new', $this->meta[12]['_elementor_page_settings']['a'] );
 		$this->assertSame( 'added', $this->meta[12]['_elementor_page_settings']['c'] );
 	}
 
 	public function test_update_kit_handles_non_array_meta_and_no_files_manager() {
-		$this->options['elementor_active_kit']        = 3;
+		$this->options['elementor_active_kit']     = 3;
 		$this->meta[3]['_elementor_page_settings'] = 'garbage';
 
 		$this->assertTrue( qe_edu_update_kit( array( 'x' => 1 ) ) );

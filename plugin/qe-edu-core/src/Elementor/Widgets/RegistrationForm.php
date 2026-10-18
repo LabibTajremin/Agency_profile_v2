@@ -31,7 +31,7 @@ class RegistrationForm extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Registration Form', 'qe-edu' );
+		return __( 'Registration Form', 'qe-edu-core' );
 	}
 
 	/**
@@ -61,9 +61,10 @@ class RegistrationForm extends Base {
 		$this->register_form_controls();
 
 		$this->start_style_section();
-		$this->add_text_style( 'label', __( 'Labels', 'qe-edu' ), '.qe-form__label', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'label', __( 'Labels', 'qe-edu-core' ), '.qe-form__label', self::COLOR_SECONDARY, self::FONT_SECONDARY );
 		$this->add_button_style( '.qe-form .qe-btn:not(.qe-btn--ghost)' );
 		$this->end_controls_section();
+		$this->add_box_style( '.qe-form', array( 'label' => __( 'Form box', 'qe-edu-core' ) ) );
 	}
 
 	/**

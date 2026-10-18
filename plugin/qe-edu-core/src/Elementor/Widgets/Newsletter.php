@@ -34,7 +34,7 @@ class Newsletter extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Newsletter', 'qe-edu' );
+		return __( 'Newsletter', 'qe-edu-core' );
 	}
 
 	/**
@@ -63,34 +63,41 @@ class Newsletter extends Base {
 	protected function register_controls() {
 		$d = Defaults::newsletter();
 
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Newsletter', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), $d['heading'] );
-		$this->add_textarea( 'text', __( 'Text', 'qe-edu' ), $d['text'] );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Newsletter', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), $d['heading'] );
+		$this->add_textarea( 'text', __( 'Text', 'qe-edu-core' ), $d['text'] );
 		$this->add_select(
 			'provider',
-			__( 'Send sign-ups to', 'qe-edu' ),
+			__( 'Send sign-ups to', 'qe-edu-core' ),
 			array(
-				'builtin'   => __( 'Leads list on this website', 'qe-edu' ),
-				'mailchimp' => __( 'Mailchimp (set the key in Theme Settings → Footer)', 'qe-edu' ),
-				'shortcode' => __( 'Another plugin (shortcode)', 'qe-edu' ),
+				'builtin'   => __( 'Leads list on this website', 'qe-edu-core' ),
+				'mailchimp' => __( 'Mailchimp (set the key in Theme Settings → Footer)', 'qe-edu-core' ),
+				'shortcode' => __( 'Another plugin (shortcode)', 'qe-edu-core' ),
 			),
 			$d['provider']
 		);
-		$this->add_text( 'shortcode', __( 'Form shortcode', 'qe-edu' ), $d['shortcode'], array( 'condition' => array( 'provider' => 'shortcode' ) ) );
-		$this->add_text( 'placeholder', __( 'Hint inside the email box', 'qe-edu' ), $d['placeholder'], array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
-		$this->add_text( 'button', __( 'Button text', 'qe-edu' ), $d['button'], array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
-		$this->add_text( 'success_message', __( 'Thank-you message', 'qe-edu' ), $d['success_message'], array( 'qe_scope' => 'server' ) );
-		$this->add_text( 'invalid_message', __( 'Wrong email message', 'qe-edu' ), $d['invalid_message'], array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
-		$this->add_text( 'error_message', __( 'Error message', 'qe-edu' ), $d['error_message'], array( 'qe_scope' => 'server' ) );
-		$this->add_text( 'rate_message', __( 'Too many attempts', 'qe-edu' ), $d['rate_message'], array( 'qe_scope' => 'server' ) );
-		$this->add_text( 'sending_label', __( 'Button while sending', 'qe-edu' ), __( 'Sending…', 'qe-edu' ), array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
+		$this->add_text( 'shortcode', __( 'Form shortcode', 'qe-edu-core' ), $d['shortcode'], array( 'condition' => array( 'provider' => 'shortcode' ) ) );
+		$this->add_text( 'placeholder', __( 'Hint inside the email box', 'qe-edu-core' ), $d['placeholder'], array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
+		$this->add_text( 'button', __( 'Button text', 'qe-edu-core' ), $d['button'], array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
+		$this->add_text( 'success_message', __( 'Thank-you message', 'qe-edu-core' ), $d['success_message'], array( 'qe_scope' => 'server' ) );
+		$this->add_text( 'invalid_message', __( 'Wrong email message', 'qe-edu-core' ), $d['invalid_message'], array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
+		$this->add_text( 'error_message', __( 'Error message', 'qe-edu-core' ), $d['error_message'], array( 'qe_scope' => 'server' ) );
+		$this->add_text( 'rate_message', __( 'Too many attempts', 'qe-edu-core' ), $d['rate_message'], array( 'qe_scope' => 'server' ) );
+		$this->add_text( 'sending_label', __( 'Button while sending', 'qe-edu-core' ), __( 'Sending…', 'qe-edu-core' ), array( 'condition' => array( 'provider!' => 'shortcode' ) ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu' ), '.qe-newsletter__heading', self::COLOR_SECONDARY, self::FONT_PRIMARY );
-		$this->add_text_style( 'text', __( 'Text', 'qe-edu' ), '.qe-newsletter__text', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu-core' ), '.qe-newsletter__heading', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'text', __( 'Text', 'qe-edu-core' ), '.qe-newsletter__text', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->add_button_style( '.qe-newsletter .qe-btn' );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-newsletter',
+			array(
+				'label' => __( 'Box', 'qe-edu-core' ),
+				'align' => '.qe-newsletter',
+			)
+		);
 	}
 
 	/**
@@ -102,7 +109,7 @@ class Newsletter extends Base {
 		$s = $this->get_settings_for_display();
 
 		if ( ! Settings::get( 'footer.newsletter' ) ) {
-			$this->print_editor_notice( __( 'The newsletter is switched off in Theme Settings → Footer.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'The newsletter is switched off in Theme Settings → Footer.', 'qe-edu-core' ) );
 			return;
 		}
 
@@ -130,7 +137,7 @@ class Newsletter extends Base {
 		printf( '<input type="hidden" name="nonce" value="%s">', esc_attr( wp_create_nonce( Handler::NONCE ) ) );
 		printf(
 			'<div class="qe-form__hp" aria-hidden="true"><label>%s<input type="text" name="website" value="" tabindex="-1" autocomplete="off"></label></div>',
-			esc_html__( 'Leave this field empty', 'qe-edu' )
+			esc_html__( 'Leave this field empty', 'qe-edu-core' )
 		);
 		printf(
 			'<div class="qe-newsletter__row"><label for="%1$s" class="screen-reader-text">%2$s</label><input type="email" id="%1$s" name="qe_email" required autocomplete="email" placeholder="%2$s" class="qe-form__input" data-type="email"><button type="submit" class="qe-btn" data-qe-submit>%3$s</button></div>',

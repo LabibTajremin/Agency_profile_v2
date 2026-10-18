@@ -151,7 +151,7 @@ final class HeadTest extends SeoTestCase {
 			'_qe_seo_description' => 'Study news.',
 			'_qe_seo_title'       => 'Our news {sep} {site}',
 		);
-		$head = new Head();
+		$head           = new Head();
 		$this->assertSame( 'Our news | Test Site', $head->title() );
 		$this->assertSame( 'Study news.', Head::description() );
 		$this->assertSame( 'https://example.test/p/12/', Head::canonical() );

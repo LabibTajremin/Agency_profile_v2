@@ -74,7 +74,7 @@ final class AllWidgetsTest extends WidgetTestCase {
 	 * @dataProvider widgets
 	 */
 	public function test_metadata( $index ) {
-		$class = self::cls( $index );
+		$class  = self::cls( $index );
 		$widget = new $class();
 		$this->assertMatchesRegularExpression( '/^qe-[a-z-]+$/', $widget->get_name() );
 		$this->assertNotSame( '', $widget->get_title() );
@@ -89,23 +89,38 @@ final class AllWidgetsTest extends WidgetTestCase {
 	 * @dataProvider widgets
 	 */
 	public function test_styles_default_to_elementor_globals( $index ) {
-		$class = self::cls( $index );
+		$class    = self::cls( $index );
 		$widget   = new $class();
 		$controls = $widget->get_controls_for_test();
 
 		foreach ( $controls as $id => $control ) {
-			if ( Controls_Manager::COLOR === $control['type'] ) {
+			if ( Controls_Manager::COLOR === $control['type'] && isset( $control['global'] ) ) {
 				$this->assertStringStartsWith( 'globals/colors?id=', $control['global']['default'], "$class $id" );
+			} elseif ( Controls_Manager::COLOR === $control['type'] ) {
+				$this->assertArrayNotHasKey( 'default', $control, "$class $id: no global means it follows the theme" );
 			}
 			if ( Controls_Manager::TAB_STYLE === ( $control['tab'] ?? '' ) ) {
 				$this->fail( 'Unexpected tab on control' );
 			}
 		}
 		foreach ( $widget->group_controls as $group ) {
-			$this->assertSame( 'typography', $group[0] );
-			$this->assertStringStartsWith( 'globals/typography?id=', $group[1]['global']['default'], $class );
+			if ( 'typography' === $group[0] ) {
+				$this->assertStringStartsWith( 'globals/typography?id=', $group[1]['global']['default'], $class );
+			} else {
+				$this->assertContains( $group[0], array( 'background', 'border', 'box-shadow' ), $class );
+			}
 		}
 		$this->assertArrayHasKey( 'section_style', $widget->sections, "$class has a Colours & fonts section" );
+		$this->assertArrayHasKey( 'section_box', $widget->sections, "$class has a Box & spacing section" );
+		foreach ( array( 'box_radius', 'box_padding' ) as $id ) {
+			$this->assertSame( Controls_Manager::DIMENSIONS, $controls[ $id ]['type'], "$class $id" );
+			$this->assertArrayNotHasKey( 'default', $controls[ $id ], "$class $id follows the theme until changed" );
+		}
+		if ( isset( $controls['button_bg'] ) ) {
+			foreach ( array( 'button_text_color', 'button_hover_text_color', 'button_radius', 'button_padding' ) as $id ) {
+				$this->assertArrayHasKey( $id, $controls, "$class $id" );
+			}
+		}
 	}
 
 	/**
@@ -113,8 +128,8 @@ final class AllWidgetsTest extends WidgetTestCase {
 	 */
 	public function test_renders_with_defaults_everywhere( $index ) {
 		$class = self::cls( $index );
-		$name = ( new $class() )->get_name();
-		$base = self::BASE[ $name ] ?? array();
+		$name  = ( new $class() )->get_name();
+		$base  = self::BASE[ $name ] ?? array();
 
 		foreach ( array( false, true ) as $editing ) {
 			$this->editing = $editing;
@@ -179,7 +194,7 @@ final class AllWidgetsTest extends WidgetTestCase {
 	 * @dataProvider widgets
 	 */
 	public function test_every_text_control_is_editable( $index ) {
-		$class = self::cls( $index );
+		$class    = self::cls( $index );
 		$widget   = new $class();
 		$name     = $widget->get_name();
 		$controls = $widget->get_controls_for_test();

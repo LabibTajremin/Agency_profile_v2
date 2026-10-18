@@ -35,9 +35,9 @@ final class KitSyncTest extends PluginTestCase {
 	}
 
 	public function test_every_swatch_updates_elementor_globals() {
-		$this->options['elementor_active_kit'] = 9;
+		$this->options['elementor_active_kit']     = 9;
 		$this->meta[9]['_elementor_page_settings'] = array( 'container_width' => array( 'size' => 1240 ) );
-		$files = \Mockery::mock();
+		$files                                     = \Mockery::mock();
 		$files->shouldReceive( 'clear_cache' )->times( 12 );
 		\Elementor\Plugin::$instance = (object) array( 'files_manager' => $files );
 		Actions\expectDone( 'qe_edu_kit_synced' )->times( 12 )->with( 9 );
@@ -54,9 +54,9 @@ final class KitSyncTest extends PluginTestCase {
 	}
 
 	public function test_sync_sets_button_styles() {
-		$this->options['elementor_active_kit'] = 9;
+		$this->options['elementor_active_kit']     = 9;
 		$this->meta[9]['_elementor_page_settings'] = array( '__globals__' => array( 'link_normal_color' => 'globals/colors?id=primary' ) );
-		$files = \Mockery::mock();
+		$files                                     = \Mockery::mock();
 		$files->shouldReceive( 'clear_cache' );
 		\Elementor\Plugin::$instance = (object) array( 'files_manager' => $files );
 
@@ -97,7 +97,17 @@ final class KitSyncTest extends PluginTestCase {
 	}
 
 	public function test_system_colors_for_custom() {
-		$colors = KitSync::system_colors( array_replace_recursive( Settings::all(), array( 'colors' => array( 'accent' => 'custom', 'custom' => '#3366FF' ) ) ) );
+		$colors = KitSync::system_colors(
+			array_replace_recursive(
+				Settings::all(),
+				array(
+					'colors' => array(
+						'accent' => 'custom',
+						'custom' => '#3366FF',
+					),
+				)
+			)
+		);
 		$this->assertSame( '#3366FF', $colors[0]['color'] );
 		$this->assertSame( array( 'primary', 'secondary', 'text', 'accent' ), array_column( $colors, '_id' ) );
 	}

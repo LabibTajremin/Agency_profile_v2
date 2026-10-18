@@ -34,7 +34,7 @@ class ServiceSlider extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Service Cards Slider', 'qe-edu' );
+		return __( 'Service Cards Slider', 'qe-edu-core' );
 	}
 
 	/**
@@ -72,20 +72,20 @@ class ServiceSlider extends Base {
 	public static function sample_items() {
 		return array(
 			array(
-				'title' => __( 'Direct Entry Student Recruitment', 'qe-edu' ),
-				'text'  => __( 'We connect qualified students directly with partner universities and colleges.', 'qe-edu' ),
+				'title' => __( 'Direct Entry Student Recruitment', 'qe-edu-core' ),
+				'text'  => __( 'We connect qualified students directly with partner universities and colleges.', 'qe-edu-core' ),
 			),
 			array(
-				'title' => __( 'International Pathways', 'qe-edu' ),
-				'text'  => __( 'Foundation and pre-master\'s programmes that lead to degree study.', 'qe-edu' ),
+				'title' => __( 'International Pathways', 'qe-edu-core' ),
+				'text'  => __( 'Foundation and pre-master\'s programmes that lead to degree study.', 'qe-edu-core' ),
 			),
 			array(
-				'title' => __( 'In-country University Preparation', 'qe-edu' ),
-				'text'  => __( 'Academic and English preparation before you travel.', 'qe-edu' ),
+				'title' => __( 'In-country University Preparation', 'qe-edu-core' ),
+				'text'  => __( 'Academic and English preparation before you travel.', 'qe-edu-core' ),
 			),
 			array(
-				'title' => __( 'Managed Campus', 'qe-edu' ),
-				'text'  => __( 'Study centres that deliver partner programmes close to home.', 'qe-edu' ),
+				'title' => __( 'Managed Campus', 'qe-edu-core' ),
+				'text'  => __( 'Study centres that deliver partner programmes close to home.', 'qe-edu-core' ),
 			),
 		);
 	}
@@ -111,25 +111,25 @@ class ServiceSlider extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Cards', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'What We Do', 'qe-edu' ) );
-		$this->add_textarea( 'intro', __( 'Introduction', 'qe-edu' ), __( 'Four ways we help students and institutions succeed.', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Cards', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'What We Do', 'qe-edu-core' ) );
+		$this->add_textarea( 'intro', __( 'Introduction', 'qe-edu-core' ), __( 'Four ways we help students and institutions succeed.', 'qe-edu-core' ) );
 		$this->add_select(
 			'source',
-			__( 'Cards come from', 'qe-edu' ),
+			__( 'Cards come from', 'qe-edu-core' ),
 			array(
-				'cpt'    => __( 'Services (dashboard menu) — updates automatically', 'qe-edu' ),
-				'manual' => __( 'Typed in below', 'qe-edu' ),
+				'cpt'    => __( 'Services (dashboard menu) — updates automatically', 'qe-edu-core' ),
+				'manual' => __( 'Typed in below', 'qe-edu-core' ),
 			),
 			'cpt'
 		);
-		$this->add_number( 'count', __( 'How many', 'qe-edu' ), 8, 1, 30, array( 'condition' => array( 'source' => 'cpt' ) ) );
+		$this->add_number( 'count', __( 'How many', 'qe-edu-core' ), 8, 1, 30, array( 'condition' => array( 'source' => 'cpt' ) ) );
 
 		$items = new Repeater();
 		$items->add_control(
 			'image',
 			array(
-				'label'   => __( 'Image', 'qe-edu' ),
+				'label'   => __( 'Image', 'qe-edu-core' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array( 'url' => '' ),
 			)
@@ -137,7 +137,7 @@ class ServiceSlider extends Base {
 		$items->add_control(
 			'title',
 			array(
-				'label'       => __( 'Title', 'qe-edu' ),
+				'label'       => __( 'Title', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
@@ -146,7 +146,7 @@ class ServiceSlider extends Base {
 		$items->add_control(
 			'text',
 			array(
-				'label'   => __( 'Text', 'qe-edu' ),
+				'label'   => __( 'Text', 'qe-edu-core' ),
 				'type'    => Controls_Manager::TEXTAREA,
 				'default' => '',
 			)
@@ -154,7 +154,7 @@ class ServiceSlider extends Base {
 		$items->add_control(
 			'link',
 			array(
-				'label'   => __( 'Link', 'qe-edu' ),
+				'label'   => __( 'Link', 'qe-edu-core' ),
 				'type'    => Controls_Manager::URL,
 				'default' => array( 'url' => '' ),
 			)
@@ -162,7 +162,7 @@ class ServiceSlider extends Base {
 		$this->add_control(
 			'items',
 			array(
-				'label'       => __( 'Cards', 'qe-edu' ),
+				'label'       => __( 'Cards', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $items->get_controls(),
 				'default'     => self::sample_items(),
@@ -170,16 +170,23 @@ class ServiceSlider extends Base {
 				'condition'   => array( 'source' => 'manual' ),
 			)
 		);
-		$this->add_text( 'button_text', __( 'Button text', 'qe-edu' ), __( 'Learn More', 'qe-edu' ) );
+		$this->add_text( 'button_text', __( 'Button text', 'qe-edu-core' ), __( 'Learn More', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->add_slider_controls( 3 );
 
 		$this->start_style_section();
-		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu' ), '.qe-section-head__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
-		$this->add_text_style( 'card_title', __( 'Card title', 'qe-edu' ), '.qe-card-title', self::COLOR_SECONDARY, self::FONT_SECONDARY );
-		$this->add_text_style( 'card_text', __( 'Card text', 'qe-edu' ), '.qe-card-text', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu-core' ), '.qe-section-head__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'card_title', __( 'Card title', 'qe-edu-core' ), '.qe-card-title', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'card_text', __( 'Card text', 'qe-edu-core' ), '.qe-card-text', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-scard',
+			array(
+				'gap'     => '.qe-slider',
+				'gap_var' => '--qe-gap',
+			)
+		);
 	}
 
 	/**
@@ -207,7 +214,7 @@ class ServiceSlider extends Base {
 		}
 
 		if ( ! $items ) {
-			$this->print_editor_notice( __( 'Showing sample cards. Add your own under Services in the dashboard menu.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'Showing sample cards. Add your own under Services in the dashboard menu.', 'qe-edu-core' ) );
 			return self::items_with( self::sample_items(), self::item_defaults() );
 		}
 

@@ -46,7 +46,7 @@ class Leads {
 	 * @return void
 	 */
 	public function register_type() {
-		$labels                 = Registrar::labels( __( 'Lead', 'qe-edu' ), __( 'Leads', 'qe-edu' ) );
+		$labels                 = Registrar::labels( __( 'Lead', 'qe-edu-core' ), __( 'Leads', 'qe-edu-core' ) );
 		$labels['add_new_item'] = '';
 
 		register_post_type(
@@ -84,8 +84,8 @@ class Leads {
 	 */
 	public static function types() {
 		return array(
-			'registration' => __( 'Registration', 'qe-edu' ),
-			'newsletter'   => __( 'Newsletter', 'qe-edu' ),
+			'registration' => __( 'Registration', 'qe-edu-core' ),
+			'newsletter'   => __( 'Newsletter', 'qe-edu-core' ),
 		);
 	}
 
@@ -127,10 +127,10 @@ class Leads {
 	public function columns( $columns ) {
 		return array(
 			'cb'             => isset( $columns['cb'] ) ? $columns['cb'] : '',
-			'title'          => __( 'Email', 'qe-edu' ),
-			'qe_lead_type'   => __( 'Form', 'qe-edu' ),
-			'qe_lead_source' => __( 'Page', 'qe-edu' ),
-			'date'           => __( 'Received', 'qe-edu' ),
+			'title'          => __( 'Email', 'qe-edu-core' ),
+			'qe_lead_type'   => __( 'Form', 'qe-edu-core' ),
+			'qe_lead_source' => __( 'Page', 'qe-edu-core' ),
+			'date'           => __( 'Received', 'qe-edu-core' ),
 		);
 	}
 
@@ -160,7 +160,7 @@ class Leads {
 	 * @return void
 	 */
 	public function meta_box() {
-		add_meta_box( 'qe-edu-lead', __( 'Submitted details', 'qe-edu' ), array( $this, 'render' ), self::TYPE, 'normal', 'high' );
+		add_meta_box( 'qe-edu-lead', __( 'Submitted details', 'qe-edu-core' ), array( $this, 'render' ), self::TYPE, 'normal', 'high' );
 	}
 
 	/**
@@ -177,7 +177,7 @@ class Leads {
 		foreach ( $fields as $label => $value ) {
 			printf( '<tr><th scope="row">%1$s</th><td>%2$s</td></tr>', esc_html( (string) $label ), esc_html( (string) $value ) );
 		}
-		printf( '<tr><th scope="row">%1$s</th><td>%2$s</td></tr>', esc_html__( 'Page', 'qe-edu' ), esc_html( (string) get_post_meta( $post->ID, '_qe_lead_source', true ) ) );
+		printf( '<tr><th scope="row">%1$s</th><td>%2$s</td></tr>', esc_html__( 'Page', 'qe-edu-core' ), esc_html( (string) get_post_meta( $post->ID, '_qe_lead_source', true ) ) );
 		echo '</tbody></table>';
 	}
 
@@ -196,7 +196,7 @@ class Leads {
 		printf(
 			'<div class="alignleft actions"><a class="button" href="%1$s">%2$s</a></div>',
 			esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=qe_edu_export_leads' ), 'qe_edu_export_leads' ) ),
-			esc_html__( 'Download all as CSV (Excel)', 'qe-edu' )
+			esc_html__( 'Download all as CSV (Excel)', 'qe-edu-core' )
 		);
 	}
 
@@ -239,7 +239,7 @@ class Leads {
 		}
 		$labels = array_values( array_unique( $labels ) );
 
-		$rows = array( array_merge( array( __( 'Received', 'qe-edu' ), __( 'Form', 'qe-edu' ), __( 'Email', 'qe-edu' ) ), $labels, array( __( 'Page', 'qe-edu' ) ) ) );
+		$rows = array( array_merge( array( __( 'Received', 'qe-edu-core' ), __( 'Form', 'qe-edu-core' ), __( 'Email', 'qe-edu-core' ) ), $labels, array( __( 'Page', 'qe-edu-core' ) ) ) );
 		foreach ( $records as $record ) {
 			list( $lead, $fields ) = $record;
 			$row                   = array(
@@ -264,7 +264,7 @@ class Leads {
 	 */
 	public function export() {
 		if ( ! current_user_can( self::CAPABILITY ) ) {
-			wp_die( esc_html__( 'You are not allowed to export leads.', 'qe-edu' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to export leads.', 'qe-edu-core' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( 'qe_edu_export_leads' );
 

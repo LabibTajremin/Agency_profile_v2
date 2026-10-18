@@ -115,11 +115,11 @@ final class Head {
 
 		if ( is_search() ) {
 			/* translators: %s: search terms. */
-			return self::fill( $template, sprintf( __( 'Search results for “%s”', 'qe-edu' ), get_search_query( false ) ) );
+			return self::fill( $template, sprintf( __( 'Search results for “%s”', 'qe-edu-core' ), get_search_query( false ) ) );
 		}
 
 		if ( is_404() ) {
-			return self::fill( $template, __( 'Page not found', 'qe-edu' ) );
+			return self::fill( $template, __( 'Page not found', 'qe-edu-core' ) );
 		}
 
 		if ( is_archive() ) {
@@ -421,7 +421,7 @@ final class Head {
 			$graph[] = $page;
 
 			if ( $crumbs ) {
-				$trail        = Breadcrumbs::schema( Breadcrumbs::trail( __( 'Home', 'qe-edu' ) ) );
+				$trail        = Breadcrumbs::schema( Breadcrumbs::trail( __( 'Home', 'qe-edu-core' ) ) );
 				$trail['@id'] = $page['@id'] . '-breadcrumb';
 				$graph[]      = array_diff_key( $trail, array( '@context' => true ) );
 			}

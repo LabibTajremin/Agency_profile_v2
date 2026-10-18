@@ -33,7 +33,7 @@ class SettingUrl extends Data_Tag {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Theme Settings link', 'qe-edu' );
+		return __( 'Theme Settings link', 'qe-edu-core' );
 	}
 
 	/**
@@ -63,7 +63,7 @@ class SettingUrl extends Data_Tag {
 		$this->add_control(
 			'key',
 			array(
-				'label'   => __( 'Which link', 'qe-edu' ),
+				'label'   => __( 'Which link', 'qe-edu-core' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => Values::url_options(),
 				'default' => 'whatsapp',

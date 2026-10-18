@@ -41,9 +41,9 @@ final class Fields {
 			esc_attr( $name ),
 			esc_attr( (string) $value ),
 			$preview,
-			esc_html__( 'Choose file', 'qe-edu' ),
+			esc_html__( 'Choose file', 'qe-edu-core' ),
 			$value ? '' : ' hidden',
-			esc_html__( 'Remove', 'qe-edu' )
+			esc_html__( 'Remove', 'qe-edu-core' )
 		);
 	}
 }

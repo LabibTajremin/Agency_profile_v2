@@ -33,7 +33,7 @@ trait RegistrationFormTrait {
 		$this->start_controls_section(
 			'section_form_fields',
 			array(
-				'label'     => __( 'Form fields', 'qe-edu' ),
+				'label'     => __( 'Form fields', 'qe-edu-core' ),
 				'condition' => $condition,
 			)
 		);
@@ -42,16 +42,16 @@ trait RegistrationFormTrait {
 		$fields->add_control(
 			'label',
 			array(
-				'label'       => __( 'Label', 'qe-edu' ),
+				'label'       => __( 'Label', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => __( 'New field', 'qe-edu' ),
+				'default'     => __( 'New field', 'qe-edu-core' ),
 				'label_block' => true,
 			)
 		);
 		$fields->add_control(
 			'type',
 			array(
-				'label'   => __( 'Type', 'qe-edu' ),
+				'label'   => __( 'Type', 'qe-edu-core' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => Defaults::field_types(),
 				'default' => 'text',
@@ -60,7 +60,7 @@ trait RegistrationFormTrait {
 		$fields->add_control(
 			'required',
 			array(
-				'label'        => __( 'Required', 'qe-edu' ),
+				'label'        => __( 'Required', 'qe-edu-core' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'default'      => 'yes',
 				'return_value' => 'yes',
@@ -69,7 +69,7 @@ trait RegistrationFormTrait {
 		$fields->add_control(
 			'placeholder',
 			array(
-				'label'       => __( 'Hint inside the box', 'qe-edu' ),
+				'label'       => __( 'Hint inside the box', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
@@ -78,7 +78,7 @@ trait RegistrationFormTrait {
 		$fields->add_control(
 			'options',
 			array(
-				'label'       => __( 'Choices (one per line)', 'qe-edu' ),
+				'label'       => __( 'Choices (one per line)', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXTAREA,
 				'default'     => '',
 				'condition'   => array( 'type' => 'select' ),
@@ -88,11 +88,11 @@ trait RegistrationFormTrait {
 		$fields->add_control(
 			'width',
 			array(
-				'label'   => __( 'Width', 'qe-edu' ),
+				'label'   => __( 'Width', 'qe-edu-core' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'full' => __( 'Full width', 'qe-edu' ),
-					'half' => __( 'Half width (side by side on computers)', 'qe-edu' ),
+					'full' => __( 'Full width', 'qe-edu-core' ),
+					'half' => __( 'Half width (side by side on computers)', 'qe-edu-core' ),
 				),
 				'default' => 'full',
 			)
@@ -100,11 +100,11 @@ trait RegistrationFormTrait {
 		$fields->add_control(
 			'step',
 			array(
-				'label'   => __( 'Step', 'qe-edu' ),
+				'label'   => __( 'Step', 'qe-edu-core' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'1' => __( 'Step 1', 'qe-edu' ),
-					'2' => __( 'Step 2', 'qe-edu' ),
+					'1' => __( 'Step 1', 'qe-edu-core' ),
+					'2' => __( 'Step 2', 'qe-edu-core' ),
 				),
 				'default' => '1',
 			)
@@ -112,7 +112,7 @@ trait RegistrationFormTrait {
 		$this->add_control(
 			'fields',
 			array(
-				'label'       => __( 'Fields', 'qe-edu' ),
+				'label'       => __( 'Fields', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $fields->get_controls(),
 				'default'     => $d['fields'],
@@ -122,62 +122,62 @@ trait RegistrationFormTrait {
 		$this->add_control(
 			'countries',
 			array(
-				'label'       => __( 'Countries in the "Country list" field (one per line)', 'qe-edu' ),
+				'label'       => __( 'Countries in the "Country list" field (one per line)', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXTAREA,
 				'default'     => $d['countries'],
 				'rows'        => 8,
 				'label_block' => true,
 			)
 		);
-		$this->add_text( 'select_placeholder', __( 'First line of drop-downs', 'qe-edu' ), $d['select_placeholder'] );
-		$this->add_textarea( 'consent_text', __( 'Consent checkbox text (leave empty for no checkbox)', 'qe-edu' ), $d['consent_text'] );
+		$this->add_text( 'select_placeholder', __( 'First line of drop-downs', 'qe-edu-core' ), $d['select_placeholder'] );
+		$this->add_textarea( 'consent_text', __( 'Consent checkbox text (leave empty for no checkbox)', 'qe-edu-core' ), $d['consent_text'] );
 		$this->add_switch(
 			'create_account',
-			__( 'Create a website account (uses the Password field)', 'qe-edu' ),
+			__( 'Create a website account (uses the Password field)', 'qe-edu-core' ),
 			$d['create_account'],
-			array( 'description' => __( 'Only works when Settings → General → "Anyone can register" is ticked; otherwise password fields are hidden.', 'qe-edu' ) )
+			array( 'description' => __( 'Only works when Settings → General → "Anyone can register" is ticked; otherwise password fields are hidden.', 'qe-edu-core' ) )
 		);
 		$this->end_controls_section();
 
 		$this->start_controls_section(
 			'section_form_steps',
 			array(
-				'label'     => __( 'Steps & buttons', 'qe-edu' ),
+				'label'     => __( 'Steps & buttons', 'qe-edu-core' ),
 				'condition' => $condition,
 			)
 		);
-		$this->add_switch( 'multi_step', __( 'Split into two steps', 'qe-edu' ), $d['multi_step'] );
-		$this->add_text( 'step_1_title', __( 'Step 1 title', 'qe-edu' ), $d['step_1_title'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
-		$this->add_text( 'step_2_title', __( 'Step 2 title', 'qe-edu' ), $d['step_2_title'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
-		$this->add_text( 'next_label', __( '"Next" button', 'qe-edu' ), $d['next_label'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
-		$this->add_text( 'back_label', __( '"Back" button', 'qe-edu' ), $d['back_label'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
-		$this->add_text( 'submit_label', __( 'Send button', 'qe-edu' ), $d['submit_label'] );
-		$this->add_text( 'sending_label', __( 'Send button while sending', 'qe-edu' ), $d['sending_label'] );
+		$this->add_switch( 'multi_step', __( 'Split into two steps', 'qe-edu-core' ), $d['multi_step'] );
+		$this->add_text( 'step_1_title', __( 'Step 1 title', 'qe-edu-core' ), $d['step_1_title'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
+		$this->add_text( 'step_2_title', __( 'Step 2 title', 'qe-edu-core' ), $d['step_2_title'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
+		$this->add_text( 'next_label', __( '"Next" button', 'qe-edu-core' ), $d['next_label'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
+		$this->add_text( 'back_label', __( '"Back" button', 'qe-edu-core' ), $d['back_label'], array( 'condition' => array( 'multi_step' => 'yes' ) ) );
+		$this->add_text( 'submit_label', __( 'Send button', 'qe-edu-core' ), $d['submit_label'] );
+		$this->add_text( 'sending_label', __( 'Send button while sending', 'qe-edu-core' ), $d['sending_label'] );
 		$this->end_controls_section();
 
 		$this->start_controls_section(
 			'section_form_messages',
 			array(
-				'label'     => __( 'Messages & email', 'qe-edu' ),
+				'label'     => __( 'Messages & email', 'qe-edu-core' ),
 				'condition' => $condition,
 			)
 		);
 		$this->add_text(
 			'recipient',
-			__( 'Send new registrations to (email)', 'qe-edu' ),
+			__( 'Send new registrations to (email)', 'qe-edu-core' ),
 			$d['recipient'],
 			array(
-				'description' => __( 'Leave empty to use Theme Settings → Contact & Social → Email.', 'qe-edu' ),
+				'description' => __( 'Leave empty to use Theme Settings → Contact & Social → Email.', 'qe-edu-core' ),
 				'qe_scope'    => 'server',
 			)
 		);
-		$this->add_text( 'email_subject', __( 'Email subject', 'qe-edu' ), $d['email_subject'], array( 'qe_scope' => 'server' ) );
-		$this->add_textarea( 'success_message', __( 'Thank-you message', 'qe-edu' ), $d['success_message'], array( 'qe_scope' => 'server' ) );
-		$this->add_textarea( 'error_message', __( 'Error message', 'qe-edu' ), $d['error_message'], array( 'qe_scope' => 'server' ) );
-		$this->add_text( 'required_message', __( 'Empty required field', 'qe-edu' ), $d['required_message'] );
-		$this->add_text( 'invalid_message', __( 'Wrong format', 'qe-edu' ), $d['invalid_message'] );
-		$this->add_textarea( 'rate_message', __( 'Too many attempts', 'qe-edu' ), $d['rate_message'], array( 'qe_scope' => 'server' ) );
-		$this->add_textarea( 'account_exists_message', __( 'Account already exists', 'qe-edu' ), $d['account_exists_message'], array( 'qe_scope' => 'server' ) );
+		$this->add_text( 'email_subject', __( 'Email subject', 'qe-edu-core' ), $d['email_subject'], array( 'qe_scope' => 'server' ) );
+		$this->add_textarea( 'success_message', __( 'Thank-you message', 'qe-edu-core' ), $d['success_message'], array( 'qe_scope' => 'server' ) );
+		$this->add_textarea( 'error_message', __( 'Error message', 'qe-edu-core' ), $d['error_message'], array( 'qe_scope' => 'server' ) );
+		$this->add_text( 'required_message', __( 'Empty required field', 'qe-edu-core' ), $d['required_message'] );
+		$this->add_text( 'invalid_message', __( 'Wrong format', 'qe-edu-core' ), $d['invalid_message'] );
+		$this->add_textarea( 'rate_message', __( 'Too many attempts', 'qe-edu-core' ), $d['rate_message'], array( 'qe_scope' => 'server' ) );
+		$this->add_textarea( 'account_exists_message', __( 'Account already exists', 'qe-edu-core' ), $d['account_exists_message'], array( 'qe_scope' => 'server' ) );
 		$this->end_controls_section();
 	}
 
@@ -283,7 +283,7 @@ trait RegistrationFormTrait {
 		printf( '<input type="hidden" name="nonce" value="%s">', esc_attr( wp_create_nonce( Handler::NONCE ) ) );
 		printf(
 			'<div class="qe-form__hp" aria-hidden="true"><label>%s<input type="text" name="website" value="" tabindex="-1" autocomplete="off"></label></div>',
-			esc_html__( 'Leave this field empty', 'qe-edu' )
+			esc_html__( 'Leave this field empty', 'qe-edu-core' )
 		);
 
 		if ( $multi ) {

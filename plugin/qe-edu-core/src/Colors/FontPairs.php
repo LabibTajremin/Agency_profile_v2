@@ -36,18 +36,18 @@ final class FontPairs {
 		};
 
 		return array(
-			'montserrat-open-sans'    => $pair( __( 'Montserrat + Open Sans (default, fastest)', 'qe-edu' ), 'Montserrat', 'Open Sans' ),
-			'poppins-inter'           => $pair( __( 'Poppins + Inter (modern)', 'qe-edu' ), 'Poppins', 'Inter' ),
-			'playfair-source-sans'    => $pair( __( 'Playfair Display + Source Sans 3 (classic)', 'qe-edu' ), 'Playfair Display', 'Source Sans 3' ),
-			'raleway-lato'            => $pair( __( 'Raleway + Lato (elegant)', 'qe-edu' ), 'Raleway', 'Lato' ),
-			'dm-serif-dm-sans'        => $pair( __( 'DM Serif Display + DM Sans (editorial)', 'qe-edu' ), 'DM Serif Display', 'DM Sans' ),
-			'lora-nunito-sans'        => $pair( __( 'Lora + Nunito Sans (friendly)', 'qe-edu' ), 'Lora', 'Nunito Sans' ),
-			'oswald-roboto'           => $pair( __( 'Oswald + Roboto (bold)', 'qe-edu' ), 'Oswald', 'Roboto' ),
-			'merriweather-work-sans'  => $pair( __( 'Merriweather + Work Sans (academic)', 'qe-edu' ), 'Merriweather', 'Work Sans' ),
-			'sora-manrope'            => $pair( __( 'Sora + Manrope (tech)', 'qe-edu' ), 'Sora', 'Manrope' ),
-			'libre-baskerville-karla' => $pair( __( 'Libre Baskerville + Karla (heritage)', 'qe-edu' ), 'Libre Baskerville', 'Karla' ),
-			'outfit-jakarta'          => $pair( __( 'Outfit + Plus Jakarta Sans (clean)', 'qe-edu' ), 'Outfit', 'Plus Jakarta Sans' ),
-			'cormorant-mulish'        => $pair( __( 'Cormorant Garamond + Mulish (luxury)', 'qe-edu' ), 'Cormorant Garamond', 'Mulish' ),
+			'montserrat-open-sans'    => $pair( __( 'Montserrat + Open Sans (default, fastest)', 'qe-edu-core' ), 'Montserrat', 'Open Sans' ),
+			'poppins-inter'           => $pair( __( 'Poppins + Inter (modern)', 'qe-edu-core' ), 'Poppins', 'Inter' ),
+			'playfair-source-sans'    => $pair( __( 'Playfair Display + Source Sans 3 (classic)', 'qe-edu-core' ), 'Playfair Display', 'Source Sans 3' ),
+			'raleway-lato'            => $pair( __( 'Raleway + Lato (elegant)', 'qe-edu-core' ), 'Raleway', 'Lato' ),
+			'dm-serif-dm-sans'        => $pair( __( 'DM Serif Display + DM Sans (editorial)', 'qe-edu-core' ), 'DM Serif Display', 'DM Sans' ),
+			'lora-nunito-sans'        => $pair( __( 'Lora + Nunito Sans (friendly)', 'qe-edu-core' ), 'Lora', 'Nunito Sans' ),
+			'oswald-roboto'           => $pair( __( 'Oswald + Roboto (bold)', 'qe-edu-core' ), 'Oswald', 'Roboto' ),
+			'merriweather-work-sans'  => $pair( __( 'Merriweather + Work Sans (academic)', 'qe-edu-core' ), 'Merriweather', 'Work Sans' ),
+			'sora-manrope'            => $pair( __( 'Sora + Manrope (tech)', 'qe-edu-core' ), 'Sora', 'Manrope' ),
+			'libre-baskerville-karla' => $pair( __( 'Libre Baskerville + Karla (heritage)', 'qe-edu-core' ), 'Libre Baskerville', 'Karla' ),
+			'outfit-jakarta'          => $pair( __( 'Outfit + Plus Jakarta Sans (clean)', 'qe-edu-core' ), 'Outfit', 'Plus Jakarta Sans' ),
+			'cormorant-mulish'        => $pair( __( 'Cormorant Garamond + Mulish (luxury)', 'qe-edu-core' ), 'Cormorant Garamond', 'Mulish' ),
 		);
 	}
 

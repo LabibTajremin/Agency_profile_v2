@@ -209,6 +209,11 @@ describe( 'widgets.js', () => {
 		expect( config.pagination.clickable ).toBe( true );
 		expect( config.autoplay.delay ).toBe( 5000 );
 		expect( config.observer ).toBe( true );
+		expect( config.spaceBetween ).toBe( 24 );
+
+		wrapper.style.setProperty( '--qe-gap', '40px' );
+		expect( api.sliderConfig( wrapper, SETTINGS ).spaceBetween ).toBe( 40 );
+		wrapper.style.removeProperty( '--qe-gap' );
 
 		const off = api.sliderConfig( wrapper, {
 			...SETTINGS,

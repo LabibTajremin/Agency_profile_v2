@@ -89,7 +89,7 @@ final class Integration {
 		$manager->add_category(
 			'qe-education',
 			array(
-				'title' => __( 'QE Education', 'qe-edu' ),
+				'title' => __( 'QE Education', 'qe-edu-core' ),
 				'icon'  => 'eicon-library-open',
 			)
 		);
@@ -114,7 +114,7 @@ final class Integration {
 	 * @return void
 	 */
 	public function tags( $manager ) {
-		$manager->register_group( 'qe-edu', array( 'title' => __( 'Theme Settings', 'qe-edu' ) ) );
+		$manager->register_group( 'qe-edu', array( 'title' => __( 'Theme Settings', 'qe-edu-core' ) ) );
 		$manager->register( new Tags\SettingText() );
 		$manager->register( new Tags\SettingUrl() );
 		$manager->register( new Tags\Logo() );
@@ -139,9 +139,9 @@ final class Integration {
 			'qe-edu-core-widgets',
 			'qeEduWidgets',
 			array(
-				'pause' => __( 'Pause', 'qe-edu' ),
-				'play'  => __( 'Play', 'qe-edu' ),
-				'error' => __( 'Sorry, something went wrong. Please try again.', 'qe-edu' ),
+				'pause' => __( 'Pause', 'qe-edu-core' ),
+				'play'  => __( 'Play', 'qe-edu-core' ),
+				'error' => __( 'Sorry, something went wrong. Please try again.', 'qe-edu-core' ),
 			)
 		);
 

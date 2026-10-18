@@ -8,6 +8,7 @@
 namespace QeEdu\Core\PostTypes;
 
 use QeEdu\Core\Admin\Fields;
+use QeEdu\Core\Settings\Settings;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -61,8 +62,14 @@ final class Registrar {
 	 * @return void
 	 */
 	public function register_types() {
+		$rewrites = array();
 		foreach ( Types::all() as $type => $definition ) {
-			$supports = array( 'title', 'thumbnail', 'page-attributes' );
+			if ( ! self::enabled( $type ) ) {
+				continue;
+			}
+			$slug              = self::slug( $type, $definition['slug'] );
+			$rewrites[ $type ] = $definition['public'] ? $slug : '';
+			$supports          = array( 'title', 'thumbnail', 'page-attributes' );
 			if ( '' !== $definition['excerpt'] ) {
 				$supports[] = 'excerpt';
 			}
@@ -80,7 +87,7 @@ final class Registrar {
 					'show_ui'             => true,
 					'show_in_rest'        => true,
 					'has_archive'         => $definition['public'],
-					'rewrite'             => $definition['public'] ? array( 'slug' => $definition['slug'] ) : false,
+					'rewrite'             => $definition['public'] ? array( 'slug' => $slug ) : false,
 					'menu_icon'           => $definition['icon'],
 					'menu_position'       => 25,
 					'supports'            => $supports,
@@ -105,6 +112,57 @@ final class Registrar {
 				);
 			}
 		}
+
+		self::refresh_permalinks( $rewrites );
+	}
+
+	/**
+	 * Whether a content type is switched on in Theme Settings → Texts.
+	 *
+	 * @param string $type Post type.
+	 * @return bool
+	 */
+	public static function enabled( $type ) {
+		return (bool) Settings::get( 'post_types.' . $type . '_enabled', true );
+	}
+
+	/**
+	 * The web address part of a content type (Theme Settings → Texts).
+	 *
+	 * @param string $type     Post type.
+	 * @param string $fallback Built-in slug.
+	 * @return string
+	 */
+	public static function slug( $type, $fallback ) {
+		$slug = sanitize_title( (string) Settings::get( 'post_types.' . $type . '_slug', '' ) );
+
+		return '' !== $slug ? $slug : $fallback;
+	}
+
+	/**
+	 * Rebuild the permalinks once after the addresses or types change, so new
+	 * addresses work without visiting Settings → Permalinks.
+	 *
+	 * @param array<string,string> $rewrites Post type => slug.
+	 * @return void
+	 */
+	private static function refresh_permalinks( $rewrites ) {
+		$hash = md5( (string) wp_json_encode( $rewrites ) );
+		if ( get_option( 'qe_edu_rewrite_hash' ) === $hash ) {
+			return;
+		}
+		update_option( 'qe_edu_rewrite_hash', $hash );
+		// After every plugin has registered its types, or their rules would be lost.
+		add_action( 'wp_loaded', array( __CLASS__, 'flush' ) );
+	}
+
+	/**
+	 * Rebuild the rewrite rules.
+	 *
+	 * @return void
+	 */
+	public static function flush() {
+		flush_rewrite_rules( false );
 	}
 
 	/**
@@ -120,21 +178,21 @@ final class Registrar {
 			'singular_name'      => $singular,
 			'menu_name'          => $plural,
 			/* translators: %s: item name, e.g. Destination. */
-			'add_new_item'       => sprintf( __( 'Add new %s', 'qe-edu' ), $singular ),
+			'add_new_item'       => sprintf( __( 'Add new %s', 'qe-edu-core' ), $singular ),
 			/* translators: %s: item name. */
-			'edit_item'          => sprintf( __( 'Edit %s', 'qe-edu' ), $singular ),
+			'edit_item'          => sprintf( __( 'Edit %s', 'qe-edu-core' ), $singular ),
 			/* translators: %s: item name. */
-			'new_item'           => sprintf( __( 'New %s', 'qe-edu' ), $singular ),
+			'new_item'           => sprintf( __( 'New %s', 'qe-edu-core' ), $singular ),
 			/* translators: %s: item name. */
-			'view_item'          => sprintf( __( 'View %s', 'qe-edu' ), $singular ),
+			'view_item'          => sprintf( __( 'View %s', 'qe-edu-core' ), $singular ),
 			/* translators: %s: items name, e.g. Destinations. */
-			'search_items'       => sprintf( __( 'Search %s', 'qe-edu' ), $plural ),
+			'search_items'       => sprintf( __( 'Search %s', 'qe-edu-core' ), $plural ),
 			/* translators: %s: items name. */
-			'not_found'          => sprintf( __( 'No %s yet.', 'qe-edu' ), $plural ),
+			'not_found'          => sprintf( __( 'No %s yet.', 'qe-edu-core' ), $plural ),
 			/* translators: %s: items name. */
-			'all_items'          => sprintf( __( 'All %s', 'qe-edu' ), $plural ),
-			'featured_image'     => __( 'Image', 'qe-edu' ),
-			'set_featured_image' => __( 'Choose image', 'qe-edu' ),
+			'all_items'          => sprintf( __( 'All %s', 'qe-edu-core' ), $plural ),
+			'featured_image'     => __( 'Image', 'qe-edu-core' ),
+			'set_featured_image' => __( 'Choose image', 'qe-edu-core' ),
 		);
 	}
 
@@ -161,7 +219,7 @@ final class Registrar {
 
 		if ( isset( $types[ $post->post_type ] ) ) {
 			/* translators: %s: item name, e.g. Destination. */
-			return sprintf( __( '%s name', 'qe-edu' ), $types[ $post->post_type ]['singular'] );
+			return sprintf( __( '%s name', 'qe-edu-core' ), $types[ $post->post_type ]['singular'] );
 		}
 
 		return $text;
@@ -174,7 +232,7 @@ final class Registrar {
 	 */
 	public function meta_boxes() {
 		foreach ( Types::all() as $type => $definition ) {
-			add_meta_box( 'qe-edu-fields', __( 'Details', 'qe-edu' ), array( $this, 'render' ), $type, 'normal', 'high' );
+			add_meta_box( 'qe-edu-fields', __( 'Details', 'qe-edu-core' ), array( $this, 'render' ), $type, 'normal', 'high' );
 		}
 	}
 

@@ -57,73 +57,73 @@ final class Palette {
 	public static function accents() {
 		return array(
 			'qe-crimson'      => array(
-				'name'    => __( 'QE Crimson', 'qe-edu' ),
+				'name'    => __( 'QE Crimson', 'qe-edu-core' ),
 				'primary' => '#A41E34',
 				'dark'    => '#7E1426',
 				'on'      => '#FFFFFF',
 			),
 			'royal-indigo'    => array(
-				'name'    => __( 'Royal Indigo', 'qe-edu' ),
+				'name'    => __( 'Royal Indigo', 'qe-edu-core' ),
 				'primary' => '#363D97',
 				'dark'    => '#262B70',
 				'on'      => '#FFFFFF',
 			),
 			'electric-violet' => array(
-				'name'    => __( 'Electric Violet', 'qe-edu' ),
+				'name'    => __( 'Electric Violet', 'qe-edu-core' ),
 				'primary' => '#6440FB',
 				'dark'    => '#4A2BD1',
 				'on'      => '#FFFFFF',
 			),
 			'midnight-navy'   => array(
-				'name'    => __( 'Midnight Navy', 'qe-edu' ),
+				'name'    => __( 'Midnight Navy', 'qe-edu-core' ),
 				'primary' => '#140342',
 				'dark'    => '#0B0127',
 				'on'      => '#FFFFFF',
 			),
 			'ocean-blue'      => array(
-				'name'    => __( 'Ocean Blue', 'qe-edu' ),
+				'name'    => __( 'Ocean Blue', 'qe-edu-core' ),
 				'primary' => '#005A94',
 				'dark'    => '#003E65',
 				'on'      => '#FFFFFF',
 			),
 			'emerald'         => array(
-				'name'    => __( 'Emerald', 'qe-edu' ),
+				'name'    => __( 'Emerald', 'qe-edu-core' ),
 				'primary' => '#0F875D',
 				'dark'    => '#0A6345',
 				'on'      => '#FFFFFF',
 			),
 			'teal-lagoon'     => array(
-				'name'    => __( 'Teal Lagoon', 'qe-edu' ),
+				'name'    => __( 'Teal Lagoon', 'qe-edu-core' ),
 				'primary' => '#0E7C86',
 				'dark'    => '#095961',
 				'on'      => '#FFFFFF',
 			),
 			'champagne-gold'  => array(
-				'name'    => __( 'Champagne Gold', 'qe-edu' ),
+				'name'    => __( 'Champagne Gold', 'qe-edu-core' ),
 				'primary' => '#B8913A',
 				'dark'    => '#8C6B24',
 				'on'      => '#111111',
 			),
 			'sunset-coral'    => array(
-				'name'    => __( 'Sunset Coral', 'qe-edu' ),
+				'name'    => __( 'Sunset Coral', 'qe-edu-core' ),
 				'primary' => '#E2574C',
 				'dark'    => '#B83E35',
 				'on'      => '#FFFFFF',
 			),
 			'amber-saffron'   => array(
-				'name'    => __( 'Amber Saffron', 'qe-edu' ),
+				'name'    => __( 'Amber Saffron', 'qe-edu-core' ),
 				'primary' => '#E89B12',
 				'dark'    => '#B4760A',
 				'on'      => '#111111',
 			),
 			'rose-quartz'     => array(
-				'name'    => __( 'Rose Quartz', 'qe-edu' ),
+				'name'    => __( 'Rose Quartz', 'qe-edu-core' ),
 				'primary' => '#C2477A',
 				'dark'    => '#962F5B',
 				'on'      => '#FFFFFF',
 			),
 			'graphite'        => array(
-				'name'    => __( 'Graphite', 'qe-edu' ),
+				'name'    => __( 'Graphite', 'qe-edu-core' ),
 				'primary' => '#2F3542',
 				'dark'    => '#1C2029',
 				'on'      => '#FFFFFF',
@@ -144,7 +144,7 @@ final class Palette {
 		if ( self::CUSTOM === $slug && self::normalize( $custom ) ) {
 			$primary = self::readable_custom( $custom );
 			$accent  = array(
-				'name'    => __( 'Custom', 'qe-edu' ),
+				'name'    => __( 'Custom', 'qe-edu-core' ),
 				'primary' => $primary,
 				'dark'    => self::mix( $primary, '#000000', 0.23 ),
 				'on'      => '#FFFFFF',

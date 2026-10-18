@@ -66,7 +66,15 @@ final class LeadsTest extends PluginTestCase {
 		$this->assertSame( 'ada@example.test', $captured['post_title'] );
 		$this->assertSame( 'registration', $captured['meta_input']['_qe_lead_type'] );
 
-		Leads::create( 'newsletter', array( 'A' => 'Ada', 'B' => 'L' ), '', '' );
+		Leads::create(
+			'newsletter',
+			array(
+				'A' => 'Ada',
+				'B' => 'L',
+			),
+			'',
+			''
+		);
 		$this->assertSame( 'Ada L', $captured['post_title'] );
 
 		Functions\when( 'wp_insert_post' )->justReturn( new \WP_Error( 'x', 'y' ) );
@@ -102,7 +110,7 @@ final class LeadsTest extends PluginTestCase {
 			'_qe_lead_fields' => array( 'Email' => '<a@b.test>' ),
 			'_qe_lead_source' => 'https://example.test/',
 		);
-		$out = $this->capture( fn() => ( new Leads() )->render( new \WP_Post( array( 'ID' => 8 ) ) ) );
+		$out           = $this->capture( fn() => ( new Leads() )->render( new \WP_Post( array( 'ID' => 8 ) ) ) );
 		$this->assertStringContainsString( '<th scope="row">Email</th><td>&lt;a@b.test&gt;</td>', $out );
 
 		$out = $this->capture( fn() => ( new Leads() )->render( new \WP_Post( array( 'ID' => 9 ) ) ) );
@@ -209,6 +217,14 @@ final class LeadsTest extends PluginTestCase {
 	}
 
 	public function test_exclude_from_sitemap() {
-		$this->assertSame( array( 'page' => 1 ), ( new Leads() )->exclude_from_sitemap( array( 'page' => 1, 'qe_lead' => 2 ) ) );
+		$this->assertSame(
+			array( 'page' => 1 ),
+			( new Leads() )->exclude_from_sitemap(
+				array(
+					'page'    => 1,
+					'qe_lead' => 2,
+				)
+			)
+		);
 	}
 }

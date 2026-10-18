@@ -51,8 +51,8 @@ class AdminPage {
 	 */
 	public function menu() {
 		add_menu_page(
-			__( 'Theme Settings', 'qe-edu' ),
-			__( 'Theme Settings', 'qe-edu' ),
+			__( 'Theme Settings', 'qe-edu-core' ),
+			__( 'Theme Settings', 'qe-edu-core' ),
 			self::CAPABILITY,
 			self::SLUG,
 			array( $this, 'render' ),
@@ -124,11 +124,11 @@ class AdminPage {
 			'darkSurface'  => Palette::DARK_SURFACE,
 			'i18n'         => array(
 				/* translators: %s: contrast ratio such as 3.2. */
-				'lowContrast' => __( 'Text on this colour would be hard to read (best contrast %s:1), so the site uses a slightly darker shade of it.', 'qe-edu' ),
+				'lowContrast' => __( 'Text on this colour would be hard to read (best contrast %s:1), so the site uses a slightly darker shade of it.', 'qe-edu-core' ),
 				/* translators: %s: contrast ratio such as 7.1. */
-				'okContrast'  => __( 'Good contrast (%s:1).', 'qe-edu' ),
-				'choose'      => __( 'Choose file', 'qe-edu' ),
-				'use'         => __( 'Use this file', 'qe-edu' ),
+				'okContrast'  => __( 'Good contrast (%s:1).', 'qe-edu-core' ),
+				'choose'      => __( 'Choose file', 'qe-edu-core' ),
+				'use'         => __( 'Use this file', 'qe-edu-core' ),
 			),
 		);
 	}
@@ -158,7 +158,7 @@ class AdminPage {
 	 */
 	protected function guard() {
 		if ( ! current_user_can( self::CAPABILITY ) ) {
-			wp_die( esc_html__( 'You are not allowed to change these settings.', 'qe-edu' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to change these settings.', 'qe-edu-core' ), '', array( 'response' => 403 ) );
 		}
 	}
 
@@ -292,11 +292,11 @@ class AdminPage {
 	 */
 	public static function notices() {
 		return array(
-			'saved'        => array( 'success', __( 'Settings saved.', 'qe-edu' ) ),
-			'imported'     => array( 'success', __( 'Settings imported.', 'qe-edu' ) ),
-			'reset'        => array( 'success', __( 'Section reset to its defaults.', 'qe-edu' ) ),
-			'import_error' => array( 'error', __( 'That file could not be imported. Please choose a settings file exported from this screen.', 'qe-edu' ) ),
-			'error'        => array( 'error', __( 'Something went wrong. Please try again.', 'qe-edu' ) ),
+			'saved'        => array( 'success', __( 'Settings saved.', 'qe-edu-core' ) ),
+			'imported'     => array( 'success', __( 'Settings imported.', 'qe-edu-core' ) ),
+			'reset'        => array( 'success', __( 'Section reset to its defaults.', 'qe-edu-core' ) ),
+			'import_error' => array( 'error', __( 'That file could not be imported. Please choose a settings file exported from this screen.', 'qe-edu-core' ) ),
+			'error'        => array( 'error', __( 'Something went wrong. Please try again.', 'qe-edu-core' ) ),
 		);
 	}
 
@@ -317,7 +317,7 @@ class AdminPage {
 		$notice  = isset( $_GET['qe_notice'] ) ? sanitize_key( wp_unslash( $_GET['qe_notice'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only.
 
 		echo '<div class="wrap qe-settings">';
-		echo '<h1>' . esc_html__( 'Theme Settings', 'qe-edu' ) . '</h1>';
+		echo '<h1>' . esc_html__( 'Theme Settings', 'qe-edu-core' ) . '</h1>';
 
 		if ( isset( $notices[ $notice ] ) ) {
 			printf( '<div class="notice notice-%1$s is-dismissible"><p>%2$s</p></div>', esc_attr( $notices[ $notice ][0] ), esc_html( $notices[ $notice ][1] ) );
@@ -348,8 +348,8 @@ class AdminPage {
 		if ( ! empty( $tab['preview'] ) ) {
 			printf(
 				'<div class="qe-settings__preview"><p class="qe-settings__preview-label">%1$s</p><iframe title="%2$s" src="%3$s" data-qe-preview loading="lazy"></iframe></div>',
-				esc_html__( 'Live preview — changes show here before you save.', 'qe-edu' ),
-				esc_attr__( 'Live preview of the home page', 'qe-edu' ),
+				esc_html__( 'Live preview — changes show here before you save.', 'qe-edu-core' ),
+				esc_attr__( 'Live preview of the home page', 'qe-edu-core' ),
 				esc_url( add_query_arg( 'qe_preview', '1', home_url( '/' ) ) )
 			);
 		}
@@ -396,7 +396,7 @@ class AdminPage {
 			echo '</fieldset>';
 		}
 
-		submit_button( __( 'Save changes', 'qe-edu' ) );
+		submit_button( __( 'Save changes', 'qe-edu-core' ) );
 		echo '</form>';
 	}
 
@@ -558,13 +558,13 @@ class AdminPage {
 	 */
 	protected function render_swatches( $value, $id, $name ) {
 		echo '<div class="qe-swatches" role="radiogroup" aria-labelledby="' . esc_attr( $id ) . '-legend">';
-		echo '<span id="' . esc_attr( $id ) . '-legend" class="screen-reader-text">' . esc_html__( 'Accent colour', 'qe-edu' ) . '</span>';
+		echo '<span id="' . esc_attr( $id ) . '-legend" class="screen-reader-text">' . esc_html__( 'Accent colour', 'qe-edu-core' ) . '</span>';
 
 		$swatches = array();
 		foreach ( Palette::accents() as $slug => $accent ) {
 			$swatches[ $slug ] = array( $accent['name'], $accent['primary'] );
 		}
-		$swatches[ Palette::CUSTOM ] = array( __( 'Custom', 'qe-edu' ), '' );
+		$swatches[ Palette::CUSTOM ] = array( __( 'Custom', 'qe-edu-core' ), '' );
 
 		foreach ( $swatches as $slug => $swatch ) {
 			printf(
@@ -614,14 +614,14 @@ class AdminPage {
 		);
 
 		printf( '<select id="%1$s" name="%2$s">', esc_attr( $id ), esc_attr( $name ) );
-		printf( '<option value="0">%s</option>', esc_html__( 'Built-in design (no Elementor template)', 'qe-edu' ) );
+		printf( '<option value="0">%s</option>', esc_html__( 'Built-in design (no Elementor template)', 'qe-edu-core' ) );
 		foreach ( $templates as $template ) {
 			printf( '<option value="%1$d"%2$s>%3$s</option>', (int) $template->ID, selected( $value, (int) $template->ID, false ), esc_html( $template->post_title ) );
 		}
 		echo '</select>';
 
 		if ( ! $templates ) {
-			printf( '<p class="description">%s</p>', esc_html__( 'No Elementor templates yet. Import the demo (Tools tab) or create one in Elementor → Templates.', 'qe-edu' ) );
+			printf( '<p class="description">%s</p>', esc_html__( 'No Elementor templates yet. Import the demo (Tools tab) or create one in Elementor → Templates.', 'qe-edu-core' ) );
 		}
 	}
 
@@ -646,8 +646,8 @@ class AdminPage {
 		);
 
 		echo '<table class="widefat striped qe-redirects" data-qe-redirects><thead><tr>';
-		echo '<th scope="col">' . esc_html__( 'Old address (e.g. /old-page/)', 'qe-edu' ) . '</th>';
-		echo '<th scope="col">' . esc_html__( 'New address (e.g. /new-page/ or a full link)', 'qe-edu' ) . '</th>';
+		echo '<th scope="col">' . esc_html__( 'Old address (e.g. /old-page/)', 'qe-edu-core' ) . '</th>';
+		echo '<th scope="col">' . esc_html__( 'New address (e.g. /new-page/ or a full link)', 'qe-edu-core' ) . '</th>';
 		echo '</tr></thead><tbody>';
 		foreach ( array_values( $rows ) as $i => $row ) {
 			printf(
@@ -656,12 +656,12 @@ class AdminPage {
 				(int) $i,
 				esc_attr( $row['from'] ),
 				esc_attr( $row['to'] ),
-				esc_attr__( 'Old address', 'qe-edu' ),
-				esc_attr__( 'New address', 'qe-edu' )
+				esc_attr__( 'Old address', 'qe-edu-core' ),
+				esc_attr__( 'New address', 'qe-edu-core' )
 			);
 		}
 		echo '</tbody></table>';
-		printf( '<p><button type="button" class="button" data-qe-add-row>%s</button></p>', esc_html__( 'Add another redirect', 'qe-edu' ) );
+		printf( '<p><button type="button" class="button" data-qe-add-row>%s</button></p>', esc_html__( 'Add another redirect', 'qe-edu-core' ) );
 	}
 
 	/**
@@ -679,32 +679,32 @@ class AdminPage {
 		do_action( 'qe_edu_tools_tab' );
 
 		// Export.
-		echo '<section class="qe-card"><h2>' . esc_html__( 'Back up your settings', 'qe-edu' ) . '</h2>';
-		echo '<p>' . esc_html__( 'Downloads a small file with every Theme Settings value. Keep it safe or use it on another site.', 'qe-edu' ) . '</p>';
+		echo '<section class="qe-card"><h2>' . esc_html__( 'Back up your settings', 'qe-edu-core' ) . '</h2>';
+		echo '<p>' . esc_html__( 'Downloads a small file with every Theme Settings value. Keep it safe or use it on another site.', 'qe-edu-core' ) . '</p>';
 		printf(
 			'<a class="button button-primary" href="%s">%s</a></section>',
 			esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=qe_edu_export_settings' ), 'qe_edu_export_settings' ) ),
-			esc_html__( 'Download settings file', 'qe-edu' )
+			esc_html__( 'Download settings file', 'qe-edu-core' )
 		);
 
 		// Import.
-		echo '<section class="qe-card"><h2>' . esc_html__( 'Restore settings', 'qe-edu' ) . '</h2>';
-		echo '<p>' . esc_html__( 'Choose a settings file you downloaded earlier. Your current settings will be replaced.', 'qe-edu' ) . '</p>';
+		echo '<section class="qe-card"><h2>' . esc_html__( 'Restore settings', 'qe-edu-core' ) . '</h2>';
+		echo '<p>' . esc_html__( 'Choose a settings file you downloaded earlier. Your current settings will be replaced.', 'qe-edu-core' ) . '</p>';
 		echo '<form method="post" enctype="multipart/form-data" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
 		wp_nonce_field( 'qe_edu_import_settings' );
 		echo '<input type="hidden" name="action" value="qe_edu_import_settings">';
-		echo '<label for="qe-edu-import" class="screen-reader-text">' . esc_html__( 'Settings file', 'qe-edu' ) . '</label>';
+		echo '<label for="qe-edu-import" class="screen-reader-text">' . esc_html__( 'Settings file', 'qe-edu-core' ) . '</label>';
 		echo '<input type="file" id="qe-edu-import" name="qe_edu_import" accept="application/json,.json" required> ';
-		submit_button( __( 'Restore', 'qe-edu' ), 'secondary', 'submit', false );
+		submit_button( __( 'Restore', 'qe-edu-core' ), 'secondary', 'submit', false );
 		echo '</form></section>';
 
 		// Reset.
-		echo '<section class="qe-card"><h2>' . esc_html__( 'Reset a section', 'qe-edu' ) . '</h2>';
-		echo '<p>' . esc_html__( 'Puts one tab back to the way it was when the theme was installed. Other tabs are not touched.', 'qe-edu' ) . '</p>';
+		echo '<section class="qe-card"><h2>' . esc_html__( 'Reset a section', 'qe-edu-core' ) . '</h2>';
+		echo '<p>' . esc_html__( 'Puts one tab back to the way it was when the theme was installed. Other tabs are not touched.', 'qe-edu-core' ) . '</p>';
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
 		wp_nonce_field( 'qe_edu_reset_settings' );
 		echo '<input type="hidden" name="action" value="qe_edu_reset_settings">';
-		echo '<label for="qe-edu-reset-tab" class="screen-reader-text">' . esc_html__( 'Section', 'qe-edu' ) . '</label>';
+		echo '<label for="qe-edu-reset-tab" class="screen-reader-text">' . esc_html__( 'Section', 'qe-edu-core' ) . '</label>';
 		echo '<select id="qe-edu-reset-tab" name="reset_tab">';
 		foreach ( $tabs as $id => $definition ) {
 			if ( $definition['fields'] ) {
@@ -712,7 +712,7 @@ class AdminPage {
 			}
 		}
 		echo '</select> ';
-		submit_button( __( 'Reset section', 'qe-edu' ), 'delete', 'submit', false );
+		submit_button( __( 'Reset section', 'qe-edu-core' ), 'delete', 'submit', false );
 		echo '</form></section>';
 
 		echo '</div>';

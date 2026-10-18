@@ -32,7 +32,7 @@ class TeamGrid extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Team Grid', 'qe-edu' );
+		return __( 'Team Grid', 'qe-edu-core' );
 	}
 
 	/**
@@ -50,13 +50,13 @@ class TeamGrid extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Team', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'Meet our team', 'qe-edu' ) );
-		$this->add_number( 'count', __( 'How many', 'qe-edu' ), 12, 1, 100 );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Team', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'Meet our team', 'qe-edu-core' ) );
+		$this->add_number( 'count', __( 'How many', 'qe-edu-core' ), 12, 1, 100 );
 		$this->add_responsive_control(
 			'columns',
 			array(
-				'label'          => __( 'Columns', 'qe-edu' ),
+				'label'          => __( 'Columns', 'qe-edu-core' ),
 				'type'           => Controls_Manager::SELECT,
 				'options'        => array(
 					'1' => '1',
@@ -70,15 +70,16 @@ class TeamGrid extends Base {
 				'selectors'      => array( '{{WRAPPER}} .qe-team' => '--qe-cols: {{VALUE}};' ),
 			)
 		);
-		$this->add_switch( 'show_bio', __( 'Show short bio', 'qe-edu' ), '' );
-		$this->add_switch( 'show_linkedin', __( 'Show LinkedIn link', 'qe-edu' ) );
-		$this->add_text( 'linkedin_label', __( 'LinkedIn link text', 'qe-edu' ), __( 'LinkedIn profile', 'qe-edu' ) );
+		$this->add_switch( 'show_bio', __( 'Show short bio', 'qe-edu-core' ), '' );
+		$this->add_switch( 'show_linkedin', __( 'Show LinkedIn link', 'qe-edu-core' ) );
+		$this->add_text( 'linkedin_label', __( 'LinkedIn link text', 'qe-edu-core' ), __( 'LinkedIn profile', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'name', __( 'Name', 'qe-edu' ), '.qe-person__name', self::COLOR_SECONDARY, self::FONT_SECONDARY );
-		$this->add_text_style( 'role', __( 'Job title', 'qe-edu' ), '.qe-person__role', self::COLOR_PRIMARY, self::FONT_TEXT );
+		$this->add_text_style( 'name', __( 'Name', 'qe-edu-core' ), '.qe-person__name', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'role', __( 'Job title', 'qe-edu-core' ), '.qe-person__role', self::COLOR_PRIMARY, self::FONT_TEXT );
 		$this->end_controls_section();
+		$this->add_box_style( '.qe-person', array( 'gap' => '.qe-team' ) );
 	}
 
 	/**
@@ -91,7 +92,7 @@ class TeamGrid extends Base {
 		$people = $this->posts( 'qe_team', (int) $s['count'] );
 
 		if ( ! $people ) {
-			$this->print_editor_notice( __( 'No team members yet. Add them under Team in the dashboard menu.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'No team members yet. Add them under Team in the dashboard menu.', 'qe-edu-core' ) );
 			return;
 		}
 

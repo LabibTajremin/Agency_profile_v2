@@ -43,7 +43,7 @@ final class MobileBar {
 		if ( '' !== $link ) {
 			$text      = (string) Settings::get( 'footer.mobile_bar_text' );
 			$buttons[] = array(
-				'text'  => '' !== $text ? $text : __( 'Apply now', 'qe-edu' ),
+				'text'  => '' !== $text ? $text : __( 'Apply now', 'qe-edu-core' ),
 				'url'   => $link,
 				'class' => 'qe-mobile-bar__apply',
 			);
@@ -53,7 +53,7 @@ final class MobileBar {
 		if ( '' !== $chat ) {
 			$text      = (string) Settings::get( 'footer.mobile_bar_chat' );
 			$buttons[] = array(
-				'text'  => '' !== $text ? $text : __( 'WhatsApp us', 'qe-edu' ),
+				'text'  => '' !== $text ? $text : __( 'WhatsApp us', 'qe-edu-core' ),
 				'url'   => $chat,
 				'class' => 'qe-mobile-bar__chat',
 			);

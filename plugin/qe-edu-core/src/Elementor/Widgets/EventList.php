@@ -31,7 +31,7 @@ class EventList extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Event List', 'qe-edu' );
+		return __( 'Event List', 'qe-edu-core' );
 	}
 
 	/**
@@ -49,29 +49,30 @@ class EventList extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Events', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'Upcoming events & webinars', 'qe-edu' ) );
-		$this->add_number( 'count', __( 'How many', 'qe-edu' ), 6, 1, 50 );
-		$this->add_switch( 'show_past', __( 'Also show past events', 'qe-edu' ), '' );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Events', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'Upcoming events & webinars', 'qe-edu-core' ) );
+		$this->add_number( 'count', __( 'How many', 'qe-edu-core' ), 6, 1, 50 );
+		$this->add_switch( 'show_past', __( 'Also show past events', 'qe-edu-core' ), '' );
 		$this->add_select(
 			'layout',
-			__( 'Layout', 'qe-edu' ),
+			__( 'Layout', 'qe-edu-core' ),
 			array(
-				'list' => __( 'List', 'qe-edu' ),
-				'grid' => __( 'Cards', 'qe-edu' ),
+				'list' => __( 'List', 'qe-edu-core' ),
+				'grid' => __( 'Cards', 'qe-edu-core' ),
 			),
 			'list'
 		);
-		$this->add_text( 'button_text', __( 'Button text', 'qe-edu' ), __( 'Details & registration', 'qe-edu' ) );
-		$this->add_text( 'online_label', __( 'Label for online events', 'qe-edu' ), __( 'Online', 'qe-edu' ) );
-		$this->add_text( 'empty_text', __( 'Text when there are no events', 'qe-edu' ), __( 'No upcoming events right now — please check back soon.', 'qe-edu' ) );
-		$this->add_switch( 'schema', __( 'Tell Google about these events (rich results)', 'qe-edu' ) );
+		$this->add_text( 'button_text', __( 'Button text', 'qe-edu-core' ), __( 'Details & registration', 'qe-edu-core' ) );
+		$this->add_text( 'online_label', __( 'Label for online events', 'qe-edu-core' ), __( 'Online', 'qe-edu-core' ) );
+		$this->add_text( 'empty_text', __( 'Text when there are no events', 'qe-edu-core' ), __( 'No upcoming events right now — please check back soon.', 'qe-edu-core' ) );
+		$this->add_switch( 'schema', __( 'Tell Google about these events (rich results)', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'title', __( 'Event title', 'qe-edu' ), '.qe-event__title', self::COLOR_SECONDARY, self::FONT_SECONDARY );
-		$this->add_text_style( 'date', __( 'Date', 'qe-edu' ), '.qe-event__date', self::COLOR_PRIMARY, self::FONT_ACCENT );
+		$this->add_text_style( 'title', __( 'Event title', 'qe-edu-core' ), '.qe-event__title', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'date', __( 'Date', 'qe-edu-core' ), '.qe-event__date', self::COLOR_PRIMARY, self::FONT_ACCENT );
 		$this->end_controls_section();
+		$this->add_box_style( '.qe-event', array( 'gap' => '.qe-events' ) );
 	}
 
 	/**

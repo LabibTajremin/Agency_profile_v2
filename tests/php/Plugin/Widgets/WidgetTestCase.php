@@ -62,7 +62,7 @@ abstract class WidgetTestCase extends PluginTestCase {
 		$document->shouldReceive( 'get_main_id' )->andReturn( 42 );
 		$documents = \Mockery::mock();
 		$documents->shouldReceive( 'get_current' )->andReturn( $document );
-		\Elementor\Plugin::$instance = (object) array(
+		\Elementor\Plugin::$instance        = (object) array(
 			'editor'    => $editor,
 			'documents' => $documents,
 		);
@@ -116,7 +116,14 @@ abstract class WidgetTestCase extends PluginTestCase {
 			}
 		);
 		Functions\when( 'get_the_post_thumbnail_url' )->justReturn( false );
-		Functions\when( 'wp_get_nav_menus' )->justReturn( array( (object) array( 'term_id' => 5, 'name' => 'Main' ) ) );
+		Functions\when( 'wp_get_nav_menus' )->justReturn(
+			array(
+				(object) array(
+					'term_id' => 5,
+					'name'    => 'Main',
+				),
+			)
+		);
 		Functions\when( 'wp_get_nav_menu_items' )->alias( fn() => $this->menu_items );
 		Functions\when( 'get_queried_object_id' )->justReturn( 0 );
 		Functions\when( 'get_theme_mod' )->justReturn( 0 );
@@ -188,7 +195,7 @@ abstract class WidgetTestCase extends PluginTestCase {
 	 * @return void
 	 */
 	protected function with_menu() {
-		$item = static function ( $id, $parent, $title, $object_id = 0, $type = 'post_type' ) {
+		$item             = static function ( $id, $parent, $title, $object_id = 0, $type = 'post_type' ) {
 			return (object) array(
 				'ID'               => $id,
 				'menu_item_parent' => $parent,

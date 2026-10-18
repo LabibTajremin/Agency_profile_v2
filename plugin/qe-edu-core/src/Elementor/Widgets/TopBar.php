@@ -34,7 +34,7 @@ class TopBar extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Top Bar', 'qe-edu' );
+		return __( 'Top Bar', 'qe-edu-core' );
 	}
 
 	/**
@@ -52,7 +52,7 @@ class TopBar extends Base {
 	 * @return array<string,string>
 	 */
 	public static function menu_options() {
-		$options = array( '' => __( '— Choose a menu —', 'qe-edu' ) );
+		$options = array( '' => __( '— Choose a menu —', 'qe-edu-core' ) );
 		foreach ( wp_get_nav_menus() as $menu ) {
 			$options[ (string) $menu->term_id ] = $menu->name;
 		}
@@ -66,23 +66,23 @@ class TopBar extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Links', 'qe-edu' ) ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Links', 'qe-edu-core' ) ) );
 		$this->add_select(
 			'source',
-			__( 'Links come from', 'qe-edu' ),
+			__( 'Links come from', 'qe-edu-core' ),
 			array(
-				'links' => __( 'Typed in below', 'qe-edu' ),
-				'menu'  => __( 'A menu (Appearance → Menus)', 'qe-edu' ),
+				'links' => __( 'Typed in below', 'qe-edu-core' ),
+				'menu'  => __( 'A menu (Appearance → Menus)', 'qe-edu-core' ),
 			),
 			'links'
 		);
-		$this->add_select( 'menu', __( 'Menu', 'qe-edu' ), self::menu_options(), '', array( 'condition' => array( 'source' => 'menu' ) ) );
+		$this->add_select( 'menu', __( 'Menu', 'qe-edu-core' ), self::menu_options(), '', array( 'condition' => array( 'source' => 'menu' ) ) );
 
 		$links = new Repeater();
 		$links->add_control(
 			'text',
 			array(
-				'label'   => __( 'Text', 'qe-edu' ),
+				'label'   => __( 'Text', 'qe-edu-core' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -90,13 +90,13 @@ class TopBar extends Base {
 		$links->add_control(
 			'link',
 			array(
-				'label'   => __( 'Link', 'qe-edu' ),
+				'label'   => __( 'Link', 'qe-edu-core' ),
 				'type'    => Controls_Manager::URL,
 				'default' => array( 'url' => '#' ),
 			)
 		);
 		$defaults = array();
-		foreach ( array( __( 'News', 'qe-edu' ), __( 'Events', 'qe-edu' ), __( 'Careers', 'qe-edu' ), __( 'Study Mobility Program', 'qe-edu' ), __( 'Contact Us', 'qe-edu' ) ) as $text ) {
+		foreach ( array( __( 'News', 'qe-edu-core' ), __( 'Events', 'qe-edu-core' ), __( 'Careers', 'qe-edu-core' ), __( 'Study Mobility Program', 'qe-edu-core' ), __( 'Contact Us', 'qe-edu-core' ) ) as $text ) {
 			$defaults[] = array(
 				'text' => $text,
 				'link' => array( 'url' => '#' ),
@@ -105,7 +105,7 @@ class TopBar extends Base {
 		$this->add_control(
 			'links',
 			array(
-				'label'       => __( 'Links', 'qe-edu' ),
+				'label'       => __( 'Links', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $links->get_controls(),
 				'default'     => $defaults,
@@ -113,13 +113,14 @@ class TopBar extends Base {
 				'condition'   => array( 'source' => 'links' ),
 			)
 		);
-		$this->add_switch( 'show_contact', __( 'Show phone and email (from Theme Settings)', 'qe-edu' ) );
-		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu' ), __( 'Utility links', 'qe-edu' ) );
+		$this->add_switch( 'show_contact', __( 'Show phone and email (from Theme Settings)', 'qe-edu-core' ) );
+		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu-core' ), __( 'Utility links', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'links', __( 'Links', 'qe-edu' ), '.qe-topbar-w a', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'links', __( 'Links', 'qe-edu-core' ), '.qe-topbar-w a', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->end_controls_section();
+		$this->add_box_style( '.qe-topbar-w', array( 'label' => __( 'Bar', 'qe-edu-core' ) ) );
 	}
 
 	/**

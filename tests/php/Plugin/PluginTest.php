@@ -55,7 +55,7 @@ final class PluginTest extends PluginTestCase {
 
 	public function test_boot_registers_modules_once() {
 		Filters\expectApplied( 'qe_edu_core_modules' )->once()->andReturn( array( FakeModule::class ) );
-		Functions\expect( 'load_plugin_textdomain' )->once()->with( 'qe-edu', false, 'qe-edu-core/languages' );
+		Functions\expect( 'load_plugin_textdomain' )->once()->with( 'qe-edu-core', false, 'qe-edu-core/languages' );
 		Actions\expectDone( 'qe_edu_core_loaded' )->once();
 
 		$plugin = Plugin::instance();

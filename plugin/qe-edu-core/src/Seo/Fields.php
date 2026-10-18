@@ -23,53 +23,53 @@ final class Fields {
 		return array(
 			'title'          => array(
 				'type'  => 'text',
-				'label' => __( 'SEO title', 'qe-edu' ),
-				'help'  => __( 'The blue headline in Google. About 50–60 characters. Leave empty to use the page title.', 'qe-edu' ),
+				'label' => __( 'SEO title', 'qe-edu-core' ),
+				'help'  => __( 'The blue headline in Google. About 50–60 characters. Leave empty to use the page title.', 'qe-edu-core' ),
 			),
 			'description'    => array(
 				'type'  => 'textarea',
-				'label' => __( 'Meta description', 'qe-edu' ),
-				'help'  => __( 'The grey text under the headline in Google. About 120–160 characters.', 'qe-edu' ),
+				'label' => __( 'Meta description', 'qe-edu-core' ),
+				'help'  => __( 'The grey text under the headline in Google. About 120–160 characters.', 'qe-edu-core' ),
 			),
 			'keyword'        => array(
 				'type'  => 'text',
-				'label' => __( 'Focus keyword', 'qe-edu' ),
-				'help'  => __( 'The phrase people search for, e.g. "study in Canada". You will see simple tips below.', 'qe-edu' ),
+				'label' => __( 'Focus keyword', 'qe-edu-core' ),
+				'help'  => __( 'The phrase people search for, e.g. "study in Canada". You will see simple tips below.', 'qe-edu-core' ),
 			),
 			'canonical'      => array(
 				'type'  => 'url',
-				'label' => __( 'Canonical address', 'qe-edu' ),
-				'help'  => __( 'Advanced. Only if this page copies another page; paste the original address.', 'qe-edu' ),
+				'label' => __( 'Canonical address', 'qe-edu-core' ),
+				'help'  => __( 'Advanced. Only if this page copies another page; paste the original address.', 'qe-edu-core' ),
 			),
 			'noindex'        => array(
 				'type'  => 'checkbox',
-				'label' => __( 'Hide this page from search engines (noindex)', 'qe-edu' ),
-				'help'  => __( 'For thank-you pages, private landing pages and similar.', 'qe-edu' ),
+				'label' => __( 'Hide this page from search engines (noindex)', 'qe-edu-core' ),
+				'help'  => __( 'For thank-you pages, private landing pages and similar.', 'qe-edu-core' ),
 			),
 			'nofollow'       => array(
 				'type'  => 'checkbox',
-				'label' => __( 'Ask search engines not to follow links on this page (nofollow)', 'qe-edu' ),
-				'help'  => __( 'Rarely needed.', 'qe-edu' ),
+				'label' => __( 'Ask search engines not to follow links on this page (nofollow)', 'qe-edu-core' ),
+				'help'  => __( 'Rarely needed.', 'qe-edu-core' ),
 			),
 			'og_title'       => array(
 				'type'  => 'text',
-				'label' => __( 'Title when shared on social media', 'qe-edu' ),
-				'help'  => __( 'Leave empty to use the SEO title.', 'qe-edu' ),
+				'label' => __( 'Title when shared on social media', 'qe-edu-core' ),
+				'help'  => __( 'Leave empty to use the SEO title.', 'qe-edu-core' ),
 			),
 			'og_description' => array(
 				'type'  => 'textarea',
-				'label' => __( 'Description when shared on social media', 'qe-edu' ),
-				'help'  => __( 'Leave empty to use the meta description.', 'qe-edu' ),
+				'label' => __( 'Description when shared on social media', 'qe-edu-core' ),
+				'help'  => __( 'Leave empty to use the meta description.', 'qe-edu-core' ),
 			),
 			'og_image'       => array(
 				'type'  => 'media',
-				'label' => __( 'Image when shared on social media', 'qe-edu' ),
-				'help'  => __( '1200×630 is ideal. Leave empty to use the featured image or the default share image.', 'qe-edu' ),
+				'label' => __( 'Image when shared on social media', 'qe-edu-core' ),
+				'help'  => __( '1200×630 is ideal. Leave empty to use the featured image or the default share image.', 'qe-edu-core' ),
 			),
 			'schema'         => array(
 				'type'    => 'select',
-				'label'   => __( 'What kind of page is this?', 'qe-edu' ),
-				'help'    => __( 'Helps Google show the right kind of result. Questions come from the FAQ widget (switch on "Tell Google these are FAQs") and event details from the event itself.', 'qe-edu' ),
+				'label'   => __( 'What kind of page is this?', 'qe-edu-core' ),
+				'help'    => __( 'Helps Google show the right kind of result. Questions come from the FAQ widget (switch on "Tell Google these are FAQs") and event details from the event itself.', 'qe-edu-core' ),
 				'options' => self::schema_types(),
 			),
 		);
@@ -82,12 +82,12 @@ final class Fields {
 	 */
 	public static function schema_types() {
 		return array(
-			'WebPage'     => __( 'Normal page', 'qe-edu' ),
-			'AboutPage'   => __( 'About page', 'qe-edu' ),
-			'ContactPage' => __( 'Contact page', 'qe-edu' ),
-			'FAQPage'     => __( 'Questions & answers page', 'qe-edu' ),
-			'Event'       => __( 'Event', 'qe-edu' ),
-			'Course'      => __( 'Course / programme', 'qe-edu' ),
+			'WebPage'     => __( 'Normal page', 'qe-edu-core' ),
+			'AboutPage'   => __( 'About page', 'qe-edu-core' ),
+			'ContactPage' => __( 'Contact page', 'qe-edu-core' ),
+			'FAQPage'     => __( 'Questions & answers page', 'qe-edu-core' ),
+			'Event'       => __( 'Event', 'qe-edu-core' ),
+			'Course'      => __( 'Course / programme', 'qe-edu-core' ),
 		);
 	}
 

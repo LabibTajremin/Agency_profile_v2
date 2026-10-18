@@ -40,7 +40,16 @@ final class EnqueueTest extends ThemeTestCase {
 	public function test_enqueue_assets_with_fonts_and_comments() {
 		Functions\expect( 'wp_enqueue_style' )->once()->with( 'qe-edu', QE_EDU_URI . '/assets/css/main.css', array(), \Mockery::type( 'string' ) );
 		Functions\expect( 'wp_add_inline_style' )->once()->with( 'qe-edu', \Mockery::type( 'string' ) );
-		Functions\expect( 'wp_enqueue_script' )->once()->with( 'qe-edu', QE_EDU_URI . '/assets/js/theme.min.js', array(), \Mockery::type( 'string' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
+		Functions\expect( 'wp_enqueue_script' )->once()->with(
+			'qe-edu',
+			QE_EDU_URI . '/assets/js/theme.min.js',
+			array(),
+			\Mockery::type( 'string' ),
+			array(
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			)
+		);
 		Functions\expect( 'wp_enqueue_script' )->once()->with( 'comment-reply' );
 		Functions\expect( 'wp_localize_script' )->once()->with(
 			'qe-edu',

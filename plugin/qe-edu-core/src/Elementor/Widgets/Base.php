@@ -10,6 +10,9 @@
 namespace QeEdu\Core\Elementor\Widgets;
 
 use Elementor\Controls_Manager;
+use Elementor\Group_Control_Background;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Typography;
 use Elementor\Icons_Manager;
 use Elementor\Widget_Base;
@@ -243,37 +246,37 @@ abstract class Base extends Widget_Base {
 	protected function add_slider_controls( $desktop = 3 ) {
 		$this->start_controls_section(
 			'section_slider',
-			array( 'label' => __( 'Slider', 'qe-edu' ) )
+			array( 'label' => __( 'Slider', 'qe-edu-core' ) )
 		);
-		$this->add_number( 'per_view', __( 'Cards visible on computers', 'qe-edu' ), $desktop, 1, 6 );
-		$this->add_number( 'per_view_tablet', __( 'Cards visible on tablets', 'qe-edu' ), min( 2, $desktop ), 1, 4 );
+		$this->add_number( 'per_view', __( 'Cards visible on computers', 'qe-edu-core' ), $desktop, 1, 6 );
+		$this->add_number( 'per_view_tablet', __( 'Cards visible on tablets', 'qe-edu-core' ), min( 2, $desktop ), 1, 4 );
 		$this->add_number(
 			'per_view_mobile',
-			__( 'Cards visible on phones', 'qe-edu' ),
+			__( 'Cards visible on phones', 'qe-edu-core' ),
 			1.15,
 			1,
 			2,
 			array(
 				'step'        => 0.05,
-				'description' => __( '1.15 shows a peek of the next card, inviting a swipe.', 'qe-edu' ),
+				'description' => __( '1.15 shows a peek of the next card, inviting a swipe.', 'qe-edu-core' ),
 			)
 		);
-		$this->add_switch( 'autoplay', __( 'Move automatically', 'qe-edu' ), 'yes' );
+		$this->add_switch( 'autoplay', __( 'Move automatically', 'qe-edu-core' ), 'yes' );
 		$this->add_number(
 			'autoplay_delay',
-			__( 'Seconds between slides', 'qe-edu' ),
+			__( 'Seconds between slides', 'qe-edu-core' ),
 			5,
 			2,
 			20,
 			array( 'condition' => array( 'autoplay' => 'yes' ) )
 		);
-		$this->add_switch( 'arrows', __( 'Show arrows', 'qe-edu' ), 'yes' );
-		$this->add_switch( 'dots', __( 'Show dots', 'qe-edu' ), 'yes' );
+		$this->add_switch( 'arrows', __( 'Show arrows', 'qe-edu-core' ), 'yes' );
+		$this->add_switch( 'dots', __( 'Show dots', 'qe-edu-core' ), 'yes' );
 		$this->add_switch(
 			'static_editor',
-			__( 'Show as a still row while editing', 'qe-edu' ),
+			__( 'Show as a still row while editing', 'qe-edu-core' ),
 			'',
-			array( 'description' => __( 'Makes editing easier; visitors still see the slider.', 'qe-edu' ) )
+			array( 'description' => __( 'Makes editing easier; visitors still see the slider.', 'qe-edu-core' ) )
 		);
 		$this->end_controls_section();
 	}
@@ -293,7 +296,7 @@ abstract class Base extends Widget_Base {
 			$id . '_color',
 			array(
 				/* translators: %s: element name, e.g. Heading. */
-				'label'     => sprintf( __( '%s colour', 'qe-edu' ), $label ),
+				'label'     => sprintf( __( '%s colour', 'qe-edu-core' ), $label ),
 				'type'      => Controls_Manager::COLOR,
 				'global'    => array( 'default' => $color ),
 				'selectors' => array( '{{WRAPPER}} ' . $selector => 'color: {{VALUE}};' ),
@@ -304,7 +307,7 @@ abstract class Base extends Widget_Base {
 			array(
 				'name'     => $id . '_typography',
 				/* translators: %s: element name, e.g. Heading. */
-				'label'    => sprintf( __( '%s font', 'qe-edu' ), $label ),
+				'label'    => sprintf( __( '%s font', 'qe-edu-core' ), $label ),
 				'global'   => array( 'default' => $font ),
 				'selector' => '{{WRAPPER}} ' . $selector,
 			)
@@ -321,7 +324,7 @@ abstract class Base extends Widget_Base {
 		$this->add_control(
 			'button_bg',
 			array(
-				'label'     => __( 'Button colour', 'qe-edu' ),
+				'label'     => __( 'Button colour', 'qe-edu-core' ),
 				'type'      => Controls_Manager::COLOR,
 				'global'    => array( 'default' => self::COLOR_PRIMARY ),
 				'selectors' => array( '{{WRAPPER}} ' . $selector => 'background-color: {{VALUE}};' ),
@@ -330,21 +333,210 @@ abstract class Base extends Widget_Base {
 		$this->add_control(
 			'button_hover_bg',
 			array(
-				'label'     => __( 'Button colour on hover', 'qe-edu' ),
+				'label'     => __( 'Button colour on hover', 'qe-edu-core' ),
 				'type'      => Controls_Manager::COLOR,
 				'global'    => array( 'default' => self::COLOR_ACCENT ),
 				'selectors' => array( '{{WRAPPER}} ' . $selector . ':hover, {{WRAPPER}} ' . $selector . ':focus-visible' => 'background-color: {{VALUE}};' ),
+			)
+		);
+		$this->add_control(
+			'button_text_color',
+			array(
+				'label'     => __( 'Button text colour', 'qe-edu-core' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array( '{{WRAPPER}} ' . $selector => 'color: {{VALUE}};' ),
+			)
+		);
+		$this->add_control(
+			'button_hover_text_color',
+			array(
+				'label'     => __( 'Button text colour on hover', 'qe-edu-core' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array( '{{WRAPPER}} ' . $selector . ':hover, {{WRAPPER}} ' . $selector . ':focus-visible' => 'color: {{VALUE}};' ),
 			)
 		);
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'button_typography',
-				'label'    => __( 'Button font', 'qe-edu' ),
+				'label'    => __( 'Button font', 'qe-edu-core' ),
 				'global'   => array( 'default' => self::FONT_ACCENT ),
 				'selector' => '{{WRAPPER}} ' . $selector,
 			)
 		);
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			array(
+				'name'     => 'button_border',
+				'label'    => __( 'Button border', 'qe-edu-core' ),
+				'selector' => '{{WRAPPER}} ' . $selector,
+			)
+		);
+		$this->add_responsive_control(
+			'button_radius',
+			array(
+				'label'      => __( 'Button corner radius', 'qe-edu-core' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', '%', 'em' ),
+				'selectors'  => array( '{{WRAPPER}} ' . $selector => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};' ),
+			)
+		);
+		$this->add_responsive_control(
+			'button_padding',
+			array(
+				'label'      => __( 'Button padding', 'qe-edu-core' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', 'em', 'rem' ),
+				'selectors'  => array( '{{WRAPPER}} ' . $selector => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};' ),
+			)
+		);
+	}
+
+	/**
+	 * A "Box & spacing" style section: background, border, corner radius,
+	 * shadow and padding of the widget's cards (or its main box), plus the
+	 * gap between items and the text alignment when given.
+	 *
+	 * Every control is empty by default, so the design follows the theme
+	 * until the user changes something.
+	 *
+	 * @param string $selector Card / box selector inside the widget.
+	 * @param array  $args {
+	 *     Optional.
+	 *
+	 *     @type string $label      Section label.
+	 *     @type string $gap        Selector of the items' container (sets `gap`).
+	 *     @type string $gap_var    Set this CSS custom property instead of `gap` (sliders).
+	 *     @type string $align      Selector whose text alignment can change.
+	 *     @type string $min_height Selector whose minimum height can change.
+	 * }
+	 * @return void
+	 */
+	protected function add_box_style( $selector, $args = array() ) {
+		$args   = array_merge(
+			array(
+				'label'      => __( 'Cards', 'qe-edu-core' ),
+				'gap'        => '',
+				'gap_var'    => '',
+				'align'      => '',
+				'min_height' => '',
+			),
+			$args
+		);
+		$target = '{{WRAPPER}} ' . $selector;
+
+		$this->start_controls_section(
+			'section_box',
+			array(
+				/* translators: %s: part of the widget, e.g. Cards. */
+				'label' => sprintf( __( '%s: box & spacing', 'qe-edu-core' ), $args['label'] ),
+				'tab'   => Controls_Manager::TAB_STYLE,
+			)
+		);
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			array(
+				'name'     => 'box_background',
+				'types'    => array( 'classic', 'gradient' ),
+				'selector' => $target,
+			)
+		);
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			array(
+				'name'     => 'box_border',
+				'selector' => $target,
+			)
+		);
+		$this->add_responsive_control(
+			'box_radius',
+			array(
+				'label'      => __( 'Corner radius', 'qe-edu-core' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', '%', 'em' ),
+				'selectors'  => array( $target => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow: hidden;' ),
+			)
+		);
+		$this->add_group_control(
+			Group_Control_Box_Shadow::get_type(),
+			array(
+				'name'     => 'box_shadow',
+				'selector' => $target,
+			)
+		);
+		$this->add_responsive_control(
+			'box_padding',
+			array(
+				'label'      => __( 'Padding', 'qe-edu-core' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', 'em', 'rem', '%' ),
+				'selectors'  => array( $target => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};' ),
+			)
+		);
+		if ( '' !== $args['min_height'] ) {
+			$this->add_responsive_control(
+				'box_min_height',
+				array(
+					'label'      => __( 'Minimum height', 'qe-edu-core' ),
+					'type'       => Controls_Manager::SLIDER,
+					'size_units' => array( 'px', 'vh' ),
+					'range'      => array(
+						'px' => array(
+							'min' => 0,
+							'max' => 1200,
+						),
+						'vh' => array(
+							'min' => 0,
+							'max' => 100,
+						),
+					),
+					'selectors'  => array( '{{WRAPPER}} ' . $args['min_height'] => 'min-height: {{SIZE}}{{UNIT}};' ),
+				)
+			);
+		}
+		if ( '' !== $args['gap'] ) {
+			$property = '' !== $args['gap_var'] ? $args['gap_var'] : 'gap';
+			$this->add_responsive_control(
+				'box_gap',
+				array(
+					'label'      => __( 'Space between items', 'qe-edu-core' ),
+					'type'       => Controls_Manager::SLIDER,
+					'size_units' => array( 'px', 'rem' ),
+					'range'      => array(
+						'px' => array(
+							'min' => 0,
+							'max' => 100,
+						),
+					),
+					'selectors'  => array( '{{WRAPPER}} ' . $args['gap'] => $property . ': {{SIZE}}{{UNIT}};' ),
+				)
+			);
+		}
+		if ( '' !== $args['align'] ) {
+			$this->add_responsive_control(
+				'box_align',
+				array(
+					'label'     => __( 'Alignment', 'qe-edu-core' ),
+					'type'      => Controls_Manager::CHOOSE,
+					'options'   => array(
+						'left'   => array(
+							'title' => __( 'Left', 'qe-edu-core' ),
+							'icon'  => 'eicon-text-align-left',
+						),
+						'center' => array(
+							'title' => __( 'Centre', 'qe-edu-core' ),
+							'icon'  => 'eicon-text-align-center',
+						),
+						'right'  => array(
+							'title' => __( 'Right', 'qe-edu-core' ),
+							'icon'  => 'eicon-text-align-right',
+						),
+					),
+					'selectors' => array( '{{WRAPPER}} ' . $args['align'] => 'text-align: {{VALUE}};' ),
+				)
+			);
+		}
+		$this->end_controls_section();
 	}
 
 	/**
@@ -356,7 +548,7 @@ abstract class Base extends Widget_Base {
 		$this->start_controls_section(
 			'section_style',
 			array(
-				'label' => __( 'Colours & fonts', 'qe-edu' ),
+				'label' => __( 'Colours & fonts', 'qe-edu-core' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -594,8 +786,8 @@ abstract class Base extends Widget_Base {
 		if ( 'yes' === $settings['arrows'] ) {
 			printf(
 				'<button type="button" class="qe-slider__arrow qe-slider__arrow--prev" aria-label="%1$s"></button><button type="button" class="qe-slider__arrow qe-slider__arrow--next" aria-label="%2$s"></button>',
-				esc_attr__( 'Previous slide', 'qe-edu' ),
-				esc_attr__( 'Next slide', 'qe-edu' )
+				esc_attr__( 'Previous slide', 'qe-edu-core' ),
+				esc_attr__( 'Next slide', 'qe-edu-core' )
 			);
 		}
 		if ( 'yes' === $settings['dots'] ) {

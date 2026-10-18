@@ -9,10 +9,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-17T12:55:55+00:00\n"
+"POT-Creation-Date: 2026-10-18T08:28:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: qe-edu\n"
+"X-Domain: qe-edu-core\n"
 
 #. Plugin Name of the plugin
 #: qe-edu-core.php
@@ -513,7 +513,7 @@ msgstr ""
 #: src/Elementor/Widgets/AnimatedHero.php:153
 #: src/Elementor/Widgets/NewsSlider.php:92
 #: src/Elementor/Widgets/ServiceSlider.php:132
-#: src/PostTypes/Registrar.php:136
+#: src/PostTypes/Registrar.php:194
 msgid "Image"
 msgstr ""
 
@@ -575,84 +575,153 @@ msgstr ""
 msgid "Moving words colour"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:246
+#: src/Elementor/Widgets/AnimatedHero.php:229
+msgid "Hero"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:249
 #: src/Elementor/Widgets/DestinationsGrid.php:113
 msgid "Slider"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:248
+#: src/Elementor/Widgets/Base.php:251
 msgid "Cards visible on computers"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:249
+#: src/Elementor/Widgets/Base.php:252
 msgid "Cards visible on tablets"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:252
+#: src/Elementor/Widgets/Base.php:255
 msgid "Cards visible on phones"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:258
+#: src/Elementor/Widgets/Base.php:261
 msgid "1.15 shows a peek of the next card, inviting a swipe."
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:261
+#: src/Elementor/Widgets/Base.php:264
 msgid "Move automatically"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:264
+#: src/Elementor/Widgets/Base.php:267
 msgid "Seconds between slides"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:270
+#: src/Elementor/Widgets/Base.php:273
 msgid "Show arrows"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:271
+#: src/Elementor/Widgets/Base.php:274
 msgid "Show dots"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:274
+#: src/Elementor/Widgets/Base.php:277
 msgid "Show as a still row while editing"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:276
+#: src/Elementor/Widgets/Base.php:279
 msgid "Makes editing easier; visitors still see the slider."
 msgstr ""
 
 #. translators: %s: element name, e.g. Heading.
-#: src/Elementor/Widgets/Base.php:296
+#: src/Elementor/Widgets/Base.php:299
 #, php-format
 msgid "%s colour"
 msgstr ""
 
 #. translators: %s: element name, e.g. Heading.
-#: src/Elementor/Widgets/Base.php:307
+#: src/Elementor/Widgets/Base.php:310
 #, php-format
 msgid "%s font"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:324
+#: src/Elementor/Widgets/Base.php:327
 msgid "Button colour"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:333
+#: src/Elementor/Widgets/Base.php:336
 msgid "Button colour on hover"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:343
+#: src/Elementor/Widgets/Base.php:345
+msgid "Button text colour"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:353
+msgid "Button text colour on hover"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:362
 msgid "Button font"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:359
+#: src/Elementor/Widgets/Base.php:371
+msgid "Button border"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:378
+msgid "Button corner radius"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:387
+msgid "Button padding"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:418
+#: src/Elementor/Widgets/EventList.php:61
+#: src/Elementor/Widgets/ServiceSlider.php:114
+#: src/Elementor/Widgets/ServiceSlider.php:165
+msgid "Cards"
+msgstr ""
+
+#. translators: %s: part of the widget, e.g. Cards.
+#: src/Elementor/Widgets/Base.php:432
+#, php-format
+msgid "%s: box & spacing"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:454
+msgid "Corner radius"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:470
+msgid "Padding"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:480
+msgid "Minimum height"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:502
+msgid "Space between items"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:519
+msgid "Alignment"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:523
+msgid "Left"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:527
+msgid "Centre"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:531
+msgid "Right"
+msgstr ""
+
+#: src/Elementor/Widgets/Base.php:551
 msgid "Colours & fonts"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:597
+#: src/Elementor/Widgets/Base.php:789
 msgid "Previous slide"
 msgstr ""
 
-#: src/Elementor/Widgets/Base.php:598
+#: src/Elementor/Widgets/Base.php:790
 msgid "Next slide"
 msgstr ""
 
@@ -795,6 +864,11 @@ msgstr ""
 msgid "Icon colour"
 msgstr ""
 
+#: src/Elementor/Widgets/BenefitsForm.php:186
+#: src/Elementor/Widgets/RegistrationForm.php:67
+msgid "Form box"
+msgstr ""
+
 #: src/Elementor/Widgets/Breadcrumbs.php:36
 #: src/Elementor/Widgets/Breadcrumbs.php:54
 #: src/Settings/Schema.php:634
@@ -828,7 +902,12 @@ msgstr ""
 msgid "Breadcrumb"
 msgstr ""
 
-#: src/Elementor/Widgets/Breadcrumbs.php:100
+#: src/Elementor/Widgets/Breadcrumbs.php:66
+#: src/Elementor/Widgets/TopBar.php:123
+msgid "Bar"
+msgstr ""
+
+#: src/Elementor/Widgets/Breadcrumbs.php:107
 msgid "Breadcrumbs are switched off in Theme Settings → SEO."
 msgstr ""
 
@@ -872,7 +951,12 @@ msgstr ""
 msgid "Image (optional)"
 msgstr ""
 
-#: src/Elementor/Widgets/CtaDownload.php:124
+#: src/Elementor/Widgets/CtaDownload.php:86
+#: src/Elementor/Widgets/Newsletter.php:97
+msgid "Box"
+msgstr ""
+
+#: src/Elementor/Widgets/CtaDownload.php:131
 msgid "Choose a PDF here or in Theme Settings → Brand to show the download button."
 msgstr ""
 
@@ -1029,7 +1113,7 @@ msgstr ""
 msgid "Show flags"
 msgstr ""
 
-#: src/Elementor/Widgets/DestinationsGrid.php:181
+#: src/Elementor/Widgets/DestinationsGrid.php:182
 msgid "Showing sample countries. Add your own under Destinations in the dashboard menu."
 msgstr ""
 
@@ -1053,12 +1137,6 @@ msgstr ""
 
 #: src/Elementor/Widgets/EventList.php:60
 msgid "List"
-msgstr ""
-
-#: src/Elementor/Widgets/EventList.php:61
-#: src/Elementor/Widgets/ServiceSlider.php:114
-#: src/Elementor/Widgets/ServiceSlider.php:165
-msgid "Cards"
 msgstr ""
 
 #: src/Elementor/Widgets/EventList.php:65
@@ -1101,6 +1179,7 @@ msgstr ""
 
 #: src/Elementor/Widgets/Faq.php:53
 #: src/Elementor/Widgets/Faq.php:76
+#: src/Elementor/Widgets/Faq.php:103
 msgid "Questions"
 msgstr ""
 
@@ -1148,6 +1227,7 @@ msgstr ""
 
 #: src/Elementor/Widgets/LogoCarousel.php:72
 #: src/Elementor/Widgets/LogoCarousel.php:93
+#: src/Elementor/Widgets/LogoCarousel.php:121
 msgid "Logos"
 msgstr ""
 
@@ -1199,7 +1279,7 @@ msgstr ""
 msgid "Grey logos, colour on hover"
 msgstr ""
 
-#: src/Elementor/Widgets/LogoCarousel.php:195
+#: src/Elementor/Widgets/LogoCarousel.php:202
 msgid "No logos yet. Add them under Partners in the dashboard menu, or choose images."
 msgstr ""
 
@@ -1254,7 +1334,11 @@ msgstr ""
 msgid "Current page and hover colour"
 msgstr ""
 
-#: src/Elementor/Widgets/MegaMenu.php:222
+#: src/Elementor/Widgets/MegaMenu.php:98
+msgid "Dropdowns"
+msgstr ""
+
+#: src/Elementor/Widgets/MegaMenu.php:223
 msgid "Choose a menu in the widget settings (create one in Appearance → Menus)."
 msgstr ""
 
@@ -1312,11 +1396,11 @@ msgstr ""
 msgid "Sending…"
 msgstr ""
 
-#: src/Elementor/Widgets/Newsletter.php:105
+#: src/Elementor/Widgets/Newsletter.php:112
 msgid "The newsletter is switched off in Theme Settings → Footer."
 msgstr ""
 
-#: src/Elementor/Widgets/Newsletter.php:133
+#: src/Elementor/Widgets/Newsletter.php:140
 #: src/Elementor/Widgets/RegistrationFormTrait.php:286
 msgid "Leave this field empty"
 msgstr ""
@@ -1443,14 +1527,18 @@ msgstr ""
 msgid "Breadcrumb label for screen readers"
 msgstr ""
 
+#: src/Elementor/Widgets/PageTitleBanner.php:84
+msgid "Banner"
+msgstr ""
+
 #. translators: %s: search terms.
-#: src/Elementor/Widgets/PageTitleBanner.php:104
+#: src/Elementor/Widgets/PageTitleBanner.php:112
 #: src/Seo/Head.php:118
 #, php-format
 msgid "Search results for “%s”"
 msgstr ""
 
-#: src/Elementor/Widgets/PageTitleBanner.php:108
+#: src/Elementor/Widgets/PageTitleBanner.php:116
 #: src/Seo/Breadcrumbs.php:68
 #: src/Seo/Head.php:122
 msgid "Page not found"
@@ -1663,7 +1751,7 @@ msgstr ""
 msgid "Card text"
 msgstr ""
 
-#: src/Elementor/Widgets/ServiceSlider.php:210
+#: src/Elementor/Widgets/ServiceSlider.php:217
 msgid "Showing sample cards. Add your own under Services in the dashboard menu."
 msgstr ""
 
@@ -1672,6 +1760,7 @@ msgid "Site Logo"
 msgstr ""
 
 #: src/Elementor/Widgets/SiteLogo.php:54
+#: src/Elementor/Widgets/SiteLogo.php:89
 #: src/PostTypes/Types.php:84
 #: src/Settings/Schema.php:177
 msgid "Logo"
@@ -1722,7 +1811,11 @@ msgstr ""
 msgid "Social media"
 msgstr ""
 
-#: src/Elementor/Widgets/SocialLinks.php:166
+#: src/Elementor/Widgets/SocialLinks.php:124
+msgid "Icons"
+msgstr ""
+
+#: src/Elementor/Widgets/SocialLinks.php:173
 msgid "Add your social media links in Theme Settings → Contact & Social."
 msgstr ""
 
@@ -1732,6 +1825,7 @@ msgstr ""
 
 #: src/Elementor/Widgets/StatsCounter.php:62
 #: src/Elementor/Widgets/StatsCounter.php:101
+#: src/Elementor/Widgets/StatsCounter.php:143
 msgid "Numbers"
 msgstr ""
 
@@ -1809,7 +1903,7 @@ msgstr ""
 msgid "Job title"
 msgstr ""
 
-#: src/Elementor/Widgets/TeamGrid.php:94
+#: src/Elementor/Widgets/TeamGrid.php:95
 msgid "No team members yet. Add them under Team in the dashboard menu."
 msgstr ""
 
@@ -1895,7 +1989,7 @@ msgstr ""
 msgid "Quote"
 msgstr ""
 
-#: src/Elementor/Widgets/Testimonials.php:207
+#: src/Elementor/Widgets/Testimonials.php:214
 msgid "No testimonials yet. Add them under Testimonials in the dashboard menu."
 msgstr ""
 
@@ -2870,58 +2964,58 @@ msgid "You are not allowed to export leads."
 msgstr ""
 
 #. translators: %s: item name, e.g. Destination.
-#: src/PostTypes/Registrar.php:123
+#: src/PostTypes/Registrar.php:181
 #, php-format
 msgid "Add new %s"
 msgstr ""
 
 #. translators: %s: item name.
-#: src/PostTypes/Registrar.php:125
+#: src/PostTypes/Registrar.php:183
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
 #. translators: %s: item name.
-#: src/PostTypes/Registrar.php:127
+#: src/PostTypes/Registrar.php:185
 #, php-format
 msgid "New %s"
 msgstr ""
 
 #. translators: %s: item name.
-#: src/PostTypes/Registrar.php:129
+#: src/PostTypes/Registrar.php:187
 #, php-format
 msgid "View %s"
 msgstr ""
 
 #. translators: %s: items name, e.g. Destinations.
-#: src/PostTypes/Registrar.php:131
+#: src/PostTypes/Registrar.php:189
 #, php-format
 msgid "Search %s"
 msgstr ""
 
 #. translators: %s: items name.
-#: src/PostTypes/Registrar.php:133
+#: src/PostTypes/Registrar.php:191
 #, php-format
 msgid "No %s yet."
 msgstr ""
 
 #. translators: %s: items name.
-#: src/PostTypes/Registrar.php:135
+#: src/PostTypes/Registrar.php:193
 #, php-format
 msgid "All %s"
 msgstr ""
 
-#: src/PostTypes/Registrar.php:137
+#: src/PostTypes/Registrar.php:195
 msgid "Choose image"
 msgstr ""
 
 #. translators: %s: item name, e.g. Destination.
-#: src/PostTypes/Registrar.php:164
+#: src/PostTypes/Registrar.php:222
 #, php-format
 msgid "%s name"
 msgstr ""
 
-#: src/PostTypes/Registrar.php:177
+#: src/PostTypes/Registrar.php:235
 msgid "Details"
 msgstr ""
 
@@ -4140,6 +4234,33 @@ msgstr ""
 msgid "An Elementor template shown at the top of the news page and category lists. It replaces the plain heading."
 msgstr ""
 
-#: src/Settings/Schema.php:825
+#. translators: %s: content type, e.g. Destinations.
+#: src/Settings/Schema.php:818
+#, php-format
+msgid "Use %s"
+msgstr ""
+
+#: src/Settings/Schema.php:819
+msgid "Untick to hide this content type from the dashboard if your site does not need it. Nothing is deleted."
+msgstr ""
+
+#: src/Settings/Schema.php:821
+#: src/Settings/Schema.php:833
+msgid "Content types"
+msgstr ""
+
+#. translators: %s: content type, e.g. Destinations.
+#: src/Settings/Schema.php:828
+#, php-format
+msgid "%s web address"
+msgstr ""
+
+#. translators: %s: default address part, e.g. destinations.
+#: src/Settings/Schema.php:830
+#, php-format
+msgid "The part of the address after your domain, e.g. %s. Use lowercase letters, numbers and dashes."
+msgstr ""
+
+#: src/Settings/Schema.php:850
 msgid "Theme texts"
 msgstr ""

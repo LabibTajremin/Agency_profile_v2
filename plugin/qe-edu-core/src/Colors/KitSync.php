@@ -40,22 +40,22 @@ final class KitSync {
 		return array(
 			array(
 				'_id'   => 'primary',
-				'title' => __( 'Primary (accent)', 'qe-edu' ),
+				'title' => __( 'Primary (accent)', 'qe-edu-core' ),
 				'color' => $colors['primary'],
 			),
 			array(
 				'_id'   => 'secondary',
-				'title' => __( 'Secondary (navy)', 'qe-edu' ),
+				'title' => __( 'Secondary (navy)', 'qe-edu-core' ),
 				'color' => '#140342',
 			),
 			array(
 				'_id'   => 'text',
-				'title' => __( 'Text', 'qe-edu' ),
+				'title' => __( 'Text', 'qe-edu-core' ),
 				'color' => '#3D3A4F',
 			),
 			array(
 				'_id'   => 'accent',
-				'title' => __( 'Accent (dark)', 'qe-edu' ),
+				'title' => __( 'Accent (dark)', 'qe-edu-core' ),
 				'color' => $colors['dark'],
 			),
 		);
@@ -118,10 +118,10 @@ final class KitSync {
 		};
 
 		return array(
-			$font( 'primary', __( 'Headings', 'qe-edu' ), $pair['heading'], '700' ),
-			$font( 'secondary', __( 'Sub-headings', 'qe-edu' ), $pair['heading'], '600' ),
-			$font( 'text', __( 'Body text', 'qe-edu' ), $pair['body'], '400' ),
-			$font( 'accent', __( 'Buttons', 'qe-edu' ), $pair['heading'], '600' ),
+			$font( 'primary', __( 'Headings', 'qe-edu-core' ), $pair['heading'], '700' ),
+			$font( 'secondary', __( 'Sub-headings', 'qe-edu-core' ), $pair['heading'], '600' ),
+			$font( 'text', __( 'Body text', 'qe-edu-core' ), $pair['body'], '400' ),
+			$font( 'accent', __( 'Buttons', 'qe-edu-core' ), $pair['heading'], '600' ),
 		);
 	}
 

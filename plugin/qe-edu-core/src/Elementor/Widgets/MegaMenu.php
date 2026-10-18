@@ -34,7 +34,7 @@ class MegaMenu extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Mega Menu', 'qe-edu' );
+		return __( 'Mega Menu', 'qe-edu-core' );
 	}
 
 	/**
@@ -61,40 +61,41 @@ class MegaMenu extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Menu', 'qe-edu' ) ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Menu', 'qe-edu-core' ) ) );
 		$this->add_select(
 			'menu',
-			__( 'Menu', 'qe-edu' ),
+			__( 'Menu', 'qe-edu-core' ),
 			TopBar::menu_options(),
 			'',
-			array( 'description' => __( 'Create and edit menus in Appearance → Menus. Tick "Mega panel" on a top-level item for a multi-column panel.', 'qe-edu' ) )
+			array( 'description' => __( 'Create and edit menus in Appearance → Menus. Tick "Mega panel" on a top-level item for a multi-column panel.', 'qe-edu-core' ) )
 		);
 		$this->add_select(
 			'breakpoint',
-			__( 'Switch to the mobile menu below', 'qe-edu' ),
+			__( 'Switch to the mobile menu below', 'qe-edu-core' ),
 			array(
-				'1024' => __( 'Tablet width (1024px)', 'qe-edu' ),
-				'767'  => __( 'Phone width (767px)', 'qe-edu' ),
+				'1024' => __( 'Tablet width (1024px)', 'qe-edu-core' ),
+				'767'  => __( 'Phone width (767px)', 'qe-edu-core' ),
 			),
 			'1024'
 		);
-		$this->add_text( 'toggle_text', __( 'Mobile menu button text', 'qe-edu' ), __( 'Menu', 'qe-edu' ) );
-		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu' ), __( 'Main menu', 'qe-edu' ) );
-		$this->add_text( 'submenu_label', __( 'Submenu button label for screen readers', 'qe-edu' ), __( 'Show submenu', 'qe-edu' ) );
+		$this->add_text( 'toggle_text', __( 'Mobile menu button text', 'qe-edu-core' ), __( 'Menu', 'qe-edu-core' ) );
+		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu-core' ), __( 'Main menu', 'qe-edu-core' ) );
+		$this->add_text( 'submenu_label', __( 'Submenu button label for screen readers', 'qe-edu-core' ), __( 'Show submenu', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'link', __( 'Menu links', 'qe-edu' ), '.qe-mega__link', self::COLOR_SECONDARY, self::FONT_SECONDARY );
+		$this->add_text_style( 'link', __( 'Menu links', 'qe-edu-core' ), '.qe-mega__link', self::COLOR_SECONDARY, self::FONT_SECONDARY );
 		$this->add_control(
 			'active_color',
 			array(
-				'label'     => __( 'Current page and hover colour', 'qe-edu' ),
+				'label'     => __( 'Current page and hover colour', 'qe-edu-core' ),
 				'type'      => Controls_Manager::COLOR,
 				'global'    => array( 'default' => self::COLOR_PRIMARY ),
 				'selectors' => array( '{{WRAPPER}} .qe-mega__link:hover, {{WRAPPER}} .qe-mega__link:focus-visible, {{WRAPPER}} .is-current > .qe-mega__link' => 'color: {{VALUE}};' ),
 			)
 		);
 		$this->end_controls_section();
+		$this->add_box_style( '.qe-mega__panel', array( 'label' => __( 'Dropdowns', 'qe-edu-core' ) ) );
 	}
 
 	/**
@@ -219,7 +220,7 @@ class MegaMenu extends Base {
 		$items = $s['menu'] ? wp_get_nav_menu_items( (int) $s['menu'] ) : array();
 
 		if ( ! $items ) {
-			$this->print_editor_notice( __( 'Choose a menu in the widget settings (create one in Appearance → Menus).', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'Choose a menu in the widget settings (create one in Appearance → Menus).', 'qe-edu-core' ) );
 			return;
 		}
 

@@ -158,10 +158,19 @@
 
 	/* Sliders -------------------------------------------------------- */
 
+	// The gap set in Elementor (Box & spacing → Space between items) is the
+	// --qe-gap custom property on the slider; 24px when it is not set.
+	function sliderGap( wrapper ) {
+		const gap = parseFloat(
+			root.getComputedStyle( wrapper ).getPropertyValue( '--qe-gap' )
+		);
+		return isNaN( gap ) ? 24 : gap;
+	}
+
 	function sliderConfig( wrapper, settings ) {
 		return {
 			slidesPerView: settings.perViewMobile,
-			spaceBetween: 24,
+			spaceBetween: sliderGap( wrapper ),
 			watchOverflow: true,
 			observer: true,
 			observeParents: true,

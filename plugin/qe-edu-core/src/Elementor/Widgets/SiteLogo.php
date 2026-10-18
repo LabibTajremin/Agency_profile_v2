@@ -33,7 +33,7 @@ class SiteLogo extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Site Logo', 'qe-edu' );
+		return __( 'Site Logo', 'qe-edu-core' );
 	}
 
 	/**
@@ -51,21 +51,21 @@ class SiteLogo extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Logo', 'qe-edu' ) ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Logo', 'qe-edu-core' ) ) );
 		$this->add_select(
 			'variant',
-			__( 'Which logo', 'qe-edu' ),
+			__( 'Which logo', 'qe-edu-core' ),
 			array(
-				'default' => __( 'Normal logo', 'qe-edu' ),
-				'dark'    => __( 'Logo for dark backgrounds', 'qe-edu' ),
+				'default' => __( 'Normal logo', 'qe-edu-core' ),
+				'dark'    => __( 'Logo for dark backgrounds', 'qe-edu-core' ),
 			),
 			'default',
-			array( 'description' => __( 'Logos are set in Theme Settings → Brand.', 'qe-edu' ) )
+			array( 'description' => __( 'Logos are set in Theme Settings → Brand.', 'qe-edu-core' ) )
 		);
 		$this->add_responsive_control(
 			'width',
 			array(
-				'label'      => __( 'Width', 'qe-edu' ),
+				'label'      => __( 'Width', 'qe-edu-core' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
 				'range'      => array(
@@ -84,8 +84,9 @@ class SiteLogo extends Base {
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'name', __( 'Site name (when there is no logo)', 'qe-edu' ), '.qe-site-logo__name', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'name', __( 'Site name (when there is no logo)', 'qe-edu-core' ), '.qe-site-logo__name', self::COLOR_SECONDARY, self::FONT_PRIMARY );
 		$this->end_controls_section();
+		$this->add_box_style( '.qe-site-logo', array( 'label' => __( 'Logo', 'qe-edu-core' ) ) );
 	}
 
 	/**

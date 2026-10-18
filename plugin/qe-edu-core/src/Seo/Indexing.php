@@ -102,10 +102,10 @@ final class Indexing {
 
 		printf(
 			'<div class="notice notice-warning"><p><strong>%1$s</strong> %2$s <a href="%3$s">%4$s</a></p></div>',
-			esc_html__( 'Search engines are blocked.', 'qe-edu' ),
-			esc_html__( 'Google will not show this site while "Discourage search engines" is ticked.', 'qe-edu' ),
+			esc_html__( 'Search engines are blocked.', 'qe-edu-core' ),
+			esc_html__( 'Google will not show this site while "Discourage search engines" is ticked.', 'qe-edu-core' ),
 			esc_url( admin_url( 'options-reading.php' ) ),
-			esc_html__( 'Change this in Settings → Reading', 'qe-edu' )
+			esc_html__( 'Change this in Settings → Reading', 'qe-edu-core' )
 		);
 	}
 }

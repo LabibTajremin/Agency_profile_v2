@@ -86,19 +86,19 @@ final class MenuFields {
 		printf(
 			'<p><label for="qe-mega-columns-%1$d">%2$s</label><br><select id="qe-mega-columns-%1$d" name="qe_mega_columns[%1$d]">',
 			(int) $item_id,
-			esc_html__( 'Mega panel (Mega Menu widget)', 'qe-edu' )
+			esc_html__( 'Mega panel (Mega Menu widget)', 'qe-edu-core' )
 		);
 		$options = array(
-			0 => __( 'No — normal dropdown', 'qe-edu' ),
-			2 => __( '2 columns', 'qe-edu' ),
-			3 => __( '3 columns', 'qe-edu' ),
-			4 => __( '4 columns', 'qe-edu' ),
+			0 => __( 'No — normal dropdown', 'qe-edu-core' ),
+			2 => __( '2 columns', 'qe-edu-core' ),
+			3 => __( '3 columns', 'qe-edu-core' ),
+			4 => __( '4 columns', 'qe-edu-core' ),
 		);
 		foreach ( $options as $value => $label ) {
 			printf( '<option value="%1$d"%2$s>%3$s</option>', (int) $value, selected( $columns, $value, false ), esc_html( $label ) );
 		}
 		echo '</select></p>';
-		printf( '<p>%s</p>', esc_html__( 'Panel image (optional):', 'qe-edu' ) );
+		printf( '<p>%s</p>', esc_html__( 'Panel image (optional):', 'qe-edu-core' ) );
 		echo Fields::media( 'image', self::image( $item_id ), 'qe-mega-image-' . (int) $item_id, 'qe_mega_image[' . (int) $item_id . ']' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in Fields::media().
 		echo '</div>';
 	}

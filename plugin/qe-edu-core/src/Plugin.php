@@ -103,7 +103,7 @@ final class Plugin {
 		add_action( 'load_textdomain', array( Settings\Schema::class, 'flush' ), 10, 0 );
 		add_action( 'change_locale', array( Settings\Schema::class, 'flush' ), 10, 0 );
 
-		load_plugin_textdomain( 'qe-edu', false, dirname( plugin_basename( QE_EDU_CORE_FILE ) ) . '/languages' );
+		load_plugin_textdomain( 'qe-edu-core', false, dirname( plugin_basename( QE_EDU_CORE_FILE ) ) . '/languages' );
 
 		foreach ( $this->module_classes() as $class_name ) {
 			$module = new $class_name();

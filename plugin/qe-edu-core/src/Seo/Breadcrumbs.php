@@ -65,7 +65,7 @@ final class Breadcrumbs {
 		} elseif ( is_search() ) {
 			$trail[] = self::crumb( get_search_query(), '' );
 		} elseif ( is_404() ) {
-			$trail[] = self::crumb( __( 'Page not found', 'qe-edu' ), '' );
+			$trail[] = self::crumb( __( 'Page not found', 'qe-edu-core' ), '' );
 		} else {
 			$trail[] = self::crumb( wp_strip_all_tags( get_the_archive_title() ), '' );
 		}

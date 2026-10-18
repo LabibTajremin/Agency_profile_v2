@@ -31,11 +31,20 @@ final class SchemaTest extends PluginTestCase {
 		$this->assertSame( 'X Accent colour', Schema::fields()['colors.accent']['label'] );
 	}
 
-	public function test_texts_tab_without_theme_has_only_the_page_templates() {
+	public function test_texts_tab_without_theme_has_page_templates_and_content_types() {
 		if ( function_exists( 'qe_edu_default_strings' ) ) {
 			$this->markTestSkipped( 'Theme already loaded in this process.' );
 		}
-		$this->assertSame( array( 'not_found_template', 'single_template', 'archive_template' ), array_keys( Schema::tabs()['texts']['fields'] ) );
+		$expected = array( 'not_found_template', 'single_template', 'archive_template' );
+		foreach ( \QeEdu\Core\PostTypes\Types::all() as $type => $definition ) {
+			$expected[] = $type . '_enabled';
+			if ( $definition['public'] ) {
+				$expected[] = $type . '_slug';
+			}
+		}
+		$this->assertSame( $expected, array_keys( Schema::tabs()['texts']['fields'] ) );
+		$this->assertSame( 'destinations', Schema::fields()['post_types.qe_destination_slug']['placeholder'] );
+		$this->assertTrue( Schema::fields()['post_types.qe_team_enabled']['default'] );
 	}
 
 	public function test_tabs() {

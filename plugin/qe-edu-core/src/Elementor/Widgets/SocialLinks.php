@@ -34,7 +34,7 @@ class SocialLinks extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Social Links', 'qe-edu' );
+		return __( 'Social Links', 'qe-edu-core' );
 	}
 
 	/**
@@ -85,39 +85,46 @@ class SocialLinks extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Social links', 'qe-edu' ) ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Social links', 'qe-edu-core' ) ) );
 		$this->add_control(
 			'info',
 			array(
 				'type' => Controls_Manager::RAW_HTML,
-				'raw'  => esc_html__( 'Links come from Theme Settings → Contact & Social. Only networks with a link are shown.', 'qe-edu' ),
+				'raw'  => esc_html__( 'Links come from Theme Settings → Contact & Social. Only networks with a link are shown.', 'qe-edu-core' ),
 			)
 		);
-		$this->add_switch( 'whatsapp', __( 'Include WhatsApp', 'qe-edu' ) );
+		$this->add_switch( 'whatsapp', __( 'Include WhatsApp', 'qe-edu-core' ) );
 		$this->add_select(
 			'shape',
-			__( 'Shape', 'qe-edu' ),
+			__( 'Shape', 'qe-edu-core' ),
 			array(
-				'circle' => __( 'Circles', 'qe-edu' ),
-				'square' => __( 'Rounded squares', 'qe-edu' ),
-				'plain'  => __( 'Icons only', 'qe-edu' ),
+				'circle' => __( 'Circles', 'qe-edu-core' ),
+				'square' => __( 'Rounded squares', 'qe-edu-core' ),
+				'plain'  => __( 'Icons only', 'qe-edu-core' ),
 			),
 			'circle'
 		);
-		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu' ), __( 'Social media', 'qe-edu' ) );
+		$this->add_text( 'nav_label', __( 'Label for screen readers', 'qe-edu-core' ), __( 'Social media', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->start_style_section();
 		$this->add_control(
 			'icon_color',
 			array(
-				'label'     => __( 'Icon colour', 'qe-edu' ),
+				'label'     => __( 'Icon colour', 'qe-edu-core' ),
 				'type'      => Controls_Manager::COLOR,
 				'global'    => array( 'default' => self::COLOR_PRIMARY ),
 				'selectors' => array( '{{WRAPPER}} .qe-social a' => 'color: {{VALUE}};' ),
 			)
 		);
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-social a',
+			array(
+				'label' => __( 'Icons', 'qe-edu-core' ),
+				'gap'   => '.qe-social ul',
+			)
+		);
 	}
 
 	/**
@@ -163,7 +170,7 @@ class SocialLinks extends Base {
 		$links = self::links( 'yes' === $s['whatsapp'] );
 
 		if ( ! $links ) {
-			$this->print_editor_notice( __( 'Add your social media links in Theme Settings → Contact & Social.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'Add your social media links in Theme Settings → Contact & Social.', 'qe-edu-core' ) );
 			return;
 		}
 

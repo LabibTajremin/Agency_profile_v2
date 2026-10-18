@@ -94,3 +94,10 @@ User request: `docs/DEPLOYMENT.md` (full deployment guide, demo seeding from the
 realistic demo (fictional "Brightway Education Group", destination key facts, full news articles, named
 testimonials, real-looking contact details from reserved test ranges, `{{email:…}}` placeholder on the
 site's own domain). Re-verified: PHPUnit 100% lines, demo gate 10/10 and SEO gate 5/5 on a fresh site.
+Marketplace review (user request): every widget gained a responsive "box & spacing" style section
+(background, border, radius, shadow, padding, gap, alignment/min-height where relevant) and full button
+styling; slider spacing follows the gap control; content type addresses and on/off switches in
+Theme Settings → Texts; the plugin now has its own text domain `qe-edu-core`
+(`languages/qe-edu-core.pot`, guarded by `tests/php/Packaging/TextDomainTest.php`). Verified: PHPUnit
+407 tests 100% lines, Jest 100%, demo gate 10/10 from the built zips, widgets gate 5/5, controls checked in
+Elementor's generated CSS, renamed address `/destinos/canada/` returns 200.

@@ -26,4 +26,3 @@ final class TestableAdminPage extends AdminPage {
 		return ob_get_clean();
 	}
 }
-

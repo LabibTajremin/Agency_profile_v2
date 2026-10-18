@@ -134,14 +134,14 @@ class Redirects {
 			}
 		);
 
-		echo '<h3>' . esc_html__( 'Addresses visitors could not find (404)', 'qe-edu' ) . '</h3>';
+		echo '<h3>' . esc_html__( 'Addresses visitors could not find (404)', 'qe-edu-core' ) . '</h3>';
 
 		if ( ! $log ) {
-			echo '<p class="description">' . esc_html__( 'Nothing logged yet.', 'qe-edu' ) . '</p>';
+			echo '<p class="description">' . esc_html__( 'Nothing logged yet.', 'qe-edu-core' ) . '</p>';
 			return;
 		}
 
-		echo '<table class="widefat striped"><thead><tr><th scope="col">' . esc_html__( 'Address', 'qe-edu' ) . '</th><th scope="col">' . esc_html__( 'Times', 'qe-edu' ) . '</th><th scope="col">' . esc_html__( 'Last seen', 'qe-edu' ) . '</th></tr></thead><tbody>';
+		echo '<table class="widefat striped"><thead><tr><th scope="col">' . esc_html__( 'Address', 'qe-edu-core' ) . '</th><th scope="col">' . esc_html__( 'Times', 'qe-edu-core' ) . '</th><th scope="col">' . esc_html__( 'Last seen', 'qe-edu-core' ) . '</th></tr></thead><tbody>';
 		foreach ( array_slice( $log, 0, 50, true ) as $path => $entry ) {
 			printf(
 				'<tr><td><code>%1$s</code></td><td>%2$d</td><td>%3$s</td></tr>',
@@ -155,7 +155,7 @@ class Redirects {
 		printf(
 			'<p><a class="button" href="%1$s">%2$s</a></p>',
 			esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=qe_edu_clear_404_log' ), 'qe_edu_clear_404_log' ) ),
-			esc_html__( 'Clear the list', 'qe-edu' )
+			esc_html__( 'Clear the list', 'qe-edu-core' )
 		);
 	}
 
@@ -166,7 +166,7 @@ class Redirects {
 	 */
 	public function handle_clear() {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'You are not allowed to do this.', 'qe-edu' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'You are not allowed to do this.', 'qe-edu-core' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( 'qe_edu_clear_404_log' );
 

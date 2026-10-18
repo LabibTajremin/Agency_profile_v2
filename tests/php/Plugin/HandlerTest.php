@@ -229,11 +229,37 @@ final class HandlerTest extends PluginTestCase {
 			array(
 				'consent_text' => '',
 				'fields'       => array(
-					array( '_id' => 'name', 'label' => 'Name', 'type' => 'text', 'required' => '' ),
-					array( '_id' => 'level', 'label' => 'Level', 'type' => 'select', 'required' => 'yes', 'options' => "Bachelor\nMaster" ),
-					array( '_id' => 'msg', 'label' => 'Message', 'type' => 'textarea', 'required' => '' ),
-					array( '_id' => 'contact', 'label' => 'Email', 'type' => 'email', 'required' => 'yes' ),
-					array( '_id' => 'contact2', 'label' => 'Second email', 'type' => 'email', 'required' => '' ),
+					array(
+						'_id'      => 'name',
+						'label'    => 'Name',
+						'type'     => 'text',
+						'required' => '',
+					),
+					array(
+						'_id'      => 'level',
+						'label'    => 'Level',
+						'type'     => 'select',
+						'required' => 'yes',
+						'options'  => "Bachelor\nMaster",
+					),
+					array(
+						'_id'      => 'msg',
+						'label'    => 'Message',
+						'type'     => 'textarea',
+						'required' => '',
+					),
+					array(
+						'_id'      => 'contact',
+						'label'    => 'Email',
+						'type'     => 'email',
+						'required' => 'yes',
+					),
+					array(
+						'_id'      => 'contact2',
+						'label'    => 'Second email',
+						'type'     => 'email',
+						'required' => '',
+					),
 					'not-an-array',
 					array( 'label' => 'No id' ),
 				),

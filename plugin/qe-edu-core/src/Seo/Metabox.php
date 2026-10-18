@@ -46,7 +46,7 @@ final class Metabox {
 	 * @return void
 	 */
 	public function add() {
-		add_meta_box( 'qe-edu-seo', __( 'SEO', 'qe-edu' ), array( $this, 'render' ), Fields::post_types(), 'normal', 'default' );
+		add_meta_box( 'qe-edu-seo', __( 'SEO', 'qe-edu-core' ), array( $this, 'render' ), Fields::post_types(), 'normal', 'default' );
 	}
 
 	/**
@@ -74,13 +74,13 @@ final class Metabox {
 				'sep'     => (string) \QeEdu\Core\Settings\Settings::get( 'seo.separator' ),
 				'i18n'    => array(
 					/* translators: 1: number of characters, 2: recommended range. */
-					'length'         => __( '%1$s characters (aim for %2$s)', 'qe-edu' ),
-					'keywordTitle'   => __( 'The focus keyword is in the SEO title.', 'qe-edu' ),
-					'keywordDesc'    => __( 'The focus keyword is in the meta description.', 'qe-edu' ),
-					'keywordUrl'     => __( 'The focus keyword is in the page address.', 'qe-edu' ),
-					'keywordHeading' => __( 'The focus keyword is in the page title.', 'qe-edu' ),
-					'missing'        => __( 'Not yet', 'qe-edu' ),
-					'ok'             => __( 'Yes', 'qe-edu' ),
+					'length'         => __( '%1$s characters (aim for %2$s)', 'qe-edu-core' ),
+					'keywordTitle'   => __( 'The focus keyword is in the SEO title.', 'qe-edu-core' ),
+					'keywordDesc'    => __( 'The focus keyword is in the meta description.', 'qe-edu-core' ),
+					'keywordUrl'     => __( 'The focus keyword is in the page address.', 'qe-edu-core' ),
+					'keywordHeading' => __( 'The focus keyword is in the page title.', 'qe-edu-core' ),
+					'missing'        => __( 'Not yet', 'qe-edu-core' ),
+					'ok'             => __( 'Yes', 'qe-edu-core' ),
 				),
 			)
 		);
@@ -116,7 +116,7 @@ final class Metabox {
 		}
 		echo '<ul class="qe-seo__checks" data-qe-seo-checks></ul>';
 
-		printf( '<details class="qe-seo__advanced"><summary>%s</summary>', esc_html__( 'Social sharing & advanced', 'qe-edu' ) );
+		printf( '<details class="qe-seo__advanced"><summary>%s</summary>', esc_html__( 'Social sharing & advanced', 'qe-edu-core' ) );
 		foreach ( $advanced as $key ) {
 			$this->field( $key, $fields[ $key ], $value( $key ) );
 		}
@@ -213,7 +213,7 @@ final class Metabox {
 		$document->start_controls_section(
 			'qe_seo_section',
 			array(
-				'label' => __( 'SEO', 'qe-edu' ),
+				'label' => __( 'SEO', 'qe-edu-core' ),
 				'tab'   => 'settings',
 			)
 		);

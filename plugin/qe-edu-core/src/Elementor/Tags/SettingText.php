@@ -33,7 +33,7 @@ class SettingText extends Tag {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Theme Settings text', 'qe-edu' );
+		return __( 'Theme Settings text', 'qe-edu-core' );
 	}
 
 	/**
@@ -63,7 +63,7 @@ class SettingText extends Tag {
 		$this->add_control(
 			'key',
 			array(
-				'label'   => __( 'Which text', 'qe-edu' ),
+				'label'   => __( 'Which text', 'qe-edu-core' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => Values::text_options(),
 				'default' => 'phone',

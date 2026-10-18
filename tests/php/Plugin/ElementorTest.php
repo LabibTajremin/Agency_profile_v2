@@ -45,7 +45,13 @@ final class ElementorTest extends PluginTestCase {
 		$integration = new Integration();
 
 		$elements = \Mockery::mock();
-		$elements->shouldReceive( 'add_category' )->once()->with( 'qe-education', array( 'title' => 'QE Education', 'icon' => 'eicon-library-open' ) );
+		$elements->shouldReceive( 'add_category' )->once()->with(
+			'qe-education',
+			array(
+				'title' => 'QE Education',
+				'icon'  => 'eicon-library-open',
+			)
+		);
 		$integration->category( $elements );
 
 		$widgets = \Mockery::mock();
@@ -162,7 +168,13 @@ final class ElementorTest extends PluginTestCase {
 			'qe_mega_image'         => array( 4 => '9' ),
 		);
 		$fields->save( 1, 4 );
-		$this->assertSame( array( '_qe_mega_columns' => 3, '_qe_mega_image' => 9 ), $this->meta[4] );
+		$this->assertSame(
+			array(
+				'_qe_mega_columns' => 3,
+				'_qe_mega_image'   => 9,
+			),
+			$this->meta[4]
+		);
 
 		$_POST = array(
 			'update-nav-menu-nonce' => 'ok',
@@ -265,10 +277,22 @@ final class ElementorTest extends PluginTestCase {
 		$this->assertNotSame( '', $logo->get_title() );
 		$this->assertArrayHasKey( 'variant', $logo->call_register_controls() );
 		$logo->test_settings = array( 'variant' => 'default' );
-		$this->assertSame( array( 'id' => 6, 'url' => 'https://example.test/logo.png' ), $logo->get_value_for_test() );
+		$this->assertSame(
+			array(
+				'id'  => 6,
+				'url' => 'https://example.test/logo.png',
+			),
+			$logo->get_value_for_test()
+		);
 
 		$this->settings( array() );
 		Functions\when( 'get_theme_mod' )->justReturn( 0 );
-		$this->assertSame( array( 'id' => 0, 'url' => '' ), $logo->get_value_for_test() );
+		$this->assertSame(
+			array(
+				'id'  => 0,
+				'url' => '',
+			),
+			$logo->get_value_for_test()
+		);
 	}
 }

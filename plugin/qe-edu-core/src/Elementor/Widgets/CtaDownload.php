@@ -33,7 +33,7 @@ class CtaDownload extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'CTA Download', 'qe-edu' );
+		return __( 'CTA Download', 'qe-edu-core' );
 	}
 
 	/**
@@ -51,24 +51,24 @@ class CtaDownload extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Content', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'Company Profile', 'qe-edu' ) );
-		$this->add_textarea( 'text', __( 'Text', 'qe-edu' ), __( 'Discover our story, services and global network in one document.', 'qe-edu' ) );
-		$this->add_text( 'button_text', __( 'Button text', 'qe-edu' ), __( 'Download PDF', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Content', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'Company Profile', 'qe-edu-core' ) );
+		$this->add_textarea( 'text', __( 'Text', 'qe-edu-core' ), __( 'Discover our story, services and global network in one document.', 'qe-edu-core' ) );
+		$this->add_text( 'button_text', __( 'Button text', 'qe-edu-core' ), __( 'Download PDF', 'qe-edu-core' ) );
 		$this->add_control(
 			'file',
 			array(
-				'label'       => __( 'File', 'qe-edu' ),
+				'label'       => __( 'File', 'qe-edu-core' ),
 				'type'        => Controls_Manager::MEDIA,
 				'media_types' => array( 'application/pdf' ),
 				'default'     => array( 'url' => '' ),
-				'description' => __( 'Leave empty to use Theme Settings → Brand → Company profile PDF.', 'qe-edu' ),
+				'description' => __( 'Leave empty to use Theme Settings → Brand → Company profile PDF.', 'qe-edu-core' ),
 			)
 		);
 		$this->add_control(
 			'image',
 			array(
-				'label'   => __( 'Image (optional)', 'qe-edu' ),
+				'label'   => __( 'Image (optional)', 'qe-edu-core' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array( 'url' => '' ),
 			)
@@ -76,10 +76,17 @@ class CtaDownload extends Base {
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu' ), '.qe-cta__heading', self::COLOR_SECONDARY, self::FONT_PRIMARY );
-		$this->add_text_style( 'text', __( 'Text', 'qe-edu' ), '.qe-cta__text', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu-core' ), '.qe-cta__heading', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'text', __( 'Text', 'qe-edu-core' ), '.qe-cta__text', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->add_button_style( '.qe-cta .qe-btn' );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-cta',
+			array(
+				'label' => __( 'Box', 'qe-edu-core' ),
+				'align' => '.qe-cta',
+			)
+		);
 	}
 
 	/**
@@ -121,7 +128,7 @@ class CtaDownload extends Base {
 			$this->add_render_attribute( 'download_button', 'download', wp_basename( (string) wp_parse_url( $url, PHP_URL_PATH ) ) );
 			$this->print_button( 'download_button', $s['button_text'], array( 'url' => $url ), 'qe-btn qe-btn--download' );
 		} else {
-			$this->print_editor_notice( __( 'Choose a PDF here or in Theme Settings → Brand to show the download button.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'Choose a PDF here or in Theme Settings → Brand to show the download button.', 'qe-edu-core' ) );
 		}
 		echo '</div></div>';
 	}

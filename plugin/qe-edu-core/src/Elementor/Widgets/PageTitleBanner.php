@@ -34,7 +34,7 @@ class PageTitleBanner extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Page Title Banner', 'qe-edu' );
+		return __( 'Page Title Banner', 'qe-edu-core' );
 	}
 
 	/**
@@ -52,32 +52,40 @@ class PageTitleBanner extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Title', 'qe-edu' ) ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Title', 'qe-edu-core' ) ) );
 		$this->add_text(
 			'title',
-			__( 'Title', 'qe-edu' ),
+			__( 'Title', 'qe-edu-core' ),
 			'',
-			array( 'description' => __( 'Leave empty to use the page title.', 'qe-edu' ) )
+			array( 'description' => __( 'Leave empty to use the page title.', 'qe-edu-core' ) )
 		);
-		$this->add_textarea( 'subtitle', __( 'Subtitle', 'qe-edu' ), '' );
-		$this->add_switch( 'show_breadcrumbs', __( 'Show breadcrumbs', 'qe-edu' ) );
-		$this->add_text( 'home_label', __( 'Breadcrumb first link', 'qe-edu' ), __( 'Home', 'qe-edu' ), array( 'condition' => array( 'show_breadcrumbs' => 'yes' ) ) );
-		$this->add_text( 'nav_label', __( 'Breadcrumb label for screen readers', 'qe-edu' ), __( 'Breadcrumb', 'qe-edu' ), array( 'condition' => array( 'show_breadcrumbs' => 'yes' ) ) );
+		$this->add_textarea( 'subtitle', __( 'Subtitle', 'qe-edu-core' ), '' );
+		$this->add_switch( 'show_breadcrumbs', __( 'Show breadcrumbs', 'qe-edu-core' ) );
+		$this->add_text( 'home_label', __( 'Breadcrumb first link', 'qe-edu-core' ), __( 'Home', 'qe-edu-core' ), array( 'condition' => array( 'show_breadcrumbs' => 'yes' ) ) );
+		$this->add_text( 'nav_label', __( 'Breadcrumb label for screen readers', 'qe-edu-core' ), __( 'Breadcrumb', 'qe-edu-core' ), array( 'condition' => array( 'show_breadcrumbs' => 'yes' ) ) );
 		$this->add_control(
 			'background_image',
 			array(
-				'label'   => __( 'Background image', 'qe-edu' ),
+				'label'   => __( 'Background image', 'qe-edu-core' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array( 'url' => '' ),
 			)
 		);
-		$this->add_number( 'min_height', __( 'Minimum height (pixels)', 'qe-edu' ), 280, 120, 800 );
+		$this->add_number( 'min_height', __( 'Minimum height (pixels)', 'qe-edu-core' ), 280, 120, 800 );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'title', __( 'Title', 'qe-edu' ), '.qe-banner__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
-		$this->add_text_style( 'subtitle', __( 'Subtitle', 'qe-edu' ), '.qe-banner__subtitle', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'title', __( 'Title', 'qe-edu-core' ), '.qe-banner__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'subtitle', __( 'Subtitle', 'qe-edu-core' ), '.qe-banner__subtitle', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-banner',
+			array(
+				'label'      => __( 'Banner', 'qe-edu-core' ),
+				'min_height' => '.qe-banner',
+				'align'      => '.qe-banner__inner',
+			)
+		);
 	}
 
 	/**
@@ -101,11 +109,11 @@ class PageTitleBanner extends Base {
 
 		if ( is_search() ) {
 			/* translators: %s: search terms. */
-			return sprintf( __( 'Search results for “%s”', 'qe-edu' ), get_search_query( false ) );
+			return sprintf( __( 'Search results for “%s”', 'qe-edu-core' ), get_search_query( false ) );
 		}
 
 		if ( is_404() ) {
-			return __( 'Page not found', 'qe-edu' );
+			return __( 'Page not found', 'qe-edu-core' );
 		}
 
 		if ( is_archive() ) {

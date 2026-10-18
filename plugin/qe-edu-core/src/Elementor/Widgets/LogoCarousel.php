@@ -33,7 +33,7 @@ class LogoCarousel extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Logo Carousel', 'qe-edu' );
+		return __( 'Logo Carousel', 'qe-edu-core' );
 	}
 
 	/**
@@ -69,28 +69,28 @@ class LogoCarousel extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Logos', 'qe-edu' ) ) );
-		$this->add_text( 'heading', __( 'Heading', 'qe-edu' ), __( 'Trusted by leaders, experts and institutions across the globe', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Logos', 'qe-edu-core' ) ) );
+		$this->add_text( 'heading', __( 'Heading', 'qe-edu-core' ), __( 'Trusted by leaders, experts and institutions across the globe', 'qe-edu-core' ) );
 		$this->add_select(
 			'source',
-			__( 'Logos come from', 'qe-edu' ),
+			__( 'Logos come from', 'qe-edu-core' ),
 			array(
-				'cpt'     => __( 'Partners (dashboard menu) — updates automatically', 'qe-edu' ),
-				'gallery' => __( 'Images chosen below', 'qe-edu' ),
+				'cpt'     => __( 'Partners (dashboard menu) — updates automatically', 'qe-edu-core' ),
+				'gallery' => __( 'Images chosen below', 'qe-edu-core' ),
 			),
 			'cpt'
 		);
 		$this->add_select(
 			'partner_type',
-			__( 'Which partners', 'qe-edu' ),
-			array_merge( array( '' => __( 'All partners', 'qe-edu' ) ), Types::partner_types() ),
+			__( 'Which partners', 'qe-edu-core' ),
+			array_merge( array( '' => __( 'All partners', 'qe-edu-core' ) ), Types::partner_types() ),
 			'',
 			array( 'condition' => array( 'source' => 'cpt' ) )
 		);
 		$this->add_control(
 			'gallery',
 			array(
-				'label'     => __( 'Logos', 'qe-edu' ),
+				'label'     => __( 'Logos', 'qe-edu-core' ),
 				'type'      => Controls_Manager::GALLERY,
 				'default'   => array(),
 				'condition' => array( 'source' => 'gallery' ),
@@ -98,23 +98,30 @@ class LogoCarousel extends Base {
 		);
 		$this->add_select(
 			'mode',
-			__( 'Movement', 'qe-edu' ),
+			__( 'Movement', 'qe-edu-core' ),
 			array(
-				'marquee' => __( 'Continuous scroll', 'qe-edu' ),
-				'step'    => __( 'Step by step (slider)', 'qe-edu' ),
-				'static'  => __( 'No movement (grid)', 'qe-edu' ),
+				'marquee' => __( 'Continuous scroll', 'qe-edu-core' ),
+				'step'    => __( 'Step by step (slider)', 'qe-edu-core' ),
+				'static'  => __( 'No movement (grid)', 'qe-edu-core' ),
 			),
 			'marquee'
 		);
-		$this->add_number( 'speed', __( 'Scroll duration (seconds per loop)', 'qe-edu' ), 30, 5, 120, array( 'condition' => array( 'mode' => 'marquee' ) ) );
-		$this->add_switch( 'grayscale', __( 'Grey logos, colour on hover', 'qe-edu' ) );
+		$this->add_number( 'speed', __( 'Scroll duration (seconds per loop)', 'qe-edu-core' ), 30, 5, 120, array( 'condition' => array( 'mode' => 'marquee' ) ) );
+		$this->add_switch( 'grayscale', __( 'Grey logos, colour on hover', 'qe-edu-core' ) );
 		$this->end_controls_section();
 
 		$this->add_slider_controls( 5 );
 
 		$this->start_style_section();
-		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu' ), '.qe-section-head__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'heading', __( 'Heading', 'qe-edu-core' ), '.qe-section-head__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-logo',
+			array(
+				'label' => __( 'Logos', 'qe-edu-core' ),
+				'gap'   => '.qe-logos__grid, {{WRAPPER}} .qe-marquee__track',
+			)
+		);
 	}
 
 	/**
@@ -192,7 +199,7 @@ class LogoCarousel extends Base {
 		$mode = in_array( $s['mode'], array( 'marquee', 'step', 'static' ), true ) ? $s['mode'] : 'marquee';
 
 		if ( ! $items ) {
-			$this->print_editor_notice( __( 'No logos yet. Add them under Partners in the dashboard menu, or choose images.', 'qe-edu' ) );
+			$this->print_editor_notice( __( 'No logos yet. Add them under Partners in the dashboard menu, or choose images.', 'qe-edu-core' ) );
 			return;
 		}
 

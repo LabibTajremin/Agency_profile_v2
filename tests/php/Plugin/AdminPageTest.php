@@ -114,8 +114,8 @@ final class AdminPageTest extends PluginTestCase {
 	}
 
 	public function test_save_rejects_unknown_tab() {
-		$page          = new TestableAdminPage();
-		$_POST['tab']  = 'nope';
+		$page         = new TestableAdminPage();
+		$_POST['tab'] = 'nope';
 		$page->handle_save();
 		$this->assertStringContainsString( 'tab=brand&qe_notice=error', $this->redirect );
 		$this->assertSame( 1, $page->halts );
@@ -300,13 +300,44 @@ final class AdminPageTest extends PluginTestCase {
 
 		$this->assertStringContainsString( '<textarea id="id" name="name" rows="4" class="large-text" placeholder="">a&lt;b</textarea>', $page->control( array( 'type' => 'textarea' ), 'a<b' ) );
 		$this->assertStringContainsString( 'class="large-text code"', $page->control( array( 'type' => 'code' ), '' ) );
-		$this->assertStringContainsString( 'type="number" id="id" name="name" value="16" min="14" max="20"', $page->control( array( 'type' => 'number', 'min' => 14, 'max' => 20 ), 16 ) );
-		$this->assertStringContainsString( '<option value="b" selected=\'selected\'>B</option>', $page->control( array( 'type' => 'select', 'options' => array( 'a' => 'A', 'b' => 'B' ) ), 'b' ) );
+		$this->assertStringContainsString(
+			'type="number" id="id" name="name" value="16" min="14" max="20"',
+			$page->control(
+				array(
+					'type' => 'number',
+					'min'  => 14,
+					'max'  => 20,
+				),
+				16
+			)
+		);
+		$this->assertStringContainsString(
+			'<option value="b" selected=\'selected\'>B</option>',
+			$page->control(
+				array(
+					'type'    => 'select',
+					'options' => array(
+						'a' => 'A',
+						'b' => 'B',
+					),
+				),
+				'b'
+			)
+		);
 		$this->assertStringContainsString( 'type="color" id="id" name="name" value="#a41e34" data-qe-custom-color', $page->control( array( 'type' => 'color' ), '#A41E34' ) );
 		$this->assertStringContainsString( 'type="url"', $page->control( array( 'type' => 'url' ), '' ) );
 		$this->assertStringContainsString( 'type="email"', $page->control( array( 'type' => 'email' ), '' ) );
 		$this->assertStringContainsString( 'type="tel"', $page->control( array( 'type' => 'tel' ), '' ) );
-		$this->assertStringContainsString( 'type="text" id="id" name="name" value="v" class="regular-text" placeholder="Default"', $page->control( array( 'type' => 'text', 'placeholder' => 'Default' ), 'v' ) );
+		$this->assertStringContainsString(
+			'type="text" id="id" name="name" value="v" class="regular-text" placeholder="Default"',
+			$page->control(
+				array(
+					'type'        => 'text',
+					'placeholder' => 'Default',
+				),
+				'v'
+			)
+		);
 
 		$swatches = $page->control( array( 'type' => 'swatch' ), 'graphite' );
 		$this->assertStringContainsString( 'value="graphite" checked=\'checked\'', $swatches );
@@ -317,16 +348,37 @@ final class AdminPageTest extends PluginTestCase {
 	public function test_media_control() {
 		$page = new TestableAdminPage();
 
-		$empty = $page->control( array( 'type' => 'media', 'mime' => 'image' ), 0 );
+		$empty = $page->control(
+			array(
+				'type' => 'media',
+				'mime' => 'image',
+			),
+			0
+		);
 		$this->assertStringContainsString( 'data-qe-media-remove hidden', $empty );
 		$this->assertStringContainsString( '<div class="qe-media__preview" data-qe-media-preview></div>', $empty );
 
 		Functions\when( 'wp_get_attachment_url' )->justReturn( 'https://x.test/logo.png' );
-		$this->assertStringContainsString( '<img src="https://x.test/logo.png" alt="">', $page->control( array( 'type' => 'media', 'mime' => 'image' ), 4 ) );
+		$this->assertStringContainsString(
+			'<img src="https://x.test/logo.png" alt="">',
+			$page->control(
+				array(
+					'type' => 'media',
+					'mime' => 'image',
+				),
+				4
+			)
+		);
 
 		Functions\when( 'wp_get_attachment_url' )->justReturn( 'https://x.test/profile.pdf' );
 		Functions\when( 'wp_basename' )->alias( 'basename' );
-		$pdf = $page->control( array( 'type' => 'media', 'mime' => 'application/pdf' ), 5 );
+		$pdf = $page->control(
+			array(
+				'type' => 'media',
+				'mime' => 'application/pdf',
+			),
+			5
+		);
 		$this->assertStringContainsString( '>profile.pdf</a>', $pdf );
 		$this->assertStringNotContainsString( 'data-qe-media-remove hidden', $pdf );
 	}
@@ -352,7 +404,15 @@ final class AdminPageTest extends PluginTestCase {
 
 	public function test_redirects_control() {
 		$page = new TestableAdminPage();
-		$out  = $page->control( array( 'type' => 'redirects' ), array( array( 'from' => '/a', 'to' => '/b' ) ) );
+		$out  = $page->control(
+			array( 'type' => 'redirects' ),
+			array(
+				array(
+					'from' => '/a',
+					'to'   => '/b',
+				),
+			)
+		);
 		$this->assertSame( 4, substr_count( $out, '<tr><td>' ) );
 		$this->assertStringContainsString( 'name="name[0][from]" value="/a"', $out );
 		$this->assertStringContainsString( 'data-qe-add-row', $out );

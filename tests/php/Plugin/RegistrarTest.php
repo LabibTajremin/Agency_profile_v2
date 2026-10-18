@@ -38,6 +38,11 @@ final class RegistrarTest extends PluginTestCase {
 			}
 		);
 		Functions\when( 'wp_get_attachment_url' )->justReturn( false );
+		Functions\when( 'sanitize_title' )->alias(
+			static function ( $title ) {
+				return trim( (string) preg_replace( '/[^a-z0-9]+/', '-', strtolower( strtr( $title, array( 'Ñ' => 'n' ) ) ) ), '-' );
+			}
+		);
 	}
 
 	protected function tearDown(): void {
@@ -62,6 +67,35 @@ final class RegistrarTest extends PluginTestCase {
 		}
 		$this->assertNotFalse( has_filter( 'use_block_editor_for_post_type', array( $registrar, 'classic_editor' ) ) );
 		$this->assertNotFalse( has_filter( 'enter_title_here', array( $registrar, 'title_placeholder' ) ) );
+	}
+
+	public function test_addresses_and_switching_types_off() {
+		Functions\when( 'flush_rewrite_rules' )->justReturn( null );
+		\QeEdu\Core\Settings\Schema::flush();
+		$this->settings(
+			array(
+				'post_types' => array(
+					'qe_destination_slug' => 'Destinos Ñ',
+					'qe_event_slug'       => '',
+					'qe_team_enabled'     => false,
+					'qe_partner_enabled'  => '1',
+				),
+			)
+		);
+		( new Registrar() )->register_types();
+
+		$this->assertSame( array( 'slug' => 'destinos-n' ), $this->registered['qe_destination']['rewrite'] );
+		$this->assertSame( array( 'slug' => 'events' ), $this->registered['qe_event']['rewrite'], 'Empty: built-in address.' );
+		$this->assertArrayNotHasKey( 'qe_team', $this->registered, 'Switched off.' );
+		$this->assertArrayHasKey( 'qe_partner', $this->registered );
+
+		$hash = $this->options['qe_edu_rewrite_hash'];
+		$this->assertNotFalse( has_action( 'wp_loaded', array( Registrar::class, 'flush' ) ), 'Permalinks rebuilt after a change.' );
+		Registrar::flush();
+
+		\Brain\Monkey\Actions\expectAdded( 'wp_loaded' )->never();
+		( new Registrar() )->register_types();
+		$this->assertSame( $hash, $this->options['qe_edu_rewrite_hash'], 'No rebuild when nothing changed.' );
 	}
 
 	public function test_meta_callbacks() {
@@ -101,16 +135,43 @@ final class RegistrarTest extends PluginTestCase {
 			'_qe_type' => 'recruitment',
 			'_qe_url'  => 'https://partner.test',
 		);
-		$out = $this->capture( fn() => ( new Registrar() )->render( new \WP_Post( array( 'ID' => 9, 'post_type' => 'qe_partner' ) ) ) );
+		$out           = $this->capture(
+			fn() => ( new Registrar() )->render(
+				new \WP_Post(
+					array(
+						'ID'        => 9,
+						'post_type' => 'qe_partner',
+					)
+				)
+			)
+		);
 		$this->assertStringContainsString( '<option value="recruitment" selected=\'selected\'>', $out );
 		$this->assertStringContainsString( 'type="url" id="qe-field-url" name="qe_fields[url]" value="https://partner.test"', $out );
 
-		$out = $this->capture( fn() => ( new Registrar() )->render( new \WP_Post( array( 'ID' => 10, 'post_type' => 'qe_destination' ) ) ) );
+		$out = $this->capture(
+			fn() => ( new Registrar() )->render(
+				new \WP_Post(
+					array(
+						'ID'        => 10,
+						'post_type' => 'qe_destination',
+					)
+				)
+			)
+		);
 		$this->assertStringContainsString( 'data-qe-media', $out );
 		$this->assertStringContainsString( 'name="qe_fields[flag]"', $out );
 		$this->assertStringContainsString( 'type="text" id="qe-field-country"', $out );
 
-		$out = $this->capture( fn() => ( new Registrar() )->render( new \WP_Post( array( 'ID' => 11, 'post_type' => 'qe_event' ) ) ) );
+		$out = $this->capture(
+			fn() => ( new Registrar() )->render(
+				new \WP_Post(
+					array(
+						'ID'        => 11,
+						'post_type' => 'qe_event',
+					)
+				)
+			)
+		);
 		$this->assertStringContainsString( 'type="date"', $out );
 		$this->assertStringContainsString( 'type="time"', $out );
 	}
@@ -122,7 +183,15 @@ final class RegistrarTest extends PluginTestCase {
 	 * @return void
 	 */
 	private function save( $type ) {
-		( new Registrar() )->save( 20, new \WP_Post( array( 'ID' => 20, 'post_type' => $type ) ) );
+		( new Registrar() )->save(
+			20,
+			new \WP_Post(
+				array(
+					'ID'        => 20,
+					'post_type' => $type,
+				)
+			)
+		);
 	}
 
 	public function test_save_guards() {
@@ -151,7 +220,7 @@ final class RegistrarTest extends PluginTestCase {
 			'flag'    => '0',
 			'link'    => '',
 		);
-		$this->meta[20] = array(
+		$this->meta[20]         = array(
 			'_qe_flag' => '4',
 			'_qe_link' => 'https://old.test',
 		);

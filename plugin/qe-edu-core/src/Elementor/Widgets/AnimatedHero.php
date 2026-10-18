@@ -33,7 +33,7 @@ class AnimatedHero extends Base {
 	 * @return string
 	 */
 	public function get_title() {
-		return __( 'Animated Hero', 'qe-edu' );
+		return __( 'Animated Hero', 'qe-edu-core' );
 	}
 
 	/**
@@ -60,14 +60,14 @@ class AnimatedHero extends Base {
 	 * @return void
 	 */
 	protected function register_controls() {
-		$this->start_controls_section( 'section_content', array( 'label' => __( 'Headline', 'qe-edu' ) ) );
-		$this->add_text( 'pre_text', __( 'Text before the moving words', 'qe-edu' ), __( 'Celebrating', 'qe-edu' ) );
+		$this->start_controls_section( 'section_content', array( 'label' => __( 'Headline', 'qe-edu-core' ) ) );
+		$this->add_text( 'pre_text', __( 'Text before the moving words', 'qe-edu-core' ), __( 'Celebrating', 'qe-edu-core' ) );
 
 		$words = new Repeater();
 		$words->add_control(
 			'word',
 			array(
-				'label'       => __( 'Words', 'qe-edu' ),
+				'label'       => __( 'Words', 'qe-edu-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
@@ -76,57 +76,57 @@ class AnimatedHero extends Base {
 		$this->add_control(
 			'words',
 			array(
-				'label'       => __( 'Moving words (typed one after another)', 'qe-edu' ),
+				'label'       => __( 'Moving words (typed one after another)', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $words->get_controls(),
 				'title_field' => '{{{ word }}}',
 				'default'     => array(
-					array( 'word' => __( '15 Years of Excellence', 'qe-edu' ) ),
-					array( 'word' => __( 'Global Education Pathways', 'qe-edu' ) ),
-					array( 'word' => __( 'Student Success Worldwide', 'qe-edu' ) ),
+					array( 'word' => __( '15 Years of Excellence', 'qe-edu-core' ) ),
+					array( 'word' => __( 'Global Education Pathways', 'qe-edu-core' ) ),
+					array( 'word' => __( 'Student Success Worldwide', 'qe-edu-core' ) ),
 				),
 			)
 		);
-		$this->add_text( 'post_text', __( 'Text after the moving words', 'qe-edu' ), '' );
+		$this->add_text( 'post_text', __( 'Text after the moving words', 'qe-edu-core' ), '' );
 		$this->add_select(
 			'heading_tag',
-			__( 'Heading level', 'qe-edu' ),
+			__( 'Heading level', 'qe-edu-core' ),
 			array(
 				'h1' => 'H1',
 				'h2' => 'H2',
 			),
 			'h1',
-			array( 'description' => __( 'Use H1 for the first section of a page.', 'qe-edu' ) )
+			array( 'description' => __( 'Use H1 for the first section of a page.', 'qe-edu-core' ) )
 		);
-		$this->add_textarea( 'description', __( 'Text under the headline', 'qe-edu' ), __( 'Your trusted partner for studying abroad — from choosing a course to arriving on campus.', 'qe-edu' ) );
-		$this->add_switch( 'cursor', __( 'Show typing cursor', 'qe-edu' ) );
-		$this->add_number( 'speed', __( 'Typing speed (milliseconds per letter)', 'qe-edu' ), 70, 20, 300 );
-		$this->add_number( 'pause', __( 'Pause on each phrase (milliseconds)', 'qe-edu' ), 1800, 500, 8000 );
+		$this->add_textarea( 'description', __( 'Text under the headline', 'qe-edu-core' ), __( 'Your trusted partner for studying abroad — from choosing a course to arriving on campus.', 'qe-edu-core' ) );
+		$this->add_switch( 'cursor', __( 'Show typing cursor', 'qe-edu-core' ) );
+		$this->add_number( 'speed', __( 'Typing speed (milliseconds per letter)', 'qe-edu-core' ), 70, 20, 300 );
+		$this->add_number( 'pause', __( 'Pause on each phrase (milliseconds)', 'qe-edu-core' ), 1800, 500, 8000 );
 		$this->end_controls_section();
 
-		$this->start_controls_section( 'section_buttons', array( 'label' => __( 'Buttons', 'qe-edu' ) ) );
-		$this->add_text( 'button_1_text', __( 'First button text', 'qe-edu' ), __( 'Start Your Journey', 'qe-edu' ) );
-		$this->add_link( 'button_1_link', __( 'First button link', 'qe-edu' ), '#register' );
-		$this->add_text( 'button_2_text', __( 'Second button text', 'qe-edu' ), __( 'Find Courses', 'qe-edu' ) );
-		$this->add_link( 'button_2_link', __( 'Second button link', 'qe-edu' ), '#courses' );
+		$this->start_controls_section( 'section_buttons', array( 'label' => __( 'Buttons', 'qe-edu-core' ) ) );
+		$this->add_text( 'button_1_text', __( 'First button text', 'qe-edu-core' ), __( 'Start Your Journey', 'qe-edu-core' ) );
+		$this->add_link( 'button_1_link', __( 'First button link', 'qe-edu-core' ), '#register' );
+		$this->add_text( 'button_2_text', __( 'Second button text', 'qe-edu-core' ), __( 'Find Courses', 'qe-edu-core' ) );
+		$this->add_link( 'button_2_link', __( 'Second button link', 'qe-edu-core' ), '#courses' );
 		$this->end_controls_section();
 
-		$this->start_controls_section( 'section_background', array( 'label' => __( 'Background', 'qe-edu' ) ) );
+		$this->start_controls_section( 'section_background', array( 'label' => __( 'Background', 'qe-edu-core' ) ) );
 		$this->add_select(
 			'background',
-			__( 'Background type', 'qe-edu' ),
+			__( 'Background type', 'qe-edu-core' ),
 			array(
-				'light'    => __( 'Soft light colour', 'qe-edu' ),
-				'gradient' => __( 'Accent-to-navy gradient (white text)', 'qe-edu' ),
-				'image'    => __( 'Image', 'qe-edu' ),
-				'video'    => __( 'Video', 'qe-edu' ),
+				'light'    => __( 'Soft light colour', 'qe-edu-core' ),
+				'gradient' => __( 'Accent-to-navy gradient (white text)', 'qe-edu-core' ),
+				'image'    => __( 'Image', 'qe-edu-core' ),
+				'video'    => __( 'Video', 'qe-edu-core' ),
 			),
 			'light'
 		);
 		$this->add_control(
 			'background_image',
 			array(
-				'label'     => __( 'Background image', 'qe-edu' ),
+				'label'     => __( 'Background image', 'qe-edu-core' ),
 				'type'      => Controls_Manager::MEDIA,
 				'default'   => array( 'url' => '' ),
 				'condition' => array( 'background' => array( 'image', 'video' ) ),
@@ -134,23 +134,23 @@ class AnimatedHero extends Base {
 		);
 		$this->add_text(
 			'background_video',
-			__( 'Video file link (MP4)', 'qe-edu' ),
+			__( 'Video file link (MP4)', 'qe-edu-core' ),
 			'',
 			array(
 				'condition'   => array( 'background' => 'video' ),
-				'description' => __( 'Upload the video to the Media Library and paste its link. The image above shows while it loads and on phones.', 'qe-edu' ),
+				'description' => __( 'Upload the video to the Media Library and paste its link. The image above shows while it loads and on phones.', 'qe-edu-core' ),
 			)
 		);
-		$this->add_switch( 'overlay', __( 'Darken the background for readable text', 'qe-edu' ), 'yes', array( 'condition' => array( 'background' => array( 'image', 'video' ) ) ) );
-		$this->add_number( 'min_height', __( 'Minimum height (pixels)', 'qe-edu' ), 640, 320, 1200 );
+		$this->add_switch( 'overlay', __( 'Darken the background for readable text', 'qe-edu-core' ), 'yes', array( 'condition' => array( 'background' => array( 'image', 'video' ) ) ) );
+		$this->add_number( 'min_height', __( 'Minimum height (pixels)', 'qe-edu-core' ), 640, 320, 1200 );
 		$this->end_controls_section();
 
-		$this->start_controls_section( 'section_floats', array( 'label' => __( 'Floating images', 'qe-edu' ) ) );
+		$this->start_controls_section( 'section_floats', array( 'label' => __( 'Floating images', 'qe-edu-core' ) ) );
 		$floats = new Repeater();
 		$floats->add_control(
 			'image',
 			array(
-				'label'   => __( 'Image', 'qe-edu' ),
+				'label'   => __( 'Image', 'qe-edu-core' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array( 'url' => '' ),
 			)
@@ -158,7 +158,7 @@ class AnimatedHero extends Base {
 		$floats->add_control(
 			'x',
 			array(
-				'label'   => __( 'Horizontal position (%)', 'qe-edu' ),
+				'label'   => __( 'Horizontal position (%)', 'qe-edu-core' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 70,
 				'min'     => 0,
@@ -168,7 +168,7 @@ class AnimatedHero extends Base {
 		$floats->add_control(
 			'y',
 			array(
-				'label'   => __( 'Vertical position (%)', 'qe-edu' ),
+				'label'   => __( 'Vertical position (%)', 'qe-edu-core' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 20,
 				'min'     => 0,
@@ -178,7 +178,7 @@ class AnimatedHero extends Base {
 		$floats->add_control(
 			'size',
 			array(
-				'label'   => __( 'Width (pixels)', 'qe-edu' ),
+				'label'   => __( 'Width (pixels)', 'qe-edu-core' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 220,
 				'min'     => 40,
@@ -188,7 +188,7 @@ class AnimatedHero extends Base {
 		$floats->add_control(
 			'depth',
 			array(
-				'label'   => __( 'Movement (0 = still, 1 = most)', 'qe-edu' ),
+				'label'   => __( 'Movement (0 = still, 1 = most)', 'qe-edu-core' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 0.5,
 				'min'     => 0,
@@ -199,30 +199,38 @@ class AnimatedHero extends Base {
 		$this->add_control(
 			'floats',
 			array(
-				'label'       => __( 'Images that move with the mouse (desktop only)', 'qe-edu' ),
+				'label'       => __( 'Images that move with the mouse (desktop only)', 'qe-edu-core' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $floats->get_controls(),
 				'default'     => array(),
 				'title_field' => '{{{ x }}}% / {{{ y }}}%',
 			)
 		);
-		$this->add_number( 'parallax', __( 'Mouse-move strength (pixels)', 'qe-edu' ), 24, 0, 80 );
+		$this->add_number( 'parallax', __( 'Mouse-move strength (pixels)', 'qe-edu-core' ), 24, 0, 80 );
 		$this->end_controls_section();
 
 		$this->start_style_section();
-		$this->add_text_style( 'title', __( 'Headline', 'qe-edu' ), '.qe-hero__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
+		$this->add_text_style( 'title', __( 'Headline', 'qe-edu-core' ), '.qe-hero__title', self::COLOR_SECONDARY, self::FONT_PRIMARY );
 		$this->add_control(
 			'highlight_color',
 			array(
-				'label'     => __( 'Moving words colour', 'qe-edu' ),
+				'label'     => __( 'Moving words colour', 'qe-edu-core' ),
 				'type'      => Controls_Manager::COLOR,
 				'global'    => array( 'default' => self::COLOR_PRIMARY ),
 				'selectors' => array( '{{WRAPPER}} .qe-hero__rotator' => 'color: {{VALUE}};' ),
 			)
 		);
-		$this->add_text_style( 'description', __( 'Text', 'qe-edu' ), '.qe-hero__text', self::COLOR_TEXT, self::FONT_TEXT );
+		$this->add_text_style( 'description', __( 'Text', 'qe-edu-core' ), '.qe-hero__text', self::COLOR_TEXT, self::FONT_TEXT );
 		$this->add_button_style( '.qe-hero__actions .qe-btn:not(.qe-btn--ghost)' );
 		$this->end_controls_section();
+		$this->add_box_style(
+			'.qe-hero',
+			array(
+				'label'      => __( 'Hero', 'qe-edu-core' ),
+				'min_height' => '.qe-hero',
+				'align'      => '.qe-hero__inner',
+			)
+		);
 	}
 
 	/**
